@@ -1,0 +1,34 @@
+REM : This is a spot for system tasks that we need for the game to work
+
+REM --- EMERGENCIES AND CANCELERS ----
+
+DEF DEED "DefaultEmergencyDeed"
+    SET MECHANIC_ID "NOTHING"
+    SET INSTRUCTIONS "Nothing"
+    SET DURATION 5S
+    SET FAIL_OUTRIGHT FALSE
+    SET OBSERVER_BEHAVIOR_ID "EMERGENCY"
+
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "DefaultEmergencyTask"
+    SET NAME "EMERGENCY!!"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+
+    STEP "1" "DefaultEmergencyDeed"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "SelfishCanceler"
+    SET NAME "Stop <SELFISH_PLAYER> from being selfish!"
+    SET CATEGORY "CANCELER"
+    SET DURATION <45M>
+    SET THEME "CANCELER"
+
+    STEP "1" "CancelerBase"
+
+    NEXT "1" SUCCESS FAILURE
+END

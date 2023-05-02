@@ -1,0 +1,17 @@
+MAIN(Producer): *lit le script* "Où allez-vous?"
+-DUCKS-> Nous devons sauver ces CANARDS!
+-MUST-> Nous DEVONS sauver ces canards!
+-THESE-> Nous devons sauver CES canards!
+-SAVE-> Nous devons SAUVER ces canards!
+
+DUCKS(Producer): Bonne accentuation. Les canards SONT importants
+-SUCCESS-> Parfait!
+
+MUST(Producer): Why are you saying it weird?
+-SUCCESS-> Parce que je suis une STAR.
+
+THESE(Producer): Bonne accentuation. Les autres canards sont méchants.
+-SUCCESS-> Parfait!
+
+SAVE(Producer): Super, puis la ligne continue......
+-SUCCESS-> Parce que je les ADORE!

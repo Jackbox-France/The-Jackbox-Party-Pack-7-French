@@ -1,0 +1,17 @@
+MAIN(Pizza): Ici Pepper-Phonies Vegan Pizza. Quelle est votre commande ?
+-WHEAT-> Champignons et boulettes de blé
+-CANADIAN-> Sirop d'hérable
+-CHEESE-> Quatre fromage
+-GROUNDBEET-> Betterave moulue
+
+WHEAT(Pizza): Super ! Je suis prêt dans 30 minutes
+-SUCCESS-> Les enfants aiment les champignons non ?
+
+CANADIAN(Pizza): Super ! Je suis prêt dans 30 minutes
+-SUCCESS-> C'est bon, c'est délicieux et c'est culturel
+
+CHEESE(Pizza): Super ! Je suis prêt dans 30 minutes
+-SUCCESS-> Il n'a pas vraiment dit ce qu'il y avait comme fromages...
+
+GROUNDBEET(Pizza): Super ! Je suis prêt dans 30 minutes
+-SUCCESS-> Les nutrition est plus important que la saveur, non ?

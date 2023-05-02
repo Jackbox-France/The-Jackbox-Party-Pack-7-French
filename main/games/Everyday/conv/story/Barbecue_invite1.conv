@@ -1,0 +1,17 @@
+MAIN(Neighbor): Est ce que je peux emmener quelque chose ?
+-MAC-> Des burgers, des chips et beaucoup d'amitié
+-BEAN-> Neuf salades
+-KEG-> Un pot de moutarde
+-HUNGRY-> Je veux juste des amis qui ont faim
+
+MAC(Neighbor): J'ai que deux de ces choses chez moi
+-SUCCESS-> Ah... J'y ai cru jusqu'au bout
+
+BEAN(Neighbor): J'ai juste assez de salades
+-SUCCESS-> Parfait, on se revoit au barbecue !
+
+KEG(Neighbor): Forte ou douce ?
+-SUCCESS> Les deux, il en faut mieux trop que pas assez !
+
+HUNGRY(Neighbor): Super ! J'invite ma famille, on sera 30 !
+-SUCCESS-> Uh oh.

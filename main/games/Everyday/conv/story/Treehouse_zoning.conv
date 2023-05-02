@@ -1,0 +1,18 @@
+MAIN(Zoning): Que construisez-vous dans votre jardin ?
+-HOUSE-> Une cabane dans les arbres illégale
+-TOOL-> Une cabane à outils aérienne
+-BIRD->  Une mangeoire pour oiseaux d'une taille inhabituelle
+-WEIRD-> Rien. Mon arbre bizarre a fait pousser une maison !
+
+
+HOUSE(Zoning): Vous n'êtes pas autorisé à le faire.
+-SUCCESS-> Ugh... il est temps d'utiliser le portefeuille de corruption.
+
+TOOL(Zoning): Ça a l'air crédible ! Profitez!
+-SUCCESS-> *Raccroche* ...mais ma famille sont les outils.
+
+BIRD(Zoning): Ça a l'air crédible ! Profitez!
+-SUCCESS-> *Raccroche* ...mais ma famille sont les oiseaux.
+
+WEIRD(Zoning): Incroyable ! Vous avez de la chance !
+-SUCCESS-> *Raccroche*... notre gouvernement local est-il si mauvais ?

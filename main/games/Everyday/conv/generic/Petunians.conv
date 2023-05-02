@@ -1,0 +1,22 @@
+MAIN(Voisin): Bonjour voisin !
+-INSULT-> Bonjour, je déteste vos pétunias
+-BEAUTIFUL-> Je tiens à vous dire que vos pétunias sont magnifique.
+-INSULT-> Vos pétunias me rendent furieux !
+
+INSULT(Voisin): Qu'est ce qu'il ne va pas avec ces pétunias ?
+-COMPLAINT-> Elles sont trop colorés !
+-COMPLAINT-> Elles sentent trop bon !
+-BEAUTIFUL-> Rien ! Je suis juste envieux de ne pas en avoir d'aussi belle.
+
+BEAUTIFUL(Voisin): Merci beaucoup. Elles poussent bien.
+-OFFEND-> J'ai toujours cru que vous étiez un idiot sans talent, mais vous êtes un bon jardinier.
+-FLATTER-> Si j'étais en charge du prix nobel, vous aurez gagné la médaille des meilleures pétunias.
+
+FLATTER(Voisin): Oh wouha. Merci !
+-SUCCESS-> Non, merci à VOUS de m'avoir laissé regardé ces magnifiques pétunias
+
+OFFEND(Voisin): ...
+-FAILURE-> Vous partez déjà ? C'était sympa d'avoir parlé avec vous
+
+COMPLAINT(Voisin): Heu... Je vais devoir y aller
+-FAILURE-> Bon débarras, Mme.pétunia moche.

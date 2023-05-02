@@ -1,0 +1,17 @@
+MAIN(Exterminator): Quel type de chauve-souris est-ce?
+-NORMAL-> Normale
+-DEMON-> Démoniaque
+-CURSE-> Maudite
+-EXTRA-> Extra
+
+NORMAL(Exterminator): Alors je vais utiliser des pièges à chauve-souris normaux
+-SUCCESS-> J'ai peut-être fait tuer cette personne...
+
+DEMON(Exterminator): Ma spécialité
+-SUCCESS-> Hip Hip Hourra pour les petits business!
+
+CURSE(Exterminator): Ma spécialité
+-SUCCESS-> Hip Hip Hourra pour les petits business! 
+
+EXTRA(Exterminator): Bien. Je vis pour l'action.
+-SUCCESS-> Regardes où tu marches, chauve-souris!

@@ -1,0 +1,188 @@
+REM : Fire OLD
+
+CLONE DEED "ScrubLong" "FireStep1"
+    SET INSTRUCTIONS "Il y a un feu !!! Evacuez la fumée !!!"
+END
+
+CLONE DEED "Tap2" "FireStep2"
+    SET INSTRUCTIONS "Armez l'exctincteur !!!"
+END
+
+CLONE DEED "Hold3" "FireStep3"
+    SET INSTRUCTIONS "Eteignez le feu !!!"
+END
+
+DEF TASK "FireEmergencyOLD"
+    SET NAME "Feu !!!"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    SET OBSERVER_BEHAVIOR_ID "EMERGENCY"
+
+    STEP "1" "FireStep1"
+    STEP "2" "FireStep2"
+    STEP "3" "FireStep3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+REM : Power OLD
+
+CLONE DEED "Tap3" "PowerStep1"
+    SET INSTRUCTIONS "On n'a plus d'électrcité !!! Trouvez la lampe-torche"
+END
+
+CLONE DEED "SwipeBase" "PowerStep2"
+    SET INSTRUCTIONS "Allumez l'électricité"
+    SET DIRECTION "RIGHT,LEFT"
+END
+
+CLONE DEED "SwipeBase" "PowerStep3"
+    SET INSTRUCTIONS "C'est lequel ?"
+    SET DIRECTION "RIGHT,LEFT"
+END
+
+CLONE DEED "SwipeBase" "PowerStep4"
+    SET INSTRUCTIONS "Pas celui-là"
+    SET DIRECTION "RIGHT,LEFT"
+END
+
+CLONE DEED "SwipeBase" "PowerStep5"
+    SET INSTRUCTIONS "Non. Celui-là ?"
+    SET DIRECTION "RIGHT,LEFT"
+END
+
+CLONE DEED "SwipeBase" "PowerStep6"
+    SET INSTRUCTIONS "Ca devrait être celui là"
+    SET DIRECTION "RIGHT,LEFT"
+END
+
+DEF TASK "PowerEmergencyOLD"
+    SET NAME "Plus d'électricité !!!"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    SET OBSERVER_BEHAVIOR_ID "EMERGENCY"
+
+    STEP "1" "PowerStep1"
+    STEP "2" "PowerStep2"
+    STEP "3" "PowerStep3"
+    STEP "4" "PowerStep4"
+    STEP "5" "PowerStep5"
+    STEP "6" "PowerStep6"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" "6" FAILURE
+    NEXT "6" SUCCESS FAILURE
+END
+
+
+REM : Tap Task Test
+CLONE DEED "TapEmergency" "TapEmergencyDeed"
+    SET INSTRUCTIONS "URGENCE !! Rappez dans le tas !"
+END
+
+DEF TASK "TapEmergency"
+    SET NAME " URGENCE !! Tapper dans le tas !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "TapEmergencyDeed"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+
+REM : ---------------------------------------------------
+
+REM : Kitchen fire!
+CLONE DEED "TapEmergency" "FireEmergency"
+    SET INSTRUCTIONS "LA CUISINE EST EN FEU ! ETEIGNEZ LES FLAMMES !"
+END
+
+DEF TASK "FireEmergency"
+    SET NAME "LA CUISINE EST EN FEU ! ETEIGNER LES FLAMMES !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "FireEmergency"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Basement flood
+CLONE DEED "TapEmergency" "FloodEmergency"
+    SET INSTRUCTIONS "LE SOUS-SOL EST INONDÉ ! ÉCOPEZ L'EAU !"
+END
+
+DEF TASK "FloodEmergency"
+    SET NAME "LE SOUS-SOL EST INONDÉ ! ÉCOPER L'EAU !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "FloodEmergency"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Power's out
+CLONE DEED "TapEmergency" "PowerEmergency"
+    SET INSTRUCTIONS "LE COURANT EST COUPÉ ! DÉMARREZ LE GÉNÉRATEUR !"
+END
+
+DEF TASK "PowerEmergency"
+    SET NAME "LE COURANT EST COUPÉ ! DÉMARRER LE GÉNÉRATEUR !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "PowerEmergency"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Locked out
+CLONE DEED "TapEmergency" "LockOutEmergency"
+    SET INSTRUCTIONS "VOUS ÊTES ENFERMÉ DEHORS ! ENFONCEZ LA PORTE !"
+END
+
+DEF TASK "LockOutEmergency"
+    SET NAME "VOUS ÊTES ENFERMÉ DEHORS ! ENFONCER LA PORTE !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "LockOutEmergency"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Termites
+CLONE DEED "TapEmergency" "TermiteEmergency"
+    SET INSTRUCTIONS "INFESTATION DE TERMITES ! FUMIGEZ-LES !"
+END
+
+DEF TASK "TermiteEmergency"
+    SET NAME "INFESTATION DE TERMITES ! IL FAUT LES FUMIGER !"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    
+    STEP "1" "TermiteEmergency"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "EmergencyTasks"
+    ADDTASK "FireEmergency"
+    ADDTASK "FloodEmergency"
+    ADDTASK "PowerEmergency"
+    ADDTASK "LockOutEmergency"
+    ADDTASK "TermiteEmergency"
+END

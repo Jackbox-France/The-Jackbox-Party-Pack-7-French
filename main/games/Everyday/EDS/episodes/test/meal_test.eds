@@ -1,0 +1,11 @@
+DEF EPISODE "MealTest"
+    SET CHOOSABLE FALSE
+
+    ROUND <1 8:00> <1 24:00> 2000 1000 1
+ 
+    SCHEDULE TASK "GatherBreakfast" <1 9:00>
+    SCHEDULE TASK "OrderLunch" <1 12:00>
+END
+
+
+REM : Moved these task definitions to one_offs.eds

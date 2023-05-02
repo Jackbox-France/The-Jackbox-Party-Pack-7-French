@@ -1,0 +1,18 @@
+MAIN(Voisin): Est ce que je peux récupérer mon frisbee ?
+-NEVER-> Jamais !
+-YEP-> Ouais !
+-MAYBE-> Peur-être !
+-PLEASE-> Le voici ! Il est maudit !
+
+
+NEVER(Voisin): WAHHH!!!!
+-FAILURE-> Pourquoi je fais pleurer tout le monde ?
+
+YEP(Voisin): Merci !
+-SUCCESS-> Je suis un héros.
+
+MAYBE(Voisin): Vous pouvez jouer avec nous.
+-SUCCESS-> C'est un deal !
+
+PLEASE(Voisin): Je ne crois pas qu'il est maudit.
+-SUCCESS-> Alors comment il défie la gravité ?!?!

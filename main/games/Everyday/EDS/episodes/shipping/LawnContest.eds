@@ -1,0 +1,328 @@
+DEF EPISODE "LawnContest"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Tout le beau monde"
+    SET DESCRIPTION "C'est l'heure du <font color='#AF0000'>concours de pelouse</font> annuel du quartier. Qui gagnera de l'estime pour son jardin étoilé, et qui sera jeté avec les blettes gâchées ?"
+    SET SUCCESS_MESSAGE "Malgré quelques blessures résiduelles de la vigne, la pelouse est superbe. Nous sommes heureux d'annoncer que vous avez gagné le concours et le respect de vos pairs humains !"
+    SET FAILURE_MESSAGE "Selon l'imagerie satellite, votre jardin envahi par la végétation a pris le contrôle de toute la propriété. Impressionnant pour les biologistes, mais pas pour les juges du concours."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "PickUpSticks" <1 8:00>
+    SCHEDULE TASK "SoupUpMower" <1 10:00>
+    SCHEDULE TASK "Topiary" <1 13:00>
+    SCHEDULE TASK "ContestMowLawn" <1 15:00>
+    
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "PruneHedges" <2 8:00>
+    SCHEDULE TASK "LawnConvinceNeighbor" <2 10:00>
+    SCHEDULE TASK "ContestCatchBugs" <2 15:00>
+    SCHEDULE TASK "BuyMulch" <2 18:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "PlantExoticFlowers" <3 8:00>
+    SCHEDULE TASK "BuildKissingBench" <3 10:00>
+    SCHEDULE TASK "WaterLawn" <3 13:00>
+    SCHEDULE TASK "RockGarden" <3 15:00>
+    SCHEDULE TASK "MutantFlower" <3 18:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Pick up loose sticks
+CLONE DEED "Tap5" "PickUpSticks"
+    SET INSTRUCTIONS "Ramassez des bâtons"
+END
+
+DEF TASK "PickUpSticks"
+    SET NAME "Ramasser les bâtons dans le jardin"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PickUpSticks"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Soup up the lawn mower
+CLONE DEED "Gizmos3" "SoupUpMower"
+    SET INSTRUCTIONS "Démarrez la tondeuse"
+    SET NAME "John Doe Lawnmower"
+END
+
+DEF TASK "SoupUpMower"
+    SET NAME "Démarrer la tondeuse"
+    SET ASKER_NAME "Demandez de l'aide pour démarrer la tondeuse"
+    SET HELPER_NAME "Aidez <ASKER> à démarrer la tondeuse"
+    SET CAPTAIN "YOUNG"
+    SET PARTICIPANT "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SoupUpMower"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Design complicated topiary installation
+CLONE DEED "Instructions5" "Topiary"
+    SET INSTRUCTIONS "Concevez une installation topiaire"
+
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Dessinez le périmètre de la haie"
+    SET MECHANIC_1 "SWIPE_UP"
+    SET INSTRUCTIONS_1 "Ajoutez un éléphant topiaire"
+    SET MECHANIC_2 "TAP_3"
+    SET INSTRUCTIONS_2 "Ajoutez-y quelques girafes"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Terminez par une statue de vous-même recouverte de lierre"
+    SET MECHANIC_4 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_4 "C'est génial, entourez cette partie"
+END
+
+DEF TASK "Topiary"
+    SET NAME "Concevoir une installation topiaire compliquée"
+    SET ASKER_NAME "Demandez de l'aide pour concevoir une installation topiaire compliquée"
+    SET HELPER_NAME "Aidez <ASKER> à concevoir une installation topiaire compliquée"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Topiary"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Mow the lawn
+CLONE TASK "MowLawn" "ContestMowLawn"
+    SET NAME "Tondre la pelouse pour le concours"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : ----------------------------------------------
+
+REM : Prune the hedges
+CLONE DEED "TapAll" "PruneHedges"
+    SET INSTRUCTIONS "Taillez comme un fou!"
+END
+
+DEF TASK "PruneHedges"
+    SET NAME "Tailler la haie"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PruneHedges"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Convince neighbor your topiaries aren't obscene
+CLONE DEED "DialogID" "LawnConvinceNeighbor"
+    SET INSTRUCTIONS "Persuadez votre voisin"
+    SET CONTENT_ID "LAWN_TOPIARY"
+END
+
+DEF TASK "LawnConvinceNeighbor"
+    SET NAME "Persuader le voisin que vos topiaires ne sont pas obscènes"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LawnConvinceNeighbor"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Carefully remove bugs from the yard
+CLONE TASK "CatchBugs" "ContestCatchBugs"
+    SET NAME "Enlever soigneusement les insectes du jardin"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : Drive into town for more mulch
+CLONE DEED "TravelID" "BuyMulch"
+    SET INSTRUCTIONS "On a besoin de paillis !"
+    SET CONTENT_ID "PORCH_DEBRIS"
+END
+
+DEF TASK "BuyMulch"
+    SET NAME "Aller en ville pour acheter plus de paillis"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET ASKER_NAME "Accompagnez un parent en ville pour acheter du paillis"
+    SET HELPER_NAME "Conduisez avec <ASKER> an ville pour acheter du paillis"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BuyMulch"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : -----------------------------------------------
+
+REM : Plant exotic flowers
+CLONE DEED "Instructions4" "PlantExoticFlowers"
+    SET INSTRUCTIONS "Plantez des plantes exotiques"
+
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Creusez des trous"
+    SET MECHANIC_1 "SWIPE_DOWN"
+    SET INSTRUCTIONS_1 "Plantez des fleurs exotiques"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Recouvrez de terre"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Demandez-vous s'il s'agit d'une espèce envahissante"
+END
+
+DEF TASK "PlantExoticFlowers"
+    SET NAME "Planter des fleurs exotiques"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PlantExoticFlowers"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Build a bench...for kissing
+CLONE DEED "ScrubShort" "BuildKissingBench1"
+    SET INSTRUCTIONS "Poncez les planches de bois"
+END
+
+CLONE DEED "Tap3" "BuildKissingBench2"
+    SET INSTRUCTIONS "Enfoncez les clous"
+END
+
+CLONE DEED "Rotate1080" "BuildKissingBench3"
+    SET INSTRUCTIONS "Slather on paint"
+END
+
+CLONE DEED "Nothing2" "BuildKissingBench4"
+    SET INSTRUCTIONS "Parfait pour se bécoter!"
+END
+
+DEF TASK "BuildKissingBench"
+    SET NAME "Construire un banc... pour s'embrasser"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BuildKissingBench1"
+    STEP "2" "BuildKissingBench2"
+    STEP "3" "BuildKissingBench3"
+    STEP "4" "BuildKissingBench4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Water the lawn
+CLONE DEED "Hold2" "WaterLawn1"
+    SET INSTRUCTIONS "Arrosez la pelouse"
+END
+
+CLONE DEED "Nothing3" "WaterLawn2"
+    SET INSTRUCTIONS "Réalisez que vous avez dépassé les bornes"
+END
+
+CLONE DEED "Tap3" "WaterLawn3"
+    SET INSTRUCTIONS "Mettez un panneau qui dit que c'est un étang"
+END
+
+DEF TASK "WaterLawn"
+    SET NAME "Water the lawn"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "WaterLawn1"
+    STEP "2" "WaterLawn2"
+    STEP "3" "WaterLawn3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Chill out in the rock garden
+CLONE DEED "Nothing2" "RockGarden1"
+    SET INSTRUCTIONS "Lay on the grass"
+END
+
+CLONE DEED "Nothing3" "RockGarden2"
+    SET INSTRUCTIONS "Let the sun wash over you"
+END
+
+CLONE DEED "ScrubShort" "RockGarden3"
+    SET INSTRUCTIONS "Scratch all your fresh bug bites"
+END
+
+DEF TASK "RockGarden"
+    SET NAME "Chill out in the rock garden"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "RockGarden1"
+    STEP "2" "RockGarden2"
+    STEP "3" "RockGarden3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : One of the exotic flowers has mutated!
+CLONE DEED "TapAll" "MutantFlower"
+    SET INSTRUCTIONS "It's attacking! Beat it back!"
+END
+
+DEF TASK "MutantFlower"
+    SET NAME "One of the exotic flowers has mutated!"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MutantFlower"
+
+    NEXT "1" SUCCESS FAILURE
+END

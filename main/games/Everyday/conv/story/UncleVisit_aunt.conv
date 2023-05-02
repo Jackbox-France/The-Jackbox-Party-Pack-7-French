@@ -1,0 +1,18 @@
+MAIN(Aunt Flemm): Que puis-je faire pour vous, mon cher ?
+-POLITE-> Je me demandais juste s'il était temps pour l'oncle Gorbo de rentrer à la maison...
+-ROUNDABOUT-> Comment ça se passe à la maison, tante Flemm ?
+-HELP-> L'ONCLE GORBO NOUS REND FOUS.
+
+POLITE(Aunt Flemm): Il a déjà abusé de son hospitalité, hein ?
+-LIE-> Non non ! En fait, nous aimerions qu'il reste plus longtemps !
+-HELP-> Aidez-nous, s'il vous plaît.
+
+LIE(Aunt Flemm): Ça me convient ! Dites-lui que je le verrai dans un mois !
+-SUCCESS-> Ma politesse a été ma perte.
+
+HELP(Aunt Flemm): Dites-lui que je réorganise sa collection d'hippopotames en porcelaine. Il sera de retour ici en un rien de temps.
+-SUCCESS-> Tante Flemm est la meilleure.
+
+ROUNDABOUT(Aunt Flemm): Oh, bien, bien. Je me prépare juste pour les tempêtes de feu saisonnières.
+-POLITE-> On dirait que tu as besoin d'aide ! On devrait peut-être renvoyer Oncle Gorbo chez lui ?
+-LIE-> Le temps est parfait ici ! Oncle Gorbo veut rester encore plus longtemps !

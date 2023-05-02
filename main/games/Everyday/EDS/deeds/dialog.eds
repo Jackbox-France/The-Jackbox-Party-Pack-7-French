@@ -1,0 +1,10 @@
+DEF DEED "DialogBase"
+    SET MECHANIC_ID "DIALOG"
+    SET INSTRUCTIONS "Dialog"
+END
+
+CLONE DEED "DialogBase" "DialogID"
+END
+
+CLONE DEED "DialogBase" "DialogCategory"
+END

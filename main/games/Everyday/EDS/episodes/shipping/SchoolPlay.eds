@@ -1,0 +1,451 @@
+DEF EPISODE "SchoolPlay"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Jouer le rôle"
+    SET DESCRIPTION "L'école primaire monte une production de 'Un tramway nommé tramway #124B'. La famille sera-t-elle les <font color='#AF0000'>vedettes du spectacle</font>, ou sera-t-elle obligée de 'quitter le train en marche' ?"
+    SET SUCCESS_MESSAGE "Nous avons entendu dire que quelques 'Bravos' et 'Bravissimos' étaient de mise ! Le spectacle était un spectacle transcendant de théâtre moderne. Merci d'avoir apporté au divertissement humain la classe dont il avait tant besoin."
+    SET FAILURE_MESSAGE "Il semble que les dizaines de critiques de théâtre que nous avons envoyés n'ont pas aimé votre 'production'. À cause de votre petit coup d'éclat, le club de théâtre a été obligé de se dissoudre complètement. Vous êtes contents ? C'est une école de FOOTBALL maintenant !"
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "PlayAudition" <1 9:00>
+    SCHEDULE TASK "SignUpStageManage" <1 11:00>
+    SCHEDULE TASK "CastSheet" <1 13:00>
+    SCHEDULE TASK "LongLostStar" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "TextPlayLines" <2 8:00>
+    SCHEDULE TASK "SewKidCostume" <2 13:00>
+    SCHEDULE TASK "Choreography" <2 18:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "SchoolPlayTravel" <3 10:00>
+    SCHEDULE TASK "ImpressTheater" <3 13:00>
+    SCHEDULE TASK "Camcorder" <3 15:00>
+    SCHEDULE TASK "SitActI" <3 17:00>
+    SCHEDULE TASK "Hecklers" <3 18:00>
+    SCHEDULE TASK "SaveShow" <3 20:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+CLONE DEED "DialogID" "PlayAudition"
+    SET INSTRUCTIONS "Inscrivez-vous pour la pièce de théâtre de l'école"
+    SET CONTENT_ID "SCHOOLPLAY_AUDITION"
+END
+
+DEF TASK "PlayAudition"
+    SET NAME "S'inscrire à la pièce de théâtre de l'école"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PlayAudition"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Sign up to stage manage
+CLONE DEED "Hold3" "SignUpStageManage1"
+    SET INSTRUCTIONS "Refusez le théâtre car c'est stupide"
+END
+
+CLONE DEED "Nothing2" "SignUpStageManage2"
+    SET INSTRUCTIONS "Remarquez que des enfants plus âgés et cool s'inscrivent"
+END
+
+CLONE DEED "ScrubShort" "SignUpStageManage3"
+    SET INSTRUCTIONS "Portez-vous rapidement volontaire pour être régisseur"
+END
+
+CLONE DEED "SwipeDown" "SignUpStageManage4"
+    SET INSTRUCTIONS "Mettez un casque élégant"
+END
+
+DEF TASK "SignUpStageManage"
+    SET NAME "S'inscrire à la régie de la pièce de théâtre de l'école"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SignUpStageManage1"
+    STEP "2" "SignUpStageManage2"
+    STEP "3" "SignUpStageManage3"
+    STEP "4" "SignUpStageManage4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Eagerly await cast sheet
+CLONE DEED "Nothing2" "CastSheet1"
+    SET INSTRUCTIONS "Attendez..."
+END
+
+CLONE DEED "Nothing3" "CastSheet2"
+    SET INSTRUCTIONS "Attendez..."
+END
+
+CLONE DEED "Hold2" "CastSheet3"
+    SET INSTRUCTIONS "Retenez vos cris d'angoisse"
+END
+
+CLONE DEED "QuickTap3" "CastSheet4"
+    SET INSTRUCTIONS "Courez vers l'avant de la ligne!"
+END
+
+DEF TASK "CastSheet"
+    SET NAME "Attendre avec impatience la liste des acteurs"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CastSheet1"
+    STEP "2" "CastSheet2"
+    STEP "3" "CastSheet3"
+    STEP "4" "CastSheet4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Long for lost days of stardom
+CLONE DEED "Hold3" "LongLostStar1"
+    SET INSTRUCTIONS "Dépoussiérez un vieux cliché"
+END
+
+CLONE DEED "SwipeBase" "LongLostStar2"
+    SET INSTRUCTIONS "Parcourez de vieilles affiches de théâtre"
+    SET DIRECTION "LEFT,LEFT,LEFT"
+END
+
+CLONE DEED "Nothing2" "LongLostStar3"
+    SET INSTRUCTIONS "Remémorez-vous ce qui aurait pu se passer"
+END
+
+CLONE DEED "Tap3" "LongLostStar4"
+    SET INSTRUCTIONS "Vivez indirectement ce que vivent les enfants"
+END
+
+DEF TASK "LongLostStar"
+    SET NAME "Devenir nostalgique des jours perdus de la célébrité"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LongLostStar1"
+    STEP "2" "LongLostStar2"
+    STEP "3" "LongLostStar3"
+    STEP "4" "LongLostStar4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : ----------------------------
+
+REM : Help kid memorize lines
+CLONE DEED "TextBase" "TextPlayLines"
+    SET CATEGORY "PLAYLINES"
+END
+
+DEF TASK "TextPlayLines"
+    SET DURATION <8H>
+    SET NAME "Mémoriser les répliques de la pièce"
+    SET ASKER_NAME "Demandez de l'aide pour mémoriser les répliques de la pièce"
+    SET HELPER_NAME "Aidez <ASKER> à mémoriser les répliques de la pièce"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "CHILDREN"
+    SET PARTICIPANT "ADULTS"
+    
+    STEP "1" "TextPlayLines"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Sew kid's costume
+CLONE DEED "SwipeLeft" "SewKidCostume1"
+    SET INSTRUCTIONS "Découpez un trou pour le bras"
+END
+
+CLONE DEED "QuickTap5" "SewKidCostume2"
+    SET INSTRUCTIONS "Collez quelques feuilles"
+END
+
+CLONE DEED "Nothing2" "SewKidCostume3"
+    SET INSTRUCTIONS "Repensez à ce que vous auriez pu être. Encore."
+END
+
+CLONE DEED "Hold2" "SewKidCostume4"
+    SET INSTRUCTIONS "Ajoutez un chapeau amusant"
+END
+
+DEF TASK "SewKidCostume"
+    SET NAME "Coudre le costume d'un enfant"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SewKidCostume1"
+    STEP "2" "SewKidCostume2"
+    STEP "3" "SewKidCostume3"
+    STEP "4" "SewKidCostume4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "SewOtherCostumes"
+END
+
+REM : Sew 40 other costumes
+CLONE DEED "SwipeBase" "SewOtherCostumes1"
+    SET INSTRUCTIONS "Cousez un ourlet"
+    SET DIRECTION "UP,DOWN,UP,DOWN"
+END
+
+CLONE DEED "SwipeBase" "SewOtherCostumes2"
+    SET INSTRUCTIONS "Mince, essayons encore une fois"
+    SET DIRECTION "UP,DOWN,UP,DOWN"
+END
+
+CLONE DEED "QuickTap5" "SewOtherCostumes3"
+    SET INSTRUCTIONS "Oubliez ça. Agrafez le reste.."
+END
+
+DEF TASK "SewOtherCostumes"
+    SET NAME "Coudre les costumes des autres enfants aussi"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SewOtherCostumes1"
+    STEP "2" "SewOtherCostumes2"
+    STEP "3" "SewOtherCostumes3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Learn choreography
+CLONE DEED "Instructions4" "Choreography"
+    SET INSTRUCTIONS "Chorégraphiez le grand final"
+
+    SET MECHANIC_0 "SWIPE_RIGHT"
+    SET INSTRUCTIONS_0 "Commencez par un shimmy"
+    SET MECHANIC_1 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_1 "Ajoutez une roue"
+    SET MECHANIC_2 "SWIPE_UP"
+    SET INSTRUCTIONS_2 "Grapevine! Grapevine! Grapevine"
+    SET MECHANIC_3 "SWIPE_DOWN"
+    SET INSTRUCTIONS_3 "Faites le grand final"
+END
+
+DEF TASK "Choreography"
+    SET NAME "Apprendre la chorégraphie de la pièce"
+    SET ASKER_NAME "Demandez de l'aide pour apprendre la chorégraphie de la pièce"
+    SET HELPER_NAME "Aidez <ASKER> à apprendre la chorégraphie de la pièce"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Choreography"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------
+
+REM : Drive to opening night
+CLONE DEED "TravelCategory" "SchoolPlayTravel"
+    SET INSTRUCTIONS "Conduisez à la soirée d'ouverture !"
+    SET CATEGORY "THEATER"
+END
+
+DEF TASK "SchoolPlayTravel"
+    SET NAME "Conduire à la soirée d'ouverture !"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SchoolPlayTravel"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Impress cool theater kids
+CLONE DEED "Tap1" "ImpressTheater1"
+    SET INSTRUCTIONS "Discuter de la ville de New York"
+END
+
+CLONE DEED "SwipeUp" "ImpressTheater2"
+    SET INSTRUCTIONS "Montrer le casque"
+END
+
+CLONE DEED "Hold2" "ImpressTheater3"
+    SET INSTRUCTIONS "Faites une pause cool"
+END
+
+CLONE DEED "Nothing2" "ImpressTheater4"
+    SET INSTRUCTIONS "Faites comme si rien ne s'était passé"
+END
+
+DEF TASK "ImpressTheater"
+    SET NAME "Impressionner les jeunes cool du théâtre"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ImpressTheater1"
+    STEP "2" "ImpressTheater2"
+    STEP "3" "ImpressTheater3"
+    STEP "4" "ImpressTheater4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Set up camcorder
+CLONE DEED "Gizmos3" "Camcorder"
+    SET INSTRUCTIONS "Configurez le caméscope"
+    SET NAME "HOME CAM HD"
+END
+
+DEF TASK "Camcorder"
+    SET NAME "Configurer le caméscope pour enregistrer la pièce"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Camcorder"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Ignore hecklers
+CLONE DEED "Nothing2" "Hecklers1"
+    SET INSTRUCTIONS "Ignorez une raillerie"
+END
+
+CLONE DEED "SwipeRight" "Hecklers2"
+    SET INSTRUCTIONS "Évitez une tomate"
+END
+
+CLONE DEED "Hold4" "Hecklers3"
+    SET INSTRUCTIONS "Cherchez le coupable"
+END
+
+CLONE DEED "Nothing2" "Hecklers4"
+    SET INSTRUCTIONS "Tante Curupira??"
+END
+
+DEF TASK "Hecklers"
+    SET NAME "Ignorer les chahuteurs"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Hecklers1"
+    STEP "2" "Hecklers2"
+    STEP "3" "Hecklers3"
+    STEP "4" "Hecklers4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Sit through Act I
+CLONE DEED "Nothing5" "SitActI"
+    SET INSTRUCTIONS "Asseyez-vous pendant l'acte I"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "SitActI"
+    SET NAME "S'asseoir pendant l'acte I"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SitActI"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Save the show
+CLONE DEED "Hold3" "SaveShow1"
+    SET INSTRUCTIONS "Regardez la pièce s'effondrer"
+END
+
+CLONE DEED "Nothing5" "SaveShow2"
+    SET INSTRUCTIONS "Remémorez-vous ce qui aurait pu se passer une fois de plus"
+END
+
+CLONE DEED "QuickTap5" "SaveShow3"
+    SET INSTRUCTIONS "Saisissez l'occasion!"
+END
+
+CLONE DEED "SwipeBase" "SaveShow4"
+    SET INSTRUCTIONS "Allez sur la scène!"
+    SET DIRECTION "LEFT,RIGHT"
+END
+
+DEF TASK "SaveShow"
+    SET NAME "Sauver le spectacle!"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <9H>
+
+    STEP "1" "SaveShow1"
+    STEP "2" "SaveShow2"
+    STEP "3" "SaveShow3"
+    STEP "4" "SaveShow4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END

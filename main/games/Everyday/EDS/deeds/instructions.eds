@@ -1,0 +1,22 @@
+DEF DEED "InstructionsBase"
+    SET MECHANIC_ID "INSTRUCTIONS"
+    SET INSTRUCTIONS "Instructions"
+END
+
+CLONE DEED "InstructionsBase" "Instructions1"
+END
+
+CLONE DEED "InstructionsBase" "Instructions2"
+END
+
+CLONE DEED "InstructionsBase" "Instructions3"
+END
+
+CLONE DEED "InstructionsBase" "Instructions4"
+END
+
+CLONE DEED "InstructionsBase" "Instructions5"
+END
+
+CLONE DEED "InstructionsBase" "Instructions6"
+END

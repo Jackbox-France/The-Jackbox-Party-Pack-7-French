@@ -1,0 +1,43 @@
+DEF DEED "NothingBase"
+    SET MECHANIC_ID "NOTHING"
+    SET INSTRUCTIONS "Nothing"
+    SET DURATION 3S
+END
+
+REM : Clones
+
+CLONE DEED "NothingBase" "Nothing1"
+    SET DURATION 1S
+END
+
+CLONE DEED "NothingBase" "Nothing2"
+    SET DURATION 2S
+END
+
+CLONE DEED "NothingBase" "Nothing3"
+    SET DURATION 3S
+END
+
+CLONE DEED "NothingBase" "Nothing4"
+    SET DURATION 4S
+END
+
+CLONE DEED "NothingBase" "Nothing5"
+    SET DURATION 5S
+END
+
+CLONE DEED "NothingBase" "Nothing10"
+    SET DURATION 10S
+END
+
+CLONE DEED "NothingBase" "Nothing15"
+    SET DURATION 15S
+END
+
+CLONE DEED "NothingBase" "Nothing20"
+    SET DURATION 20S
+END
+
+CLONE DEED "NothingBase" "Nothing30"
+    SET DURATION 30S
+END

@@ -1,0 +1,17 @@
+MAIN(Voisin): Je peux vous emprunter du sucre ?
+-SURE-> Bien sûr
+-NOPE-> Non
+-ONE-> Juste une pierre de sucre ?
+-BORROW-> Emprunter ?
+
+SURE(Voisin): Vous êtes trop doux !
+-SUCCESS-> C'est donc ça le sucre
+
+NOPE(Voisin): ...Désolé
+-FAILURE-> Ma réserve de sucre m'a fait perdre tellement d'amis.
+
+ONE(Voisin): Je vais prendre deux pierres si c'est possible
+-SUCCESS-> Oui bien sûr !
+
+BORROW(Voisin): Oui je vous le rends à mon retour
+-SUCCESS-> Oh, c'est vrai, il va juste faire sa promenade hebdomadaire avec son sucre.

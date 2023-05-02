@@ -1,0 +1,13 @@
+MAIN(Boss): Pourquoi mériteriez-vous une augmentation ?
+-WORK-> Je travaille dur
+-TATTLE-> Je dénoncerai les autres
+-WANT-> Parce qu'en j'en veux une
+
+WORK(Boss): Ce n'est pas comme ça que le système marche, désolé.
+-SUCCESS-> Le monde des mortels est bizarre
+
+TATTLE(Boss): Deal!
+-SUCCESS-> Haha... les autres sont stupides.
+
+WANT(Boss: J'aime votre culot. C'est un deal!
+-SUCCESS-> Alors c'est donc ça d'être confiant en soi

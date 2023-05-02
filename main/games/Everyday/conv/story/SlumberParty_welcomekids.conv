@@ -1,0 +1,18 @@
+MAIN(Kids): On fait quoi ce soir ?!!!
+-NOTHING-> Rien. Allez au lit!
+-SNACKS-> Concours de mangeurs de snacks
+-HAIR-> Maquillages et coupes de cheveux amateurs
+-MATCHES-> Qui a des allumettes!?
+
+
+NOTHING(Kids): Cassons des trucs !
+-SUCCESS-> ...on a peut-être besoin d'activités
+
+SNACKS(Kids): YAAYYY!!!!
+-SUCCESS-> Direction la cuisine!
+
+HAIR(Kids): YAAYYY!!!
+-SUCCESS-> Posons des serviettes!
+
+MATCHES(Kids): Tout le monde en a!!!
+-SUCCESS-> Direction la cachette secrète des feux d'artifice!

@@ -1,0 +1,10 @@
+REM : ALL THREE ROUNDS REPRESENT ONE DAY FROM 16:00 TO 4AM
+ROUND <1 16:00> <1 20:00> 7500  3000 1
+ROUND <2 20:00> <2 24:00> 11500  6000 1.5
+ROUND <3 0:00> <3 4:00> 17500  9000 2
+
+REM : USED IN THESE EPISODES
+REM : SlumberParty
+
+REM : KEY
+REM : ROUND <Round# RoundStartTime> <Round# RoundEndTime> BaseTagert ExtraTargetPerPlayer Multiplier

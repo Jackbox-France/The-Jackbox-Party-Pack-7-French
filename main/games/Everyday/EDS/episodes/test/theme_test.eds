@@ -1,0 +1,258 @@
+DEF EPISODE "ThemeTest"
+    SET CHOOSABLE FALSE
+
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+
+    SCHEDULE TASK "MiscThemeTest" <1 8:00>
+    SCHEDULE TASK "CleaningThemeTest" <1 8:00>
+    SCHEDULE TASK "FixingThemeTest" <1 8:00>
+    SCHEDULE TASK "CookingThemeTest" <1 8:00>
+    SCHEDULE TASK "ClothesThemeTest" <1 8:00>
+    SCHEDULE TASK "KitchenThemeTest" <1 8:00>
+    SCHEDULE TASK "BathroomThemeTest" <1 8:00>
+    SCHEDULE TASK "RecreationThemeTest" <1 8:00>
+    SCHEDULE TASK "BedroomThemeTest" <1 8:00>
+    SCHEDULE TASK "GuestThemeTest" <1 8:00>
+    SCHEDULE TASK "YardThemeTest" <1 8:00>
+    SCHEDULE TASK "PlayingThemeTest" <1 8:00>
+    SCHEDULE TASK "PaperworkThemeTest" <1 8:00>
+    SCHEDULE TASK "DecoratingThemeTest" <1 8:00>
+    SCHEDULE TASK "TalkingThemeTest" <1 8:00>
+    SCHEDULE TASK "ErrandThemeTest" <1 8:00>
+    SCHEDULE TASK "FamilyMomentThemeTest" <1 8:00>
+    SCHEDULE TASK "FamilyThemeTest" <1 8:00>
+    SCHEDULE TASK "SearchFindThemeTest" <1 8:00>
+    SCHEDULE TASK "StoryThemeTest" <1 8:00>
+    SCHEDULE TASK "SelfishThemeTest" <1 8:00>
+END
+
+DEF TASK "MiscThemeTest"
+    SET NAME "A Miscellaneous Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "MISC"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "CleaningThemeTest"
+    SET NAME "A Cleaning Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "CLEANING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "FixingThemeTest"
+    SET NAME "A Fixing Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "FIXING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "CookingThemeTest"
+    SET NAME "A Cooking Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "COOKING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "ClothesThemeTest"
+    SET NAME "A Clothes Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "CLOTHES"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "KitchenThemeTest"
+    SET NAME "A Kitchen Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "KITCHEN"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "BathroomThemeTest"
+    SET NAME "A Bathroom Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "BATHROOM"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "RecreationThemeTest"
+    SET NAME "A Recreation Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "RECREATION"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "BedroomThemeTest"
+    SET NAME "A Bedroom Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "BEDROOM"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "GuestThemeTest"
+    SET NAME "A Guests Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "GUESTS"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "YardThemeTest"
+    SET NAME "A Yard Work Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "YARD_WORK"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "PlayingThemeTest"
+    SET NAME "A Playing Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "PLAYING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "PaperworkThemeTest"
+    SET NAME "A Paperwork Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "PAPERWORK"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "DecoratingThemeTest"
+    SET NAME "A Decorating Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "DECORATING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "TalkingThemeTest"
+    SET NAME "A Talking Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "ErrandThemeTest"
+    SET NAME "An Errand Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "ERRAND"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "FamilyMomentThemeTest"
+    SET NAME "A Family Moment Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "FAMILY_MOMENT"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "FamilyThemeTest"
+    SET NAME "A Family Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "FAMILY_TASK"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "SearchFindThemeTest"
+    SET NAME "A Search/Find Task"
+    SET CATEGORY "MEDIUM"
+    SET THEME "SEARCH_FIND"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "StoryThemeTest"
+    SET NAME "A Story Task"
+    SET CATEGORY "STORY"
+    SET THEME "TALKING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "SelfishThemeTest"
+    SET NAME "A Selfish Task"
+    SET CATEGORY "SELFISH"
+    SET THEME "TALKING"
+    SET DURATION <12H>
+
+    STEP "1" "Tap1"
+
+    NEXT "1" SUCCESS FAILURE
+END

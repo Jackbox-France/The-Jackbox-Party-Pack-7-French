@@ -1,0 +1,29 @@
+DEF TASK "AdultsOnly"
+    SET NAME "Adults Only"
+    SET CAPTAIN "ADULTS"
+    
+    SET DURATION <250M>
+
+    STEP "First" "Tap1"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+CLONE TASK "AdultsOnly" "TeensOnly"
+    SET NAME "Teens Only"
+    SET CAPTAIN "TEENS"
+END
+
+CLONE TASK "AdultsOnly" "ChildrenOnly"
+    SET NAME "Children Only"
+    SET CAPTAIN "CHILDREN"
+END
+
+DEF EPISODE "CastTest"
+    SET CHOOSABLE FALSE
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+    
+    SCHEDULE TASK "AdultsOnly" <1 8:00>
+    SCHEDULE TASK "TeensOnly" <1 8:00>
+    SCHEDULE TASK "ChildrenOnly" <1 8:00>
+END

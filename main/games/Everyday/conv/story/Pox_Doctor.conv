@@ -1,0 +1,18 @@
+MAIN(Doctor): Veuillez décrire vos symptômes.
+-BURNS-> Des brûlures quand j'éternue
+-CLAM-> Ma peau est moite et vibre
+-HORNS-> Mes cornes se fanent
+-PULSE-> Mon pouls est négatif
+
+
+BURNS(Doctor): Dormez huit heures.
+-SUCCESS-> Un vendredi soir habituel? Compris!
+
+CLAM(Doctor): Dormez huit heures.
+-SUCCESS-> Un vendredi soir habituel? Compris!
+
+HORNS(Doctor): Vos cornes?
+-SUCCESS-> Oh, oubliez ça, je vais juste dormir un peu.
+
+PULSE(Doctor): C'est impossible. Dormez un peu.
+-SUCCESS-> Vous êtes impossible!

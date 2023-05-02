@@ -1,0 +1,9 @@
+MAIN(French Language Tape): Is this joke getting old?
+-RESPONSE1-> If you don't speak the language, it has probably aged.
+-RESPONSE1-> I'm still having fun.
+-RESPONSE1-> Rien de tout cela ne passe dans mon cerveau.
+
+RESPONSE1(French Language Tape): Have you concluded that this interface only supports the French alphabet?
+-SUCCESS-> Now that you mention it, there is a flagrant lack of diacritical marks.
+-SUCCESS-> I suppose that you have learnt this limitation too late to stop this joke?
+-FAILURE-> Comment on dit "J'abandonne" en anglais?

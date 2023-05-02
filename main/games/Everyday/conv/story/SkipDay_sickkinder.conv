@@ -1,0 +1,17 @@
+MAIN(Vice Principal): Pourquoi tu manques l'école aujourd'hui ?
+-THROW-> Je vomis partout.
+-FIND-> J'ai disparu.
+-CERN-> Le CERN a besoin de moi.
+-LOVE-> J'aime l'école. C'est une punition.
+
+THROW(Vice Principal): Dégoûtant. Restez chez vous!
+-SUCCESS-> Bwahahaha!
+
+FIND(Vice Principal): Nous allons contacter les autorités
+-SUCCESS-> Euhhhh... J'ai rien dit, je me suis trouvé!
+
+CERN(Vice Principal): Encore!?
+-SUCCESS-> C'est l'argent des contribuables suisses qui travaille !
+
+LOVE(Vice Principal): Dur mais juste. 
+-SUCCESS-> Je donne aussi mes devoirs au chat. 

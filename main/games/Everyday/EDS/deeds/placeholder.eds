@@ -1,0 +1,4 @@
+DEF DEED "PlaceholderBase"
+    SET MECHANIC_ID "PLACEHOLDER"
+    SET INSTRUCTIONS "Placeholder"
+END

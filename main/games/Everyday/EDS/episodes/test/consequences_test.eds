@@ -1,0 +1,150 @@
+DEF EPISODE "ConsequencesTest"
+
+    SET CHOOSABLE FALSE
+
+
+
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+
+    
+
+    SCHEDULE TASK "ConsequencesGetTask" <1 8:00>
+
+    SCHEDULE TASK "ConsequencesGetTaskSet" <1 8:00>
+
+END
+
+
+
+DEF TASK "ConsequencesBase"
+
+    SET DURATION <12H>
+
+
+
+    STEP "First" "PlaceholderBase"
+
+    
+
+    NEXT "First" SUCCESS FAILURE
+
+END
+
+
+
+CLONE TASK "ConsequencesBase" "ConsequencesGetTask"
+
+    SET NAME "Get a task as a consequence"
+
+    CONSEQUENCE SUCCESS "SuccessConsequence"
+
+    CONSEQUENCE FAILURE "FailureConsequence"
+
+END
+
+
+
+CLONE TASK "ConsequencesBase" "ConsequencesGetTaskSet"
+
+    SET NAME "Get a task set as a consequence"
+
+    
+
+    CONSEQUENCE SUCCESS "SuccessConsequenceTaskSet"
+
+    CONSEQUENCE FAILURE "FailureConsequenceTaskSet"
+
+END
+
+
+
+DEF TASK "ActualConsequence"
+
+    SET DURATION <12H>
+
+
+
+    STEP "First" "TapBase"
+
+    
+
+    NEXT "First" SUCCESS FAILURE
+
+END
+
+
+
+CLONE TASK "ActualConsequence" "SuccessConsequence"
+
+    SET NAME "You succeeded, here's a good consequence"
+
+END
+
+
+
+CLONE TASK "SuccessConsequence" "SuccessConsequence1"
+
+END
+
+
+
+CLONE TASK "SuccessConsequence" "SuccessConsequence2"
+
+END
+
+
+
+CLONE TASK "SuccessConsequence" "SuccessConsequence3"
+
+END
+
+
+
+CLONE TASK "ActualConsequence" "FailureConsequence"
+
+    SET NAME "You failed, here's a bad consequence"
+
+END
+
+
+
+CLONE TASK "FailureConsequence" "FailureConsequence1"
+
+END
+
+
+
+CLONE TASK "FailureConsequence" "FailureConsequence2"
+
+END
+
+
+
+CLONE TASK "FailureConsequence" "FailureConsequence3"
+
+END
+
+
+
+DEF TASKSET "SuccessConsequenceTaskSet"
+
+    ADDTASK "SuccessConsequence1"
+
+    ADDTASK "SuccessConsequence2"
+
+    ADDTASK "SuccessConsequence3"
+
+END
+
+
+
+DEF TASKSET "FailureConsequenceTaskSet"
+
+    ADDTASK "FailureConsequence1"
+
+    ADDTASK "FailureConsequence2"
+
+    ADDTASK "FailureConsequence3"
+
+END
+

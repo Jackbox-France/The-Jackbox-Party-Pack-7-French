@@ -1,0 +1,33 @@
+MAIN(Enquêteur): Bonjour, avez-vous un moment pour parler de votre soda préféré ?
+-HAPPY-> Oui, j'aime le soda et je serai très content d'en parler.
+-ANGRY-> Je déteste le soda et vous allez entendre ma colère.
+
+HAPPY(Enquêteur): Génial ! Qu'aimez-vous le plus par rapport au soda ?
+-THANKS-> Les bulles.
+-THANKS-> La douceur.
+-THANKS-> Qu'il est toujours l'heure de boire un soda.
+
+ANGRY(Enquêteur): Heu, okay... Que détestez-vous par rapport au soda ?
+-THANKS-> Je veux un soda goût jambon.
+-THANKS-> Je deviens étourdit en regardant les bulles.
+-THANKS-> Je préfère avoir soif.
+
+THANKS(Enquêteur): Merci d'avoir partagé votre opinion sur le soda.
+-SUCCESS-> De rien. Maintenant, je dois retourner faire des tâches pour augmenter le score de la famille.
+-MOREOPINIONS-> Ne partez pas, j'ai encore beaucoup de choses à dire sur le soda !
+
+MOREOPINIONS(Enquêteur): Vous êtes sûr ? Vous n'avez rien d'autre à faire ?
+-SUCCESS-> Vous avez raison, rester au téléphone me fait rater des points. Au revoir.
+-SODAHOT-> Le soldat doit être chaud. Très chaud !
+
+SODAHOT(Enquêteur): J'ai toutes les informations que j'ai besoin. Laissez-moi partir s'il vous plait.
+-SUCCESS-> Je suis content d'avoir forgé le futur du soda. Bonne journée.
+-DONOTDARE-> N'essayez même pas de raccrocher ! J'ai beaucoup de choses à dire sur le soda. 
+
+DONOTDARE(Enquêteur): ...
+-MORESODA-> Le soda est trop fort ! Le pétillement me fait mal aux oreilles !
+-MORESODA-> Le soda est mon troisième liquide préféré, juste après l'essence et le ketchup.
+-MORESODA-> Je lance juste une idée, mais pourquoi pas utiliser le soda comme déodorant ?
+
+MORESODA(Enquêteur): *raccroche*
+-SUCCESS-> Allo ? Allo ? Allo ?!

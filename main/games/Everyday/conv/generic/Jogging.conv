@@ -1,0 +1,26 @@
+MAIN(Président du club de jogging): Bonjour ! Je suis le président du club de jogging, est ce que vous voulez vous joindre à nous ce matin ? 
+-POLITENO-> Non merci, j'ai déjà fait du jogging une fois dans l'année.
+-RUDENO-> Marchez ou courez mais ne faites pas les deux !
+-JOGYES-> J'ai toujours eu envie de sortir ce vieux jogging...
+-NOTHANKS-> Je ne suis pas supposé parler aux personnes que je ne connais pas...
+
+
+POLITENO(Président du club de jogging): C'est génial, une fois dans l'année c'est déjà beaucoup !
+-SUCCESS-> Mentir est la manière la plus simple de faire du jogging
+
+
+RUDENO(Président du club de jogging): Vous allez venir faire du jogging avec nous ! On va vérifier tous les jours jusqu'à ce que vous nous rejoigniez.
+-SUCCESS-> Il est temps de déménager.
+
+
+JOGYES(Président du club de jogging): MAINTENANT on parle ! Allons-y !
+-SUCCESS-> Vous êtes un rêve en satin
+
+NOTHANKS(Président du club de jogging): Je ne suis pas un étranger en sueur, je suis un ami en sueur ! 
+-SUCCESS-> Revenez quand vous serez séché. Bonne journée !
+-TRYAGAIN-> Oh! Dans ce cas
+
+TRYAGAIN(Président du club de jogging): Donc vous allez venir faire du jogging ?
+-POLITENO-> Non merci, j'ai déjà fait du jogging une fois dans l'année.
+-RUDENO-> Marchez ou courez mais ne faites pas les deux !
+-JOGYES-> J'ai toujours eu envie de sortir ce vieux jogging...

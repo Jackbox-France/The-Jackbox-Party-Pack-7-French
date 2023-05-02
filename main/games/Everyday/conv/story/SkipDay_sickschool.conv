@@ -1,0 +1,17 @@
+MAIN(Vice Principal): Pourquoi manquez-vous l'école ?
+-FUNERAL-> Enterrement d'un grand-père
+-MINOR-> Chirurgie mineure
+-MAJOR-> Chirurgie majeure
+-SURGERY-> Réalisation d'une chirurgie amateure
+
+FUNERAL(Vice Principal): Combien de grands-pères avez-vous ?
+-SUCCESS-> Je l'ai utilisé 5 fois, mais ça marche toujours!
+
+MINOR(Vice Principal): Oh bonne chance!
+-SUCCESS-> J'espère avoir une corbeille de fruits. 
+
+MAJOR(Vice Principal): Oh vraiment bonne chance!
+-SUCCESS-> J'espère avoir une très grosse corbeille de fruits. 
+
+SURGERY(Vice Principal): Cela semble illégal, mais je ne suis pas assez payé pour m'impliquer dans la vie des étudiants, alors je ne poserai pas de questions.
+-SUCCESS-> Hourra pour l'apathie institutionnelle!

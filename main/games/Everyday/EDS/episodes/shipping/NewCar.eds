@@ -1,0 +1,288 @@
+DEF EPISODE "NewCar"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Imp My Ride"
+    SET DESCRIPTION "La famille a acheté une <font color='#AF0000'>voiture flambant neuve</font> et tout le monde en est amoureux. Mais pourra-t-elle survivre à sa première semaine à la résidence des Devils ?"
+    SET SUCCESS_MESSAGE "Grâce à votre entretien méticuleux, la nouvelle voiture sera un membre chéri de la famille pendant des années. Au moins jusqu'à ce que quelqu'un vomisse sur le siège arrière."
+    SET FAILURE_MESSAGE "Une voiture perd la moitié de sa valeur lorsqu'elle sort du parking, et toute sa valeur lorsque cette famille en a la charge."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "CarMaintenance" <1 8:00>
+    SCHEDULE TASK "NameOnCar" <1 10:00>
+    SCHEDULE TASK "WashTheNewCar" <1 13:00>
+    SCHEDULE TASK "SearchCarPayment" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "BragNeighborCar" <2 8:00>
+    SCHEDULE TASK "JoyrideNewCar" <2 10:00>
+    SCHEDULE TASK "HideCarScratch" <2 13:00>
+    SCHEDULE TASK "GetScratchBuffed" <2 15:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "WashTheNewCarAgain" <3 8:00>
+    SCHEDULE TASK "TakeSelfieNewCar" <3 10:00>
+    SCHEDULE TASK "FindCarManual" <3 13:00>
+    SCHEDULE TASK "GetCarDetailed" <3 15:00>
+    SCHEDULE TASK "NewCarFamilyPhoto" <3 18:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Do a little car maintenance
+CLONE DEED "Instructions5" "CarMaintenance"
+    SET INSTRUCTIONS "Faites l'entretien de votre voiture"
+
+    SET MECHANIC_0 "TAP"
+    SET INSTRUCTIONS_0 "Examinez les pneus"
+    SET MECHANIC_1 "SWIPE_DOWN"
+    SET INSTRUCTIONS_1 "Vérifiez l'huile"
+    SET MECHANIC_2 "TAP_HOLD"
+    SET INSTRUCTIONS_2 "Serrez le tuyau bizarre"
+    SET MECHANIC_3 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_3 "Resserrez ce qui semble être un écrou"
+    SET MECHANIC_4 "SWIPE_DOWN"
+    SET INSTRUCTIONS_4 "Fermez le capot avant de casser quelque chose"
+END
+
+DEF TASK "CarMaintenance"
+    SET NAME "Faire l'entretien de la voiture"
+    SET ASKER_NAME "Demandez de l'aide avec l'entretien de votre voiture"
+    SET HELPER_NAME "Aidez <ASKER> avec l'entretien de la voiture"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CarMaintenance"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Write name on side of car
+CLONE DEED "ScrubMedium" "NameOnCar1"
+    SET INSTRUCTIONS "Gribouillez votre nom sur la voiture"
+END
+
+CLONE DEED "Nothing3" "NameOnCar2"
+    SET INSTRUCTIONS "Admirez votre travail"
+END
+
+DEF TASK "NameOnCar"
+    SET NAME "Inscrire son nom sur la nouvelle voiture"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "NameOnCar1"
+    STEP "2" "NameOnCar2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Wash the new car
+CLONE TASK "WashTheCar2" "WashTheNewCar"
+    SET NAME "Nettoyer la nouvelle voiture"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : Search for stuff to sell online to pay car payment
+CLONE DEED "SearchID" "SearchCarPayment"
+    SET INSTRUCTIONS "Cherchez des objets à vendre"
+    SET CONTENT_ID "NEWCAR"
+END
+
+DEF TASK "SearchCarPayment"
+    SET NAME "Chercher des objets à vendre en ligne pour payer la voiture"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchCarPayment"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : -----------------------------------------
+
+REM : Brag to neighbor about car
+CLONE DEED "DialogID" "BragNeighborCar"
+    SET INSTRUCTIONS "Vantez-vous auprès de votre voisin de votre nouvelle voiture"
+    SET CONTENT_ID "NEWCAR_BRAG"
+END
+
+DEF TASK "BragNeighborCar"
+    SET NAME "Se vanter auprès du voisin de la nouvelle voiture"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BragNeighborCar"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Go joyriding in the new car
+CLONE DEED "TravelCategory" "JoyrideNewCar"
+    SET INSTRUCTIONS "Faites une balade en voiture"
+    SET CATEGORY "SHOPPING"
+END
+
+DEF TASK "JoyrideNewCar"
+    SET NAME "Faire une balade avec la nouvelle voiture"
+    SET ASKER_NAME "Faites une balade avec votre frère ou votre sœur dans la nouvelle voiture."
+    SET HELPER_NAME "Faites une balade avec <ASKER> dans la nouvelle voiture"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "JoyrideNewCar"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Hide scratch from rest of family
+CLONE DEED "Instructions4" "HideCarScratch"
+    SET INSTRUCTIONS "Cachez la rayure !"
+
+    SET MECHANIC_0 "SWIPE_DOWN"
+    SET INSTRUCTIONS_0 "Enduisez la rayure de dentifrice"
+    SET MECHANIC_1 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_1 "Nettoyez la zone avec un mouvement circulaire"
+    SET MECHANIC_2 "TAP_HOLD"
+    SET INSTRUCTIONS_2 "Nettoyez au tuyau d'arrosage"
+    SET MECHANIC_3 "TAP"
+    SET INSTRUCTIONS_3 "Réalisez que vous avez empiré les choses"
+END
+
+DEF TASK "HideCarScratch"
+    SET NAME "Cacher les rayures sur la nouvelle voiture"
+    SET ASKER_NAME "Demandez de l'aide pour cacher les rayures sur la nouvelle voiture"
+    SET HELPER_NAME "Aidez <ASKER> à cacher les rayures sur la nouvelle voiture"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "HideCarScratch"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Get the scratch buffed out at the repair shop
+CLONE DEED "TravelCategory" "GetScratchBuffed"
+    SET INSTRUCTIONS "Faites enlever la rayure à l'atelier de réparation"
+    SET CATEGORY "CAR"
+END
+
+DEF TASK "GetScratchBuffed"
+    SET NAME "Faire enlever la rayure à l'atelier de réparation"
+    SET ASKER_NAME "Allez avec votre frère ou votre sœur pour faire enlever la rayure dans un atelier de réparation"
+    SET HELPER_NAME "Allez avec <ASKER> pour faire enlever une rayure dans un atelier de réparation"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GetScratchBuffed"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : -------------------------------
+
+REM : REM : Wash the new car
+CLONE TASK "WashTheCar2" "WashTheNewCarAgain"
+    SET NAME "Laver à nouveau la nouvelle voiture pour être sûr"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : REM : Wash the new car
+CLONE TASK "TakeSelfieBase" "TakeSelfieNewCar"
+    SET NAME "Prendre un selfie sur le capot de la voiture"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : Find the car manual you already lost
+CLONE TASK "FindBook" "FindCarManual"
+    SET NAME "Trouver le manuel de la voiture déjà perdu"
+    SET ASKER_NAME "Demandez de l'aide pour trouver le manuel de la voiture déjà perdu"
+    SET HELPER_NAME "Aidez <ASKER> à trouver le manuel de la voiture déjà perdu"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : Get the car detailed
+CLONE DEED "TravelCategory" "GetCarDetailed"
+    SET INSTRUCTIONS "Faites inspecter la nouvelle voiture"
+    SET CATEGORY "CAR"
+END
+
+DEF TASK "GetCarDetailed"
+    SET NAME "Faire expertiser la nouvelle voiture"
+    SET ASKER_NAME "Accompagnez quelqu'un de plus âgé pour l'expertise de la nouvelle voiture"
+    SET HELPER_NAME "Prenez <ASKER> avec vous pour l'expertise de la nouvelle voiture"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GetCarDetailed"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Take family photo with car
+CLONE DEED "Nothing5" "NewCarFamilyPhoto"
+    SET INSTRUCTIONS "Dites 'voiture!'"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "NewCarFamilyPhoto"
+    SET NAME "Prendre une photo de famille avec la nouvelle voiture"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "NewCarFamilyPhoto"
+
+    NEXT "1" SUCCESS FAILURE
+END

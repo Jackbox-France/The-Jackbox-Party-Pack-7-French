@@ -1,0 +1,329 @@
+DEF EPISODE "Pox"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Malade et fatigué"
+    SET DESCRIPTION "Tout le monde est <font color='#AF0000'>malade à la maison</font> avec la variole du démon, mais cela ne veut pas dire que les corvées s'arrêtent. La famille pourra-t-elle faire tourner la maison sans mettre sa santé à rude épreuve ?"
+    SET SUCCESS_MESSAGE "Nous avons été heureux d'apprendre le prompt rétablissement de votre famille. Travailler quand on est bien trop malade pour travailler est un aspect déconcertant mais essentiel de la culture humaine."
+    SET FAILURE_MESSAGE "Le médecin extrêmement séduisant que nous avons envoyé chez vous a diagnostiqué que votre famille était 'en phase terminale'. Les antibiotiques ne guériront pas ce qui vous empêche de travailler ensemble."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    SCHEDULE TASK "GatherBreakfast" <1 7:01>
+    REM : SCHEDULE TASK "GatherLunch" <2 13:01>
+    SCHEDULE TASK "GatherDinner" <3 17:01>
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "SearchThermo" <1 8:00>
+    SCHEDULE TASK "TakeTempPox" <1 10:00>
+    SCHEDULE TASK "BlowNosePox" <1 13:00>
+    SCHEDULE TASK "TeenCancelPlans" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "BlandMeal" <2 8:00>
+    SCHEDULE TASK "ChannelSurfPox" <2 11:00>
+    SCHEDULE TASK "FindAntihistamine" <2 13:00>
+    SCHEDULE TASK "Humidifier" <2 15:00>
+    SCHEDULE TASK "TravelPharmacy" <2 18:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "PoxCallDoctor" <3 8:00>
+    SCHEDULE TASK "DoctorDiagnosePox" <3 11:00>
+    SCHEDULE TASK "ImpressDoctor" <3 15:00>
+    SCHEDULE TASK "PoxGoToBed" <3 21:00>
+
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Search for thermometer
+CLONE DEED "SearchID" "SearchThermo"
+    SET INSTRUCTIONS "Cherchez le thermomètre"
+    SET CONTENT_ID "THERMOMETER"
+END
+
+DEF TASK "SearchThermo"
+    SET NAME "Chercher le thermomètre"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchThermo"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Take your temperature
+CLONE DEED "SwipeUp" "TakeTempPox1"
+    SET INSTRUCTIONS "Placez le thermomètre sous la langue"
+END
+
+CLONE DEED "Hold3" "TakeTempPox2"
+    SET INSTRUCTIONS "Attendez..."
+END
+
+CLONE DEED "Nothing2" "TakeTempPox3"
+    SET INSTRUCTIONS "Ouaip. Z'êtes malade."
+END
+
+DEF TASK "TakeTempPox"
+    SET NAME "Prendre sa température"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TakeTempPox1"
+    STEP "2" "TakeTempPox2"
+    STEP "3" "TakeTempPox3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Blow your nose
+CLONE DEED "SwipeUp" "BlowNosePox1"
+    SET INSTRUCTIONS "Attrapez un mouchoir"
+END
+
+CLONE DEED "Hold3" "BlowNosePox2"
+    SET INSTRUCTIONS "Mouchez-vous!"
+END
+
+CLONE DEED "ScrubShort" "BlowNosePox3"
+    SET INSTRUCTIONS "Nettoyez votre nez"
+END
+
+CLONE DEED "Nothing3" "BlowNosePox4"
+    SET INSTRUCTIONS "Regardez la morve acide dissoudre le mouchoir"
+END
+
+DEF TASK "BlowNosePox"
+    SET NAME "Se moucher"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BlowNosePox1"
+    STEP "2" "BlowNosePox2"
+    STEP "3" "BlowNosePox3"
+    STEP "4" "BlowNosePox4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Text friend to cancel weekend plans
+CLONE DEED "DialogID" "TeenCancelPlans"
+    SET INSTRUCTIONS "Annulez vos projets de week-end"
+    SET CONTENT_ID "POX_CANCEL"
+END
+
+DEF TASK "TeenCancelPlans"
+    SET NAME "Envoyez un SMS à un ami pour annuler les projets du week-end"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TeenCancelPlans"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ---------------------------------------------
+
+REM : Make blandest possible meal
+CLONE DEED "GatherID" "BlandMeal"
+    SET INSTRUCTIONS "Préparez le repas le plus fade possible"
+    SET CONTENT_ID "BLAND_MEAL"
+END
+DEF TASK "BlandMeal"
+    SET NAME "Préparer le repas le plus fade possible"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BlandMeal"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Watch daytime TV on the couch
+CLONE TASK "ChannelSurf" "ChannelSurfPox"
+    SET NAME "Regarder la télévision en journée sur le canapé"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : Find antihistimine
+REM : Replace with antihistamine
+CLONE DEED "FindCategory" "FindAntihistamine"
+    SET INSTRUCTIONS "Trouvez les antihistaminiques"
+    SET CATEGORY "ASPRIN"
+END
+
+DEF TASK "FindAntihistamine"
+    SET NAME "Trouver les antihistaminiques"
+    SET ASKER_NAME "Demandez de l'aide pour trouver les antihistaminiques"
+    SET HELPER_NAME "Aidez <ASKER> à trouver les antihistaminiques"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FindAntihistamine"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Set up the humidifier
+CLONE DEED "Gizmos3" "Humidifier"
+    SET INSTRUCTIONS "Installez l'humidificateur"
+    SET NAME "WetLung Humidifier"
+END
+
+DEF TASK "Humidifier"
+    SET NAME "Installer l'humidificateur"
+    SET ASKER_NAME "Demandez de l'aide pour installer l'humidificateur"
+    SET HELPER_NAME "Aidez <ASKER> à installer l'humidificateur"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Humidifier"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Run to the pharmacy for supplies
+CLONE DEED "TravelCategory" "TravelPharmacy"
+    SET INSTRUCTIONS "Allez à la pharmacie"
+    SET CATEGORY "PHARMACY"
+END
+
+DEF TASK "TravelPharmacy"
+    SET NAME "Aller à la pharmacie pour acheter des médicaments"
+    SET ASKER_NAME "Faites-vous conduire à la pharmacie pour vous ravitailler en médicaments"
+    SET HELPER_NAME "Conduisez avec <ASKER> à la pharmacie pour acheter des médicaments"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TravelPharmacy"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------
+
+REM : Call the doctor
+CLONE DEED "PhoneCategory" "PoxCallDoctor"
+    SET INSTRUCTIONS "Appelez le docteur"
+    SET CATEGORY "DOCTOR"
+END
+
+DEF TASK "PoxCallDoctor"
+    SET NAME "Appeler le docteur"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PoxCallDoctor"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Describe your weird devil pox to the doctor
+CLONE DEED "DialogID" "DoctorDiagnosePox"
+    SET INSTRUCTIONS "Décrivez votre variole du diable au médecin"
+    SET CONTENT_ID "POX_DOCTOR"
+END
+
+DEF TASK "DoctorDiagnosePox"
+    SET NAME "Décrire la variole du diable au médecin"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DoctorDiagnosePox"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Try to impress the hot doctor
+CLONE DEED "Hold2" "ImpressDoctor1"
+    SET INSTRUCTIONS "Jouez du violon très fort près du médecin sexy"
+END
+
+CLONE DEED "Nothing3" "ImpressDoctor2"
+    SET INSTRUCTIONS "Écoutez attentivement les conseils du médecin sexy"
+END
+
+CLONE DEED "Rotate270" "ImpressDoctor3"
+    SET INSTRUCTIONS "Préparez une délicieuse soupe pour remercier le médecin sexy"
+END
+
+CLONE DEED "SwipeDown" "ImpressDoctor4"
+    SET INSTRUCTIONS "Éternuez accidentellement dans la soupe. Vous êtes toujours super malade."
+END
+
+DEF TASK "ImpressDoctor"
+    SET NAME "Essayer d'impressionner le docteur sexy"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ImpressDoctor1"
+    STEP "2" "ImpressDoctor2"
+    STEP "3" "ImpressDoctor3"
+    STEP "4" "ImpressDoctor4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Go to bed at a reasonable hour
+CLONE DEED "Nothing5" "PoxGoToBed"
+    SET INSTRUCTIONS "Tout le monde au lit!"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "PoxGoToBed"
+    SET NAME "Se coucher à une heure raisonnable"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PoxGoToBed"
+
+    NEXT "1" SUCCESS FAILURE
+END

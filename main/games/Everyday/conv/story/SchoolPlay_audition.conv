@@ -1,0 +1,18 @@
+MAIN(Audition): Allez-y et commencez vos lignes...
+-HARK-> "Argh! Un dinosaure..."
+-OUCH-> "Ouch! Je suis en train de mourir..."
+-YOWZA-> "Yowza! La Reine..."
+-LINE-> "...Lignes?" 
+
+
+HARK(Audition): Très effrayant ! Tu as le rôle !
+-SUCCESS-> Je pouvais vraiment voir ce dinosaure.
+
+OUCH(Audition): Très triste ! Tu as le rôle !
+-SUCCESS-> *Fait une profonde révérence*
+
+YOWZA(Audition): Une satire très intelligente ! Tu as le rôle !
+-SUCCESS-> J'ai vraiment réussi le "Yowza"
+
+LINE(Audition): ...Vous jouerez un rocher qui ne parle pas.
+-SUCCESS-> Pourquoi ne peuvent-ils pas simplement utiliser un rocher accesssoire?

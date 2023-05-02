@@ -1,0 +1,30 @@
+MAIN(Boss): Bonsoir.
+-POLITE-> Et bonsoir à vous, madame.
+-PARK-> Vous ne vous êtes pas garé dans la rue, n'est-ce pas ?
+-WRONG-> Désolé, mauvaise maison.
+
+POLITE(Boss): Où dois-je mettre mon manteau ?
+-TAKECOAT-> Je vous le prends!
+-WHOCARES-> Qui s'en soucie.
+-WHOCARES-> Jetez-le par terre.
+
+TAKECOAT(Boss): Et bien, merci!
+-SUCCESS-> Je suis en train de gérer ça!
+
+WHOCARES(Boss): Hum... Je vais juste l'accrocher ?
+-SOUNDSGOOD-> Très bien!
+-WHOCARES2-> J'AI DIT : ON S'EN FICHE.
+
+WHOCARES2(Boss): Je regrette déjà d'avoir accepté ça.
+-SUCCESS-> Je ne sais pas ce que j'ai fait de mal.
+
+SOUNDSGOOD(Boss): Super, je suppose.
+-SUCCESS-> Je suis en train de gérer ça!
+
+PARK(Boss): Oui, quelque chose ne va pas ?
+-WHOCARES2-> Ouais, votre stupide voiture bloque ma vue sur la belle rue.
+-TAKECOAT-> Je protégerai cette voiture avec ma vie.
+
+WRONG(Boss): Mais je suis sûr que c'est la bonne adresse...
+-WHOCARES2-> Eh bien, je suis sûr que je m'en fiche.
+-POLITE-> Je plaisante! Bienvenue dans notre maison!

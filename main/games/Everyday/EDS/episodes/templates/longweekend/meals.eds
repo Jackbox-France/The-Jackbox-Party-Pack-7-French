@@ -1,0 +1,11 @@
+REM : EVENTS IN ROUNDS 2 AND 3 TAKE PLACE OVER ONE LONG DAY
+SCHEDULE TASK "GatherBreakfast" <1 7:01>
+SCHEDULE TASK "GatherLunch" <2 13:01>
+SCHEDULE TASK "GatherDinner" <3 17:01>
+
+
+
+REM : USED IN THESE EPISODES
+REM : BigDance
+REM : BossDinner
+REM : FirstDate

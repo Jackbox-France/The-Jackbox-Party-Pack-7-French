@@ -1,0 +1,49 @@
+MAIN(Aunt Hecuba): Allo? Qui m'appelle?
+-GRANDMA-> Tu es invité à la fête de Grand-mère Pazuzu.
+-MURDER-> Vous êtes invité à un meurtre mystérieux sur le thème des années 1940
+-SCAM-> Vous ratez des économies fantastiques sur les longues distances !
+
+GRANDMA(Aunt Hecuba): Pazuzu? Je déteste cette vieille chouette ! Oubliez-moi !
+-REASON-> J'ai dit Pazuzu ? Je voulais dire... quelqu'un que tu aimes bien ?
+-PIECE-> Alors viens à la fête et dis-lui ce que tu penses !
+
+REASON(Aunt Hecuba): Ouais, c'est ça. Donne-moi une bonne raison pour que j'aille à cette fête minable.
+-CAKE-> Gâteaux gratuits ?
+-PIECE-> Tu pourras lui dire ce que tu penses !
+-TWENTY-> Je te donnerai 20 balles.
+
+CAKE(Aunt Hecuba): Ce n'est pas beaucoup, mais je vais prendre sur moi. Je serai là.
+-SUCCESS-> Peu importe
+
+PIECE(Aunt Hecuba): Ha ! Maintenant tu parles ma langue. Je serai là.
+-SUCCESS-> J'ai déjà arrêté d'écouter
+
+TWENTY(Aunt Hecuba): Donnes-moi en 50.
+-FINE-> Eurgh. Bien.
+-NOWAY-> Pas possible!
+
+NOWAY(Aunt Hecuba): Et bien oublie!
+-FINE-> Attends! Je vais payer!
+-FINE-> Attends! Je vais prétendre que je vais payer!
+
+
+FINE(Aunt Hecuba): Jackpot! Je serai là!
+-SUCCESS-> Ça a intérêt à valoir le coup.
+
+MURDER(Aunt Hecuba): Je déteste ces trucs bidons ! C'est toujours le majordome de toute façon !
+-GRANDMA-> Je rigole, c'est l'anniversaire de grand-mère Pazuzu.
+-ESCAPEROOM-> Et pourquoi pas une escape room à la place ?
+
+ESCAPEROOM(Aunt Hecuba): Je ne sais pas ce que c'est.
+-GRANDMA-> Laisse tomber. J'essaie de t'inviter à l'anniversaire de grand-mère Pazuzu.
+
+SCAM(Aunt Hecuba): Oh vraiment? Dites-moi en plus!
+-BIGBAND-> BigBand Internet Service a un plan qui convient à tout le monde !
+-GRANDMA-> Je rigole, c'est l'anniversaire de grand-mère Pazuzu.
+
+BIGBAND(Aunt Hecuba): Qu'en est-il des plafonds de données ?
+-LIMITS-> Bien que certains plans prévoient des limites, la plupart des utilisateurs ne les atteignent jamais.
+-GRANDMA-> Laisse tomber. J'essaie de t'inviter à l'anniversaire de grand-mère Pazuzu.
+
+LIMITS(Aunt Hecuba): C'est ce qu'ils disent tous! Bien tenté, l'arnaque! *CLICK*
+-SUCCESS-> Je lui enverrai un message à propos de la fête plus tard.

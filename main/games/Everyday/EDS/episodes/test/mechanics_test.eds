@@ -1,0 +1,313 @@
+DEF EPISODE "MechanicsTest"
+    SET CHOOSABLE FALSE
+
+    ROUND <1 7:50> <1 22:00> 2000 1000 1
+    
+    SCHEDULE TASK "GatherTest" <1 8:00>
+    SCHEDULE TASK "HoldTest" <1 8:00>
+    SCHEDULE TASK "NothingTest" <1 8:00>
+    SCHEDULE TASK "PhoneTest" <1 8:00>
+    SCHEDULE TASK "PlaceholderTest" <1 8:00>
+    SCHEDULE TASK "RotateTest" <1 8:00>
+    SCHEDULE TASK "SwipeTest" <1 8:00>
+    SCHEDULE TASK "TapTest" <1 8:00>
+    SCHEDULE TASK "TravelTest" <1 8:00>
+    SCHEDULE TASK "TextTest" <1 8:00>
+    SCHEDULE TASK "NothingTestAll" <1 8:00>
+    SCHEDULE TASK "ScrubTest" <1 8:00>
+    SCHEDULE TASK "DialogTest" <1 8:00>
+    SCHEDULE TASK "DialogTestWithSpecificContent" <1 8:00>
+    SCHEDULE TASK "InstructionsTest" <1 8:00>
+    SCHEDULE TASK "FindTest" <1 8:00>
+    SCHEDULE TASK "FindRetryTest" <1 8:00>
+    SCHEDULE TASK "GizmosTest" <1 8:00>
+    SCHEDULE TASK "SearchTest" <1 8:00>
+END
+
+
+REM : Gather
+
+DEF TASK "GatherTest"
+    SET DURATION <12H>
+    SET NAME "Test the Gather Mechanic"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+    SET THEME "MISC"
+
+    STEP "First" "GatherBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Hold
+
+DEF TASK "HoldTest"
+    SET DURATION <12H>
+    SET NAME "Test the Hold Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "HoldBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Nothing
+
+DEF TASK "NothingTest"
+    SET DURATION <12H>
+    SET NAME "Test the Nothing Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "NothingBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+CLONE DEED "NothingBase" "NothingAll"
+    SET PARTICIPATION "ALL"
+END
+
+CLONE TASK "NothingTest" "NothingTestAll"
+    SET NAME "Nothing Mechanic All"
+    STEP "First" "NothingAll"
+END
+
+REM : Phone
+
+DEF TASK "PhoneTest"
+    SET DURATION <12H>
+    SET NAME "Test the Phone Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "PhoneBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Placeholder
+
+DEF TASK "PlaceholderTest"
+    SET DURATION <12H>
+    SET NAME "Test the Placeholder Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "PlaceholderBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Rotate
+
+DEF TASK "RotateTest"
+    SET DURATION <12H>
+    SET NAME "Test the Rotate Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "RotateBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Swipe
+
+DEF TASK "SwipeTest"
+    SET DURATION <12H>
+    SET NAME "Test the Swipe Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "SwipeBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Tap
+
+CLONE DEED "TapBase" "TapReveal"
+    SET SCENE "DiscreteReveal"
+END
+
+DEF TASK "TapTest"
+    SET DURATION <12H>
+    SET NAME "Test the Tap Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "TapReveal"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Travel
+
+CLONE DEED "TravelBase" "TravelTestDeed"
+    SET INSTRUCTIONS "<ASKER> is being driven to Jackbox Games by <HELPER>"
+END
+
+DEF TASK "TravelTest"
+    SET DURATION <12H>
+    SET NAME "Giving a ride"
+    SET ASKER_NAME "Ask for a lift to Jackbox Games offices"
+    SET HELPER_NAME "Give <ASKER> a lift to Jackbox Games"
+    SET THEME "MISC"
+    
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "CHILDREN"
+
+    STEP "First" "TravelTestDeed"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Text
+
+DEF TASK "TextTest"
+    SET DURATION <12H>
+    SET NAME "Test the Text Mechanic"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "CHILDREN"
+    SET THEME "MISC"
+
+    STEP "First" "TextBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Scrub
+
+DEF TASK "ScrubTest"
+    SET DURATION <12H>
+    SET NAME "Test the Scrub Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "ScrubBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM : Dialog
+
+DEF TASK "DialogTest"
+    SET DURATION <12H>
+    SET NAME "Test the Dialog Mechanic"
+    SET THEME "MISC"
+
+    STEP "First" "DialogBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+CLONE DEED "DialogBase" "SpecificDialog"
+    SET CONTENT_ID "BAND_GEEK"
+END
+
+DEF TASK "DialogTestWithSpecificContent"
+    SET DURATION <12H>
+    SET NAME "Test the Dialog Mechanic w/specific content"
+    SET THEME "MISC"
+    
+    STEP "First" "SpecificDialog"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM : INSTRUCTIONS
+
+CLONE DEED "InstructionsBase" "InstructionsWithLotsOfSteps"
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Snap on the pedals" 
+    
+    SET MECHANIC_1 "SWIPE_LEFT"
+    SET INSTRUCTIONS_1 "Put on the front wheel" 
+    
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Tighten the nut" 
+    
+    SET MECHANIC_3 "SWIPE_RIGHT"
+    SET INSTRUCTIONS_3 "Put on the back wheel" 
+    
+    SET MECHANIC_4 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_4 "Tighten the other nut" 
+    
+    SET MECHANIC_5 "TAP_HOLD"
+    SET INSTRUCTIONS_5 "Inflate the tires" 
+    
+    SET MECHANIC_6 "TAP_3"
+    SET INSTRUCTIONS_6 "Nice job. Now kick the tires." 
+END
+
+DEF TASK "InstructionsTest"
+    SET DURATION <12H>
+    SET NAME "Test the Instructions Mechanic"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "CHILDREN"
+    SET THEME "MISC"
+    
+    STEP "First" "InstructionsWithLotsOfSteps"
+    
+        NEXT "First" SUCCESS FAILURE
+END
+
+REM : FIND
+
+DEF TASK "FindTest"
+    SET DURATION <12H>
+    SET NAME "Test the Find Mechanic"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "CHILDREN"
+    SET THEME "MISC"
+    
+    STEP "First" "FindBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+CLONE DEED "FindBase" "FindSomeMarblesAsATest"
+    SET CATEGORY "DRAWINGS"
+    SET FAIL_ON_MISTAKE FALSE
+END
+
+DEF TASK "FindRetryTest"
+    SET DURATION <12H>
+    SET NAME "Test the Retry Find Mechanic"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "CHILDREN"
+    SET THEME "MISC"
+    
+    STEP "First" "FindSomeMarblesAsATest"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM : Gizmos
+
+DEF TASK "GizmosTest"
+    SET DURATION <12H>
+    SET NAME "Test the Gizmos Mechanic"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "CHILDREN"
+    SET THEME "MISC"
+    
+    STEP "First" "Gizmos3"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM : SEARCH
+
+DEF TASK "SearchTest"
+    SET DURATION <12H>
+    SET NAME "Test the Search Mechanic"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+    SET THEME "MISC"
+    
+    STEP "First" "SearchBase"
+    
+    NEXT "First" SUCCESS FAILURE
+END

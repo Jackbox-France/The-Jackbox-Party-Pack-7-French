@@ -1,0 +1,228 @@
+REM : Ignore Chores, Play Video Games
+
+CLONE DEED "Nothing5" "VideoGameStep1"
+    SET INSTRUCTIONS "Ignore chores"
+END
+
+CLONE DEED "QuickTap10" "VideoGameStep2"
+    SET INSTRUCTIONS "Play very cool video game"
+END
+
+DEF TASK "VideoGames"
+    SET NAME "Ignore chores, play video games"
+    SET THEME "SELFISH"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "Step1" "VideoGameStep1"
+    STEP "Step2" "VideoGameStep2"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" SUCCESS FAILURE
+END
+
+
+REM : Shoot a spitball at your sibling
+
+CLONE DEED "Hold3" "ShootSpitball1"
+    SET INSTRUCTIONS "Aim..."
+END
+
+CLONE DEED "SwipeUp" "ShootSpitball2"
+    SET INSTRUCTIONS "Fire!"
+END
+
+DEF TASK "ShootSpitball"
+    SET NAME "Shoot a spitball at your sibling"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "1" "ShootSpitball1"
+    STEP "2" "ShootSpitball2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Put "kick me" sign on parent's back
+
+CLONE DEED "Nothing3" "KickMeSign1"
+    SET INSTRUCTIONS "Wait for them to lower their guard"
+END
+
+CLONE DEED "SwipeUp" "KickMeSign2"
+    SET INSTRUCTIONS "Sneak up behind them"
+END
+
+CLONE DEED "Rotate180" "KickMeSign3"
+    SET INSTRUCTIONS "Position the sign"
+END
+
+CLONE DEED "Tap1" "KickMeSign4"
+    SET INSTRUCTIONS "Tape it on!"
+END
+
+DEF TASK "KickMeSign"
+    SET NAME "Put 'kick me' sign on parent's back"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "1" "KickMeSign1"
+    STEP "2" "KickMeSign2"
+    STEP "3" "KickMeSign3"
+    STEP "4" "KickMeSign4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Leave milk out
+
+CLONE DEED "SwipeUp" "LeaveMilkOut1"
+    SET INSTRUCTIONS "Drink from carton of milk"
+END
+
+CLONE DEED "Tap1" "LeaveMilkOut2"
+    SET INSTRUCTIONS "Place carton on counter"
+END
+
+CLONE DEED "Hold5" "LeaveMilkOut3"
+    SET INSTRUCTIONS "Walk away"
+END
+
+DEF TASK "LeaveMilkOut"
+    SET NAME "Leave milk out"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "1" "LeaveMilkOut1"
+    STEP "2" "LeaveMilkOut2"
+    STEP "3" "LeaveMilkOut3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Alter bad report card
+
+CLONE DEED "SwipeRight" "AlterReportCard1"
+    SET INSTRUCTIONS "Use red pen to turn that 'D' into a 'B'"
+END
+
+CLONE DEED "SwipeUp" "AlterReportCard2"
+    SET INSTRUCTIONS "Make your grade even better"
+END
+
+CLONE DEED "SwipeLeft" "AlterReportCard3"
+    SET INSTRUCTIONS "B+. Not too shabby"
+END
+
+DEF TASK "AlterReportCard"
+    SET NAME "Alter bad report card"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "1" "AlterReportCard1"
+    STEP "2" "AlterReportCard2"
+    STEP "3" "AlterReportCard3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Disrespect your elders
+
+CLONE DEED "SwipeDown" "DisrespectElders1"
+    SET INSTRUCTIONS "Sneer"
+END
+
+CLONE DEED "SwipeUp" "DisrespectElders2"
+    SET INSTRUCTIONS "Scoff"
+END
+
+CLONE DEED "Rotate360" "DisrespectElders3"
+    SET INSTRUCTIONS "Roll your eyes"
+END
+
+DEF TASK "DisrespectElders"
+    SET NAME "Disrespect your elders"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "1" "DisrespectElders1"
+    STEP "2" "DisrespectElders2"
+    STEP "3" "DisrespectElders3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Prank call teacher 
+
+CLONE DEED "DialogBase" "PrankCallTeacher1"
+    SET INSTRUCTIONS "Prank teacher"
+    SET CONTENT_ID "TEACHER_PRANK_CALL"
+END
+
+DEF TASK "PrankCallTeacher"
+    SET NAME "Prank call teacher"
+    SET CAPTAIN "YOUNG"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+    SET DURATION <2H>
+
+    STEP "1" "PrankCallTeacher1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "SelfishYoung"
+    ADDTASK "VideoGames"
+    ADDTASK "ShootSpitball"
+    ADDTASK "KickMeSign"
+    ADDTASK "LeaveMilkOut"
+    ADDTASK "AlterReportCard"
+    ADDTASK "DisrespectElders"
+    ADDTASK "PrankCallTeacher"
+END

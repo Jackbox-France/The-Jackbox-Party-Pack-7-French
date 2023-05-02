@@ -1,0 +1,334 @@
+DEF EPISODE "BossDinner"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Stresser pour impressionner"
+    SET DESCRIPTION "La <font color='#AF0000'>patronne vient dîner</font> et une promotion juteuse est en jeu. La famille doit être sur son 31 pour s'attirer les faveurs de la grande patronne."
+    SET SUCCESS_MESSAGE "Tous les rapports indiquent que la patronne a beaucoup apprécié sa soirée. Il pourrait y avoir une promotion au poste de Vice-président des Choses Importantes dans votre futur."
+    SET FAILURE_MESSAGE "Le bruit court que la patronne a eu une visite affreusement pénible. La nourriture était mauvaise, et la compagnie encore pire. Commencez à acheter des raquettes, parce que vous êtes sur le point d'être transféré en Sibérie."
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/longweekend/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/longweekend/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/longweekend/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "InviteBossDinner" <1 10:00>
+    SCHEDULE TASK "CleanBoss" <1 11:00>
+    SCHEDULE TASK "SearchDinnerware" <1 13:00>
+    SCHEDULE TASK "SetTableBoss" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "FindTieBoss" <2 10:00>
+    SCHEDULE TASK "BossBirdBook" <2 13:00>
+    SCHEDULE TASK "GatherBossMeal" <2 15:00>
+
+    
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "GreetBoss" <3 18:01>
+    SCHEDULE TASK "BossDinnerConvo" <3 19:00>
+    SCHEDULE TASK "SingSongBoss" <3 20:00>
+    SCHEDULE TASK "FlatterBoss" <3 20:30>
+    SCHEDULE TASK "BrewCoffeeBoss" <3 21:00>
+        
+END
+
+
+REM : ------------------------------
+
+
+REM : Invite boss to dinner
+CLONE DEED "PhoneCategory" "PhoneBoss"
+    SET INSTRUCTIONS "Appelez la boss (*GLOUPS*)"
+    SET CATEGORY "BOSS"
+END
+
+CLONE DEED "DialogID" "InviteBoss"
+    SET INSTRUCTIONS "Invitez votre boss à dîner"
+    SET CONTENT_ID "BOSS_INVITE"
+END
+
+DEF TASK "InviteBossDinner"
+    SET NAME "Inviter la patronne à dîner"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PhoneBoss"
+    STEP "2" "InviteBoss"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+
+REM : Clean the house for boss
+CLONE TASK "CleanHouse" "CleanBoss"
+    SET NAME "Nettoyer la maison pour l'arrivée de la patronne"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+
+REM : Search for china
+CLONE DEED "SearchID" "SearchDinnerware"
+    SET INSTRUCTIONS "Cherchez la bonne porcelaine"
+    SET CONTENT_ID "DINNERWARE"
+END
+
+DEF TASK "SearchDinnerware"
+    SET NAME "Chercher la bonne porcelaine"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchDinnerware"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : Set the table
+CLONE TASK "SetTable" "SetTableBoss"
+    SET NAME "Mettre la table pour un dîner chic"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+END
+
+REM : -------------------
+
+REM : Find tie
+CLONE TASK "FindTie" "FindTieBoss"
+    SET NAME "Choisir une cravate qui plaira à la patronne"
+    SET ASKER_NAME "Obtenez de l'aide pour trouver une cravate qui plaira à la patronne"
+    SET HELPER_NAME "Aidez <ASKER> à trouver une cravate qui plaira à la patronne"
+    SET CAPTAIN "EVERYONE"
+    SET PARTICIPANT "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+    CONSEQUENCE SUCCESS "TieaTieBoss"
+END
+
+
+REM : Tie boss tie
+CLONE TASK "TieaTie" "TieaTieBoss"
+    SET NAME "Nouer votre cravate"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "TEENS"
+    SET DURATION <8H>
+END
+
+
+REM : Learn birds
+CLONE DEED "SwipeUp" "DigOutBook"
+    SET INSTRUCTIONS "Déterrez le livre sur les oiseaux que la patronne a recommandé l'année dernière"
+END
+
+CLONE DEED "Hold2" "BlowDustBook"
+    SET INSTRUCTIONS "Soufflez la poussière"
+END
+
+CLONE DEED "SwipeBase" "FlipBirdBook"
+    SET INSTRUCTIONS "Feuilletez le livre"
+    SET DIRECTION "LEFT,LEFT,LEFT"
+END
+
+CLONE DEED "Hold3" "AbsorbBird"
+    SET INSTRUCTIONS "Essayez d'absorber des infos sur les oiseaux"
+END
+
+CLONE DEED "SwipeRight" "CloseBook"
+    SET INSTRUCTIONS "Vous voyez l'idée"
+END
+
+DEF TASK "BossBirdBook"
+    SET NAME "La patronne aime les oiseaux. Apprenez à connaître les oiseaux."
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DigOutBook"
+    STEP "2" "BlowDustBook"
+    STEP "3" "FlipBirdBook"
+    STEP "4" "AbsorbBird"
+    STEP "5" "CloseBook"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+
+REM : Boss Meal Gather
+CLONE DEED "GatherMeal" "BossMealIngredients"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour un dîner chic"
+    SET CATEGORY "DINNER"
+
+END
+
+DEF TASK "GatherBossMeal"
+    SET DURATION <8H>
+    SET NAME "Rassembler les ingrédients pour un dîner chic"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+    
+    STEP "1" "BossMealIngredients"
+
+    NEXT "1" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "CookBossMeal"
+END
+
+
+REM : Boss Meal Cook
+CLONE DEED "Tap3" "CramBossMeal"
+    SET INSTRUCTIONS "Mettez-le au réfrigérateur pour demain."
+END
+
+DEF TASK "CookBossMeal"
+    SET DURATION <8H>
+    SET NAME "Préparer un dîner raffiné pour votre patronne"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+
+    STEP "1" "Stir"
+    STEP "2" "CramBossMeal"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+
+REM : -------------------
+
+REM : Greet Boss
+
+CLONE DEED "Hold2" "CheckTeeth"
+    SET INSTRUCTIONS "Vérifiez vos dents dans le miroir avant de répondre à la porte"
+END
+
+CLONE DEED "SwipeRight" "OpenDoorBoss"
+    SET INSTRUCTIONS "Ouvrez la porte"
+END
+
+CLONE DEED "DialogID" "DialogBossDoor"
+    SET INSTRUCTIONS "Saluez la patronne"
+    SET CONTENT_ID "BOSS_GREET"
+END
+
+DEF TASK "GreetBoss"
+    SET NAME "Accueillir la patronne à la porte"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CheckTeeth"
+    STEP "2" "OpenDoorBoss"
+    STEP "3" "DialogBossDoor"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+REM : Dinner conversation
+
+CLONE DEED "DialogID" "BossDinnerConvo"
+    SET INSTRUCTIONS "Discutez avec la patronne"
+    SET CONTENT_ID "BOSS_DINNER"
+END
+
+DEF TASK "BossDinnerConvo"
+    SET NAME "Engager une conversation polie avec la patronne lors du dîner"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BossDinnerConvo"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Sing a song
+CLONE DEED "Tap3" "TapToes"
+    SET INSTRUCTIONS "Tapotez vos orteils"
+END
+
+CLONE DEED "SwipeLeft" "SashayLeft"
+    SET INSTRUCTIONS "Un pas à gauche"
+END
+
+CLONE DEED "SwipeRight" "SashayRight"
+    SET INSTRUCTIONS "Un pas à droite"
+END
+
+CLONE DEED "Hold2" "BigFinish"
+    SET INSTRUCTIONS "Tenez la pose pour le grand final"
+END
+
+DEF TASK "SingSongBoss"
+    SET NAME "Chantez une adorable petite chanson pour la patronne"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TapToes"
+    STEP "2" "SashayLeft"
+    STEP "3" "SashayRight"
+    STEP "4" "BigFinish"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Flatter boss
+
+CLONE DEED "DialogID" "FlatterBoss"
+    SET INSTRUCTIONS "Flattez la patronne"
+    SET CONTENT_ID "BOSS_FLATTER"
+END
+
+DEF TASK "FlatterBoss"
+    SET NAME "Flatter la patronne en prétendant vouloir des conseils de carrière"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FlatterBoss"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Brew coffee
+CLONE TASK "BrewCoffee" "BrewCoffeeBoss"
+    SET NAME "Préparer le café de la patronne après le repas"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "ADULTS"
+    SET DURATION <8H>
+END

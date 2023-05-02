@@ -1,0 +1,35 @@
+DEF EPISODE "SceneTest"
+    SET CHOOSABLE FALSE
+
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+
+    SCHEDULE TASK "ToastBagel" <1 8:00>
+    SCHEDULE TASK "SortRecyclables" <1 8:00>
+    SCHEDULE TASK "CatchSpider" <1 8:00>
+    SCHEDULE TASK "KiddiePool" <1 8:00>
+    SCHEDULE TASK "Birdhouse" <1 8:00>
+    SCHEDULE TASK "OhNoAnts2" <1 8:00>
+    SCHEDULE TASK "MicrowaveSoup" <1 8:00>
+    SCHEDULE TASK "NiceTablecloth" <1 8:00>
+    SCHEDULE TASK "Chimney1" <1 8:00>
+    SCHEDULE TASK "Chimney2" <1 8:00>
+    SCHEDULE TASK "SetTable" <1 8:00>
+    SCHEDULE TASK "ExpiredFood" <1 8:00>
+    SCHEDULE TASK "MopFloor" <1 8:00>
+    SCHEDULE TASK "LeftoversFridge" <1 8:00>
+    SCHEDULE TASK "PlasticSouvenirCups" <1 8:00>
+    SCHEDULE TASK "BirdWatch" <1 8:00>
+    SCHEDULE TASK "MakeIceCubes" <1 8:00>
+    SCHEDULE TASK "HosePatioFurniture" <1 8:00>
+    SCHEDULE TASK "CleanShowerCurtain" <1 8:00>
+    SCHEDULE TASK "PutAwayLaundry" <1 8:00>
+    SCHEDULE TASK "CleanFancyDishes" <1 8:00>
+    SCHEDULE TASK "HangFrame" <1 8:00>
+    SCHEDULE TASK "PutBooksAway" <1 8:00>
+    SCHEDULE TASK "PaintSpill" <1 8:00>
+    SCHEDULE TASK "FoldLaundry" <1 8:00>
+    SCHEDULE TASK "HavePicnic" <1 8:00>
+    SCHEDULE TASK "Mahjong1" <1 8:00>
+    SCHEDULE TASK "Mahjong2" <1 8:00>
+    SCHEDULE TASK "PlayShogi" <1 8:00>
+END

@@ -1,0 +1,13 @@
+MAIN(Witness): J'ai vu le fantôme! Il était terrifiant!
+-DO-> Qu'est-ce qu'il a fait?
+-LOOK-> À quoi ressemblait-il?
+-SINGLE-> Est-ce qu'il semblait célibataire? Je demande pour un ami.
+
+DO(Witness): Il marchait ! Lentement! Et il gémissait un peu!
+-SUCCESS-> Mon premier suspect est mon grand-père...
+
+LOOK(Witness): Des vêtements en lambeaux, une barbe hirsute, une peau pâle...
+-SUCCESS-> Premier indice : ce fantôme a besoin d'un relooking.
+
+SINGLE(Witness): Bizarrement, j'ai remarqué une alliance. Elle ressemblait exactement à celle que le vieux Oldman porte...
+-SUCCESS-> C'est une impasse totale.

@@ -1,0 +1,23 @@
+MAIN(Voisin): Hey mon pote, comment ça va ?
+-NORESPECT-> Les enfants n'ont plus de respect !
+-PLENTYRESPECT> Les enfants ont beaucoup de respect.
+
+NORESPECT(Voisin): Je t'ai entendu, hein.
+-NOTHINGHANDED-> Hmm, mais nos enfants travaillent bien.
+-EVERYTHINGHANDED-> Ces enfants ont tout sous la main !
+
+EVERYTHINGHANDED(Voisin): Whoa, tu as l'air enervé !
+-ANDONEMORETHING-> Et une dernière chose, mes enfants sont pourris gâtés. !
+-THATSIT-> Et une dernière chose... hmm... hmm
+
+PLENTYRESPECT(Voisin): Je suis content de l'entendre ?
+-FAILURE-> Je crois que je n'ai rien à dire sur mes enfants.
+
+NOTHINGHANDED(Voisin): Tu les as bien élevé... Je pense !
+-SUCCESS-> Je n'ai pas grand chose à dire sur mes enfants en y pensant.
+
+THATSIT(Voisin): Tu ne veux plus rien ajouter ?
+-SUCCESS-> Je pense que j'avais que deux choses à dire sur mes enfants.
+
+ANDONEMORETHING(Voisin): Wouha, tu devrais voir un psy !
+-SUCCESS-> Je ne t'ai pas demandé ton avis.

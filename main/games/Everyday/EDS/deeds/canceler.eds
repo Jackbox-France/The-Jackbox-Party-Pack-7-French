@@ -1,0 +1,4 @@
+DEF DEED "CancelerBase"
+    SET MECHANIC_ID "CANCELER"
+    SET INSTRUCTIONS "Cancel"
+END

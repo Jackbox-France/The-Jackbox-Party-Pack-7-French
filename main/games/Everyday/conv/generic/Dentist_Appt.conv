@@ -1,0 +1,17 @@
+MAIN(Dentiste): Quelle est la raison de votre visite ?
+-CLEAN-> J'ai besoin d'un nettoyage
+-PAIN-> J'ai mal à la bouche
+-HUM-> Mes dents font que de claquer
+-MISS-> Vous me manquez
+
+CLEAN(Dentiste): Parfait ! Rendez-vous lundi !
+-SUCCESS-> J'espère que je n'ai pas donné l'impression d'être désespéré.
+
+PAIN(Dentiste): Uh oh! Rendez-vous lundi
+-SUCCESS-> Merc..uaghgaAAAHH!!!!
+
+HUM(Dentiste): Oui, je peux les entendre.
+-SUCCESS-> On se voit mardi ! *clac* *clac* *clac*
+
+MISS(Dentiste): Ce... n'est pas une raison pour une visite.
+-FAILURE-> Dommage que mes dents soient si bien nettoyées. 

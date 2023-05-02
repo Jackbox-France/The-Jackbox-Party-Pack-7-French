@@ -1,0 +1,365 @@
+DEF EPISODE "HousePest"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Nuisible d'outre-mondes"
+    SET DESCRIPTION "Mauvaise nouvelle ! La famille a un petit problème de rongeurs. Et par petit rongeur, on veut dire <font color='#AF0000'>une chauve-souris démoniaque</font>. Il semble que la créature se soit échappée du monde souterrain et soit cachée quelque part dans la maison. Bonne chance !"
+    SET SUCCESS_MESSAGE "Comme une chauve-souris sortie d'Hadès... la chauve-souris retourne chez Hadès ! Nous vous pardonnons d'avoir utilisé un peu de magie pour chasser cette maudite bestiole. Mais à partir de maintenant, nous vous encourageons à vous occuper des nuisibles comme les humains le font normalement : en lâchant une grosse enclume sur eux."
+    SET FAILURE_MESSAGE "Il semble que cette vile vermine ailée vive maintenant avec vous. Elle s'enfouira profondément dans vos murs, diminuant la valeur de revente de votre maison, hantant vos cauchemars et murmurant des insultes très personnelles lorsque vous êtes seul."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "BatSnack" <1 8:00>
+    SCHEDULE TASK "BatVacuum" <1 10:00>
+    SCHEDULE TASK "SearchBat" <1 13:00>
+         
+    REM : ROUND 2 STORY TASKS    
+    SCHEDULE TASK "LayBatTrap" <2 8:00>
+    SCHEDULE TASK "DriveBuyBatTraps" <2 13:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "WatchBatTrap" <3 8:00>
+    SCHEDULE TASK "CallBatExterminator" <3 10:00>
+    SCHEDULE TASK "TalkBatExterminator" <3 13:00>
+    SCHEDULE TASK "GatherBat" <3 15:00>
+    SCHEDULE TASK "ChantSpell" <3 18:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Get a morning snack
+CLONE DEED "SwipeUp" "BatSnack1"
+    SET INSTRUCTIONS "Prenez des chips de plantain frites"
+END
+
+CLONE DEED "Nothing3" "BatSnack2"
+    SET INSTRUCTIONS "Il y a de petites marques de morsure dans CHAQUE chips"
+END
+
+CLONE DEED "SwipeDown" "BatSnack3"
+    SET INSTRUCTIONS "Retenez l'envie de vomir"
+END
+
+DEF TASK "BatSnack"
+    SET NAME "Prendre un en-cas matinal"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BatSnack1"
+    STEP "2" "BatSnack2"
+    STEP "3" "BatSnack3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Try to vacuum
+CLONE DEED "Tap1" "BatVacuum1"
+    SET INSTRUCTIONS "Allumez l'aspirateur"
+END
+
+CLONE DEED "QuickTap5" "BatVacuum2"
+    SET INSTRUCTIONS "LA CHAUVE-SOURIS DÉTESTE L'ASPIRATEUR! LA CHAUVE-SOURIS DÉTESTE L'ASPIRATEUR!"
+END
+
+CLONE DEED "Tap1" "BatVacuum3"
+    SET INSTRUCTIONS "Éteignez l'aspirateur"
+END
+
+DEF TASK "BatVacuum"
+    SET NAME "Try to vacuum"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BatVacuum1"
+    STEP "2" "BatVacuum2"
+    STEP "3" "BatVacuum3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Search house for bat
+CLONE DEED "QuickTap4" "SearchBat1"
+    SET INSTRUCTIONS "Marchez sur la pointe des pieds dans la maison"
+END
+
+CLONE DEED "Rotate180" "SearchBat2"
+    SET INSTRUCTIONS "Regardez autour de vous..."
+END
+
+CLONE DEED "Nothing3" "SearchBat3"
+    SET INSTRUCTIONS "...elle est juste derrière-vous"
+END
+
+CLONE DEED "QuickTap5" "SearchBat4"
+    SET INSTRUCTIONS "COURREZ!!!"
+END
+
+DEF TASK "SearchBat"
+    SET NAME "Chercher la maison pour la chauve-souris"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchBat1"
+    STEP "2" "SearchBat2"
+    STEP "3" "SearchBat3"
+    STEP "4" "SearchBat4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : ------------------------------------
+
+REM : Lay out bait for bat
+CLONE DEED "Tap3" "LayBatTrap1"
+    SET INSTRUCTIONS "Disposez des plantains frais frits"
+END
+
+CLONE DEED "Rotate90" "LayBatTrap2"
+    SET INSTRUCTIONS "Attrapez une couverture"
+END
+
+CLONE DEED "Hold5" "LayBatTrap3"
+    SET INSTRUCTIONS "Jouez le jeu de l'attente"
+END
+
+DEF TASK "LayBatTrap"
+    SET NAME "Disposer des appâts pour la chauve-souris"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LayBatTrap1"
+    STEP "2" "LayBatTrap2"
+    STEP "3" "LayBatTrap3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+    
+    CONSEQUENCE SUCCESS "CatchBatBlanket"
+END
+
+REM : Try to catch bat in blanket
+CLONE DEED "Nothing5" "CatchBatBlanket1"
+    SET INSTRUCTIONS "Attendez que la chauve-souris prenne l'appât"
+END
+
+CLONE DEED "SwipeUp" "CatchBatBlanket2"
+    SET INSTRUCTIONS "Sautez-lui dessus!"
+END
+
+CLONE DEED "ScrubMedium" "CatchBatBlanket3"
+    SET INSTRUCTIONS "Tenez-la dans la couverture!"
+END
+
+CLONE DEED "Nothing3" "CatchBatBlanket4"
+    SET INSTRUCTIONS "La chauve-souris CRACHE DU FEU apparemment ! Elle est partie."
+END
+
+DEF TASK "CatchBatBlanket"
+    SET NAME "Essayer d'attraper la chauve-souris dans la couverture"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CatchBatBlanket1"
+    STEP "2" "CatchBatBlanket2"
+    STEP "3" "CatchBatBlanket3"
+    STEP "4" "CatchBatBlanket4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Buy real bat traps
+CLONE DEED "TravelID" "DriveBuyBatTraps"
+    SET INSTRUCTIONS "Achetez des pièges à chauves-souris professionnels"
+    SET CONTENT_ID "CAVE_O’_SAVI"
+END
+
+DEF TASK "DriveBuyBatTraps"
+    SET NAME "Acheter des pièges à chauves-souris professionnels"
+    SET ASKER_NAME "Faites-vous conduire pour acheter des pièges à chauves-souris professionnels"
+    SET HELPER_NAME "Conduisez  <ASKER> pour acheter des pièges à chauves-souris professionnels"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DriveBuyBatTraps"
+
+    NEXT "1" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "AssembleBatTrap"
+END
+
+REM : Assemble complicated bat trap
+CLONE DEED "Instructions4" "AssembleBatTrap"
+    SET INSTRUCTIONS "Assemblez un piège à chauve-souris compliqué"
+
+    SET MECHANIC_0 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_0 "Retirez les pièces de la boîte"
+    SET MECHANIC_1 "TAP_3"
+    SET INSTRUCTIONS_1 "Assemblez les tiges A, B et C"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Enroulez-le"
+    SET MECHANIC_3 "SWIPE_DOWN"
+    SET INSTRUCTIONS_3 "Mettez le piège en place"
+END
+
+DEF TASK "AssembleBatTrap"
+    SET NAME "Assembler un piège à chauve-souris compliqué"
+    SET ASKER_NAME "Demandez de l'aide pour assembler un piège à chauve-souris compliqué"
+    SET HELPER_NAME "Aidez <ASKER> à assembler un piège à chauve-souris compliqué"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "AssembleBatTrap"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : -------------------------------------------------------------
+
+REM : Watch bat trap in action
+CLONE DEED "Hold3" "WatchBatTrap1"
+    SET INSTRUCTIONS "Regardez la chauve-souris atterrir sur le piège"
+END
+
+CLONE DEED "Tap1" "WatchBatTrap2"
+    SET INSTRUCTIONS "Appuyez sur le bouton"
+END
+
+CLONE DEED "Nothing3" "WatchBatTrap3"
+    SET INSTRUCTIONS "Regardez la chauve-souris SE TRANSFORMER EN BRUME et s'échapper"
+END
+
+CLONE DEED "ScrubShort" "WatchBatTrap4"
+    SET INSTRUCTIONS "Écrasez le piège inutile avec le pied"
+END
+
+DEF TASK "WatchBatTrap"
+    SET NAME "Regardez le piège à chauve-souris en action"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "WatchBatTrap1"
+    STEP "2" "WatchBatTrap2"
+    STEP "3" "WatchBatTrap3"
+    STEP "4" "WatchBatTrap4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Call exterminator/exorcist
+CLONE DEED "PhoneID" "CallBatExterminator"
+    SET INSTRUCTIONS "Appelez Rodent Capture & Rapture"
+    SET CONTENT_ID "RODENT_RAP"
+END
+
+DEF TASK "CallBatExterminator"
+    SET NAME "Appelez un exterminateur/exorciste"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallBatExterminator"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Explain 'bat' problem to paranormal exterminator
+CLONE DEED "DialogID" "TalkBatExterminator"
+    SET INSTRUCTIONS "Expliquez le problème de 'chauve-souris'"
+    SET CONTENT_ID "HOUSEPEST_BAT"
+END
+
+DEF TASK "TalkBatExterminator"
+    SET NAME "Expliquer à l'exterminateur paranormal le problème de 'chauve-souris' 'bat'"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TalkBatExterminator"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Create anti-bat potion
+CLONE DEED "GatherID" "GatherBat"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour la concoction anti-chauve-souris-démon"
+    SET CONTENT_ID "BAT_WARD"
+END
+
+DEF TASK "GatherBat"
+    SET NAME "Rassembler les ingrédients pour la concoction anti-chauve-souris-démon"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GatherBat"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Chant anti-demon-bat spell
+CLONE DEED "Nothing4" "ChantSpell"
+    SET INSTRUCTIONS "Tout le monde chante 'DEHORS, CHAUVE-SOURIS DÉMON !'"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "ChantSpell"
+    SET NAME "Chanter un sort anti-chauve-souris-démon"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ChantSpell"
+
+    NEXT "1" SUCCESS FAILURE
+END

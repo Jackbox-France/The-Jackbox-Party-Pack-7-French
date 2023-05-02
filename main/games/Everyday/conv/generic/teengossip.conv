@@ -1,0 +1,54 @@
+MAIN(Carl): Allons-y.
+-ETHEL-> Qu'avez-vous sur Ethel ?
+-MITCH-> Des potins sur Mictch ?
+-FRUMP-> Que fais Mr. Frump ?
+
+ETHEL(Carl): OH MON DIEU, mon préféré ! Vous savez que son père connait Al l'étrange ?
+-ETHEL2-> Oui...
+-ETHEL2-> Heu pas vraiment...
+
+ETHEL2(Carl): Et bien c'est un MENSONGE. Ils sont allés dans le même lycée mais avec plusieurs années d'intervale.
+-ETHEL3-> SCANDALE !
+-ETHEL3-> C'est tout ce que vous avait ?
+-ETHEL3-> J'ai recontré Mad Mikkelsens.
+
+ETHEL3(Carl): Et son incisive inférieure gauche ? Totalement fausse. Elle l'a perdue dans un accident de water-polo quand elle avait 15 ans et un dentiste l'a remplacée.
+-END-> C'EST. SUPER.
+-END-> Ce n'est pas... commun...
+-END-> Mads était un amour. Comment on peut l'imaginer ?
+
+MITCH(Carl): Mitch ? On entend dire qu'il est sur une banane.
+-MITCH2-> Dis moi !
+-MITCH2-> Attends, quoi ?
+
+MITCH2(Carl): Pas d'autre nourriture que des bananes. Et pas de liquide sauf le jus de poulet.
+-MITCH3-> Il faut que j'essaie ça.
+-MITCH3-> Et ça marche, Mitch est trop beau
+-MITCH3-> C'est degoutant.
+
+MITCH3(Carl): Bien sûr, il ne s'y tiendra jamais. C'est comme la mode de la gélatine et du jus de palourde de l'année dernière.
+-END-> C'est vrai.
+-END-> Hey, Mitch a besoin de notre aide maintenant
+-END-> Gélatine et jus de palourdes. Avons-nous jamais été aussi jeunes ?
+
+FRUMP(Carl): Tu vas adorer ça. Hier, dans la classe de Frump, Bobby Qualidee a lâché toutes les grenouilles ! Elles sautaient partout comme des folles et Frump était tellement en colère qu'il a commencé à faire ce cri aigu qu'il fait tant !
+-FRUMP2-> LA FARCE DU SIÈCLE
+-FRUMP2-> Bobby est si drôle ! Il devrait sérieusement être sur SNL.
+-FRUMP2-> Attendez... les grenouilles de dissection ?
+
+FRUMP2(Carl): Tout le monde savait que Bobby l'a fait mais Frump ne l'a pas vu. Alors il courait partout en demandant à tout le monde d'avouer. J'ai presque perdu la tête !
+-FRUMP3-> Je ne peux pas croire que j'ai manqué ça !
+-FRUMP3-> Bobby et moi devrions sortir ensemble, non ? Est-ce que c'est fou ?
+-FRUMP32-> Les grenouilles de la dissection auraient été mortes, non ?
+
+FRUMP3(Carl): Il a essayé de coller toute la classe jusqu'à ce que le vice principal dise qu'il ne pouvait pas. Il avait l'air si triste...
+-END-> Cela s'est terminé sur une note mélancolique mais je suis quand même ravi.
+-END-> Je dois inviter Bobby à danser ? Je rigole bien sûr, hahahaha
+-END-> Est ce que Bobby est un nécromancié ?
+
+
+END(Carl): Bref, voilà les dernières nouvelles.
+-SUCCESS-> C'est assez de ragots pour le moment. Au revoir Carl.
+-ETHEL-> Revenons à Ethel.
+-MITCH-> Revenons à Mitch.
+-FRUMP-> Revenons à Frump.

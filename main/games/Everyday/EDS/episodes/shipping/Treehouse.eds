@@ -1,0 +1,371 @@
+DEF EPISODE "Treehouse"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Le directeur de la branche"
+    SET DESCRIPTION "La famille a décidé de <font color='#AF0000'>construire une cabane dans les arbres</font> dans le jardin. Pourront-ils construire une demeure arboricole sans déraciner leur routine habituelle ?"
+    SET SUCCESS_MESSAGE "Eh bien, il semble que le marché du logement est définitivement EN HAUSSE ! Parce que vous avez construit une maison en hauteur. Vous comprenez ? En tout cas, c'est une très belle addition à votre jardin."
+    SET FAILURE_MESSAGE "Vos voisins ont signalé un grand fracas au milieu de la nuit. On dirait que votre nouveau projet est comme un arbre qui a été tronçonné. À l'avenir, vous devriez peut-être utiliser des matériaux de construction plus solides que le ruban adhésif en toile et fournir un minimum d'efforts."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "DriveHardware" <1 8:00>
+    SCHEDULE TASK "TrimTreeBranches" <1 10:00>
+    SCHEDULE TASK "RaisePanel" <1 13:00>
+    SCHEDULE TASK "SawWood" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "HammerBoards" <2 8:00>
+    SCHEDULE TASK "PaintTreehouse" <2 10:00>
+    SCHEDULE TASK "SpyTree" <2 13:00>
+    SCHEDULE TASK "ZoningBoard" <2 15:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "MakeOutBooTree" <3 8:00>
+    SCHEDULE TASK "MakeOutPartnerTree" <3 9:00>
+    SCHEDULE TASK "TreeCracks" <3 13:00>
+    SCHEDULE TASK "DuctTapeTree" <3 15:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Drive to hardware store
+CLONE DEED "TravelID" "DriveHardware"
+    SET INSTRUCTIONS "Conduisez à la quincaillerie"
+    SET CONTENT_ID "WOOD_LUMBER"
+END
+
+DEF TASK "DriveHardware"
+    SET NAME "Conduire à la quincaillerie"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DriveHardware"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Trim tree branches
+CLONE DEED "Tap3" "TrimTreeBranches1"
+    SET INSTRUCTIONS "Grimpez à l'échelle"
+END
+
+CLONE DEED "SwipeBase" "TrimTreeBranches2"
+    SET INSTRUCTIONS "Taillez les branches"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+CLONE DEED "Hold5" "TrimTreeBranches3"
+    SET INSTRUCTIONS "Ne tombez pas de l'échelle"
+END
+
+DEF TASK "TrimTreeBranches"
+    SET NAME "Tailler des branches d'arbre"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TrimTreeBranches1"
+    STEP "2" "TrimTreeBranches2"
+    STEP "3" "TrimTreeBranches3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Raise treehouse side panel together
+CLONE DEED "TapAll" "RaisePanel"
+    SET INSTRUCTIONS "Oh hisse!!!"
+END
+
+DEF TASK "RaisePanel"
+    SET NAME "Relever les côtés de la cabane ensemble"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "RaisePanel"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Saw wood for treehouse
+CLONE DEED "Instructions4" "SawWood"
+    SET INSTRUCTIONS "Sciez du bois pour la cabane"
+
+    SET MECHANIC_0 "SWIPE_RIGHT"
+    SET INSTRUCTIONS_0 "Sciez du bois"
+    SET MECHANIC_1 "SWIPE_LEFT"
+    SET INSTRUCTIONS_1 "Retirez la scie"
+    SET MECHANIC_2 "SWIPE_LEFT"
+    SET INSTRUCTIONS_2 "C'est coincé, tirez fort"
+    SET MECHANIC_3 "TAP"
+    SET INSTRUCTIONS_3 "Cassez-la sur votre genou"
+END
+
+DEF TASK "SawWood"
+    SET NAME "Scier du bois pour la cabane"
+    SET ASKER_NAME "Demandez de l'aide pour scier du bois pour la cabane"
+    SET HELPER_NAME "Aidez <ASKER> à scier du bois pour la cabane"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SawWood"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ---------------------------------------------------
+
+REM : Hammer boards
+CLONE DEED "Tap2" "HammerBoards1"
+    SET INSTRUCTIONS "Martelez la planche"
+END
+
+CLONE DEED "QuickTap3" "HammerBoards2"
+    SET INSTRUCTIONS "Plus vite!"
+END
+
+CLONE DEED "Tap1" "HammerBoards3"
+    SET INSTRUCTIONS "Et une autre pour progresser"
+END
+
+DEF TASK "HammerBoards"
+    SET NAME "Marteler les planches"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "HammerBoards1"
+    STEP "2" "HammerBoards2"
+    STEP "3" "HammerBoards3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Paint treehouse
+CLONE DEED "Tap3" "PaintTreehouse1"
+    SET INSTRUCTIONS "Rassemblez les pots de peinture"
+END
+
+CLONE DEED "SwipeUp" "PaintTreehouse2"
+    SET INSTRUCTIONS "Éclaboussez-les partout"
+END
+
+CLONE DEED "ScrubMedium" "PaintTreehouse3"
+    SET INSTRUCTIONS "Les mains font de bons pinceaux"
+END
+
+DEF TASK "PaintTreehouse"
+    SET NAME "Peindre la cabane"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PaintTreehouse1"
+    STEP "2" "PaintTreehouse2"
+    STEP "3" "PaintTreehouse3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Spy on neighbors from treehouse
+CLONE DEED "SwipeUp" "SpyTree1"
+    SET INSTRUCTIONS "Regardez par la fenêtre de la cabane"
+END
+
+CLONE DEED "Nothing3" "SpyTree2"
+    SET INSTRUCTIONS "Regardez votre voisin chanter en faisant du jardinage"
+END
+
+CLONE DEED "Hold5" "SpyTree3"
+    SET INSTRUCTIONS "Essayez de ne pas chanter en même temps"
+END
+
+DEF TASK "SpyTree"
+    SET NAME "Espionner les voisins de la cabane"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SpyTree1"
+    STEP "2" "SpyTree2"
+    STEP "3" "SpyTree3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Lie to zoning board
+CLONE DEED "DialogID" "ZoningBoard"
+    SET INSTRUCTIONS "Mentez au comité de zonage"
+    SET CONTENT_ID "TREEHOUSE_ZONING"
+END
+
+DEF TASK "ZoningBoard"
+    SET NAME "Mentir au comité de zonage"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ZoningBoard"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : --------------------------------
+
+REM : Make out with boo in treehouse
+CLONE DEED "Tap4" "MakeOutBooTree1"
+    SET INSTRUCTIONS "Montez l'échelle"
+END
+
+CLONE DEED "Hold3" "MakeOutBooTree2"
+    SET INSTRUCTIONS "Prenez leur main"
+END
+
+CLONE DEED "ScrubMedium" "MakeOutBooTree3"
+    SET INSTRUCTIONS "Coller vos visages l'un contre l'autre... C'est un baiser, non?"
+END
+
+DEF TASK "MakeOutBooTree"
+    SET NAME "Embrasser son/sa petit(e) ami(e) dans la cabane"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakeOutBooTree1"
+    STEP "2" "MakeOutBooTree2"
+    STEP "3" "MakeOutBooTree3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Make out with partner in treehouse
+CLONE DEED "Tap4" "MakeOutPartnerTree1"
+    SET INSTRUCTIONS "Montez l'échelle"
+END
+
+CLONE DEED "Hold3" "MakeOutPartnerTree2"
+    SET INSTRUCTIONS "Prenez leur main"
+END
+
+CLONE DEED "Nothing5" "MakeOutPartnerTree3"
+    SET INSTRUCTIONS "Réalisez que vous avez besoin de vous reposer après avoir monté à l'échelle"
+END
+
+DEF TASK "MakeOutPartnerTree"
+    SET NAME "Embrasser son/sa partenaire dans la cabane"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakeOutPartnerTree1"
+    STEP "2" "MakeOutPartnerTree2"
+    STEP "3" "MakeOutPartnerTree3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Inspect cracks in treehouse
+CLONE DEED "Hold5" "TreeCracks1"
+    SET INSTRUCTIONS "Examinez la planche fissurée"
+END
+
+CLONE DEED "Tap3" "TreeCracks2"
+    SET INSTRUCTIONS "Tapez dessus plusieurs fois"
+END
+
+CLONE DEED "Nothing2" "TreeCracks3"
+    SET INSTRUCTIONS "Ça sent pas bon..."
+END
+
+DEF TASK "TreeCracks"
+    SET NAME "Inspecter les fissures de la cabane"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TreeCracks1"
+    STEP "2" "TreeCracks2"
+    STEP "3" "TreeCracks3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Duct tape treehouse damage
+CLONE DEED "Rotate270" "DuctTapeTree1"
+    SET INSTRUCTIONS "Déroulez le ruban adhésif"
+END
+
+CLONE DEED "Hold2" "DuctTapeTree2"
+    SET INSTRUCTIONS "Collez le ruban sur le sol qui s'effondre"
+END
+
+CLONE DEED "ScrubLong" "DuctTapeTree3"
+    SET INSTRUCTIONS "Assurez-vous que ça colle vraiment"
+END
+
+CLONE DEED "Tap2" "DuctTapeTree4"
+    SET INSTRUCTIONS "Marchez prudemment sur le sol"
+END
+
+DEF TASK "DuctTapeTree"
+    SET NAME "Réparer les fissures de la cabane"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DuctTapeTree1"
+    STEP "2" "DuctTapeTree2"
+    STEP "3" "DuctTapeTree3"
+    STEP "4" "DuctTapeTree4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END

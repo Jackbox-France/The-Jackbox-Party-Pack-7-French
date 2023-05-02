@@ -1,0 +1,28 @@
+MAIN(Commercial): Êtes-vous intéressé par une assurance pour votre lézard ?
+-NOTHANKS-> J'ai déjà une assurance pour mon iguana
+-GOON-> Ca semble intéressant, dites m'en plus
+-MARK-> Bien entendu ! Je dois protéger mon petit lézard
+-DONOTCALL-> Jamais !
+
+
+NOTHANKS(Commercial): Votre politesse m'émeut. Je raccroche. 
+-SUCCESS-> Mentir est, encore une fois, la bonne réponse
+
+
+GOON(Commercial): Oh non, je suis jamais allé jusque là dans mon scam...uh...uh... vous devriez prendre MON argent !
+-SUCCESS-> Je suis le sorcier des lézard !
+
+
+MARK(Commercial): Excellent ! Commençons avec un paiement de 100,000€ pour votre petit animal...
+-FAILURE-> Je sais pas si c'était une bonne idée...
+
+
+DONOTCALL(Commercial): Oh, vous ne vouliez pas dire ça bien entendu ?
+-SUCCESS-> Je vais raccrocher tellement fort que vote grand-mère va le sentir
+-TRYAGAIN-> Ok bon... 
+
+
+TRYAGAIN(Commercial): Êtes-vous intéressé par une assurance pour votre lézard ?
+-NOTHANKS-> J'ai déjà une assurance pour mon iguana
+-GOON-> Ca semble intéressant, dites m'en plus
+-MARK-> Bien entendu ! Je dois protéger mon petit lézard

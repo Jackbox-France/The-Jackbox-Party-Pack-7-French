@@ -1,0 +1,17 @@
+MAIN(Riley): C'est la fin du monde?
+-LOVE->Oui, je t'aime. 
+-BREAK-> Ouaip, séparons-nous
+-BYE-> Uh huh, bye-bye
+-RECORD-> Je peux reprendre mes disques?
+
+LOVE(Riley): Si nous survivons, marrions-nous!
+-SUCCESS->Oh oh
+
+BREAK(Riley): C'est CE genre de jour!
+-SUCCESS-> Ton sarcasme me manquera
+
+BYE(Riley): Bye-bye Chouchou
+-SUCCESS-> On a géré ça avec beaucoup de maturité
+
+RECORD(Riley): Jamais!
+-SUCCESS-> Pourquoi est-ce que j'ai même des disques!

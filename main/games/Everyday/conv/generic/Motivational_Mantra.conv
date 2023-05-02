@@ -1,0 +1,16 @@
+MAIN(Cassette motivationnel): Vous êtes magnifique, autant à l'extérieur qu'à l'intérieur.
+-REASSURE-> Je suis magnifique, à l'intérieur et à l'extérieur.
+-DOUBT-> Je suis un déchet.
+
+DOUBT(Cassette motivationnel):*s'éteint*
+-FAILURE-> Et ma place est avec les déchets.
+
+REASSURE(Cassette motivationnel): Vous pouvez tout accomplir.
+-DESPAIR-> Ma vie est un désordre.
+-BELIEVEINYOURSELF-> Je peux tout accomplir.
+
+DESPAIR(Cassette motivationnel):*s'éteint*
+-FAILURE-> Je suis condamné ! Condamné !
+
+BELIEVEINYOURSELF(Cassette motivationnel): Vous allez survivre à cette journée. Tout va bien.
+-SUCCESS-> Je vais survivre à cette journée. Tout va bien.

@@ -1,0 +1,351 @@
+DEF EPISODE "Money"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Emploi pénible"
+    SET DESCRIPTION "<font color='#AF0000'>L'argent</font> fait tourner le monde, et la famille en veut plus. Cette semaine, tout le monde fait tout ce qu'il peut pour trouver un emploi, obtenir une augmentation, ou avoir de la chance avec de l'argent."
+    SET SUCCESS_MESSAGE "Nous avons été heureux d'apprendre que vous êtes passé à une tranche d'imposition supérieure. La sécurité financière est la clé de la survie dans le monde des humains. Mais rappelez-vous, l'argent ne peut pas acheter le bonheur. Je plaisante. Il le peut totalement !"
+    SET FAILURE_MESSAGE "Il n'y a pas que l'argent dans la vie, mais il faut de l'argent pour l'obtenir. Si vous ne pouvez pas ramener le bacon à la maison, vous devrez compter sur le concept abstrait de l'amour familial pour vous combler. Et nous savons tous à quel point ce sera décevant."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "RaiseTips" <1 8:00>
+    SCHEDULE TASK "FoodDelivery1" <1 10:00>
+    SCHEDULE TASK "SearchLooseChange" <1 11:00>
+    SCHEDULE TASK "MakePresentationRaise" <1 13:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "SetUpLemonade" <2 8:00>
+    SCHEDULE TASK "FoodDelivery2" <2 10:00>
+    SCHEDULE TASK "BlowOffWork" <2 13:00>
+    SCHEDULE TASK "GetFiredTeen" <2 20:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "AskForRaise" <3 8:00>
+    SCHEDULE TASK "TeenHideFired" <3 10:00>
+    SCHEDULE TASK "LemonadeCustomer" <3 13:00>
+    SCHEDULE TASK "OgleCars" <3 15:00>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Seaerch for tips on asking for a raise
+CLONE DEED "Tap5" "RaiseTips1"
+    SET INSTRUCTIONS "Entrez un terme de recherche soigneusement formulé"
+END
+
+CLONE DEED "Tap3" "RaiseTips2"
+    SET INSTRUCTIONS "Fermez les fenêtres publicitaires"
+END
+
+CLONE DEED "Nothing3" "RaiseTips3"
+    SET INSTRUCTIONS "Soez distrait par une vidéo d'écureuil"
+END
+
+CLONE DEED "SwipeBase" "RaiseTips4"
+    SET INSTRUCTIONS "Abandonnez et passez en revue des photos d'écureuils mignons"
+    SET DIRECTION "LEFT,LEFT,LEFT"
+END
+
+DEF TASK "RaiseTips"
+    SET NAME "Rechercher des conseils pour demander une augmentation"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "RaiseTips1"
+    STEP "2" "RaiseTips2"
+    STEP "3" "RaiseTips3"
+    STEP "4" "RaiseTips4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Go on food delivery
+CLONE DEED "TravelCategory" "FoodDelivery1"
+    SET INSTRUCTIONS "Livrez des commandes alimentaires"
+    SET CATEGORY "RESIDENCE"
+END
+
+DEF TASK "FoodDelivery1"
+    SET NAME "Livrer de la nourriture"
+    SET ASKER_NAME "Accompagnez un adolescent dans son travail de livraison de nourriture"
+    SET HELPER_NAME "Emmenez <ASKER> avec vous pour votre travail de livraison de nourriture"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FoodDelivery1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Search hosue for loose change
+CLONE DEED "SearchID" "SearchLooseChange"
+    SET INSTRUCTIONS "Cherchez de la petite monnaie"
+    SET CONTENT_ID "LOOSECHANGE"
+END
+
+DEF TASK "SearchLooseChange"
+    SET NAME "Chercher de la petite monnaie"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchLooseChange"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make a little presentation on why you deserve a raise
+CLONE DEED "Instructions4" "MakePresentationRaise"
+    SET INSTRUCTIONS "Faites une présentation sur pourquoi vous méritez une augmentation"
+
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Ajoutez une diapositive soulignant vos réalisations passées"
+    SET MECHANIC_1 "TAP_HOLD"
+    SET INSTRUCTIONS_1 "Générez un diagramme circulaire de vos qualités les plus précieuses"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Ajoutez une musique inspirante en fond"
+    SET MECHANIC_3 "TAP_3"
+    SET INSTRUCTIONS_3 "Introduisez enfin un tas d'animations folles"
+END
+
+DEF TASK "MakePresentationRaise"
+    SET NAME "Faire une petite présentation sur pourquoi vous méritez une augmentation"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET ASKER_NAME "Aidez votre parent à faire une petite présentation sur les raisons pour lesquelles il mérite une augmentation"
+    SET HELPER_NAME "Faites une petite présentation sur les raisons pour lesquelles vous méritez une augmentation avec l'aide de <ASKER>"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakePresentationRaise"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ----------------------------------------------------
+
+REM : Go on another food delivery
+CLONE DEED "TravelCategory" "FoodDelivery2"
+    SET INSTRUCTIONS "Livrez des commandes alimentaires"
+    SET CATEGORY "RESIDENCE"
+END
+
+DEF TASK "FoodDelivery2"
+    SET NAME "Faire une autre livraison de nourriture"
+    SET ASKER_NAME "Accompagnez un adolescent pour une autre livraison de nourriture"
+    SET HELPER_NAME "Emmenez <ASKER> pour une autre livraison de nourriture"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FoodDelivery2"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Blow off work to go to the movies
+CLONE DEED "TravelCategory" "BlowOffWork"
+    SET INSTRUCTIONS "Allons au cinéma !"
+    SET CATEGORY "THEATER"
+END
+
+DEF TASK "BlowOffWork"
+    SET NAME "Laisser tomber le travail pour aller au cinéma"
+    SET ASKER_NAME "Suivez un adolescent qui quitte son travail pour aller au cinéma"
+    SET HELPER_NAME "Laissez tomber le travail et emmenez <ASKER> au cinéma"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BlowOffWork"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Set up a lemonade stand
+CLONE DEED "Tap3" "SetUpLemonade1"
+    SET INSTRUCTIONS "Enfoncez des clous"
+END
+
+CLONE DEED "SwipeBase" "SetUpLemonade2"
+    SET INSTRUCTIONS "Accrochez l'enseigne"
+    SET DIRECTION "LEFT,RIGHT"
+END
+
+CLONE DEED "Hold3" "SetUpLemonade3"
+    SET INSTRUCTIONS "Versez de la limonade"
+END
+
+CLONE DEED "Nothing3" "SetUpLemonade4"
+    SET INSTRUCTIONS "Ça marche toujours à la télé"
+END
+
+DEF TASK "SetUpLemonade"
+    SET NAME "Monter un stand de limonade"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SetUpLemonade1"
+    STEP "2" "SetUpLemonade2"
+    STEP "3" "SetUpLemonade3"
+    STEP "4" "SetUpLemonade4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Get fired for blowing off work
+CLONE DEED "DialogID" "GetFiredTeen"
+    SET INSTRUCTIONS "Parlez à votre boss"
+    SET CONTENT_ID "MONEY_FIRED"
+END
+
+DEF TASK "GetFiredTeen"
+    SET NAME "Le boss est au téléphone..."
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GetFiredTeen"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ---------------------------------------------------
+
+REM : Ask the boss for a raise
+CLONE DEED "DialogID" "AskForRaise"
+    SET INSTRUCTIONS "C'est votre moment!"
+    SET CONTENT_ID "MONEY_RAISE"
+END
+
+DEF TASK "AskForRaise"
+    SET NAME "Demander une augmentation au patron"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "AskForRaise"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Go driving anyway so family does't know you got fired
+CLONE DEED "TravelCategory" "TeenHideFired"
+    SET INSTRUCTIONS "Allons faire du shopping"
+    SET CATEGORY "SHOPPING"
+END
+
+DEF TASK "TeenHideFired"
+    SET NAME "Conduire hors de la maison pour que la famille ne sache pas que vous avez été viré"
+    SET ASKER_NAME "Conduisez avec un adolescent pour que la famille ne sache pas qu'il a été viré"
+    SET HELPER_NAME "Conduisez avec <ASKER> pour que la famille ne sache pas que vous avez été viré"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TeenHideFired"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Drive to car dealership and ogle car you'll buy with raise money
+CLONE DEED "TravelCategory" "OgleCars"
+    SET INSTRUCTIONS "Allez reluquer la nouvelle voiture"
+    SET CATEGORY "CAR"
+END
+
+DEF TASK "OgleCars"
+    SET NAME "Aller reluquer la nouvelle voiture que vous achèterez avec l'argent collecté"
+    SET ASKER_NAME "Allez avec un adulte pour reluquer la voiture chez le concessionnaire"
+    SET HELPER_NAME "Prenez <ASKER> pour reluquer la voiture que vous achèterez avec l'argent collecté"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "OgleCars"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Serve your first lemonade customer
+CLONE DEED "Tap1" "LemonadeCustomer1"
+    SET INSTRUCTIONS "Commencez par une salutation amicale"
+END
+
+CLONE DEED "Hold5" "LemonadeCustomer2"
+    SET INSTRUCTIONS "Versez un grand verre de limonade"
+END
+
+CLONE DEED "SwipeUp" "LemonadeCustomer3"
+    SET INSTRUCTIONS "Tendez la main pour le paiement"
+END
+
+CLONE DEED "Hold3" "LemonadeCustomer4"
+    SET INSTRUCTIONS "Attendez une minute... examinez cette pièce..."
+END
+
+CLONE DEED "Nothing3" "LemonadeCustomer5"
+    SET INSTRUCTIONS "C'est un nickel rare à tête de buffle ! Vous êtes riche !"
+END
+
+DEF TASK "LemonadeCustomer"
+    SET NAME "Serve your first lemonade customer"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LemonadeCustomer1"
+    STEP "2" "LemonadeCustomer2"
+    STEP "3" "LemonadeCustomer3"
+    STEP "4" "LemonadeCustomer4"
+    STEP "5" "LemonadeCustomer5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END

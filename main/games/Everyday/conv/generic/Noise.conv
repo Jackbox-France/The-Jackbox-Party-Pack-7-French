@@ -1,0 +1,18 @@
+MAIN(Voisin): Votre musique est un peu forte, non ?
+-WHAT-> QUOI ?!
+-SORRY-> DESOLE !
+-JAM-> VOUS VOULEZ VOUS JOINDRE A NOUS ?
+-BAD-> ÇA ÉLIMINE LES MAUVAISES PENSÉES !
+
+
+WHAT(Voisin): Je vais partir
+-SUCCESS-> QUOI ?!?!?!?!
+
+SORRY(Voisin): PAS DE SOUCIS !
+-SUCCESS-> JE SUIS CONTENT DE L'ENTENDRE
+
+JAM(Voisin): ...BIEN SÛR !!!
+-SUCCESS-> PRENEZ UN LUTH ET ALLONS-Y !
+
+BAD(Voisin): Vous avez besoin de parler ?
+-SUCCESS-> ...oui, s'il vous plait.

@@ -1,0 +1,17 @@
+MAIN(Agent): Vous avez une belle chanson, comment vous appelez-vous ?
+-SIN-> "Les rockeurs des laves"
+-HECK-> "La maison des enfers"
+-PITCH-> "Les rockeurs démoniaques"
+-BRIM-> "La famille démon"
+
+SIN(Agent): Ca me va, signez ça
+-SUCCESS-> Allons utiliser cet argent dès maintenant !
+
+HECK(Agent): D'accord, signez juste là
+-SUCCESS-> Je vois déjà nos albums s'écouler
+
+PITCH(Agent): Parfait, j'ai un festival pour vous
+-SUCCESS-> J'espère qu'il y aura du monde.
+
+BRIM(Agent): Parfait, signez ici
+-SUCCESS-> Allons utiliser cet argent dès maintenant !

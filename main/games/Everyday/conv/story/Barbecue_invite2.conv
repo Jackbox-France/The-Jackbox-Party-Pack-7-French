@@ -1,0 +1,17 @@
+MAIN(Butcher): Vous avez de la place pour une personne de plus.
+-COURSE-> Bien sûr !
+-FAMILY-> C'est que pour la famille.
+-CHAIRS-> On n'a plus de chaises.
+-NOT-> Oui, mais pas vous.
+
+COURSE(Butcher): Super ! J'emmène les enfants !
+-SUCCESS-> Le jardin va être rempli
+
+FAMILY(Butcher): Je comprends.
+-SUCCESS-> C'était une blague, vous pouvez venir !
+
+CHAIRS(Butcher): Je peux m'asseoir sur le sol.
+-SUCCESS-> Okay, vous pouvez venir !
+
+NOT(Butcher): Est-ce que je peux seulement envoyer mes enfants ?
+-SUCCESS->...d'accord.

@@ -1,0 +1,17 @@
+MAIN(Neighbor): Wow. Alors pourquoi avez-vous acheté cette nouvelle voiture ?
+-MILEAGE-> Elle a un bon kilométrage
+-SEATS-> Elle a des sièges en cuir
+-FAST-> Elle est genre... vraiment rapide
+-FLY-> Elle peut voler!
+
+MILEAGE(Neighbor): Très responsable.
+-SUCCESS-> Ce n'est pas du tout parce qu'elle est rapide...
+
+SEATS(Neighbor): Super
+-SUCCESS-> Combien de vaches dans votre voiture ?
+
+FAST(Neighbor): C'est genre...très cool
+-SUCCESS-> Regardez-nous ! On discute comme des passionnés.
+
+FLY(Neighbor): Cool. On va se jeter d'une falaise !
+-SUCCESS-> Le mensonge en valait la peine pour gagner un copain de voiture !

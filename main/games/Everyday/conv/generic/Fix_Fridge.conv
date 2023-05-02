@@ -1,0 +1,17 @@
+MAIN(Fridge): Okay, quel son fait votre réfrigérateur ?
+-HURM-> HHuurrMM-Hrr-Hrrr
+-CHUNK-> Chunk-Chunk-Clang
+-BZZZ-> Bzzzzzzzzzz
+-FINE-> Non rien... Il marche bien en fait.
+
+HURM(Fridge): Juste, tapez-le
+-SUCCESS-> Ca marche mieux maintenant !
+
+CHUNK(Fridge): Vous allez avoir besoin d'un nouveau frigo
+-SUCCESS-> Et je vais avoir besoin de plus d'argent.
+
+BZZZ(Fridge): Et si vous le tapez ?
+-SUCCESS-> Il y a maintenant un meilleur son
+
+FINE(Fridge): Parfait, je vous souhaite une bonne journée. 
+-SUCCESS-> Bonne journée à vous aussi. 

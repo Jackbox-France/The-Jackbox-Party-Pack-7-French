@@ -1,0 +1,17 @@
+MAIN(Interviewer): Comment vous sentez-vous d'être la première famille dans l'espace ?
+-STELLAR-> Stellaire !
+-WORLD-> Hors de ce monde !
+-BLAST-> C'est parti !
+-DARK-> L'espace est un oubli froid et sombre.  
+
+STELLAR(Interviewer): Parlons à quelqu'un de plus intéressant.
+-SUCCESS-> J'aurais dû ajouter un super
+
+WORLD(Interviewer): J'adore les calembours!
+-SUCCESS-> Je ne l'ai même pas planète-ifié !
+
+BLAST(Interviewer): On adore l'enthousiasme !
+-SUCCESS-> Je cache ma peur !
+
+DARK(Interviewer): Précis
+-SUCCESS-> Prenons la mesure de la "gravité" de la situation.

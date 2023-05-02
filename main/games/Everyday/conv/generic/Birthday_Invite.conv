@@ -1,0 +1,23 @@
+MAIN(Camarade): Hey, est-ce que je peux emprunter ton manuel ? J'ai fait tomber le mien dans la boue.
+-ANGRY-> Je pense que mon invitation pour ta fête d'anniversaire est aussi tombé dans la boue.
+-SURE-> Bien sûr ! Je ferai n'importe quoi pour mes amis. On est bien ami ?
+
+ANGRY(Camarade): Oh désolé, cette fête est exclusive a seulement quelques personnes.
+-BYE-> Et bien mon manuel est exclusif aussi. Salut !
+-HINT-> Si je viens à cette fête, je pourrai emmener mes réponses au prochain devoir maison...
+
+SURE(Camarade): Merci ! Maintenant je dois faire ce devoir maison stupide...
+-BYE-> Ouais tu dois le faire, Au revoir !
+-HINT-> Tu peux copier mes réponses. Peut-être que je peux te les donner à ta fête d'anniversaire ?
+
+BYE(Camarade): Dans tous les cas, salut loser !
+-FAILURE-> C'est toi le loser !
+-HINT-> Attends ! Et si je te laissais copier mes réponses... à ta fête d'anniversaire ?
+
+HINT(Camarade): Ugh, d'accord. Tu peux venir. Juste, ne soit pas bizarre.
+-SUCCESS-> Merci, BFF! Je te revois là-bas !
+
+
+
+
+

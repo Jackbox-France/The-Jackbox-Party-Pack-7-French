@@ -1,0 +1,17 @@
+MAIN(Interviewer): Comment vous sentez-vous d'être la première famille dans l'espace ?
+-COOL-> Plutôt cool
+-OVER-> Déjà marre
+-GROOVY-> Groovy
+-KEEN-> Très satisfaisant
+
+COOL(Interviewer): L'espace C'EST cool
+-SUCCESS-> La famille aussi !
+
+OVER(Interviewer): Parlons à quelqu'un de plus intéressant.
+-SUCCESS-> J'avais l'air si cool et désintéressé !
+
+GROOVY(Interviewer): Vous êtes sarcastique, là?
+-SUCCESS-> Presque toujours
+
+KEEN(Interviewer): Vous êtes sarcastique, là?
+-SUCCESS-> Presque toujours

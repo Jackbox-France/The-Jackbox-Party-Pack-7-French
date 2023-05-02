@@ -1,0 +1,26 @@
+MAIN(Grandma): Quoi?
+-POLITE-> Bonjour grand-mère! Tu passes un bon anniversaire ?
+-OLD-> Alors, ça fait quoi d'avoir 666 ans ?
+-INSULT-> Toujours en train de t'éclater, vieux sac d'os ?
+
+POLITE(Grandma): Non! Il fait trop froid! Elle est où la soupe que j'aime bien? De mon temps, il y avait une petite chose appelée respect !
+-RANT2-> Et bien, je...
+-RANT2-> De la soupe?
+-INSULT-> De ton temps, Lucifer avait des couches.
+
+RANT2(Grandma): Plus personne ne s'habille pour prendre l'avion ! La télévision rend les jeunes mous ! Votez pour Ike !
+-RANT3-> En fait, ce n'est pas...
+-RANT3-> Ike nous a donné les autoroutes en effet...
+-INSULT-> Tu sens les pieds, grand-mère.
+
+RANT3(Grandma): Danser aujourd'hui est trop obscène ! De mon temps, on n'avait pas besoin d'un œuf pour faire un gâteau instantané! Je demande des mesures de sécurité sociale, mais seulement lorsqu'elles me profitent personnellement!
+-POLITE-> Bien sûr, mais à part ça, ça va bien ?
+-SUCCESS->(Reculer silencieusement et appeler cela un succès)
+
+OLD(Grandma): C'est terrible! J'ai mal au dos! Mes dents sont pleines de trous! Mes cornes sont fragiles et écaillées! La crasse de mes yeux pèse sur un côté de ma tête!
+-RANT2-> Euh, je suis désolé d'entendre ça.
+-INSULT-> Oh tout le monde s'en fiche.
+
+INSULT(Grandma): Qu'est-ce que tu as dit?!
+-RANT2-> J'ai dit, parles-moi de toutes vos merveilleuses plaintes ennuyeuses !
+-SUCCESS-> Oublie ça, je vais chercher du gâteau.

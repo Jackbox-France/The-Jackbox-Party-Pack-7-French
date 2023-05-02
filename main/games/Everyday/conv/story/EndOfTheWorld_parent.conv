@@ -1,0 +1,17 @@
+MAIN(Boss): C'est la fin du monde?
+-OFF-> Oui, j'ai besoin d'un congé demain.
+-RAISE-> Ouaip, je peux avoir une augmentation?
+-QUIT-> Uh huh, je démisionne.
+-LOVE-> Oui, je vous aime.
+
+OFF(Bossing): Très bieeeeeeen
+-SUCCESS-> Super!
+
+RAISE(Bossing): Bien sûr, pourquoi pas?
+-SUCCESS-> Merci, rocher tueur de l'espace!
+
+QUIT(Bossing): Ok. J'écris ceci au feutre indélébile.
+-SUCCESS-> Hmmm... J'espère que cette apocalypse est réelle.
+
+LOVE(Bossing): Moi ou le bureau?
+-SUCCESS-> Oui.

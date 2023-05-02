@@ -1,0 +1,18 @@
+MAIN(Cancel): Comment ça, tu ne peux pas venir ?
+-WEATHER-> Je ne suis pas en forme.
+-PLAGUE-> J'ai la peste.
+-ENDS-> Ça sort par les deux bouts.
+-CONT-> Je suis contagieux et je serai là !
+
+
+WEATHER(Cancel): Remets-toi sur pied !
+-SUCCESS-> ...et maintenant je perds conscience..
+
+PLAGUE(Cancel): Tu nous manqueras!
+-SUCCESS-> Racontez mon histoire au monde!
+
+ENDS(Cancel): Euh...Remets-toi sur pied !
+-SUCCESS-> ...et maintenant je perds conscience..
+
+CONT(Cancel): S'il... S'il te plaît, non
+-SUCCESS-> Les microbes sont mes seuls amis maintenant.

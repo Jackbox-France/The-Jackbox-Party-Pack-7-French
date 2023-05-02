@@ -1,0 +1,28 @@
+DEF DEED "TextBase"
+    SET MECHANIC_ID "TEXT"
+    SET INSTRUCTIONS "Text"
+    SET CATEGORY "WIFI"
+    SET FAIL_ON_MISTAKE FALSE
+END
+
+REM : Clones
+
+CLONE DEED "TextBase" "TextWifi"
+    SET CATEGORY "WIFI"
+    SET INSTRUCTIONS "Remember the wifi password"
+END
+
+CLONE DEED "TextBase" "TextName"
+    SET CATEGORY "NAME"
+    SET INSTRUCTIONS "Remember that one person's name"
+END
+
+CLONE DEED "TextBase" "TextSpelling"
+    SET CATEGORY "SPELLING"
+    SET INSTRUCTIONS "Study for spelling test"
+END
+
+CLONE DEED "TextBase" "TextStuff"
+    SET CATEGORY "STUFF"
+    SET INSTRUCTIONS "Add item to grocery list"
+END

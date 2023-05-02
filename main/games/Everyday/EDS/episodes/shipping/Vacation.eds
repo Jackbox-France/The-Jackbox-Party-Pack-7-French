@@ -1,0 +1,292 @@
+DEF EPISODE "Vacation"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Les Devils prennent des vacances"
+    SET DESCRIPTION "La famille a gagné de luxueuses <font color='#AF0000'>vacances à San Francisco</font> ! Il y a juste un hic : Ils n'ont qu'une semaine pour préparer le voyage."
+    SET SUCCESS_MESSAGE "Nous avons été heureux d'apprendre que vous avez pris San Francisco d'assaut. Survivre à des vacances avec sa famille proche est une étape critique pour l'être humain. N'oubliez pas d'ennuyer vos voisins avec les diapositives !"
+    SET FAILURE_MESSAGE "San Francisco est si belle à cette époque de l'année. Probablement. Vous ne le saurez jamais puisque votre mauvaise planification vous a fait manquer votre vol."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "French1" <1 10:00>
+    SCHEDULE TASK "FindBeret" <1 11:00>
+    SCHEDULE TASK "BookParisHotel" <1 13:00>
+    SCHEDULE TASK "MakeParisBudget" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "CallCatSitter" <2 8:00>
+    SCHEDULE TASK "French2" <2 13:00>
+    SCHEDULE TASK "TravelPassports" <2 15:00>
+    SCHEDULE TASK "PassportPhotos" <2 18:00>
+    
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "SearchAdaptors" <3 8:00>
+    SCHEDULE TASK "French3" <3 13:00>
+    SCHEDULE TASK "PackParisSuitcase" <3 15:00>
+    SCHEDULE TASK "CallTaxiParis" <3 18:00>
+     
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : French for Clueless Tourists: Lesson 1
+CLONE DEED "DialogID" "French1"
+    SET INSTRUCTIONS "L'Anglais pour les nuls : Leçon 1"
+    SET CONTENT_ID "VACATION_FRENCH1"
+END
+
+DEF TASK "French1"
+    SET NAME "L'Anglais pour les nuls : Leçon 1"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "French1"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Find your favorite beret
+REM : Replace with BERETS
+CLONE DEED "FindCategory" "FindBeret"
+    SET INSTRUCTIONS "Trouvez votre casquette préférée"
+    SET CATEGORY "BERET"
+END
+
+DEF TASK "FindBeret"
+    SET NAME "Trouver votre casquette favorie"
+    SET ASKER_NAME "Demandez de l'aide pour trouver votre casquette préférée"
+    SET HELPER_NAME "Aidez <ASKER> à trouver leur casquette préférée"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FindBeret"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call to book hotel
+CLONE DEED "PhoneID" "BookParisHotel"
+    SET INSTRUCTIONS "Appelez pour réserver un hôtel"
+    SET CONTENT_ID "SPEEDYGET"
+END
+
+DEF TASK "BookParisHotel"
+    SET NAME "Appeler pour réserver un hôtel"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BookParisHotel"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make a trip budget
+CLONE DEED "Instructions4" "MakeParisBudget"
+    SET INSTRUCTIONS "Établissez un budget de voyage"
+
+    SET MECHANIC_0 "TAP"
+    SET INSTRUCTIONS_0 "Ajoutez un montant pour la nourriture"
+    SET MECHANIC_1 "TAP_3"
+    SET INSTRUCTIONS_1 "Ajoutez un montant pour des souvenirs"
+    SET MECHANIC_2 "TAP"
+    SET INSTRUCTIONS_2 "Ajoutez un montant pour des bonbons Jelly Belly"
+    SET MECHANIC_3 "SWIPE_LEFT"
+    SET INSTRUCTIONS_3 "Rappelez-vous le goût horrible qu'ils peuvent avoir, et effacez cette dernière partie"
+END
+
+DEF TASK "MakeParisBudget"
+    SET NAME "Établir un budget de voyage pour San Francisco"
+    SET CAPTAIN "EVERYONE"
+    SET PARTICIPANT "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakeParisBudget"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------
+
+REM : Call the cat sitter
+CLONE DEED "PhoneCategory" "CallCatSitter"
+    SET INSTRUCTIONS "Appelez la nourrice du chat"
+    SET CATEGORY "RESIDENCE"
+END
+
+DEF TASK "CallCatSitter"
+    SET NAME "Appeler la nourrice du chat"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallCatSitter"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : French for Clueless Tourists: Lesson 2
+CLONE DEED "DialogID" "French2"
+    SET INSTRUCTIONS "L'Anglais pour les nuls : Leçon 2"
+    SET CONTENT_ID "VACATION_FRENCH2"
+END
+
+DEF TASK "French2"
+    SET NAME "L'Anglais pour les nuls : Leçon 2"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "French2"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Drive to get passports made
+CLONE DEED "TravelCategory" "TravelPassports"
+    SET INSTRUCTIONS "Conduisez pour aller faire des passeports"
+    SET CATEGORY "POSTOFFICE"
+END
+
+DEF TASK "TravelPassports"
+    SET NAME "Conduire pour aller faire des passeports"
+    SET ASKER_NAME "Faites-vous conduire pour aller faire des passeports"
+    SET HELPER_NAME "Conduisez <ASKER> pour aller faire des passeports"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TravelPassports"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Everyone hold still for passport photos
+CLONE DEED "NothingBase" "PassportPhotos"
+    SET INSTRUCTIONS "Ne souriez pas"
+    SET DURATION 5S
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "PassportPhotos"
+    SET NAME "Tout le monde reste immobile pour les photos d'identité"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PassportPhotos"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------
+
+REM : Look for international power adaptors
+CLONE DEED "SearchID" "SearchAdaptors"
+    SET INSTRUCTIONS "Cherchez des adaptateurs électriques internationaux"
+    SET CONTENT_ID "ADAPTERS"
+END
+
+DEF TASK "SearchAdaptors"
+    SET NAME "Chercher des adaptateurs électriques internationaux"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchAdaptors"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : French for Clueless Tourists: Lesson 3
+CLONE DEED "DialogID" "French3"
+    SET INSTRUCTIONS "L'Anglais pour les nuls : Leçon 3"
+    SET CONTENT_ID "VACATION_FRENCH3"
+END
+
+DEF TASK "French3"
+    SET NAME "L'Anglais pour les nuls : Leçon 3"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "French3"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Carefully pack suitcase
+CLONE DEED "Instructions4" "PackParisSuitcase"
+    SET INSTRUCTIONS "Préparez soigneusement votre valise"
+
+    SET MECHANIC_0 "TAP_HOLD"
+    SET INSTRUCTIONS_0 "Placez les sous-vêtements de manière ordonnée"
+    SET MECHANIC_1 "TAP"
+    SET INSTRUCTIONS_1 "Jetez les chemises"
+    SET MECHANIC_2 "ROTATE_COUNTER"
+    SET INSTRUCTIONS_2 "Mettez en boule les chaussettes"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Refermez la valise"
+END
+
+DEF TASK "PackParisSuitcase"
+    SET NAME "Préparer soigneusement la valise"
+    SET ASKER_NAME "Demandez de l'aide pour préparer soigneusement votre valise"
+    SET HELPER_NAME "Aidez <ASKER> à préparer soigneusement leur valise"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PackParisSuitcase"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call a cab to the airport
+CLONE DEED "PhoneCategory" "CallTaxiParis"
+    SET INSTRUCTIONS "Appelez Taxi Company"
+    SET CATEGORY "TAXI"
+END
+
+DEF TASK "CallTaxiParis"
+    SET NAME "Appelez un taxi pour l'aéroport"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallTaxiParis"
+
+    NEXT "1" SUCCESS FAILURE
+END

@@ -1,0 +1,17 @@
+MAIN(Manager): Pourquoi n'avez-vous pas pris votre poste ?
+-CAR-> Problème de voiture....?
+-TIME-> Heure d'été...?
+-WOLF-> Des loups sauvages en fuite...?
+-LIKE-> Je n'aime pas le travail....?
+
+CAR(Manager): Je respecte votre honnêteté, mais vous êtes viré.
+-SUCCESS-> ...logique.
+
+TIME(Manager): Je respecte votre honnêteté, mais vous êtes viré.
+-SUCCESS-> ...logique.
+
+WOLF(Kids): Vous êtes clairement en train de mentir... vous êtes viré!
+-SUCCESS-> Bien! Laissez les loups gagner!
+
+LIKE(Kids): Bonnes nouvelles! Vous n'aurez plus à le faire!
+-SUCCESS-> ...J'me demande si ils vont continuer à me payer?

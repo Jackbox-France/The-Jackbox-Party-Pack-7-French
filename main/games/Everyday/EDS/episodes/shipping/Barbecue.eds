@@ -1,0 +1,398 @@
+DEF EPISODE "Barbecue"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Soleil et Barbecue"
+    SET DESCRIPTION "L'été est là et il est temps de se détendre autour d'un <font color='#AF0000'>barbecue</font> avec les voisins. La famille parviendra-t-elle à organiser une barbecue normale sans inviter tout le voisinage, ou bien sera-t-elle passée à la moulinette ?"
+    SET SUCCESS_MESSAGE "Nos informateurs rapportent que votre petite fiesta en plein air était juteuse, savoureuse, et assaisonnée ! Quand il s'agit de griller, votre famille a vraiment le coup de main. Je vous attends dans mon bureau pour organiser ce que vous savez faire le mieux."
+    SET FAILURE_MESSAGE "Nos grilleurs professionnels ont entendu dire que votre barbecue était surpeuplé, collant, et qu'il n'offrait même pas une option décente de kebab ! Amusez-vous bien à réhabiliter votre pelouse en ruine, avec un peu de salmonelle."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "InviteNeighborsBBQ" <1 8:00>
+    SCHEDULE TASK "SecretMarinade" <1 10:00>
+    SCHEDULE TASK "MeatGuy" <1 13:00>
+    SCHEDULE TASK "TeenInviteSO" <1 15:00>
+
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "UnfoldTable" <2 8:00>
+    SCHEDULE TASK "SearchForCoals" <2 10:00>
+    SCHEDULE TASK "BarbecuePotatoSalad" <2 13:00>
+    SCHEDULE TASK "MeatRun" <2 15:00>
+
+    REM : ROUND 3 STORY TASKSSCHEDULE TASK "LightUpGrill" <3 ##:00>
+    SCHEDULE TASK "BurnReportCard" <3 8:00>
+    SCHEDULE TASK "SearchHotSauce" <3 10:00>
+    SCHEDULE TASK "WorkTheGrill" <3 13:00>
+    SCHEDULE TASK "HideMeatShortage" <3 15:00>
+
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+CLONE DEED "DialogID" "InviteNeighborsBBQ"
+    SET INSTRUCTIONS "Invitez les voisins au barbecue"
+    SET CONTENT_ID "BARBECUE_INVITE1"
+END
+
+DEF TASK "InviteNeighborsBBQ"
+    SET NAME "Inviter les voisins au barbecue"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "InviteNeighborsBBQ"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Mix up the family secret marinade
+CLONE DEED "Hold3" "SecretMarinade1"
+    SET INSTRUCTIONS "Versez les ingrédients liquides"
+END
+
+CLONE DEED "QuickTap5" "SecretMarinade2"
+    SET INSTRUCTIONS "Et l'épice secrète"
+END
+
+CLONE DEED "Nothing3" "SecretMarinade3"
+    SET INSTRUCTIONS "Laissez la mariner"
+END
+
+CLONE DEED "Nothing4" "SecretMarinade4"
+    SET INSTRUCTIONS "Continuez à mariner"
+END
+
+CLONE DEED "Nothing5" "SecretMarinade5"
+    SET INSTRUCTIONS "Laissez-la reposer une semaine de plus pour être sûr."
+END
+
+DEF TASK "SecretMarinade"
+    SET NAME "Mixer la marinade secrète des démons"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SecretMarinade1"
+    STEP "2" "SecretMarinade2"
+    STEP "3" "SecretMarinade3"
+    STEP "4" "SecretMarinade4"
+    STEP "5" "SecretMarinade5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Call your meet guy
+CLONE DEED "PhoneID" "MeatGuy1"
+    SET INSTRUCTIONS "Appelez votre boucher"
+    SET CONTENT_ID "THE_BACON_BA"
+END
+
+CLONE DEED "DialogCategory" "MeatGuy2"
+    SET INSTRUCTIONS "Parlez viande"
+    SET CONTENT_ID "BARBECUE_INVITE2"
+END
+
+DEF TASK "MeatGuy"
+    SET NAME "Appeler votre boucher"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MeatGuy1"
+    STEP "2" "MeatGuy2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Invite a date without permission
+CLONE DEED "DialogID" "TeenInviteSO"
+    SET INSTRUCTIONS "Invitez votre amoureux(se) au barbecue sans permission."
+    SET CONTENT_ID "BARBECUE_INVITE3"
+END
+
+DEF TASK "TeenInviteSO"
+    SET NAME "Inviter votre amoureux(se) au barbecue sans permission"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TeenInviteSO"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------------
+
+REM : Unfold the backyard table
+CLONE DEED "Instructions4" "UnfoldTable"
+    SET INSTRUCTIONS "Dépliez la table du jardin"
+
+    SET MECHANIC_0 "SWIPE_DOWN"
+    SET INSTRUCTIONS_0 "Tirez ici"
+    SET MECHANIC_1 "TAP"
+    SET INSTRUCTIONS_1 "Mettez les épingles ici"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Vissez cette chose"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Espérez qu'il reste en place..."
+END
+
+DEF TASK "UnfoldTable"
+    SET NAME "Déplier la table du jardin"
+    SET ASKER_NAME "Demandez de l'aide pour déplier la table du jardin"
+    SET HELPER_NAME "Aidez <ASKER> à déplier la table du jardin"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "UnfoldTable"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Find the good coals
+CLONE DEED "SearchID" "SearchForCoals"
+    SET INSTRUCTIONS "Trouvez du charbon dans les enfers"
+    SET CONTENT_ID "COALS"
+END
+
+DEF TASK "SearchForCoals"
+    SET NAME "Trouver du charbon dans les enfers"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchForCoals"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Gather ingredients for potato salad
+CLONE DEED "GatherID" "BarbecuePotatoSalad"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour la salade de pommes de terre"
+    SET CONTENT_ID "POTATO_SALAD"
+END
+
+DEF TASK "BarbecuePotatoSalad"
+    SET NAME "Rassembler les ingrédients pour la salade de pommes de terre"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BarbecuePotatoSalad"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Go on emergency meat run
+CLONE DEED "TravelCategory" "MeatRun"
+    SET INSTRUCTIONS "Récupérez de la viande en urgence"
+    SET CATEGORY "GROCERY"
+END
+
+DEF TASK "MeatRun"
+    SET NAME "Récupérer de la viande en urgence"
+    SET ASKER_NAME "Demandez de l'aide pour être accompagné afin de récupérer de la viande"
+    SET HELPER_NAME "Allez avec <ASKER> afin de récupérer de la viande"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MeatRun"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : -------------------------------------
+
+REM : Light up the grill!
+CLONE DEED "Tap1" "LightUpGrill1"
+    SET INSTRUCTIONS "Ajoutez de l'essence"
+END
+
+CLONE DEED "Tap3" "LightUpGrill2"
+    SET INSTRUCTIONS "Un petit peu plus"
+END
+
+CLONE DEED "QuickTap5" "LightUpGrill3"
+    SET INSTRUCTIONS "Mieux vaut prévenir que guérir"
+END
+
+CLONE DEED "SwipeRight" "LightUpGrill4"
+    SET INSTRUCTIONS "Craquez une allumette !"
+END
+
+CLONE DEED "Hold3" "LightUpGrill5"
+    SET INSTRUCTIONS "Maintenant, nous allons pouvoir griller tout ça !"
+END
+
+DEF TASK "LightUpGrill"
+    SET NAME "Allumer le gril !"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LightUpGrill1"
+    STEP "2" "LightUpGrill2"
+    STEP "3" "LightUpGrill3"
+    STEP "4" "LightUpGrill4"
+    STEP "5" "LightUpGrill5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Burn your report card in the BBQ
+CLONE DEED "SwipeBase" "BurnReportCard1"
+    SET INSTRUCTIONS "Déchirez les preuves"
+    SET DIRECTION "RIGHT,RIGHT"
+END
+
+CLONE DEED "SwipeDown" "BurnReportCard2"
+    SET INSTRUCTIONS "Cachez les morceaux"
+END
+
+CLONE DEED "Tap1" "BurnReportCard3"
+    SET INSTRUCTIONS "Mission accomplie !"
+END
+
+CLONE DEED "Nothing3" "BurnReportCard4"
+    SET INSTRUCTIONS "Faites-vous attraper immédiatement"
+END
+
+DEF TASK "BurnReportCard"
+    SET NAME "Brûlez votre bulletin de notes dans le grill"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BurnReportCard1"
+    STEP "2" "BurnReportCard2"
+    STEP "3" "BurnReportCard3"
+    STEP "4" "BurnReportCard4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Search for the spiciest hot sauce
+CLONE DEED "SearchID" "SearchHotSauce"
+    SET INSTRUCTIONS "Recherchez la sauce piquante la plus épicée"
+    SET CONTENT_ID "HOTSAUCE"
+END
+
+DEF TASK "SearchHotSauce"
+    SET NAME "Rechercher la sauce piquante la plus épicée"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchHotSauce"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Work the grill
+CLONE DEED "QuickTap3" "WorkTheGrill1"
+    SET INSTRUCTIONS "Mettez votre uniforme"
+END
+
+CLONE DEED "SwipeUp" "WorkTheGrill2"
+    SET INSTRUCTIONS "Retournez"
+END
+
+CLONE DEED "SwipeUp" "WorkTheGrill3"
+    SET INSTRUCTIONS "Retournez encore !"
+END
+
+CLONE DEED "Hold2" "WorkTheGrill4"
+    SET INSTRUCTIONS "Ajoutez le jus"
+END
+
+CLONE DEED "Nothing2" "WorkTheGrill5"
+    SET INSTRUCTIONS "Acceptez les félicitations"
+END
+
+DEF TASK "WorkTheGrill"
+    SET NAME "Travailler sur le gril"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "WorkTheGrill1"
+    STEP "2" "WorkTheGrill2"
+    STEP "3" "WorkTheGrill3"
+    STEP "4" "WorkTheGrill4"
+    STEP "5" "WorkTheGrill5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Hode the fact you're out of meat
+CLONE DEED "Instructions4" "HideMeatShortage"
+    SET INSTRUCTIONS "Cachez le fait que vous n'avez plus de viande."
+
+    SET MECHANIC_0 "TAP"
+    SET INSTRUCTIONS_0 "Trouvez du pain"
+    SET MECHANIC_1 "TAP_3"
+    SET INSTRUCTIONS_1 "Mettez n'importe quoi dedans"
+    SET MECHANIC_2 "SWIPE_LEFT"
+    SET INSTRUCTIONS_2 "Ajoutez la sauce barbecue"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Présentez votre repas à votre voisin énervé"
+END
+
+DEF TASK "HideMeatShortage"
+    SET NAME "Cacher le fait que vous n'avez plus de viande."
+    SET ASKER_NAME "Demandez de l'aide pour cacher le fait que vous n'avez plus de viande."
+    SET HELPER_NAME "Aidez <ASKER> à cacher le fait que vous n'avez plus de viande."
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "HideMeatShortage"
+
+    NEXT "1" SUCCESS FAILURE
+END

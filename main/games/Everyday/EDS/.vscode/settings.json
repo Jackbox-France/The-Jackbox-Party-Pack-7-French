@@ -1,0 +1,18 @@
+{
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "code",
+        "markdown",
+        "latex",
+        "plaintext",
+        "EveryDASIC",
+        "everydasic"
+    ],
+    "spellright.parserByClass": {
+        "everydasic": {
+            "parser": "code"
+        }
+    }
+}

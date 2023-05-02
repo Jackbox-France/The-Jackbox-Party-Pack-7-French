@@ -1,0 +1,13 @@
+MAIN(Fellow Student): J'ai entendu dire que tu avais... "le truc froid"?
+-PASSWORD-> Quel est le mot de passe?
+-MONEY-> Ça dépend. Est-ce que tu as le cash?
+-NAIVE-> Non, je viens d'avoir cette glace illégale!
+
+PASSWORD(Fellow Student): ..."Pistache."
+-SUCCESS-> J'ai oublié si c'était le bon mot de passe, mais tant pis.
+
+MONEY(Fellow Student): Allez mec, j'en ai droit à un petit peu!
+-SUCCESS-> Bien, mais tu me dois beaucoup.
+
+NAIVE(Fellow Student): Tais-toi, mec!
+-SUCCESS-> Ah oui! C'est un crime.

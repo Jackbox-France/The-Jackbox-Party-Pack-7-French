@@ -1,0 +1,18 @@
+MAIN(Représentant de Cable Co.): Quel chaine voulez vous ajouter à votre offre ?
+-SNACK-> Snack TV
+-VOYEUR-> Voyeur TV
+-BIRD-> Oiseaux cool TV
+-SPORT-> J'aime le sport TV
+
+
+SNACK(Représentant de Cable Co.): Juste à temps pour la semaine du popcorn !
+-SUCCESS-> Bien entendu !
+
+VOYEUR(Représentant de Cable Co.): Cette chaine n'existe pas ! 
+-FAILURE-> Bon, je vais juste hacker les caméras de sécurité de mes voisins alors
+
+BIRD(Représentant de Cable Co.): Juste à temps pour la semaine des oiseaux !
+-SUCCESS-> Et oui, j'adore les rouge-gorges !
+
+SPORT(Représentant de Cable Co.): Juste à temps pour la semaine de la luge !
+-SUCCESS-> Ouais ! J'adore la luge !

@@ -1,0 +1,18 @@
+MAIN(Voisin): Avez-vous vu le match hier ?
+-WOW-> Oui, quel tir !
+-WOW-> Oui, quel arrrêt !
+
+WOW(Neighbor): Que pensez-vous des attaquants français pendant la deuxième mi-temps ?
+-AMAZING-> Ils ont vraiment bien joué
+-AMAZING-> La retournée accrobatique du premier attaquant était magnifique.
+
+AMAZING(Neighbor): Vous pouvez l'admettre, ça c'est ce qu'on appelle du sport.
+-CHAMPION-> Oui, notre équipe est la meilleure équipe !
+-BONSAI-> Je préfère les tulipes par rapport au foot.
+
+BONSAI(Neighbor): Heu ? Je pensais que vous étiez fan de sport.
+-FAILURE-> Non, j'aime les tulipes. Je pense que nous ne pouvons pas devenir ami.
+-CHAMPION->Je voulais dire, j'adore le sport ! C'est trop bien le sport !
+
+CHAMPION(Neighbor): Je pense que ça peut être l'année où on peut être champion !
+-SUCCESS-> Je suis d'accord !

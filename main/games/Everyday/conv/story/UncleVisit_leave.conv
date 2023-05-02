@@ -1,0 +1,18 @@
+MAIN(Uncle Gorbo): Ma très chère famille, que devrions-nous faire maintenant ?
+-LATE-> Il se fait tard...
+-RACE-> On fait la course jusqu'à chez toi !
+-HIDE-> On joue à cache-cache où on ne cherche jamais ?
+-OTHER-> Nous devrions voir d'autres familles.
+
+
+LATE(Uncle Gorbo): Très bien ! Je vais rester pour la nuit !
+-SUCCESS-> J'imagine que je vais dormir dans la baignoire
+
+RACE(Uncle Gorbo): Laissez-moi m'étirer un peu !
+-SUCCESS-> Ça pourrait marcher...
+
+HIDE(Uncle Gorbo): Laissez-moi m'étirer un peu !
+-SUCCESS-> Ça pourrait marcher...
+
+OTHER(Uncle Gorbo): Mais j'ai déjà trouvé la meilleure !
+-SUCCESS-> Maudissez cette adorable nuisance !

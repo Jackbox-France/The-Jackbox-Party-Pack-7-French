@@ -1,0 +1,398 @@
+DEF EPISODE "CousinVisit"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Cousin du malin"
+    SET DESCRIPTION "Votre <font color='#AF0000'>Cousin Rompo</font> nous a écrit pour nous dire qu'il voulait vous rendre visite. Il a même proposé de vous aider dans vos tâches quotidiennes ! Je suis sûr que les rumeurs selon lesquelles il serait un trouble-fête précoce sont infondées."
+    SET SUCCESS_MESSAGE "Rompo s'est bien amusé ! Il nous a été dit que votre maison était un endroit idéal pour les monstres et les démons en visite. Préparez votre chambre d'amis, car plusieurs esprits malins ont besoin d'un endroit où dormir. Littéralement."
+    SET FAILURE_MESSAGE "Cousin Rompo était un peu maladroit, et nous avons le regret de dire que vous avez échoué. La prochaine fois qu'un cryptique visite la ville, nous vous suggérons de passer plus de temps à répondre à leurs habitudes uniques et moins de temps à prendre des photos floues d'eux pour l'album."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "GreetCousin" <1 8:00>
+    SCHEDULE TASK "RompoPhoto" <1 10:00>
+    SCHEDULE TASK "CousinGutters" <1 13:00>
+    SCHEDULE TASK "CousinRoof" <1 15:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "DishesCousin" <2 8:00>
+    SCHEDULE TASK "FloorCleaner" <2 10:00>
+    SCHEDULE TASK "GatherSamosa" <2 13:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "HideFromCousin" <3 8:00>
+    SCHEDULE TASK "VacuumCousin" <3 10:00>
+    SCHEDULE TASK "SearchRompoGame" <3 13:00>
+    SCHEDULE TASK "FindCousinBag" <3 15:00>
+
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Greet cousin at door
+CLONE DEED "SwipeLeft" "GreetCousin1"
+    SET INSTRUCTIONS "Ouvrez la porte pour le cousin"
+END
+
+CLONE DEED "DialogID" "GreetCousin2"
+    SET INSTRUCTIONS "Accueillez Cousin Rompo"
+    SET CONTENT_ID "COUSINVISIT_GREET"
+END
+
+DEF TASK "GreetCousin"
+    SET NAME "Accueillir le cousin Rompo à la porte"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GreetCousin1"
+    STEP "2" "GreetCousin2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Take family photo with cousin Rompo
+CLONE DEED "Nothing3" "RompoPhoto"
+    SET INSTRUCTIONS "Serrez-vous !"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "RompoPhoto"
+    SET NAME "Prendre une photo de famille avec le cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "RompoPhoto"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Clean gutters with cousin 
+CLONE DEED "QuickTap4" "CousinGutters1"
+    SET INSTRUCTIONS "Grimpez à l'échelle"
+END
+
+CLONE DEED "ScrubMedium" "CousinGutters2"
+    SET INSTRUCTIONS "Nettoyez les débris"
+END
+
+CLONE DEED "SwipeUp" "CousinGutters3"
+    SET INSTRUCTIONS "Glissez alors que le cousin Rompo renverse l'échelle"
+END
+
+CLONE DEED "Hold5" "CousinGutters4"
+    SET INSTRUCTIONS "Accrochez-vous aux gouttières pour sauver votre vie"
+END
+
+DEF TASK "CousinGutters"
+    SET NAME "Nettoyer les gouttières avec le cousin"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CousinGutters1"
+    STEP "2" "CousinGutters2"
+    STEP "3" "CousinGutters3"
+    STEP "4" "CousinGutters4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Help cousin off roof
+
+CLONE DEED "Instructions4" "CousinRoof"
+    SET INSTRUCTIONS "Faites descendre Cousin Rompo du toit"
+
+    SET MECHANIC_0 "SWIPE_UP"
+    SET INSTRUCTIONS_0 "Relevez vous"
+    SET MECHANIC_1 "TAP_HOLD"
+    SET INSTRUCTIONS_1 "Prenez la main de Rompo"
+    SET MECHANIC_2 "TAP"
+    SET INSTRUCTIONS_2 "Mettez Rompo sur votre dos"
+    SET MECHANIC_3 "TAP_3"
+    SET INSTRUCTIONS_3 "Descendez"
+END
+
+DEF TASK "CousinRoof"
+    SET NAME "Faire descendre le cousin Rompo du toit"
+    SET ASKER_NAME "Obtenez de l'aide pour faire descendre le cousin Rompo du toit."
+    SET HELPER_NAME "Aidez <ASKER> à faire descendre le cousin Rompo du toit"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CousinRoof"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------------
+
+REM : Do dishes with cousin
+CLONE DEED "Rotate90Counter" "DishesCousin1"
+    SET INSTRUCTIONS "Allumez le robinet"
+END
+
+CLONE DEED "ScrubMedium" "DishesCousin2"
+    SET INSTRUCTIONS "Frottez les assiettes"
+END
+
+CLONE DEED "Nothing3" "DishesCousin3"
+    SET INSTRUCTIONS "Vos pieds commencent à être mouillés..."
+END
+
+CLONE DEED "Hold5" "DishesCousin4"
+    SET INSTRUCTIONS "Retirez le torchon que Cousin Rompo a oublié dans l'évacuation"
+END
+
+DEF TASK "DishesCousin"
+    SET NAME "Faire la vaisselle avec Cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DishesCousin1"
+    STEP "2" "DishesCousin2"
+    STEP "3" "DishesCousin3"
+    STEP "4" "DishesCousin4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Run kitchen floor cleaner
+CLONE DEED "Gizmos3" "FloorCleaner"
+    SET INSTRUCTIONS "Nettoyez le sol de la cuisine"
+    SET NAME "Floor Cleaner"
+END
+
+DEF TASK "FloorCleaner"
+    SET NAME "Nettoyer le sol de la cuisine"
+    SET ASKER_NAME "Demandez de l'aide pour nettoyer le sol de la cuisine"
+    SET HELPER_NAME "Aidez <ASKER> à nettoyer le sol de la cuisine"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FloorCleaner"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Gather ingredients for samosa
+CLONE DEED "GatherLunch" "GatherSamosa"
+    SET INSTRUCTIONS "Rassemblez les ingrédients des samosas"
+    SET CONTENT_ID "SAMOSA"
+END
+
+DEF TASK "GatherSamosa"
+    SET NAME "Rassembler les ingrédients des samosas avec Cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GatherSamosa"
+
+    NEXT "1" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "MakeSamosaCousin"
+END
+
+REM : Make Samosa with Cousin Rompo
+CLONE DEED "Rotate360" "MakeSamosaCousin1"
+    SET INSTRUCTIONS "Mélangez la pâte"
+END
+
+CLONE DEED "Tap1" "MakeSamosaCousin2"
+    SET INSTRUCTIONS "Chauffez l'huile dans la poêle"
+END
+
+CLONE DEED "SwipeUp" "MakeSamosaCousin3"
+    SET INSTRUCTIONS "Roulez la pâte"
+END
+
+CLONE DEED "Nothing5" "MakeSamosaCousin4"
+    SET INSTRUCTIONS "Remarquez qu'un feu de cuisine se propage..."
+END
+
+DEF TASK "MakeSamosaCousin"
+    SET NAME "Faire des samosas avec Cousin Rompo"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakeSamosaCousin1"
+    STEP "2" "MakeSamosaCousin2"
+    STEP "3" "MakeSamosaCousin3"
+    STEP "4" "MakeSamosaCousin4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "PutOutFireCousin"
+END
+
+REM : Put out fire
+CLONE DEED "Hold2" "PutOutFireCousin1"
+    SET INSTRUCTIONS "Pulvérisez à l'extincteur"
+END
+
+CLONE DEED "SwipeUp" "PutOutFireCousin2"
+    SET INSTRUCTIONS "Arrosez-le avec de l'eau"
+END
+
+CLONE DEED "ScrubMedium" "PutOutFireCousin3"
+    SET INSTRUCTIONS "Contentez-vous de l'écraser."
+END
+
+DEF TASK "PutOutFireCousin"
+    SET NAME "Éteindre le feu de cuisine causé par cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PutOutFireCousin1"
+    STEP "2" "PutOutFireCousin2"
+    STEP "3" "PutOutFireCousin3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------
+
+REM : Hide from cousin
+CLONE DEED "SwipeLeft" "HideFromCousin1"
+    SET INSTRUCTIONS "Ouvrez le placard"
+END
+
+CLONE DEED "Hold3" "HideFromCousin2"
+    SET INSTRUCTIONS "Poussez votre frère ou votre sœur dehors"
+END
+
+CLONE DEED "SwipeRight" "HideFromCousin3"
+    SET INSTRUCTIONS "Claquez la porte"
+END
+
+DEF TASK "HideFromCousin"
+    SET NAME "Se cacher du Cousin Rompo"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "HideFromCousin1"
+    STEP "2" "HideFromCousin2"
+    STEP "3" "HideFromCousin3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Vacuum rug with cousin
+CLONE DEED "Tap1" "VacuumCousin1"
+    SET INSTRUCTIONS "Allumez l'aspirateur"
+END
+
+CLONE DEED "Hold3" "VacuumCousin2"
+    SET INSTRUCTIONS "Passez-le sur le tapis"
+END
+
+CLONE DEED "Tap2" "VacuumCousin3"
+    SET INSTRUCTIONS "Il est coincé par quelque chose"
+END
+
+CLONE DEED "Rotate180" "VacuumCousin4"
+    SET INSTRUCTIONS "Videz le sac"
+END
+
+DEF TASK "VacuumCousin"
+    SET NAME "Aspirer le tapis avec cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "VacuumCousin1"
+    STEP "2" "VacuumCousin2"
+    STEP "3" "VacuumCousin3"
+    STEP "4" "VacuumCousin4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Search for cousin's lost cup and ball game
+CLONE DEED "SearchID" "SearchRompoGame"
+    SET INSTRUCTIONS "Cherchez le bilboquet adoré du cousin Rompo"
+    SET CONTENT_ID "ROMPO"
+END
+
+DEF TASK "SearchRompoGame"
+    SET NAME "Chercher le bilboquet adoré du Cousin Rompo"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SearchRompoGame"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Find cousin's backpack so they can leave
+CLONE DEED "FindCategory" "FindCousinBag"
+    SET INSTRUCTIONS "Trouvez le sac à dos du Cousin Rompo"
+    SET CATEGORY "BAGS"
+END
+
+DEF TASK "FindCousinBag"
+    SET NAME "Trouver le sac à dos du cousin Rompo pour qu'il puisse partir"
+    SET ASKER_NAME "Demandez de l'aide pour trouver le sac à dos du cousin Rompo afin qu'il puisse PARTIR."
+    SET HELPER_NAME "Aidez <ASKER> à  trouver le sac à dos du cousin Rompo pour qu'il puisse PARTIR"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FindCousinBag"
+
+    NEXT "1" SUCCESS FAILURE
+END

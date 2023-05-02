@@ -1,0 +1,17 @@
+MAIN(Riley): Mon petit oeuf à la diable a dit que tu voulais me voir ?
+-COME-> Bien sûr ! Viens dîner !
+-HAVE-> On t'aura pour le dîner !
+-GUESS-> Un dîner... je présume ?
+-NEVER-> Ne m'appelles plus jamais ici
+
+COME(Riley): Bien sûr. Pourquoi pas ?
+-SUCCESS-> C'était assez agréable.
+
+HAVE(Riley): Haha, on dirait que tu veux me manger.
+-SUCCESS-> Hmm... J'ai besoin d'un nouveau plat principal.
+
+GUESS(Riley): ...Oui?
+-SUCCESS-> Ça va être une nuit difficile.
+
+NEVER(Riley): C'était une interaction perturbante...
+-SUCCESS-> Je dois faire le dîner pour m'excuser.

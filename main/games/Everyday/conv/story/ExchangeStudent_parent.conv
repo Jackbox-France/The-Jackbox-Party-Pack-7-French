@@ -1,0 +1,17 @@
+MAIN(Parent): What exactly is your complaint about my child?
+-NICE-> Il est TROP gentil.
+-CLEAN-> La maison est TROP propre
+-CHECK-> Mon chéquier est TROP équilibré
+-FEAR-> Je crains le changement
+
+NICE(Parent): Ce satané gamin. Je vais lui parler.
+-SUCCESS-> Donc c'est héréditaire. 
+
+CLEAN(Parent): Je n'avais pas réalisé que c'était un problème
+-SUCCESS-> Je ne peux plus manger de rib sur le canapé maintenant!
+
+CHECK(Parent): Je n'avais pas réalisé que c'était un problème
+-SUCCESS> Ça enlève tout le mystère amusant de nos finances !
+
+FEAR(Parent): ...Je ne peux pas vous aider à ce sujet
+-SUCCESS-> Bien ! J'en ai assez que votre famille améliore ma vie !

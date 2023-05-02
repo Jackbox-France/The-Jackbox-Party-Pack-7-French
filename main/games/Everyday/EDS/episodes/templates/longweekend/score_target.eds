@@ -1,0 +1,14 @@
+REM : EVENTS IN ROUNDS 2 AND 3 TAKE PLACE OVER ONE LONG DAY
+ROUND <1 7:00> <1 24:00>  7500  3000 1
+ROUND <2 7:00> <2 18:00>  11500  6000 1.5
+ROUND <3 18:00> <3 24:00> 17500  9000 2
+
+
+
+REM : USED IN THESE EPISODES
+REM : BigDance
+REM : BossDinner
+REM : FirstDate
+
+REM : KEY
+REM : ROUND <Round# RoundStartTime> <Round# RoundEndTime> BaseTagert ExtraTargetPerPlayer Multiplier

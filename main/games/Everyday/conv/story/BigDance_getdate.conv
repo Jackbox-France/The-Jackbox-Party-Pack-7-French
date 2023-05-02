@@ -1,0 +1,17 @@
+MAIN(Cute Student): Non... Je n'ai pas de compagnon pour le bal. Pourquoi demandes-tu?
+-WANT-> Veux-tu y venir avec moi ?
+-GROUP-> Rejoins notre groupe !
+-MOCK-> Allons-y et moquons nous des gens.
+-SURVEY-> Je fais juste un sondage. Je n'y vais même pas.
+
+SURVEY(Cute Student): Oh. ok.
+-SUCCESS-> Maintenant je dois appeler toute ma classe pour que mon histoire soit crédible.
+
+WANT(Cute Student): Ouais! Ça a l'air amusant!
+-SUCCESS-> Attends. C'est bien d'être franc avec les gens ?
+
+GROUP(Cute Student): Ouai... oh. ok.
+-SUCCESS-> J'ai peut-être visé trop bas
+
+MOCK(Cute Student): J'aime détester les choses!
+-SUCCESS-> On va en faire la nuit la plus détestable de tous les temps !

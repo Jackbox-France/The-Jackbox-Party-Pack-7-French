@@ -1,0 +1,24 @@
+MAIN(Vendeur): Bonjour ! Quel gout voulez-vous ? Les options sont sur le côté du van.
+-VANILLA-> Vanille
+-CHOCO-> Choco-splosion
+-GRAPE-> Raisin
+-NONE-> Eh... non oubliez...
+
+VANILLA(Vendeur): Et voici !
+-SUCCESS-> Merci !
+
+CHOCO(Vendeur): Et voilà !
+-SUCCESS-> Choco-stastique !
+
+GRAPE(Vendeur): Le voilà !
+-SUCCESS-> Dommage que ça n'a pas totalement le gout du vin
+
+NONE(Vendeur): Dernière chance ?
+-FAILURE-> Jamais !
+-TRYAGAIN-> Peut-être....
+
+TRYAGAIN(Vendeur): Regardez de nouveau ?
+-VANILLA-> Vanille
+-CHOCO-> Choco-splosion
+-GRAPE-> Raisin
+-NONE-> Eh... non oubliez...

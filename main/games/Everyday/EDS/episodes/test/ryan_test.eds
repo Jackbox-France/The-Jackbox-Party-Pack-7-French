@@ -1,0 +1,57 @@
+DEF EPISODE "RyanTest"
+    SET CHOOSABLE FALSE
+    SET EMERGENCY "EmergencyTasks"
+
+    ROUND <1 8:00> <1 24:00> 2000 1000 1
+
+    REM : SCHEDULE TASK "RyanDialogTest" <1 8:05>
+    SCHEDULE TASKSET "RyanTestTasks" <1 8:01> <1 23:00> "HYPER"
+       
+    
+
+END
+
+CLONE DEED "DialogID" "RyanDialogTest"
+    SET INSTRUCTIONS "Test this!"
+    SET CONTENT_ID "COMPLAIN_ABOUT_KIDS"
+END
+
+DEF TASK "RyanDialogTest"
+    SET NAME "Test this!"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "MEDIUM"
+    SET THEME "MISC"
+    SET DURATION <8H>
+
+    STEP "1" "RyanDialogTest"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+CLONE DEED "TapBase" "TapAllTest"
+    SET INSTRUCTIONS "Tap like the dickens!"
+    SET NUM_TAPS 25
+    SET WAIT 0S
+    SET PARTICIPATION "ALL"
+
+END
+
+DEF TASK "TapAllTest"
+    SET NAME "This is a thing where you tap!"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "MEDIUM"
+    SET DURATION <3H>
+    SET THEME "MISC"
+    
+    STEP "1" "TapAllTest"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "RyanTestTasks"
+    ADDTASK "StinkBomb"
+END

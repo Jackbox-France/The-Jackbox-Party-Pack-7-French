@@ -1,0 +1,14 @@
+MAIN(Riley): Hé, petit gars ! J'ai beaucoup entendu parler de toi par ton grand frère ou ta grande soeur.
+-PANTS-> Une fois, il/elle a mouillé son pantalon au pique-nique familial !
+-PANTS-> Une fois, il/elle a pleuré parce que nous n'avions plus de mayonnaise !
+-FART-> Une fois, il/elle a pété dans la piscine et on aurait dit le bruit d'une gorgone mourante !
+
+PANTS(Riley): Haha... Je suppose que ça a dû être il y a longtemps!
+-LASTWEEK-> C'était la semaine dernière.
+-SUCCESS-> Crois ce que tu as besoin de croire.
+
+LASTWEEK(Riley): Oh...
+-SUCCESS-> Méfait accompli.
+
+FART(Riley): Nous ne devrions jamais avoir honte de notre corps.
+-SUCCESS-> Je n'ai pas réussi à faire des bêtises, mais j'ai appris une bonne leçon.

@@ -1,0 +1,428 @@
+DEF EPISODE "SlumberParty"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Soirée pyjama diabolique"
+    SET DESCRIPTION "Le plus jeune enfant de la famille accueille sa première <font color='#AF0000'>soirée pyjama</font>. Parviendront-ils à gérer l'anarchie pure de 8 enfants avec la couverture de l'obscurité ? Il s'agit d'un défi de nuit, nous serons donc de retour au matin pour voir comment vous vous êtes débrouillés."
+    SET SUCCESS_MESSAGE "Nous avons été heureux d'apprendre que tout le monde a dormi 3 heures et demie ! Vous avez créé une soirée de petits écarts de conduite, de flux sanguins caféinés et de cris de fin de soirée. Comme toute soirée pyjama humaine."
+    SET FAILURE_MESSAGE "Comme le dit le proverbe, 'L'enfer, c'est quatre enfants'. Il ne faut pas s'étonner que le fait d'en accueillir huit soit plus que le diable le plus endurant puisse supporter. Non seulement les autres parents se doutent que leurs enfants manquent de sommeil, mais ils auraient pu jurer qu'ils étaient beaucoup moins 'possédés par le mal' que lorsqu'ils les ont déposés."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/slumberparty/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/slumberparty/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/slumberparty/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "WelcomeKids" <1 16:01>
+    SCHEDULE TASK "GatherSnackTray" <1 17:00>
+    SCHEDULE TASK "SlumberWatchScaryMovie" <1 18:00>
+    SCHEDULE TASK "LoadCoffee" <1 18:00>
+
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "SlumberSneakKid" <2 20:01>
+    SCHEDULE TASK "SlumberScareKids" <2 21:00>
+    SCHEDULE TASK "SlumberSound" <2 21:00>
+    SCHEDULE TASK "SlumberBedTime" <2 22:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "SlumberTeenSneak" <3 0:01>
+    SCHEDULE TASK "SlumberStayUp" <3 1:00>
+    SCHEDULE TASK "HangOutGarage" <3 2:00>
+    SCHEDULE TASK "SlumberQuiet" <3 2:00>
+    SCHEDULE TASK "SlumberBedTimeSeriously" <3 2:30>
+        
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Welcome kids at door
+CLONE DEED "DialogID" "DialogGreetKids"
+    SET INSTRUCTIONS "Souhaitez la bienvenue aux enfants à la porte"
+    SET CONTENT_ID "SLUMBERPARTY_WELCOME"
+END
+
+DEF TASK "WelcomeKids"
+    SET NAME "Accueillir les enfants à la porte"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DialogGreetKids"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make snack tray
+CLONE DEED "GatherID" "GatherSnackTray"
+    SET INSTRUCTIONS "Préparez un plateau de collations"
+    SET CONTENT_ID "SNACK_TRAY"
+END
+
+DEF TASK "GatherSnackTray"
+    SET NAME "Préparer un plateau de collations"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GatherSnackTray"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Watch scary movie
+CLONE DEED "QuickTap5" "FlipChannelsScary"
+    SET INSTRUCTIONS "Zappez les chaînes"
+END
+
+CLONE DEED "Hold3" "ChainsawTV"
+    SET INSTRUCTIONS "Wow... une troonçonneuse!"
+END
+
+CLONE DEED "Hold5" "GripPillow"
+    SET INSTRUCTIONS "Serrez un coussin"
+END
+
+CLONE DEED "SwipeUp" "HideEyes"
+    SET INSTRUCTIONS "Cachez vos yeux"
+END
+
+DEF TASK "SlumberWatchScaryMovie"
+    SET NAME "Regarder un film d'horreur"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "FlipChannelsScary"
+    STEP "2" "ChainsawTV"
+    STEP "3" "GripPillow"
+    STEP "4" "HideEyes"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Load up on coffee
+CLONE DEED "SwipeUp" "LoadCoffee1"
+    SET INSTRUCTIONS "Portez la tasse à vos lèvres"
+END
+
+CLONE DEED "Hold3" "LoadCoffee2"
+    SET INSTRUCTIONS "Et glouglou"
+END
+
+CLONE DEED "Tap1" "LoadCoffee3"
+    SET INSTRUCTIONS "Vérifiez l'heure"
+END
+
+CLONE DEED "Hold3" "LoadCoffee4"
+    SET INSTRUCTIONS "Continuez à boire"
+END
+
+DEF TASK "LoadCoffee"
+    SET NAME "Faire le plein de café"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LoadCoffee1"
+    STEP "2" "LoadCoffee2"
+    STEP "3" "LoadCoffee3"
+    STEP "4" "LoadCoffee4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------
+
+REM : Sneak out
+CLONE DEED "Tap2" "SlumberSneakKid1"
+    SET INSTRUCTIONS "Rembourrez les oreillers sous la couverture"
+END
+
+CLONE DEED "QuickTap4" "SlumberSneakKid2"
+    SET INSTRUCTIONS "Faufilez-vous à la porte"
+END
+
+CLONE DEED "SwipeRight" "SlumberSneakKid3"
+    SET INSTRUCTIONS "Ouvrez la porte"
+END
+
+CLONE DEED "Nothing3" "SlumberSneakKid4"
+    SET INSTRUCTIONS "Jetez un dernier regard mélancolique sur votre ancienne vie"
+END
+
+DEF TASK "SlumberSneakKid"
+    SET NAME "Sortir en douce"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberSneakKid1"
+    STEP "2" "SlumberSneakKid2"
+    STEP "3" "SlumberSneakKid3"
+    STEP "4" "SlumberSneakKid4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "SlumberSearchKids"
+END
+
+REM : Search for kids who snuck out
+CLONE DEED "SearchID" "SlumberSearch"
+    SET INSTRUCTIONS "Cherchez les enfants qui ont fait le mur"
+    SET CONTENT_ID "SLUMBERSEARCH"
+END
+
+DEF TASK "SlumberSearchKids"
+    SET NAME "Chercher les enfants qui ont fait le mur"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberSearch"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Scare the kids
+
+CLONE DEED "Tap2" "SlumberScareKids1"
+    SET INSTRUCTIONS "Cachez-vous dans le placard"
+END
+
+CLONE DEED "ScrubMedium" "SlumberScareKids2"
+    SET INSTRUCTIONS "Grattez le mur"
+END
+
+CLONE DEED "Nothing3" "SlumberScareKids3"
+    SET INSTRUCTIONS "Attendez..."
+END
+
+CLONE DEED "SwipeUp" "SlumberScareKids4"
+    SET INSTRUCTIONS "Sautez et criez !"
+END
+
+DEF TASK "SlumberScareKids"
+    SET NAME "Effrayer les enfants"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberScareKids1"
+    STEP "2" "SlumberScareKids2"
+    STEP "3" "SlumberScareKids3"
+    STEP "4" "SlumberScareKids4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Investigate scary sound
+CLONE DEED "Tap3" "SlumberSound1"
+    SET INSTRUCTIONS "Descendez les escaliers"
+END
+
+CLONE DEED "Hold5" "SlumberSound2"
+    SET INSTRUCTIONS "Jetez un coup d'œil dans le coin..."
+END
+
+CLONE DEED "Nothing3" "SlumberSound3"
+    SET INSTRUCTIONS "C'est juste une ombre... pas vrai?"
+END
+
+CLONE DEED "QuickTap4" "SlumberSound4"
+    SET INSTRUCTIONS "Fuyez juste au cas où!"
+END
+
+DEF TASK "SlumberSound"
+    SET NAME "Enquêter sur un son effrayant"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberSound1"
+    STEP "2" "SlumberSound2"
+    STEP "3" "SlumberSound3"
+    STEP "4" "SlumberSound4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Everybody go to bed
+CLONE DEED "Nothing5" "SlumberBedTime"
+    SET INSTRUCTIONS "Endormez-vous (ou faites semblant)"
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "SlumberBedTime"
+    SET NAME "C'est l'heure de se coucher !"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberBedTime"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------
+
+REM : Teen sneak out for no reason
+CLONE DEED "TravelID" "SlumberTeenSneak"
+    SET INSTRUCTIONS "J'ai envie de tekka maki"
+    SET CONTENT_ID "GAS_N_SUSHI"
+END
+
+DEF TASK "SlumberTeenSneak"
+    SET NAME "Faire une balade en voiture"
+    SET ASKER_NAME "Faites une balade en voiture avec un adolescent"
+    SET HELPER_NAME "Faites une balade en voiture avec <ASKER>"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberTeenSneak"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Hang out in garage
+CLONE DEED "Nothing3" "HangOutGarage1"
+    SET INSTRUCTIONS "Asseyez-vous dans le garage. Évitez les enfants."
+END
+
+CLONE DEED "SwipeDown" "HangOutGarage2"
+    SET INSTRUCTIONS "Traînez autour de l'ampoule"
+END
+
+CLONE DEED "Nothing3" "HangOutGarage3"
+    SET INSTRUCTIONS "On s'ennuie. Retournez à l'intérieur."
+END
+
+DEF TASK "HangOutGarage"
+    SET NAME "Traîner dans le garage"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "HangOutGarage1"
+    STEP "2" "HangOutGarage2"
+    STEP "3" "HangOutGarage3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Tell kids quiet down
+CLONE DEED "SwipeRight" "SlumberQuiet1"
+    SET INSTRUCTIONS "Ouvrez grand la porte"
+END
+
+CLONE DEED "Hold3" "SlumberQuiet2"
+    SET INSTRUCTIONS "Faites un gros bruit de 'Chuuuut'"
+END
+
+CLONE DEED "Hold5" "SlumberQuiet3"
+    SET INSTRUCTIONS "Ça ne marche pas, faites vraiment 'CHHHHHHUT'"
+END
+
+DEF TASK "SlumberQuiet"
+    SET NAME "Dire aux enfants de se calmer"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberQuiet1"
+    STEP "2" "SlumberQuiet2"
+    STEP "3" "SlumberQuiet3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Stay up
+CLONE DEED "Tap1" "SlumberStayUp1"
+    SET INSTRUCTIONS "Posez une question simple"
+END
+
+CLONE DEED "Tap2" "SlumberStayUp2"
+    SET INSTRUCTIONS "La conversation s'intensifie"
+END
+
+CLONE DEED "Nothing5" "SlumberStayUp3"
+    SET INSTRUCTIONS "Contemplez l'infini"
+END
+
+DEF TASK "SlumberStayUp"
+    SET NAME "Rester éveillé en posant des questions existentielles"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberStayUp1"
+    STEP "2" "SlumberStayUp2"
+    STEP "3" "SlumberStayUp3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Go to sleep!!
+CLONE DEED "Nothing5" "SlumberBedTimeSeriously"
+    SET INSTRUCTIONS "ON EST SÉRIEUX."
+    SET PARTICIPATION "ALL"
+END
+
+DEF TASK "SlumberBedTimeSeriously"
+    SET NAME "ALLEZ DORMIR!!!"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SlumberBedTimeSeriously"
+
+    NEXT "1" SUCCESS FAILURE
+END

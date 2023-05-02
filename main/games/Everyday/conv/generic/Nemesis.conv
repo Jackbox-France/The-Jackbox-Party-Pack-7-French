@@ -1,0 +1,28 @@
+MAIN(Nemesis): Bonjour, voisin ! J'suis Nemesis ! Es-tu prêt pour ton combat final ?
+-ENGAGE-> Vas-y vilain !
+-RUNAWAY-> Tu ne m'attraperas jamais ! 
+-TRICK-> Je sais qui tu es, mais qui suis-je ?
+-FORGOT-> Attendez, qui êtes-vous encore ?
+
+
+ENGAGE(Nemesis): Ma vengeance est à portée de main ! Prends tes épées dans l'arrière-cour dans cinq minutes !
+-SUCCESS-> J'espère que tu crois à tes cartes, car il est l'heure du DU-DU-DU-DU-DUEL !
+
+
+RUNAWAY(Nemesis): Vous ne m'échapperez jamais ! Ma rage est éternel ! 
+-FAILURE-> Il est temps de reprendre la course !
+
+
+TRICK(Nemesis): Je suis... Je suis... Oh mon dieu, qui suis-je ??? 30 années de perdu !
+-SUCCESS-> Le jeu de mots l'emporte !
+
+
+FORGOT(Nemesis): C'est moi ! Ton Némésis ? Un ancien ami devenu rival après une grande trahison ?
+-SUCCESS-> Hmm... Ca ne me dit rien. Enchanté
+-TRYAGAIN-> Ohhh, oui ! C'est un nouveau cache-oeil ?
+
+
+TRYAGAIN(Nemesis): Non c'est le même. Maintenant, es-tu prêt pour le combat final, ou pas ?
+-ENGAGE-> Vas-y vilain !
+-RUNAWAY-> Tu ne m'attraperas jamais ! 
+-TRICK-> Je sais qui tu es, mais qui suis-je ?

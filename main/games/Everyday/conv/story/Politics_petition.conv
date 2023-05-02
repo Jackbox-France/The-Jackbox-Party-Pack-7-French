@@ -1,0 +1,18 @@
+MAIN(Neighbor): Une campagne politique ? Comment puis-je aider ?
+-PETITION-> Signer la pétition ?
+-FORGE-> Forger des votes supplémentaires ?
+-DONATION-> Faire une donation?
+-BROCHURE-> Prendre cette brochure?
+
+
+PETITION(Neighbor): Bien sûr. Pourquoi pas ?
+-SUCCESS-> Signez là en grand!
+
+FORGE(Neighbor): N'est-ce pas un crime?
+-SUCCESS-> Nous allons aussi légaliser cela !
+
+DONATION(Neighbor): Bien sûr. Voilà 200€.
+-SUCCESS-> Combien devrais-je déclarer...?
+
+BROCHURE(Neighbor): Bien sûr. Pourquoi pas?
+-SUCCESS-> Je les ai faites moi-même!

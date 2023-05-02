@@ -1,0 +1,32 @@
+MAIN(Contractor): Il est temps de payer.
+-POLITE-> Y a-t-il un moyen de faire baisser ce prix ?
+-OUTRAGE-> C'est scandaleux ! Je refuse de payer !
+-AMNESIA-> Je ne me souviens pas avoir commandé une piscine. Vous voyez, je suis amnésique.
+
+POLITE(Contractor): Ça dépend. Êtes-vous doué pour la négociation ?
+-GOOD-> Je ne répondrai que si vous me donnez cinq euros.
+-BAD-> Je ne répondrai que si vous me donnez dix euros.
+
+GOOD(Contractor): Vous avez été plus malin que moi et maintenant votre piscine est gratuite.
+-SUCCESS-> Cette cassette d'auto-assistance a porté ses fruits !
+
+BAD(Contractor): Je gagne cette négociation. Maintenant vous devez payer le double et aussi installer MA piscine.
+-SUCCESS-> Ça aurait pu être mieux.
+
+OUTRAGE(Contractor): La farce s'est retournée contre vous. Nous avons rempli votre piscine de poison et je suis le seul à avoir l'antidote !
+-UNETHICAL-> La nature complexe du système juridique me dissuade de signaler ce crime.
+-WIN-> Non, la blague est sur vous parce que J'ADORE le poison !
+
+WIN(Contractor): Vous avez gagné cette bataille, propriétaire. Mais nous allons gagner la guerre.
+-SUCCESS-> J'ai fini de vous parler.
+
+UNETHICAL(Contractor): Je comptais exactement sur ça.
+-SUCCESS-> Prenez juste mon porte-feuille.
+
+AMNESIA(Contractor): Si vous êtes amnésique, comment vous rappelez-vous que vous êtes amnésique ?
+-TATOO-> Via un réseau compliqué de tatouages corporels me rappelant mon passé.
+-WIN-> J'ai oublié.
+-BAD-> Très bien, j'ai menti.
+
+TATOO(Contractor): Je ne vois pas de tatouages. Et maintenant, je vous facture aussi cette conversation ridicule.
+-SUCCESS-> Ça en valait la peine.

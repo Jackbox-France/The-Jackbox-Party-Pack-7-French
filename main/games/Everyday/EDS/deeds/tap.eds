@@ -1,0 +1,76 @@
+DEF DEED "TapBase"
+    SET MECHANIC_ID "TAP"
+    SET INSTRUCTIONS "Tap"
+    SET NUM_TAPS 4
+    SET WAIT 0.5S
+END
+
+REM : Clones
+
+CLONE DEED "TapBase" "Tap1"    
+    SET NUM_TAPS 1
+END
+
+CLONE DEED "TapBase" "Tap2"    
+    SET NUM_TAPS 2
+END
+
+CLONE DEED "TapBase" "Tap3"    
+    SET NUM_TAPS 3
+END
+
+CLONE DEED "TapBase" "Tap4"    
+    SET NUM_TAPS 4
+END
+
+CLONE DEED "TapBase" "Tap5"    
+    SET NUM_TAPS 5
+END
+
+CLONE DEED "TapBase" "QuickTap1"    
+    SET NUM_TAPS 1
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap2"    
+    SET NUM_TAPS 2
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap3"    
+    SET NUM_TAPS 3
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap4"    
+    SET NUM_TAPS 4
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap5"    
+    SET NUM_TAPS 5
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap6"    
+    SET NUM_TAPS 6
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "QuickTap10"    
+    SET NUM_TAPS 10
+    SET WAIT 0.25S
+END
+
+CLONE DEED "TapBase" "TapAll"
+    SET MECHANIC_ID "TAP"
+    SET INSTRUCTIONS "Tap"
+    SET NUM_TAPS 10
+    SET WAIT 0S
+    SET UPDATE_RATE 1S
+    SET PARTICIPATION "ALL"
+END
+
+CLONE DEED "TapAll" "TapEmergency"
+    SET NUM_TAPS 20
+END

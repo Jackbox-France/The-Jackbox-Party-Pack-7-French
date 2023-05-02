@@ -1,0 +1,51 @@
+DEF EPISODE "CategoryTest"
+    SET CHOOSABLE FALSE
+
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+    
+    SCHEDULE TASK "TapLow" <1 8:00>
+    SCHEDULE TASK "TapMedium" <1 8:00>
+    SCHEDULE TASK "TapHigh" <1 8:00>
+    SCHEDULE TASK "TapStory" <1 8:00>
+END
+
+
+DEF TASK "TapLow"
+    SET DURATION <12H>
+    SET NAME "Low Tap Mechanic"
+    SET CATEGORY "LOW"
+
+    STEP "1" "Tap1"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "TapMedium"
+    SET DURATION <12H>
+    SET NAME "Medium Tap Mechanic"
+    SET CATEGORY "MEDIUM"
+
+    STEP "1" "Tap1"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "TapHigh"
+    SET DURATION <12H>
+    SET NAME "High Tap Mechanic"
+    SET CATEGORY "HIGH"
+
+    STEP "1" "Tap1"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+DEF TASK "TapStory"
+    SET DURATION <12H>
+    SET NAME "Story Tap Mechanic"
+    SET CATEGORY "STORY"
+
+    STEP "1" "Tap1"
+    
+    NEXT "1" SUCCESS FAILURE
+END

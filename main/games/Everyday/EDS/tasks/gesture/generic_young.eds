@@ -1,0 +1,369 @@
+REM : Take Out Trash
+
+CLONE DEED "Tap2" "CrushBags"
+    SET INSTRUCTIONS "Ecrasez les sacs"
+END
+
+CLONE DEED "SwipeDown" "Squash"
+    SET INSTRUCTIONS "Empilez les sacs"
+END
+
+DEF TASK "TakeOutTrash2"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET THEME "CLEANING"
+    SET NAME "Sortir les poubelles"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+
+    STEP "CRUSH" "CrushBags"
+    STEP "SQUASH" "Squash"
+    
+    NEXT "CRUSH" "SQUASH" FAILURE
+    NEXT "SQUASH" SUCCESS FAILURE
+END
+
+
+REM : Wash The Car
+
+CLONE DEED "Hold2" "Hose"
+    SET INSTRUCTIONS "Nettoyez la voiture au jet d'eau"
+END
+
+CLONE DEED "ScrubMedium" "Scrub"
+    SET INSTRUCTIONS "Frottez fort"
+END
+
+CLONE DEED "SwipeBase" "Dry"
+    SET INSTRUCTIONS "Séchez la"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+DEF TASK "WashTheCar2"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET THEME "CLEANING"
+    SET NAME "Lavez la voiture"
+    SET CAPTAIN "YOUNG"
+
+    STEP "HOSE" "Hose"
+    STEP "SCRUB" "Scrub"
+    STEP "DRY" "Dry"
+    
+    NEXT "HOSE" "SCRUB" FAILURE
+    NEXT "SCRUB" "DRY" FAILURE
+    NEXT "DRY" SUCCESS FAILURE
+END
+
+REM : Do Your Homework (DoHomework)
+
+CLONE DEED "SwipeLeft" "FlipPage1"
+    SET INSTRUCTIONS "Tournez la page"
+END
+
+CLONE DEED "SwipeLeft" "FlipPage2"
+    SET INSTRUCTIONS "Tournez une autre page"
+END
+
+CLONE DEED "SwipeRight" "FlipPageBack"
+    SET INSTRUCTIONS "Attendez, qu'est ce que je viens de lire ?"
+END
+
+CLONE DEED "SwipeUp" "HomeworkFlipTable"
+    SET INSTRUCTIONS "Retournez la table en colère"
+END
+
+DEF TASK "DoHomework"
+    SET NAME "Faire ses devoirs"
+    SET THEME "PAPERWORK"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "MEDIUM"
+
+    STEP "1" "FlipPage1"
+    STEP "2" "FlipPage2"
+    STEP "3" "FlipPageBack"
+    STEP "4" "HomeworkFlipTable"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE 
+END
+
+
+REM : Rake Leaves 1
+
+CLONE DEED "SwipeRight" "Rake1Step1"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+CLONE DEED "SwipeRight" "Rake1Step2"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+CLONE DEED "SwipeRight" "Rake1Step3"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+DEF TASK "RakeLeaves1"
+    SET NAME "Ratisser les feuilles"
+    SET THEME "YARD_WORK"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+
+
+    STEP "Step1" "Rake1Step1"
+    STEP "Step2" "Rake1Step2"
+    STEP "Step3" "Rake1Step3"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" SUCCESS FAILURE
+END
+
+
+REM : Rake Leaves 2
+
+CLONE DEED "SwipeRight" "Rake2Step1"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+CLONE DEED "SwipeRight" "Rake2Step2"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+CLONE DEED "SwipeRight" "Rake2Step3"
+    SET INSTRUCTIONS "Ratissez les feuilles"
+END
+
+CLONE DEED "SwipeDown" "Rake2Step4"
+    SET INSTRUCTIONS "Jetez-vous dans la pile de feuille"
+END
+
+DEF TASK "RakeLeaves2"
+    SET NAME "Ratisser les feuilles"
+    SET THEME "YARD_WORK"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+
+    STEP "Step1" "Rake2Step1"
+    STEP "Step2" "Rake2Step2"
+    STEP "Step3" "Rake2Step3"
+    STEP "Step4" "Rake2Step4"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" "Step4" FAILURE
+    NEXT "Step4" SUCCESS FAILURE
+END
+
+
+REM : Brush Your Teeth
+
+CLONE DEED "Rotate360" "Circles"
+    SET INSTRUCTIONS "Brossez ces dents"
+END
+
+CLONE DEED "SwipeBase" "BackForth"
+    SET INSTRUCTIONS "Brossez encore plus !"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT,LEFT,RIGHT"
+END
+
+DEF TASK "BrushYourTeeth"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET THEME "BATHROOM"
+    SET NAME "Se brosser les dents"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+
+    STEP "CIRCLES" "Circles"
+    STEP "BACKFORTH" "BackForth"
+    
+    NEXT "CIRCLES" SUCCESS "BACKFORTH"
+    NEXT "CIRCLES" FAILURE FAILURE
+    NEXT "BACKFORTH" SUCCESS SUCCESS
+    NEXT "BACKFORTH" FAILURE FAILURE
+END
+
+
+REM : Mow the lawn (MowLawn)
+
+CLONE DEED "SwipeLeft" "MowStart"
+    SET INSTRUCTIONS "Commencez à tondre la pelouse"
+END
+
+CLONE DEED "SwipeRight" "MowSpot"
+    SET INSTRUCTIONS "Vous avez oublié un endroit, reculez."
+END
+
+CLONE DEED "SwipeLeft" "MowTurnAround"
+    SET INSTRUCTIONS "Tournez autour"
+END
+
+CLONE DEED "SwipeRight" "MowMiss"
+    SET INSTRUCTIONS "Vous l'avez encore raté"
+END
+
+CLONE DEED "SwipeUp" "MowDone"
+    SET INSTRUCTIONS "Eh, c'est assez pour aujourd'hui"
+END
+
+DEF TASK "MowLawn"
+    SET NAME "Tondre la pelouse"
+    SET THEME "YARD_WORK"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+
+    STEP "1" "MowStart"
+    STEP "2" "MowSpot"
+    STEP "3" "MowTurnAround"
+    STEP "4" "MowMiss"
+    STEP "5" "MowDone"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Make an origami crane
+
+CLONE DEED "SwipeLeft" "OrigamiCrane1"
+    SET INSTRUCTIONS "Pliez le papier"
+END
+
+CLONE DEED "ScrubShort" "OrigamiCrane2"
+    SET INSTRUCTIONS "Lissez les plis"
+END
+
+CLONE DEED "SwipeRight" "OrigamiCrane3"
+    SET INSTRUCTIONS "Pliez le papier"
+END
+
+CLONE DEED "SwipeLeft" "OrigamiCrane4"
+    SET INSTRUCTIONS "Pliez le papier"
+END
+
+CLONE DEED "Hold5" "OrigamiCrane5"
+    SET INSTRUCTIONS "... Contentez vous d'un oiseau en papier"
+END
+
+DEF TASK "OrigamiCrane"
+    SET NAME "Faire un origami"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "LOW"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "OrigamiCrane1"
+    STEP "2" "OrigamiCrane2"
+    STEP "3" "OrigamiCrane3"
+    STEP "4" "OrigamiCrane4"
+    STEP "5" "OrigamiCrane5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Prank call a local business
+
+CLONE DEED "PhoneCategory" "PrankCallBusiness1"
+    SET INSTRUCTIONS "Appelez une entreprise locale"
+    SET CATEGORY "FOOD"
+END
+
+CLONE DEED "DialogBase" "PrankCallBusiness2"
+    SET INSTRUCTIONS "Faites-leur une farce"
+    SET CONTENT_ID "FRIDGE_PRANK"
+END
+
+DEF TASK "PrankCallBusiness"
+    SET NAME "Faire une farce à une entreprise locale"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "PrankCallBusiness1"
+    STEP "2" "PrankCallBusiness2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Try on your new pants
+
+CLONE DEED "SwipeRight" "NewPants1"
+    SET INSTRUCTIONS "Essayez votre nouveau jean"
+END
+
+CLONE DEED "SwipeUp" "NewPants2"
+    SET INSTRUCTIONS "Faites entrer une jambe"
+END
+
+CLONE DEED "SwipeUp" "NewPants3"
+    SET INSTRUCTIONS "Maintenant l'autre jambe"
+END
+
+CLONE DEED "QuickTap5" "NewPants4"
+    SET INSTRUCTIONS "Sautez un peu pour les faire monter"
+END
+
+CLONE DEED "Nothing3" "NewPants5"
+    SET INSTRUCTIONS "Demandez de l'aide..."
+END
+
+CLONE DEED "Hold3" "NewPants6"
+    SET INSTRUCTIONS "Ca vous va bien !"
+END
+
+DEF TASK "NewPants"
+    SET NAME "Essayer un nouveau pantalon"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "MEDIUM"
+    SET THEME "CLOTHES"
+    SET DURATION <3H>
+
+    STEP "1" "NewPants1"
+    STEP "2" "NewPants2"
+    STEP "3" "NewPants3"
+    STEP "4" "NewPants4"
+    STEP "5" "NewPants5"
+    STEP "6" "NewPants6"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" "6" FAILURE
+    NEXT "6" SUCCESS FAILURE
+END
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "YoungTasks"
+    ADDTASK "TakeOutTrash2"
+    ADDTASK "WashTheCar2"
+    ADDTASK "DoHomework"
+    ADDTASK "RakeLeaves1"
+    ADDTASK "RakeLeaves2"
+    ADDTASK "BrushYourTeeth"
+    ADDTASK "MowLawn"
+    ADDTASK "OrigamiCrane"
+    ADDTASK "PrankCallBusiness"
+    ADDTASK "NewPants"
+END

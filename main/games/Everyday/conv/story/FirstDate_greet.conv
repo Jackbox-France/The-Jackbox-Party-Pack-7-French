@@ -1,0 +1,21 @@
+MAIN(Riley): Salut, je suis Riley.
+-COMEIN-> Entrez, s'il vous plaît !
+-DISH-> Vous avez apporté un plat à faire passer, non ?
+-DONTSEE-> Je ne vois pas le charme.
+
+COMEIN(Riley): Vous avez une si belle maison!
+-THANKS-> Merci, c'était fourni par des démons!
+-THANKS-> Descendez d'un cran, Riley.
+
+THANKS(Riley): Je suis extrêmement nerveux.
+-SUCCESS-> C'est agréable de se sentir supérieur à un adolescent pour une fois.
+
+DISH(Riley): Oh mince. Oh non. Oh mince.
+-SUCCESS-> J'ai réussi à déstabiliser un adolescent maladroit.
+
+DONTSEE(Riley): Euh...bien... Les gens me disent que j'ai un joli sourire ?
+-SUCCESS-> Je vous crois sur parole.
+-SMILE-> Prouvez-le.
+
+SMILE(Riley): *Sourit nerveusement*
+-SUCCESS-> Honnêtement? Radiant.

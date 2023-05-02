@@ -1,0 +1,17 @@
+MAIN(AC): Quelle est la gravité de votre problème ?
+-SMOKE-> La climatisation fait de la fumée
+-COUCH-> Mon canapé est en feu
+-FLAME-> Notre chat est en flammes
+-COOL-> On est tranquille
+
+SMOKE(AC): Ça peut attendre jusqu'à demain
+-SUCCESS-> *tousse* *tousse*
+
+COUCH(AC): Ça peut attendre jusqu'à demain
+-SUCCESS-> Adieu le pouf
+
+FLAME(AC): Juste un chat ? Ça peut attendre
+-SUCCESS-> Je vais chercher le tuyau.
+
+COOL(AC): Super ! À jamais !
+-SUCCESS-> Je suis si nul au téléphone.

@@ -1,0 +1,284 @@
+DEF EPISODE "GrandmasBirthday"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Un démon pour le dîner"
+    SET DESCRIPTION "C'est le<font color='#AF0000'>666e anniversaire de Grand-mère Pazuzu</font>, et même si c'est un démon maléfique à trois têtes que personne n'aime, la famille lui organise une fête."
+    SET SUCCESS_MESSAGE "Nous avons été ravis d'apprendre que le 666e anniversaire de Grand-mère Pazuzu s'est déroulée sans accroc. Fêter l'anniversaire d'un parent ennuyeux est une tradition humaine de longue date, tout comme les pique-niques au bureau et le fait de prétendre aimer les pulls faits maison."
+    SET FAILURE_MESSAGE "Nous avons appris que l'anniversaire de Mamie Pazuzu a été un véritable désastre. Nos plantes dans sa maison de retraite nous ont dit qu'elle ne voulait pas se taire sur le fait qu'elle avait passé un moment terrible. Pour votre gouverne, ne vous attendez pas à voir l'un de vos noms sur le testament."
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "TravelPartySupplies" <1 8:00>
+    SCHEDULE TASK "CallFriendGrandma" <1 10:00>
+    SCHEDULE TASK "CleanParty" <1 13:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "TravelGrammaPresent" <2 8:00>
+    SCHEDULE TASK "GatherGrandmaBouquet" <2 10:00>
+    SCHEDULE TASK "GrandmaHandmadeGift" <2 15:00>
+    SCHEDULE TASK "WrapGrandmasGift" <2 18:00>
+    
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "GatherGrandmaMeal" <3 8:00>
+    SCHEDULE TASK "TravelPickupGrandma" <3 11:00>
+    SCHEDULE TASK "GrandmaSmallTalk" <3 15:00>
+    SCHEDULE TASK "GrandmaBlowCandles" <3 18:00>
+        
+END
+
+
+REM : ------------------------------
+
+
+REM : Get Party Supplies
+CLONE DEED "TravelCategory" "TravelGrammaSupplies"
+    SET INSTRUCTIONS "Conduisez jusqu'au magasin pour acheter des fournitures de fête"
+    SET CONTENT_ID "PARTYTOWNSHIP"
+END
+
+DEF TASK "TravelPartySupplies"
+    SET DURATION <8H>
+    SET NAME "Conduire jusqu'au magasin pour acheter des fournitures de fête"
+    SET ASKER_NAME "Accompagnez une personne plus âgée au magasin pour acheter des fournitures de fête"
+    SET HELPER_NAME "Conduisez au magasin avec <ASKER> pour acheter des fournitures de fête"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "YOUNG"
+    
+    STEP "1" "TravelGrammaSupplies"
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Buy Grandma's Present
+CLONE DEED "TravelCategory" "TravelGrammaPresent"
+    SET INSTRUCTIONS "Allez acheter un cadeau à grand-mère"
+    SET CATEGORY "SHOPPING"
+END
+
+DEF TASK "TravelGrammaPresent"
+    SET DURATION <8H>
+    SET NAME "Aller acheter un cadeau à Grand-mère"
+    SET ASKER_NAME "Faites-vous conduire au magasin pour acheter un cadeau à grand-mère"
+    SET HELPER_NAME "Conduisez <ASKER> au magasin pour acheter un cadeau à grand-mère"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "CHILDREN"
+
+    
+    STEP "1" "TravelGrammaPresent"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Pick up Grandma
+CLONE DEED "TravelCategory" "TravelPickupGrandma"
+    SET INSTRUCTIONS "Allez chercher Grand-mère à son domicile"
+    SET CONTENT_ID "EERIEACRES"
+END
+
+DEF TASK "TravelPickupGrandma"
+    SET DURATION <8H>
+    SET NAME "Aller chercher Grand-mère à son domicile"
+    SET ASKER_NAME "Partez avec quelqu'un de plus âgé pour aller chercher Grand-mère"
+    SET HELPER_NAME "Allez avec <ASKER> pour aller chercher Grand-mère"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "CHILDREN"
+
+
+    STEP "1" "TravelPickupGrandma"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call Friend
+
+CLONE DEED "PhoneID" "CallHecuba"
+    SET INSTRUCTIONS "Appelez Aunt Hecuba"
+    SET CONTENT_ID "HECUBA"
+END
+
+CLONE DEED "DialogBase" "GrandmaCallFriend"
+    SET INSTRUCTIONS "Parlez à Tante Hecuba"
+    SET CONTENT_ID "GRANDMAS_FRIEND"
+END
+
+DEF TASK "CallFriendGrandma"
+    SET DURATION <8H>
+    SET NAME "Inviter Tante Hecuba à la fête"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+
+    STEP "1" "CallHecuba"
+    STEP "2" "GrandmaCallFriend"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Clean the house
+CLONE TASK "CleanHouse" "CleanParty"
+    SET NAME "Nettoyer la maison pour la fête"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+END
+
+REM : Handmade present
+CLONE TASK "MakeSlimeMess" "GrandmaHandmadeGift"
+    SET NAME "Offrir à Grand-mère un cadeau fait maison"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "CHILDREN"
+    SET DURATION <8H>
+
+END
+
+REM : Wrap present
+CLONE DEED "SwipeBase" "WrapGift"
+    SET INSTRUCTIONS "Emballez le cadeau de Grand-mère"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT,LEFT,RIGHT"
+END
+
+CLONE DEED "Rotate360Counter" "UnspoolRibbon"
+    SET INSTRUCTIONS "Découpez le ruban"
+END
+
+CLONE DEED "Hold3" "TapeDown"
+    SET INSTRUCTIONS "Fixez les coins avec du ruban adhésif"    
+END
+
+CLONE DEED "Tap1" "Bow"
+    SET INSTRUCTIONS "Ajoutez un nœud"
+END
+
+DEF TASK "WrapGrandmasGift"
+    SET DURATION <8H>
+    SET NAME "Emballer le cadeau de Grand-mère"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+
+    STEP "1" "WrapGift"
+    STEP "2" "TapeDown"
+    STEP "3" "UnspoolRibbon"
+    STEP "4" "Bow"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+
+REM : Gramma Meal Cook
+CLONE DEED "GatherMeal" "GrammaMealIngredients"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour le repas préféré de grand-mère"
+    SET CATEGORY "DINNER"
+
+END
+
+DEF TASK "GatherGrandmaMeal"
+    SET DURATION <8H>
+    SET NAME "Rassembler les ingrédients pour le repas préféré de grand-mère"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+    
+    STEP "1" "GrammaMealIngredients"
+
+    NEXT "1" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "CookGrandmaMeal"
+END
+
+
+REM : Gramma Meal Gather
+CLONE DEED "Tap3" "CramGrandmaMeal"
+    SET INSTRUCTIONS "Mettez-le au réfrigérateur jusqu'à la fête"
+END
+
+DEF TASK "CookGrandmaMeal"
+    SET DURATION <8H>
+    SET NAME "Préparer le repas préféré de Grand-mère"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+
+    STEP "1" "Stir"
+    STEP "2" "CramGrandmaMeal"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+    
+    CONSEQUENCE SUCCESS "EatLunch"
+END
+
+REM : Blow out candles
+CLONE DEED "Hold5" "GrandmaBlowCandles"
+    SET INSTRUCTIONS "Soufflez fort !"
+END
+
+DEF TASK "GrandmaBlowCandles"
+    SET NAME "Aider Grand-mère à souffler ses bougies"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GrandmaBlowCandles"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : Make small talk with Grandma
+CLONE DEED "DialogID" "GrandmaSmallTalk"
+    SET INSTRUCTIONS "Faites la conversation avec Grand-mère"
+    SET CONTENT_ID "GRANDMAS_SMALLTALK"
+END
+
+DEF TASK "GrandmaSmallTalk"
+    SET NAME "Faire la conversation avec Grand-mère"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GrandmaSmallTalk"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make Grandma a bouquet
+CLONE DEED "GatherBase" "GatherGrandmaBouquet"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour le bouquet"
+    SET CONTENT_ID "GRANDMAS_FLOWERS"
+END
+
+DEF TASK "GatherGrandmaBouquet"
+    SET DURATION <3H>
+    SET NAME "Faire un bouquet à Grand-mère"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+
+    STEP "1" "GatherGrandmaBouquet"
+
+    NEXT "1" SUCCESS FAILURE
+END

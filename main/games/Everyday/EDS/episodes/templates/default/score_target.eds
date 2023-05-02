@@ -1,0 +1,8 @@
+REM : DEFAULT SCORE TARGETS
+ROUND <1 7:00> <1 24:00> 7500  3000 1
+ROUND <2 7:00> <2 24:00> 11500  6000 1.5
+ROUND <3 7:00> <3 24:00> 17500  9000 2
+
+
+REM : KEY
+REM : ROUND <Round# RoundStartTime> <Round# RoundEndTime> BaseTagert ExtraTargetPerPlayer Multiplier

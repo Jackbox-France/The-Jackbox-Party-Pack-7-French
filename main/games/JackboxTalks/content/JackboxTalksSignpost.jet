@@ -1,0 +1,1505 @@
+
+{
+"content": [
+  {
+   "id": "71367",
+   "position": "middle",
+   "signpost": "Alors qu'est-ce que cela signifie exactement?",
+   "x": false
+  },
+  {
+   "id": "71368",
+   "position": "end",
+   "signpost": "C'est là que j'ai appris quelque chose de vraiment choquant",
+   "x": false
+  },
+  {
+   "id": "71369",
+   "position": "middle",
+   "signpost": "Pourquoi cette information est-elle importante?",
+   "x": false
+  },
+  {
+   "id": "71370",
+   "position": "end",
+   "signpost": "Et maintenant?",
+   "x": false
+  },
+  {
+   "id": "71371",
+   "position": "middle",
+   "signpost": "Voici une chose intéressante...",
+   "x": false
+  },
+  {
+   "id": "71372",
+   "position": "end",
+   "signpost": "Et quel effet cela a-t-il sur le reste du monde?",
+   "x": false
+  },
+  {
+   "id": "71373",
+   "position": "end",
+   "signpost": "Qu'ai-je appris de tout cela?",
+   "x": false
+  },
+  {
+   "id": "71374",
+   "position": "middle",
+   "signpost": "Cela m'a donné une idée",
+   "x": false
+  },
+  {
+   "id": "71375",
+   "position": "middle",
+   "signpost": "La prochaine chose vous surprendra vraiment",
+   "x": false
+  },
+  {
+   "id": "71376",
+   "position": "end",
+   "signpost": "A quoi ressemble le futur?",
+   "x": false
+  },
+  {
+   "id": "71377",
+   "position": "middle",
+   "signpost": "Il y a une chose que j'ignorais...",
+   "x": false
+  },
+  {
+   "id": "71378",
+   "position": "end",
+   "signpost": "Que peut-on faire à ce sujet?",
+   "x": false
+  },
+  {
+   "id": "71379",
+   "position": "middle",
+   "signpost": "Pourquoi cela se produit-il?",
+   "x": false
+  },
+  {
+   "id": "71380",
+   "position": "end",
+   "signpost": "Comment sommes-nous arrivés ici?",
+   "x": false
+  },
+  {
+   "id": "71381",
+   "position": "end",
+   "signpost": "Où allons-nous à partir d'ici?",
+   "x": false
+  },
+  {
+   "id": "71382",
+   "position": "end",
+   "signpost": "Quel impact cela a-t-il sur votre vie de tous les jours?",
+   "x": false
+  },
+  {
+   "id": "71383",
+   "position": "middle",
+   "signpost": "Je sais ce que vous pensez...",
+   "x": false
+  },
+  {
+   "id": "71384",
+   "position": "middle",
+   "signpost": "Mais j'ai oublié une chose...",
+   "x": false
+  },
+  {
+   "id": "71385",
+   "position": "end",
+   "signpost": "Quel est le pire dans tout cela?",
+   "x": false
+  },
+  {
+   "id": "71386",
+   "position": "middle",
+   "signpost": "Vous pourriez vous demander... pourquoi? Eh bien...",
+   "x": false
+  },
+  {
+   "id": "71387",
+   "position": "end",
+   "signpost": "Mais alors tout a changé...",
+   "x": false
+  },
+  {
+   "id": "71388",
+   "position": "middle",
+   "signpost": "Cette prochaine partie vous surprendra",
+   "x": false
+  },
+  {
+   "id": "71389",
+   "position": "end",
+   "signpost": "C'est un problème, alors voici la solution",
+   "x": false
+  },
+  {
+   "id": "71390",
+   "position": "end",
+   "signpost": "Mais qu'est-ce que cela signifie pour VOUS?",
+   "x": false
+  },
+  {
+   "id": "71391",
+   "position": "middle",
+   "signpost": "Comment est-ce possible?",
+   "x": false
+  },
+  {
+   "id": "71392",
+   "position": "end",
+   "signpost": "C'est là que VOUS intervenez",
+   "x": false
+  },
+  {
+   "id": "71393",
+   "position": "end",
+   "signpost": "Mais qu'est-ce que tout cela signifie?",
+   "x": false
+  },
+  {
+   "id": "71394",
+   "position": "middle",
+   "signpost": "Bonne nouvelle, il y a un bon côté",
+   "x": false
+  },
+  {
+   "id": "71395",
+   "position": "end",
+   "signpost": "Si vous partez d'ici en vous souvenant d'une chose, ce devrait être celle-ci...",
+   "x": false
+  },
+  {
+   "id": "71396",
+   "position": "middle",
+   "signpost": "Voici les mauvaises nouvelles",
+   "x": false
+  },
+  {
+   "id": "71397",
+   "position": "middle",
+   "signpost": "J'ai un fait amusant pour vous",
+   "x": false
+  },
+  {
+   "id": "71398",
+   "position": "middle",
+   "signpost": "Et bien, le saviez-vous?",
+   "x": false
+  },
+  {
+   "id": "71399",
+   "position": "end",
+   "signpost": "Il y avait une chose qui a tout changé pour moi",
+   "x": false
+  },
+  {
+   "id": "71400",
+   "position": "middle",
+   "signpost": "La prochaine chose m'a époustouflé",
+   "x": false
+  },
+  {
+   "id": "71401",
+   "position": "end",
+   "signpost": "Rien de tout cela n'a d'importance à cause de cela...",
+   "x": false
+  },
+  {
+   "id": "71402",
+   "position": "middle",
+   "signpost": "Mais je n'étais pas prêt à affronter la vérité...",
+   "x": false
+  },
+  {
+   "id": "71403",
+   "position": "end",
+   "signpost": "Enfin, voici ce qui relie tout cela ensemble",
+   "x": false
+  },
+  {
+   "id": "71404",
+   "position": "end",
+   "signpost": "Suis-je une meilleure personne à cause de cela?",
+   "x": false
+  },
+  {
+   "id": "71405",
+   "position": "end",
+   "signpost": "Qui est responsable de cela?",
+   "x": false
+  },
+  {
+   "id": "71406",
+   "position": "middle",
+   "signpost": "Saviez-vous que le fait suivant",
+   "x": false
+  },
+  {
+   "id": "71407",
+   "position": "end",
+   "signpost": "Prenez une seconde pour imaginer cela",
+   "x": false
+  },
+  {
+   "id": "71408",
+   "position": "middle",
+   "signpost": "Croiriez-vous si je vous disais cela",
+   "x": false
+  },
+  {
+   "id": "71409",
+   "position": "end",
+   "signpost": "Il y a une raison à cela",
+   "x": false
+  },
+  {
+   "id": "71410",
+   "position": "middle",
+   "signpost": "Est-ce une bonne chose?",
+   "x": false
+  },
+  {
+   "id": "71411",
+   "position": "middle",
+   "signpost": "Cela pourrait être mauvais, et je vais vous dire pourquoi",
+   "x": false
+  },
+  {
+   "id": "71412",
+   "position": "middle",
+   "signpost": "Voici quelque chose que j'ai été étonné de découvrir",
+   "x": false
+  },
+  {
+   "id": "71413",
+   "position": "end",
+   "signpost": "Je n'arrive pas à croire que je dis ça, mais...",
+   "x": false
+  },
+  {
+   "id": "71414",
+   "position": "middle",
+   "signpost": "Imaginez ce scénario",
+   "x": false
+  },
+  {
+   "id": "71415",
+   "position": "end",
+   "signpost": "Sachant cela, je veux que vous vous représentiez",
+   "x": false
+  },
+  {
+   "id": "71416",
+   "position": "middle",
+   "signpost": "Si vous voulez blâmer quelque chose, c'est ça",
+   "x": false
+  },
+  {
+   "id": "71593",
+   "position": "middle",
+   "signpost": "Mais les regards peuvent être trompeurs...",
+   "x": false
+  },
+  {
+   "id": "71595",
+   "position": "middle",
+   "signpost": "Voici un savoir époustouflant",
+   "x": false
+  },
+  {
+   "id": "71599",
+   "position": "middle",
+   "signpost": "Voici une chose positive à ce sujet",
+   "x": false
+  },
+  {
+   "id": "71600",
+   "position": "middle",
+   "signpost": "Voici la pensée révolutionnaire qui a tout changé",
+   "x": false
+  },
+  {
+   "id": "71603",
+   "position": "middle",
+   "signpost": "Eureka! J'ai crié quand j'ai vu ça",
+   "x": false
+  },
+  {
+   "id": "71605",
+   "position": "middle",
+   "signpost": "Je savais que j'étais sur quelque chose de grand parce que...",
+   "x": false
+  },
+  {
+   "id": "71606",
+   "position": "middle",
+   "signpost": "Ecoute, je dois enlever ça de ma poitrine...",
+   "x": false
+  },
+  {
+   "id": "71607",
+   "position": "middle",
+   "signpost": "Voici une opinion impopulaire",
+   "x": false
+  },
+  {
+   "id": "71608",
+   "position": "middle",
+   "signpost": "Suivez-moi dans ce terrier de lapin...",
+   "x": false
+  },
+  {
+   "id": "71610",
+   "position": "middle",
+   "signpost": "A travers le brouillard de confusion, il y avait une chose qui me guidait...",
+   "x": false
+  },
+  {
+   "id": "71611",
+   "position": "end",
+   "signpost": "Ayez toujours avec vous la vérité suivante...",
+   "x": false
+  },
+  {
+   "id": "71613",
+   "position": "end",
+   "signpost": "N'oubliez jamais ce que vous avez appris aujourd'hui...",
+   "x": false
+  },
+  {
+   "id": "71616",
+   "position": "end",
+   "signpost": "Votre vie ne sera plus jamais la même à cause de ce fait",
+   "x": false
+  },
+  {
+   "id": "71618",
+   "position": "end",
+   "signpost": "Maintenant, c'est à vous de décider. Que devez-vous faire?",
+   "x": false
+  },
+  {
+   "id": "71622",
+   "position": "end",
+   "signpost": "Pourquoi ne retenir qu'une seule chose quand on peut se souvenir de ces trois choses",
+   "x": false
+  },
+  {
+   "id": "71640",
+   "position": "end",
+   "signpost": "Chacun doit faire sa part. Alors, voici quelque chose que vous pouvez faire",
+   "x": false
+  },
+  {
+   "id": "71641",
+   "position": "end",
+   "signpost": "Ne restez pas assis là! Faites la prochaine chose!",
+   "x": false
+  },
+  {
+   "id": "71644",
+   "position": "middle",
+   "signpost": "Ce qui suit est un mythe communément admis",
+   "x": false
+  },
+  {
+   "id": "71663",
+   "position": "middle",
+   "signpost": "Cette connaissance a un prix terrible...",
+   "x": false
+  },
+  {
+   "id": "71665",
+   "position": "middle",
+   "signpost": "Cela ne me rapportera pas d'amis mais il faut le dire...",
+   "x": false
+  },
+  {
+   "id": "71668",
+   "position": "middle",
+   "signpost": "Voici une analogie utile",
+   "x": false
+  },
+  {
+   "id": "71670",
+   "position": "middle",
+   "signpost": "Mais, d'un autre côté...",
+   "x": false
+  },
+  {
+   "id": "71671",
+   "position": "middle",
+   "signpost": "Regardons d'abord l'histoire",
+   "x": false
+  },
+  {
+   "id": "71685",
+   "position": "end",
+   "signpost": "Il s'avère que la réponse était en moi depuis le début",
+   "x": false
+  },
+  {
+   "id": "71686",
+   "position": "middle",
+   "signpost": "Je ne veux pas vous faire peur, mais...",
+   "x": false
+  },
+  {
+   "id": "71687",
+   "position": "middle",
+   "signpost": "Je possède la seule compétence nécessaire pour maîtriser cette situation",
+   "x": false
+  },
+  {
+   "id": "71688",
+   "position": "middle",
+   "signpost": "J'ai vraiment foiré les choses, alors c'est arrivé",
+   "x": false
+  },
+  {
+   "id": "71689",
+   "position": "end",
+   "signpost": "C'était drôle de savoir qui est venu m'aider",
+   "x": false
+  },
+  {
+   "id": "71690",
+   "position": "end",
+   "signpost": "Tout bien considéré, c'est le pire",
+   "x": false
+  },
+  {
+   "id": "71691",
+   "position": "middle",
+   "signpost": "Comment étais-je censé savoir, pendant tout ce temps je tombais amoureux de...",
+   "x": false
+  },
+  {
+   "id": "71692",
+   "position": "middle",
+   "signpost": "Faut-il avoir peur?",
+   "x": false
+  },
+  {
+   "id": "71693",
+   "position": "middle",
+   "signpost": "Est-ce ma faute?",
+   "x": false
+  },
+  {
+   "id": "71694",
+   "position": "end",
+   "signpost": "Confus? Bien sûr. Voici une chose que je sais",
+   "x": false
+  },
+  {
+   "id": "71695",
+   "position": "middle",
+   "signpost": "Je veux vous raconter une histoire...",
+   "x": false
+  },
+  {
+   "id": "71696",
+   "position": "middle",
+   "signpost": "Y a-t-il un complot secret impliqué?",
+   "x": false
+  },
+  {
+   "id": "71697",
+   "position": "end",
+   "signpost": "4 experts sur 5 sont d'accord avec ce qui suit",
+   "x": false
+  },
+  {
+   "id": "71698",
+   "position": "end",
+   "signpost": "Voici une vérité encore plus inconfortable",
+   "x": false
+  },
+  {
+   "id": "71699",
+   "position": "end",
+   "signpost": "Je suis responsable et voici pourquoi",
+   "x": false
+  },
+  {
+   "id": "71700",
+   "position": "middle",
+   "signpost": "Voici quelque chose qui me tient éveillé la nuit",
+   "x": false
+  },
+  {
+   "id": "71701",
+   "position": "end",
+   "signpost": "Tu vas rire quand je te montrerai ce que j'ai fait...",
+   "x": false
+  },
+  {
+   "id": "71702",
+   "position": "middle",
+   "signpost": "Vous ne pouvez pas nier ce fait",
+   "x": false
+  },
+  {
+   "id": "71947",
+   "position": "middle",
+   "signpost": "Il n'y a qu'une seule explication à cela",
+   "x": false
+  },
+  {
+   "id": "71949",
+   "position": "middle",
+   "signpost": "Il s'est avéré que je ne posais pas la bonne question. J'ai donc posé la question à la place...",
+   "x": false
+  },
+  {
+   "id": "71950",
+   "position": "end",
+   "signpost": "Il n'y a rien à faire... ou y en a-t-il? Il y a, c'est ça...",
+   "x": false
+  },
+  {
+   "id": "71951",
+   "position": "end",
+   "signpost": "Ce n'est que le début et voici pourquoi",
+   "x": false
+  },
+  {
+   "id": "71952",
+   "position": "middle",
+   "signpost": "Mais pourquoi detrues-je m'en soucier?",
+   "x": false
+  },
+  {
+   "id": "71956",
+   "position": "end",
+   "signpost": "Pour résumer en termes simples...",
+   "x": false
+  },
+  {
+   "id": "71957",
+   "position": "middle",
+   "signpost": "Il est impossible de surestimer à quel point cela est important et voici pourquoi",
+   "x": false
+  },
+  {
+   "id": "71958",
+   "position": "end",
+   "signpost": "Êtes-vous confus? Permettez-moi de le dire simplement",
+   "x": false
+  },
+  {
+   "id": "71959",
+   "position": "end",
+   "signpost": "Heureusement, j'ai la réponse...",
+   "x": false
+  },
+  {
+   "id": "71960",
+   "position": "middle",
+   "signpost": "Comment en sommes-nous arrivés là?",
+   "x": false
+  },
+  {
+   "id": "71961",
+   "position": "middle",
+   "signpost": "Mais, je n'étais pas préparé à ce tournant choquant",
+   "x": false
+  },
+  {
+   "id": "71962",
+   "position": "end",
+   "signpost": "Voici quelque chose qui me fait du bien dans cette situation",
+   "x": false
+  },
+  {
+   "id": "71963",
+   "position": "end",
+   "signpost": "Et donc, nous voici à mon dernier point...",
+   "x": false
+  },
+  {
+   "id": "71964",
+   "position": "end",
+   "signpost": "Ce n'est pas aussi grave qu'il y paraît, à cause de ça",
+   "x": false
+  },
+  {
+   "id": "71965",
+   "position": "end",
+   "signpost": "Avant de partir aujourd'hui, souvenez-vous de ceci",
+   "x": false
+  },
+  {
+   "id": "71994",
+   "position": "middle",
+   "signpost": "Mais le contraire est également true...",
+   "x": false
+  },
+  {
+   "id": "71995",
+   "position": "end",
+   "signpost": "Dans un monde idéal, nous pourrions avoir ceci",
+   "x": false
+  },
+  {
+   "id": "71996",
+   "position": "middle",
+   "signpost": "Au lieu de vous montrer les chiffres, je veux vous montrer ceci",
+   "x": false
+  },
+  {
+   "id": "71997",
+   "position": "end",
+   "signpost": "Ceci est ma promesse...",
+   "x": false
+  },
+  {
+   "id": "72001",
+   "position": "middle",
+   "signpost": "Même les enfants comprennent ce simple fait...",
+   "x": false
+  },
+  {
+   "id": "72002",
+   "position": "end",
+   "signpost": "Je peux résumer cela en vous montrant ceci",
+   "x": false
+  },
+  {
+   "id": "72003",
+   "position": "middle",
+   "signpost": "Cela peut sembler ridicule mais voici pourquoi c'est très grave",
+   "x": false
+  },
+  {
+   "id": "72005",
+   "position": "end",
+   "signpost": "Gravez cette image dans votre mémoire...",
+   "x": false
+  },
+  {
+   "id": "72008",
+   "position": "middle",
+   "signpost": "Rien ne vous mettra plus en colère que ça",
+   "x": false
+  },
+  {
+   "id": "72034",
+   "position": "middle",
+   "signpost": "Fermez les yeux et imaginez ce qui pourrait être...",
+   "x": false
+  },
+  {
+   "id": "72035",
+   "position": "end",
+   "signpost": "Tout bien considéré, voici à quoi pourrait ressembler demain...",
+   "x": false
+  },
+  {
+   "id": "72036",
+   "position": "middle",
+   "signpost": "Voici ce que la plupart des gens ne comprennent pas",
+   "x": false
+  },
+  {
+   "id": "72037",
+   "position": "end",
+   "signpost": "Ce que les données nous disent est évident...",
+   "x": false
+  },
+  {
+   "id": "72039",
+   "position": "end",
+   "signpost": "Il y a une conclusion inconfortable à laquelle nous devons arriver",
+   "x": false
+  },
+  {
+   "id": "72041",
+   "position": "middle",
+   "signpost": "Le point de départ le plus évident est ici...",
+   "x": false
+  },
+  {
+   "id": "72086",
+   "position": "middle",
+   "signpost": "Voici quelque chose auquel vous n'avez probablement pas pensé",
+   "x": false
+  },
+  {
+   "id": "72087",
+   "position": "end",
+   "signpost": "Que faire à ce sujet?",
+   "x": false
+  },
+  {
+   "id": "72088",
+   "position": "middle",
+   "signpost": "Je vais faire ce point suivant attentivement...",
+   "x": false
+  },
+  {
+   "id": "72090",
+   "position": "end",
+   "signpost": "Assez c'est assez, à cause de ça",
+   "x": false
+  },
+  {
+   "id": "72091",
+   "position": "middle",
+   "signpost": "Je me tiens responsable de ce qui s'est passé ensuite...",
+   "x": false
+  },
+  {
+   "id": "72092",
+   "position": "middle",
+   "signpost": "J'ai endalement dû admettre que ce qui suit était true...",
+   "x": false
+  },
+  {
+   "id": "72093",
+   "position": "middle",
+   "signpost": "Mais honnêtement, qui s'en soucie?",
+   "x": false
+  },
+  {
+   "id": "72094",
+   "position": "end",
+   "signpost": "Comment puis-je parler de moi?",
+   "x": false
+  },
+  {
+   "id": "72279",
+   "position": "middle",
+   "signpost": "D'où cela a-t-il commencé?",
+   "x": false
+  },
+  {
+   "id": "72280",
+   "position": "middle",
+   "signpost": "Maintenant, considérons l'autre côté de cette situation...",
+   "x": false
+  },
+  {
+   "id": "72282",
+   "position": "middle",
+   "signpost": "Attachez-vous à ce qui s'est passé ensuite...",
+   "x": false
+  },
+  {
+   "id": "72286",
+   "position": "end",
+   "signpost": "Laissez-moi vous laisser avec ceci...",
+   "x": false
+  },
+  {
+   "id": "72287",
+   "position": "end",
+   "signpost": "Joignons nos mains et convenons sur une chose",
+   "x": false
+  },
+  {
+   "id": "72288",
+   "position": "end",
+   "signpost": "Ne soyez pas comme moi, et voici ce qui vous aidera...",
+   "x": false
+  },
+  {
+   "id": "72289",
+   "position": "middle",
+   "signpost": "Posez-vous une question...",
+   "x": false
+  },
+  {
+   "id": "72292",
+   "position": "end",
+   "signpost": "Il n'y a qu'une seule façon de résoudre ce problème",
+   "x": false
+  },
+  {
+   "id": "72295",
+   "position": "middle",
+   "signpost": "Il y a un élément clé à tout cela",
+   "x": false
+  },
+  {
+   "id": "72296",
+   "position": "end",
+   "signpost": "Souvenez-vous de deux choses: 1, je suis le meilleur, et 2...",
+   "x": false
+  },
+  {
+   "id": "72297",
+   "position": "middle",
+   "signpost": "Ne vous inquiétez pas. Je suis là pour vous aider et voici mon plan",
+   "x": false
+  },
+  {
+   "id": "72307",
+   "position": "middle",
+   "signpost": "Bonne nouvelle! Il existe un meilleur moyen!",
+   "x": false
+  },
+  {
+   "id": "72308",
+   "position": "middle",
+   "signpost": "J'ai dû aller beaucoup, beaucoup plus loin. Alors, voici où je suis allé",
+   "x": false
+  },
+  {
+   "id": "72309",
+   "position": "middle",
+   "signpost": "Whoa whoa whoa, revenons un peu en arrière...",
+   "x": false
+  },
+  {
+   "id": "72310",
+   "position": "middle",
+   "signpost": "Il est temps d'attribuer le blâme...",
+   "x": false
+  },
+  {
+   "id": "72311",
+   "position": "middle",
+   "signpost": "Seul un true idiot contesterait ce fait",
+   "x": false
+  },
+  {
+   "id": "72315",
+   "position": "middle",
+   "signpost": "Je vais chanter cette prochaine partie...",
+   "x": false
+  },
+  {
+   "id": "72321",
+   "position": "middle",
+   "signpost": "Ne dites pas que je ne vous ai pas prévenu, mais...",
+   "x": false
+  },
+  {
+   "id": "72327",
+   "position": "end",
+   "signpost": "La réponse était devant moi tout le temps...",
+   "x": false
+  },
+  {
+   "id": "72340",
+   "position": "middle",
+   "signpost": "Osez embrasser cette vérité",
+   "x": false
+  },
+  {
+   "id": "72346",
+   "position": "middle",
+   "signpost": "Souvenez-vous de la parabole vue dans cette image suivante",
+   "x": false
+  },
+  {
+   "id": "72355",
+   "position": "middle",
+   "signpost": "Je dis la prochaine chose à un coût personnel élevé",
+   "x": false
+  },
+  {
+   "id": "72358",
+   "position": "middle",
+   "signpost": "Ce fait détruira votre cerveau",
+   "x": false
+  },
+  {
+   "id": "72372",
+   "position": "middle",
+   "signpost": "Préparez-vous à vous fâcher à mon prochain point",
+   "x": false
+  },
+  {
+   "id": "72375",
+   "position": "middle",
+   "signpost": "Ce simple fait suivant a changé ma vie...",
+   "x": false
+  },
+  {
+   "id": "72376",
+   "position": "end",
+   "signpost": "Suis-je un héros? Oui. Laissez-moi vous montrer pourquoi",
+   "x": false
+  },
+  {
+   "id": "72377",
+   "position": "middle",
+   "signpost": "Couvre-toi les oreilles si tu es un lâche. Sinon, écoute ça...",
+   "x": false
+  },
+  {
+   "id": "72379",
+   "position": "middle",
+   "signpost": "Chaque histoire a un méchant. Dans ce conte, c'est ça...",
+   "x": false
+  },
+  {
+   "id": "72385",
+   "position": "middle",
+   "signpost": "Vous vous demandez probablement pourquoi je suis l'expert? Voici pourquoi...",
+   "x": false
+  },
+  {
+   "id": "72388",
+   "position": "end",
+   "signpost": "Je voudrais vous laisser un poème pour accompagner cette image suivante...",
+   "x": false
+  },
+  {
+   "id": "72392",
+   "position": "end",
+   "signpost": "Cette prochaine partie de mon discours va changer votre vie pour toujours...",
+   "x": false
+  },
+  {
+   "id": "72394",
+   "position": "middle",
+   "signpost": "Voici une pépite de bonne nouvelle...",
+   "x": false
+  },
+  {
+   "id": "72395",
+   "position": "end",
+   "signpost": "Légalement, je ne peux pas dire ça, mais j'y vais...",
+   "x": false
+  },
+  {
+   "id": "72396",
+   "position": "middle",
+   "signpost": "Un sage mystique qui vit dans la forêt m'a donné ce conseil...",
+   "x": false
+  },
+  {
+   "id": "72433",
+   "position": "middle",
+   "signpost": "J'ai de bonnes nouvelles et de mauvaises nouvelles, mais voici les mauvaises nouvelles bien dites...",
+   "x": false
+  },
+  {
+   "id": "72434",
+   "position": "middle",
+   "signpost": "Il y a longtemps, quelque chose d'incroyable s'est produit...",
+   "x": false
+  },
+  {
+   "id": "72435",
+   "position": "middle",
+   "signpost": "Cette prochaine photo vous donnera de l'espoir, et voici pourquoi...",
+   "x": false
+  },
+  {
+   "id": "72436",
+   "position": "middle",
+   "signpost": "Je m'excuse pour cette prochaine photo, mais vous devez voir la vérité...",
+   "x": false
+  },
+  {
+   "id": "72437",
+   "position": "middle",
+   "signpost": "Les gens puissants ne veulent pas que je vous dise le fait suivant...",
+   "x": false
+  },
+  {
+   "id": "72439",
+   "position": "middle",
+   "signpost": "Je vais partager une opinion controversée avec vous...",
+   "x": false
+  },
+  {
+   "id": "72446",
+   "position": "middle",
+   "signpost": "Toujours confus? Voici un moyen simple de le visualiser...",
+   "x": false
+  },
+  {
+   "id": "72447",
+   "position": "middle",
+   "signpost": "Cette prochaine image vous convaincra que je sais de quoi je parle...",
+   "x": false
+  },
+  {
+   "id": "72455",
+   "position": "middle",
+   "signpost": "Pour expliquer, laissez-moi vous raconter une histoire intéressante...",
+   "x": false
+  },
+  {
+   "id": "72456",
+   "position": "middle",
+   "signpost": "Comme le puissant chêne poussant à partir d'un humble gland, voici un petit mais important fait...",
+   "x": false
+  },
+  {
+   "id": "72457",
+   "position": "end",
+   "signpost": "Préparez-vous, une énorme décharge d'informations arrive dans 3... 2... 1...",
+   "x": false
+  },
+  {
+   "id": "72458",
+   "position": "middle",
+   "signpost": "Quelle heure est-il? Il est temps pour moi de dissiper quelques idées fausses... heures",
+   "x": false
+  },
+  {
+   "id": "72460",
+   "position": "middle",
+   "signpost": "Si vous n'êtes pas touché par cette prochaine information, vous n'avez pas d'âme",
+   "x": true
+  },
+  {
+   "id": "72475",
+   "position": "middle",
+   "signpost": "Veuillez mémoriser soigneusement tout ce que je suis sur le point de dire...",
+   "x": false
+  },
+  {
+   "id": "72477",
+   "position": "middle",
+   "signpost": "Contemplez cette vérité éclairante...",
+   "x": false
+  },
+  {
+   "id": "72478",
+   "position": "middle",
+   "signpost": "Pourquoi suis-je qualifié pour en parler? Laissez-moi vous montrer mon parcours...",
+   "x": false
+  },
+  {
+   "id": "72481",
+   "position": "middle",
+   "signpost": "Les experts sont très concernés, et voici pourquoi...",
+   "x": false
+  },
+  {
+   "id": "72483",
+   "position": "middle",
+   "signpost": "Quand j'ai entendu la prochaine chose, j'ai paniqué...",
+   "x": false
+  },
+  {
+   "id": "72492",
+   "position": "end",
+   "signpost": "J'ai gardé ce secret pendant longtemps...",
+   "x": false
+  },
+  {
+   "id": "72494",
+   "position": "end",
+   "signpost": "Toute l'histoire de l'humanité s'est préparée à la prochaine chose que je vais dire...",
+   "x": false
+  },
+  {
+   "id": "72497",
+   "position": "middle",
+   "signpost": "Avant de continuer, je dois retirer une chose de ma poitrine...",
+   "x": false
+  },
+  {
+   "id": "72498",
+   "position": "middle",
+   "signpost": "Voici le plus gros obstacle à surmonter...",
+   "x": false
+  },
+  {
+   "id": "72501",
+   "position": "middle",
+   "signpost": "Que disent les experts à ce sujet?",
+   "x": false
+  },
+  {
+   "id": "72503",
+   "position": "middle",
+   "signpost": "Permettez-moi de jouer un instant l'avocat du diable...",
+   "x": false
+  },
+  {
+   "id": "72704",
+   "position": "middle",
+   "signpost": "Mais c'est ici que ça devient épicé",
+   "x": false
+  },
+  {
+   "id": "72705",
+   "position": "end",
+   "signpost": "Comme si cela ne suffisait pas à vous épater, mâchez ça...",
+   "x": false
+  },
+  {
+   "id": "72707",
+   "position": "end",
+   "signpost": "Enfin, vous êtes prêt à être éclairé. Le voici...",
+   "x": false
+  },
+  {
+   "id": "72708",
+   "position": "middle",
+   "signpost": "Luttez avec ça pendant un moment, puis considérez ceci...",
+   "x": false
+  },
+  {
+   "id": "72709",
+   "position": "middle",
+   "signpost": "Permettez-moi d'être très clair sur quelque chose...",
+   "x": false
+  },
+  {
+   "id": "72710",
+   "position": "end",
+   "signpost": "Tout cela indique une vérité essentielle",
+   "x": false
+  },
+  {
+   "id": "72711",
+   "position": "end",
+   "signpost": "Qu'est-ce que cela signifie pour les humains?",
+   "x": false
+  },
+  {
+   "id": "72713",
+   "position": "end",
+   "signpost": "Cela se résume à ceci",
+   "x": false
+  },
+  {
+   "id": "72714",
+   "position": "end",
+   "signpost": "Si vous me l'aviez demandé l'année dernière, je n'aurais jamais cru que je dirais ça mais...",
+   "x": false
+  },
+  {
+   "id": "72723",
+   "position": "middle",
+   "signpost": "Il n'y a aucun moyen de dire ce point suivant gentiment, donc je ne vais pas...",
+   "x": false
+  },
+  {
+   "id": "72724",
+   "position": "middle",
+   "signpost": "Je ne suis pas trop fier pour admettre que ce que j'ai fait ensuite était false...",
+   "x": false
+  },
+  {
+   "id": "72727",
+   "position": "end",
+   "signpost": "Qui pouvons-nous appeler pour résoudre ce problème?",
+   "x": false
+  },
+  {
+   "id": "72730",
+   "position": "middle",
+   "signpost": "Ce point suivant est un peu déchirant...",
+   "x": false
+  },
+  {
+   "id": "72731",
+   "position": "end",
+   "signpost": "Si vous vous souciez vraiment de moi, vous ferez ce que je vous dis de faire. D'abord...",
+   "x": false
+  },
+  {
+   "id": "72732",
+   "position": "end",
+   "signpost": "Il n'y a qu'une seule chose que nous pouvons faire pour préserver notre avenir, c'est...",
+   "x": false
+  },
+  {
+   "id": "72733",
+   "position": "end",
+   "signpost": "Je vous demande maintenant d'utiliser la plus grande ressource de l'humanité...",
+   "x": false
+  },
+  {
+   "id": "72734",
+   "position": "middle",
+   "signpost": "Pourquoi ai-je l'air si furieux? Je vais vous dire pourquoi!",
+   "x": false
+  },
+  {
+   "id": "72736",
+   "position": "end",
+   "signpost": "Tout ce que je demande, c'est une foi aveugle en moi, et ma vision, qui est la suivante...",
+   "x": false
+  },
+  {
+   "id": "72737",
+   "position": "middle",
+   "signpost": "Essayez de ne pas vous concentrer sur les négatifs. Au lieu de cela, concentrez-vous sur les SUPER négatifs, tels que...",
+   "x": false
+  },
+  {
+   "id": "72738",
+   "position": "middle",
+   "signpost": "Laissez-moi vous raconter une histoire qui est vaguement liée à ce sujet...",
+   "x": false
+  },
+  {
+   "id": "72739",
+   "position": "middle",
+   "signpost": "Vous vous demandez peut-être: Suis-je le problème? Oui, et voici pourquoi...",
+   "x": false
+  },
+  {
+   "id": "72839",
+   "position": "middle",
+   "signpost": "Voici un mantra que je me répète chaque matin",
+   "x": false
+  },
+  {
+   "id": "72841",
+   "position": "middle",
+   "signpost": "Cette image suivante me rappelle un vieil adage...",
+   "x": false
+  },
+  {
+   "id": "72842",
+   "position": "middle",
+   "signpost": "Cela vous fera tomber vos chaussettes...",
+   "x": false
+  },
+  {
+   "id": "72843",
+   "position": "middle",
+   "signpost": "Quand vous entendez cette partie suivante, je m'excuse par avance de vous avoir fait pleurer...",
+   "x": false
+  },
+  {
+   "id": "72844",
+   "position": "middle",
+   "signpost": "Voici quelque chose qui sonne mal, mais qui est vraiment très bon...",
+   "x": false
+  },
+  {
+   "id": "72845",
+   "position": "middle",
+   "signpost": "Il y a un gros problème que tout le monde ignore...",
+   "x": false
+  },
+  {
+   "id": "72846",
+   "position": "middle",
+   "signpost": "Besoin de preuves? La voici",
+   "x": false
+  },
+  {
+   "id": "72847",
+   "position": "middle",
+   "signpost": "J'ai un message pour tous mes ennemis...",
+   "x": false
+  },
+  {
+   "id": "72936",
+   "position": "middle",
+   "signpost": "S'il y a des enfants dans le public, couvrez-vous les oreilles parce que...",
+   "x": true
+  },
+  {
+   "id": "72937",
+   "position": "middle",
+   "signpost": "Dans l'intérêt de l'équité, parlons de l'argument opposé et pourquoi c'est stupide",
+   "x": false
+  },
+  {
+   "id": "72939",
+   "position": "end",
+   "signpost": "Il n'y a plus grand chose à dire, je vais donc crier mon prochain point",
+   "x": false
+  },
+  {
+   "id": "72940",
+   "position": "middle",
+   "signpost": "Je partage cette prochaine chose parce que je considère tout le monde ici, sauf l'un de vous, un ami",
+   "x": false
+  },
+  {
+   "id": "72941",
+   "position": "end",
+   "signpost": "Il me reste quelques secondes, alors laissez-moi vous dire ceci...",
+   "x": false
+  },
+  {
+   "id": "72942",
+   "position": "middle",
+   "signpost": "Vous avez probablement beaucoup de questions auxquelles je ne répondrai pas. Considérez plutôt ceci...",
+   "x": false
+  },
+  {
+   "id": "72943",
+   "position": "end",
+   "signpost": "Suis-je une meilleure personne maintenant? Oui et voici pourquoi...",
+   "x": false
+  },
+  {
+   "id": "72944",
+   "position": "middle",
+   "signpost": "En tant que beau génie, il est de mon devoir de vous parler de cette question importante",
+   "x": false
+  },
+  {
+   "id": "72945",
+   "position": "end",
+   "signpost": "J'avais besoin que vous me compreniez, et maintenant j'ai besoin que vous me craigniez",
+   "x": false
+  },
+  {
+   "id": "72947",
+   "position": "end",
+   "signpost": "Vous vous demandez peut-être: Que puis-je faire? Tout d'abord, arrêtez de crier. Deuxièmement...",
+   "x": false
+  },
+  {
+   "id": "72948",
+   "position": "end",
+   "signpost": "Merci pour votre temps, et merci pour cela...",
+   "x": false
+  },
+  {
+   "id": "72998",
+   "position": "middle",
+   "signpost": "Ouvrez la bouche, car voici une autre information savoureuse...",
+   "x": false
+  },
+  {
+   "id": "72999",
+   "position": "middle",
+   "signpost": "Avant de penser à me défier, tenez compte de cet avertissement...",
+   "x": false
+  },
+  {
+   "id": "73000",
+   "position": "middle",
+   "signpost": "Voici pourquoi je suis le Steve Jobs de savoir de quoi je parle, fois 100...",
+   "x": false
+  },
+  {
+   "id": "73001",
+   "position": "end",
+   "signpost": "J'espère que vous avez appris quelque chose aujourd'hui, et si vous ne l'avez pas fait, voici ce que je suggère...",
+   "x": false
+  },
+  {
+   "id": "73003",
+   "position": "end",
+   "signpost": "Prenez un stylo et du papier et notez ceci...",
+   "x": false
+  },
+  {
+   "id": "73004",
+   "position": "middle",
+   "signpost": "J'ai passé des années à parler de ce prochain point sur mon blog...",
+   "x": false
+  },
+  {
+   "id": "73006",
+   "position": "middle",
+   "signpost": "Quand j'ai dit la prochaine chose à ma bibliothèque locale, ils m'ont interdit à vie...",
+   "x": false
+  },
+  {
+   "id": "73009",
+   "position": "middle",
+   "signpost": "Non, vous n'hallucinez pas. Ce que vous allez voir est réel...",
+   "x": false
+  },
+  {
+   "id": "73010",
+   "position": "middle",
+   "signpost": "Applaudissements, car je suis sur le point de vous annoncer la meilleure nouvelle de tous les temps...",
+   "x": false
+  },
+  {
+   "id": "73011",
+   "position": "middle",
+   "signpost": "La phrase que je vais prononcer pourrait être les cinq mots les plus importants prononcés dans l'histoire humaine...",
+   "x": false
+  },
+  {
+   "id": "73457",
+   "position": "middle",
+   "signpost": "Personne ne peut m'arrêter! Personne, sauf peut-être...",
+   "x": false
+  },
+  {
+   "id": "73458",
+   "position": "middle",
+   "signpost": "Quelque chose sent le poisson, et je vais vous dire ce que c'est...",
+   "x": false
+  },
+  {
+   "id": "73459",
+   "position": "middle",
+   "signpost": "Il y a beaucoup de questions à considérer, mais je répondrai à la seule que j'aime",
+   "x": false
+  },
+  {
+   "id": "73462",
+   "position": "end",
+   "signpost": "Qui est à blâmer? Ta mère. Je suis désolé, je suis impoli. Peut-être que c'est...",
+   "x": true
+  },
+  {
+   "id": "73969",
+   "position": "middle",
+   "signpost": "Cela me rappelle un autre point légèrement lié...",
+   "x": false
+  },
+  {
+   "id": "73971",
+   "position": "middle",
+   "signpost": "J'ai pensé à la prochaine chose en sous-vêtements",
+   "x": true
+  },
+  {
+   "id": "73972",
+   "position": "middle",
+   "signpost": "Préparez-vous, car cette prochaine diapositive vous bouleversera...",
+   "x": false
+  },
+  {
+   "id": "73973",
+   "position": "middle",
+   "signpost": "De toute évidence, ce point suivant est nul",
+   "x": false
+  },
+  {
+   "id": "73974",
+   "position": "middle",
+   "signpost": "Voici un petit fait savoureux...",
+   "x": false
+  },
+  {
+   "id": "73975",
+   "position": "middle",
+   "signpost": "Je suis profondément désolé de devoir vous apporter cette nouvelle...",
+   "x": false
+  },
+  {
+   "id": "73977",
+   "position": "end",
+   "signpost": "Sortez vos tableaux de bord, car je suis sur le point de coller l'atterrissage",
+   "x": false
+  },
+  {
+   "id": "73979",
+   "position": "end",
+   "signpost": "Je ne suis qu'un orateur, debout devant un public, leur posant une question...",
+   "x": false
+  },
+  {
+   "id": "73980",
+   "position": "middle",
+   "signpost": "Mise de côté des faits, que savons-nous vraiment ?",
+   "x": false
+  }
+ ]
+}

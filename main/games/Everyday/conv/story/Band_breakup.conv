@@ -1,0 +1,18 @@
+MAIN(Breakup): Pourquoi votre groupe se sépare ?
+-EGO-> Trop d'égoïsmes
+-SOLD-> On a tout vendu
+-SOLO-> Je pars en solo
+-MUSIC-> La musique passait avant tout
+
+
+EGO(Breakup): Déchirant
+-SUCCESS-> Merci de respecter notre intimité maintenant
+
+SOLD(Breakup): Bien entendu
+-SUCCESS-> S'il vous plait, achetez un tee-shirt
+
+SOLO(Breakup): Vous êtes qui déjà ?
+-SUCCESS-> Je pensais que plus de personnes étaient derrière moi...
+
+MUSIC(Breakup): Déchirant
+-SUCCESS-> Merci de respecter notre intimité

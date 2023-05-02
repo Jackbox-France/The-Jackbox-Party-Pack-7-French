@@ -1,0 +1,24 @@
+MAIN(Enfant du voisinage): Salut, je voudrais te vendre des magazines. Que veux-tu ?
+-GARDENS-> Les racines du jardin
+-CELEB-> Les repas des célébrités
+-DOGS-> Chiens et armes
+-NONE-> Nous ne lisons pas beaucoup
+
+GARDENS(Enfant du voisinage): Super ! Signe ici !
+-SUCCESS-> Ce magazine est seulement pour les adultes ennuyeux
+
+CELEB(Enfant du voisinage): Super ! Signe ici !
+-SUCCESS-> Je vais pouvoir me faire pleins de repas.
+
+DOGS(Enfant du voisinage): Super ! Signe ici !
+-SUCCESS-> Je sens que je suis dans une liste de surveillance maintenant.
+
+NONE(Enfant du voisinage): Ah mince, vous êtes sûr ?
+-SUCCESS-> Je sauve les arbres !
+-TRYAGAIN-> Non...
+
+TRYAGAIN(Enfant du voisinage):
+-GARDENS-> Les racines du jardin
+-CELEB-> Les repas des célébrités
+-DOGS-> Chiens et armes
+-NONE-> IL. NE. FAUT. PAS. IMPRIMER.

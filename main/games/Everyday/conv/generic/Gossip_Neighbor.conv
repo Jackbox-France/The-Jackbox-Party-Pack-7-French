@@ -1,0 +1,18 @@
+MAIN(Voisin commère): Qu'on fait Han et Sean cette nuit dans leur propriété privée ?!
+-FIGHT-> Ils se sont battus
+-SMOOCH-> Ils se sont aimés
+-ASTRO-> Ils ont faire de l'astrophysique
+-NONE-> Je ne m'occupe pas de ça
+
+
+FIGHT(Voisin commère): Continuez !
+-SUCCESS-> Avec des mots !!!
+
+SMOOCH(Voisin commère): Continuez !
+-SUCCESS-> Avec la lanque !!!
+
+ASTRO(Voisin commère): De l'astrophysique romantique ?
+-SUCCESS-> Est ce qu'il y a un autre type d'astrophysique ?
+
+NONE(Voisin commère): Vous n'êtes pas fun.
+-FAILURE-> D'accord monsieur le voyeur.

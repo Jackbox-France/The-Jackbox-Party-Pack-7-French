@@ -1,0 +1,6 @@
+REM : DEFAULT MEALS
+SCHEDULE TASK "GatherBreakfast" <1 7:01>
+SCHEDULE TASK "GatherLunch" <2 13:01>
+SCHEDULE TASK "GatherDinner" <3 17:01>
+
+REM : Pox and NewSchool do not use these meals

@@ -1,0 +1,23 @@
+DEF DEED "SwipeBase"
+    SET MECHANIC_ID "SWIPE"
+    SET INSTRUCTIONS "Swipe"
+    SET DIRECTION "UP"
+END
+
+REM : Clones
+
+CLONE DEED "SwipeBase" "SwipeUp"
+    SET DIRECTION "UP"
+END
+
+CLONE DEED "SwipeBase" "SwipeDown"
+    SET DIRECTION "DOWN"
+END
+
+CLONE DEED "SwipeBase" "SwipeLeft"
+    SET DIRECTION "LEFT"
+END
+
+CLONE DEED "SwipeBase" "SwipeRight"
+    SET DIRECTION "RIGHT"
+END

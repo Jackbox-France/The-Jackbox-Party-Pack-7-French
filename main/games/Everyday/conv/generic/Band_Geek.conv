@@ -1,0 +1,23 @@
+﻿MAIN(Fan de musique): Mon groupe de musique préféré, les smackeurs, ont des problèmes financiers mais ils organisent une parade. Je peux avoir une petite pièce comme donation ?
+-DOLLAR-> Voici une pièce.
+-TWENTY-> Ca vous va 30 pièces ?
+-NOMONEY-> Marcher en faisant de la musique est une abomination.
+
+
+DOLLAR(Fan de musique): Oh... merci. 
+-SUCCESS-> Je suis sûr que votre groupe sera mieux avec cette pièce. 
+
+
+TWENTY(Fan de musique): Oh wouha ! Merci énormément !
+-SUCCESS-> Merci de supporter les smackeurs.
+
+
+NOMONEY(Fan de musique): Nous allons devoir annuler la parade... sauf si vous changez d'avis ?
+-SUCCESS-> Jamais ! Partez d'ici !
+-TRYAGAIN-> Hmm...
+
+
+TRYAGAIN(Fan de musique): Ouais ! Combien voulez vous donner ?
+-DOLLAR-> Voici une pièce. 
+-TWENTY-> Ca vous va 30 pièces ?
+-NOMONEY-> Marcher en faisant de la musique est une abomination.

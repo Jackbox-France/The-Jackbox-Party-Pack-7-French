@@ -1,0 +1,360 @@
+DEF EPISODE "SkipDay"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Faire le mur"
+    SET DESCRIPTION "Après deux longs mois, tous les membres de la famille décident d'avoir leur propre petit <font color='#AF0000'>skip day</font>. Pour une fois dans leur vie, pourront-ils profiter d'un moment d'intimité ?"
+    SET SUCCESS_MESSAGE "Nos petits oiseaux nous ont dit que vous sembliez reposé, détendu et avez récupéré le lendemain de vos mystérieuses 'maladies'. NOUS NE SOMMES certainement pas soupçonneux de ceci."
+    SET FAILURE_MESSAGE "Bien tenté, ex-las. Non seulement vous avez été pris en flagrant délit de fuite de vos responsabilités, mais vous avez été malade pour de bon à cause du stress."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/oneday/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/oneday/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/oneday/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "CallInWork" <1 8:00>
+    SCHEDULE TASK "CallInSchool" <1 8:30>
+    SCHEDULE TASK "CallInKinder" <1 9:00>
+    SCHEDULE TASK "SkipDummy" <1 10:00>
+    
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "PeaceQuiet" <2 13:01>
+    SCHEDULE TASK "BuildCard" <2 14:00>
+    SCHEDULE TASK "SneakOutSkipDay" <2 15:00>
+    SCHEDULE TASK "TravelAimless" <2 16:00>
+
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "DialogSkipSchool" <3 19:01>
+    SCHEDULE TASK "ColliderFuel" <3 19:30>
+    SCHEDULE TASK "GorgeSkip" <3 20:00>
+    SCHEDULE TASK "SkipMakeUp" <3 20:30>
+    SCHEDULE TASK "ShutDownCollider" <3 20:45>
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Call in sick to work
+CLONE DEED "DialogID" "CallInWork"
+    SET INSTRUCTIONS "Faites-vous porter pâle au travail"
+    SET CONTENT_ID "SKIPDAY_SICKWORK"
+END
+
+DEF TASK "CallInWork"
+    SET NAME "Se faire porter pâle au travail"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallInWork"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call in sick to school
+CLONE DEED "DialogID" "CallInSchool"
+    SET INSTRUCTIONS "Faites-vous porter pâle à l'école"
+    SET CONTENT_ID "SKIPDAY_SICKSCHOOL"
+END
+
+DEF TASK "CallInSchool"
+    SET NAME "Se faire porter pâle à l'école"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallInSchool"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call in sick to kindergarten
+CLONE DEED "DialogID" "CallInKinder"
+    SET INSTRUCTIONS "Faites-vous porter pâle à la maternelle"
+    SET CONTENT_ID "SKIPDAY_SICKKINDER"
+END
+
+DEF TASK "CallInKinder"
+    SET NAME "Se faire porter pâle à la maternelle"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallInKinder"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make dummy
+CLONE DEED "Tap3" "SkipDummy1"
+    SET INSTRUCTIONS "Trouvez la bonne taille de balle"
+END
+
+CLONE DEED "SwipeDown" "SkipDummy2"
+    SET INSTRUCTIONS "Remplissez vos vêtements"
+END
+
+CLONE DEED "SwipeRight" "SkipDummy3"
+    SET INSTRUCTIONS "Ajoutez un peu de cheveux"
+END
+
+CLONE DEED "Hold2" "SkipDummy4"
+    SET INSTRUCTIONS "Une ressemblance parfaite !"
+END
+
+DEF TASK "SkipDummy"
+    SET NAME "Créer une version factice de soi-même"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SkipDummy1"
+    STEP "2" "SkipDummy2"
+    STEP "3" "SkipDummy3"
+    STEP "4" "SkipDummy4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : -------------------------------------
+
+REM : Enjoy peace and quiet
+CLONE DEED "SwipeDown" "PeaceQuiet1"
+    SET INSTRUCTIONS "Asseyez-vous dans le bon fauteuil"
+END
+
+CLONE DEED "Hold2" "PeaceQuiet2"
+    SET INSTRUCTIONS "Savourez une gorgée de bon café"
+END
+
+CLONE DEED "SwipeLeft" "PeaceQuiet3"
+    SET INSTRUCTIONS "Sortez votre passe-temps le plus honteux"
+END
+
+CLONE DEED "QuickTap5" "PeaceQuiet4"
+    SET INSTRUCTIONS "Réarrangez votre collection de billes"
+END
+
+DEF TASK "PeaceQuiet"
+    SET NAME "Profiter de la paix et du calme"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PeaceQuiet1"
+    STEP "2" "PeaceQuiet2"
+    STEP "3" "PeaceQuiet3"
+    STEP "4" "PeaceQuiet4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Build a cardboard particle collider
+CLONE DEED "Gizmos6" "BuildCard"
+    SET INSTRUCTIONS "Construisez un collisionneur de particules en carton"
+    SET NAME "Particle Collider"
+END
+
+DEF TASK "BuildCard"
+    SET NAME "Construire un collisionneur de particules en carton dans le jardin"
+    SET ASKER_NAME "Demandez de l'aide pour construire un collisionneur de particules en carton dans le jardin"
+    SET HELPER_NAME "Aidez <ASKER> à construire un collisionneur de particules en carton dans le jardin"
+    SET CAPTAIN "MATURE"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "BuildCard"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Sneak out
+CLONE TASK "SneakOutBase" "SneakOutSkipDay"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAIN "TEENS"
+    SET DURATION <8H>
+END
+
+REM : Drive aimlessly around town
+CLONE DEED "TravelCategory" "TravelAimless"
+    SET INSTRUCTIONS "Allons chercher de la nourriture"
+    SET CATEGORY "FOOD"
+END
+
+DEF TASK "TravelAimless"
+    SET NAME "Conduire sans but dans la ville"
+    SET ASKER_NAME "Allez avec un adolescent pour conduire sans but dans la ville"
+    SET HELPER_NAME "Conduisez sans but dans la ville avec <ASKER> "
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TravelAimless"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : ----------------------------------------------
+
+REM : Answer call from school
+CLONE DEED "DialogID" "DialogSkipSchool"
+    SET INSTRUCTIONS "Jouez-la cool"
+    SET CONTENT_ID "SKIPDAY_CHECKIN"
+END
+
+DEF TASK "DialogSkipSchool"
+    SET NAME "Répondre à l'appel de l'école"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DialogSKipSchool"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make fuel for your collider
+CLONE DEED "SwipeRight" "ColliderFuel1"
+    SET INSTRUCTIONS "Videz le réfrigérateur"
+END
+
+CLONE DEED "Rotate360" "ColliderFuel2"
+    SET INSTRUCTIONS "Versez le tout dans un seau"
+END
+
+CLONE DEED "Tap1" "ColliderFuel3"
+    SET INSTRUCTIONS "Ajoutez une pointe de javel"
+END
+
+CLONE DEED "Hold3" "ColliderFuel4"
+    SET INSTRUCTIONS "Faites le plein !"
+END
+
+DEF TASK "ColliderFuel"
+    SET NAME "Fabriquer du combustible pour le collisionneur de votre jardin"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ColliderFuel1"
+    STEP "2" "ColliderFuel2"
+    STEP "3" "ColliderFuel3"
+    STEP "4" "ColliderFuel4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Gorge on snack food
+CLONE DEED "Tap3" "GorgeSkip1"
+    SET INSTRUCTIONS "Mangez tous les anchois que vous voulez"
+END
+
+CLONE DEED "QuickTap3" "GorgeSkip2"
+    SET INSTRUCTIONS "Mangez-en encore plus"
+END
+
+CLONE DEED "Nothing3" "GorgeSkip3"
+    SET INSTRUCTIONS "Soyez fier de votre décision d'adulte"
+END
+
+CLONE DEED "Hold3" "GorgeSkip4"
+    SET INSTRUCTIONS "Oh oh... indigestion"
+END
+
+DEF TASK "GorgeSkip"
+    SET NAME "Se gaver de snacks"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "GorgeSkip1"
+    STEP "2" "GorgeSkip2"
+    STEP "3" "GorgeSkip3"
+    STEP "4" "GorgeSkip4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Find the makeup work you misplaced
+CLONE DEED "SearchID" "SkipMakeUp"
+    SET INSTRUCTIONS "Retrouvez le travail de rattrapage que vous avez égaré"
+    SET CONTENT_ID "MAKEUPWORK"
+END
+
+DEF TASK "SkipMakeUp"
+    SET NAME "Retrouver le travail de rattrapage que vous avez égaré"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SkipMakeUp"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Shut down collider
+CLONE DEED "Instructions5" "ShutDownCollider"
+    SET INSTRUCTIONS "Arrêtez le collisionneur en surchauffe !"
+
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Éteignez le feu"
+    SET MECHANIC_1 "SWIPE_DOWN"
+    SET INSTRUCTIONS_1 "Enclenchez l'interrupteur d'annulation"
+    SET MECHANIC_2 "TAP_HOLD"
+    SET INSTRUCTIONS_2 "Préparez-vous à l'explosion"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Soupirez de soulagement"
+    SET MECHANIC_4 "SWIPE_UP"
+    SET INSTRUCTIONS_4 "Faites-vous surprendre par la pluie"
+END
+
+DEF TASK "ShutDownCollider"
+    SET NAME "Arrêter la surchauffe du collisionneur de particules du jardin !"
+    SET ASKER_NAME "Demandez de l'aide pour arrêter la surchauffe du collisionneur de particules du jardin"
+    SET HELPER_NAME "Aidez <ASKER> à arrêter la surchauffe du collisionneur de particules du jardin"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ShutDownCollider"
+
+    NEXT "1" SUCCESS FAILURE
+END

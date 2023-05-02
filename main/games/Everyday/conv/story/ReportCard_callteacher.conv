@@ -1,0 +1,18 @@
+MAIN(Teacher): Qu'êtes-vous prêt à faire pour améliorer les notes de votre enfant ?
+-HOMEWORK-> Aider à faire ses devoirs.
+-EXTRA-> Y a-t-il des crédits supplémentaires?
+-YELL-> Crier très fort.
+-BRIBE-> Des pots-de-vin et encore des pots-de-vin.
+
+
+HOMEWORK(Teacher): Ce serait formidable!
+-SUCCESS-> Oh oh. Maintenant je dois apprendre de l'anglais.
+
+EXTRA(Teacher): Ils pourraient construire un modèle...
+-SUCCESS-> Au magasin d'artisanat!
+
+YELL(Teacher): Vous devriez probablement revenir à l'école.
+-SUCCESS-> Le bon côté des choses, c'est que je peux raccrocher le téléphone !
+
+BRIBE(Politic): Ça peut marcher pour le prof de maths, mais pas pour moi!
+-SUCCESS-> Je n'avais pas d'argent pour le pot-de-vin de toute façon.

@@ -1,0 +1,9 @@
+MAIN(French Language Tape): The cow is unable to get a driver's license.
+-RESPONSE1-> Because it does not have a valid identification.
+-RESPONSE1-> And so the cow has to pay full price for the audio books.
+-RESPONSE1-> Pardon, quoi ? Je ne parle pas anglais.
+
+RESPONSE1(French Language Tape): Too much peanut butter is bad for your skin tone.
+-SUCCESS-> The things we love will cause our death.
+-SUCCESS-> I doubt the accuracy of your research.
+-FAILURE-> Je ne peux pas simplement parler français avec un accent anglais ?

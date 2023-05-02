@@ -1,0 +1,59 @@
+REM : Cool Down in Front of Open Fridge
+
+CLONE DEED "SwipeLeft" "CoolFridgeStep1"
+    SET INSTRUCTIONS "Ouvrez la porte de frigo"
+END
+
+CLONE DEED "Nothing5" "CoolFridgeStep2"
+    SET INSTRUCTIONS "Appréciez l'air frais"
+END
+
+CLONE DEED "Nothing5" "CoolFridgeStep3"
+    SET INSTRUCTIONS "Ignorez le son étrange provenant du frigo"
+END
+
+DEF TASK "CoolFridge"
+    SET NAME "Se raffraichir devant le frigo"
+    SET THEME "SELFISH"
+    SET CATEGORY "SELFISH"
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+
+    SET DURATION <2H>
+    REM : SELFISH TIMEOUT
+
+    STEP "Step1" "CoolFridgeStep1"
+    STEP "Step2" "CoolFridgeStep2"
+    STEP "Step3" "CoolFridgeStep3"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" SUCCESS FAILURE
+END
+
+REM : Call psychic hotline
+CLONE DEED "PhoneCategory" "PhonePsychic"
+    SET INSTRUCTIONS "Perdez de l'argent en appelant 'psychic hotline'"
+    SET CATEGORY "PSYCHIC"
+END
+
+DEF TASK "PhonePsychic"
+    SET NAME "Perdre de l'argent en appelant 'psychic hotline'"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "SELFISH"
+    SET THEME "SELFISH"
+    SET DURATION <2H>
+    SET CANCELER "SelfishCanceler"
+    SET EMPTY_BEHAVIOR "FAIL"
+
+    STEP "1" "PhonePsychic"
+
+    NEXT "1" SUCCESS FAILURE
+END
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "SelfishAny"
+    ADDTASK "CoolFridge"
+    ADDTASK "PhonePsychic"
+END

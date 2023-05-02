@@ -1,0 +1,16 @@
+MAIN(Professeur): Bonjour, qui est-ce ?
+-HONEST-> C'est moi, votre élève dévoué
+-PRANK-> C'est la banque. Nous vous appelons pour vous dire que tout votre argent a disparu.
+
+HONEST(Professeur): Oh bonjour, que se passe t'il ?
+-FAILURE-> Rien du tout, je voulais juste vous dire bonjour car j'adore l'école. Au revoir.
+
+PRANK(Professeur): Quoi ? Comment c'est arrivé ?
+-MESSUP-> *rigole*
+-PRANKDONE->Votre compte a été signalé car vous avez une mauvaise clé B.A.R.D.
+
+MESSUP(Professeur): Attendez, votre voix me semble familière...
+-SUCCESS->*raccroche rapidement*
+
+PRANKDONE(Professeur): J'ai un mauvais clébard... QUOI ?!
+-SUCCESS-> Hahahaha! *raccroche*

@@ -1,0 +1,440 @@
+DEF EPISODE "ExchangeStudent"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Un échange équitable"
+    SET DESCRIPTION "Un <font color='#AF0000'>étudiant d'échange</font> de Pearly Gates, Iowa reste avec la famille pour le week-end. Essayez de faire en sorte qu'il se sente comme chez lui, n'est-ce pas ?"
+    SET SUCCESS_MESSAGE "Notre réseau de mamans nous a informés que l'étudiant s'est senti bien accueilli dans votre maison. Félicitations pour avoir appris comment les gens devraient s'entendre, une leçon que la plupart d'entre nous ont apprise au jardin d'enfants. Oh, et gardez cette recette de thé glacé !"
+    SET FAILURE_MESSAGE "Pas de chance, hôtes. Nous avons entendu dire que votre étudiant ne s'est pas du tout senti enveloppé dans l'amour de votre unité familiale ! Puisse chaque gorgée de thé glacé rafraîchissant être marquée par le souvenir de votre échec."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/default/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/default/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/default/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "PickUpEx" <1 8:00>
+    SCHEDULE TASK "MakeHousePresentable" <1 10:00>
+    SCHEDULE TASK "WelcomeStudent" <1 13:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "IntellectualConvo" <2 8:00>
+    SCHEDULE TASK "TextBigWord" <2 10:00>
+    SCHEDULE TASK "RearrangeBookcase" <2 13:00>
+    SCHEDULE TASK "CallExParents" <2 15:00>
+    SCHEDULE TASK "CollegeApEx" <2 18:00>
+    
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "Melancholy" <3 8:00>
+    SCHEDULE TASK "Glower" <3 10:00>
+    SCHEDULE TASK "DeadLizard" <3 13:00>
+    SCHEDULE TASK "PlayPretendEx" <3 15:00>
+    SCHEDULE TASK "TeaRevenge" <3 18:00>
+
+END
+
+
+REM : ------------------------------
+
+REM : Define this episode's story tasks below
+
+REM : Drive to pick up student at the train station
+CLONE DEED "TravelID" "PickUpEx"
+    SET INSTRUCTIONS "Récupérez l'étudiant à la gare"
+    SET CONTENT_ID "ASTERTRAIN"
+END
+
+DEF TASK "PickUpEx"
+    SET NAME "Récupérer l'étudiant à la gare"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PickUpEx"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make the house presentable for exchange student
+CLONE DEED "Instructions4" "MakeHousePresentable"
+    SET INSTRUCTIONS "Faites en sorte que la maison soit présentable"
+
+    SET MECHANIC_0 "TAP_3"
+    SET INSTRUCTIONS_0 "Époussetez le canapé"
+    SET MECHANIC_1 "SWIPE_LEFT"
+    SET INSTRUCTIONS_1 "Nettoyez les plinthes"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Polissez les poignées de porte"
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Admirez votre travail"
+END
+
+DEF TASK "MakeHousePresentable"
+    SET NAME "Faire en sorte que la maison soit présentable pour l'étudiant d'échange"
+    SET ASKER_NAME "Demandez de l'aide pour rendre la maison présentable pour l'étudiant d'échange"
+    SET HELPER_NAME "Aidez <ASKER> à rendre la maison présentable pour l'étudiant d'échange"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "MakeHousePresentable"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Welcome student to the family
+CLONE DEED "Tap1" "WelcomeStudent1"
+    SET INSTRUCTIONS "Offrez à l'étudiant votre cadeau de bienvenue"
+END
+
+CLONE DEED "Tap1" "WelcomeStudent2"
+    SET INSTRUCTIONS "Acceptez leur note de remerciement immédiate"
+END
+
+CLONE DEED "Hold2" "WelcomeStudent3"
+    SET INSTRUCTIONS "Avalez votre contrariété"
+END
+
+DEF TASK "WelcomeStudent"
+    SET NAME "Accueillir l'étudiant dans la famille"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "WelcomeStudent1"
+    STEP "2" "WelcomeStudent2"
+    STEP "3" "WelcomeStudent3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : ----------------------------------------
+
+CLONE DEED "Hold3" "IntellectualConvo1"
+    SET INSTRUCTIONS "Réfléchissez à une question profonde"
+END
+
+CLONE DEED "QuickTap3" "IntellectualConvo2"
+    SET INSTRUCTIONS "Gloussez de façon intellectuelle"
+END
+
+CLONE DEED "SwipeLeft" "IntellectualConvo3"
+    SET INSTRUCTIONS "Acceptez leur offre de thé glacé frais"
+END
+
+CLONE DEED "Nothing2" "IntellectualConvo4"
+    SET INSTRUCTIONS "Rafraîchissant !"
+END
+
+DEF TASK "IntellectualConvo"
+    SET NAME "Profiter d'une conversation intellectuelle avec l'étudiant"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "IntellectualConvo1"
+    STEP "2" "IntellectualConvo2"
+    STEP "3" "IntellectualConvo3"
+    STEP "4" "IntellectualConvo4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Look up big word exchange student used
+CLONE DEED "TextBase" "TextBigWord"
+    SET CATEGORY "BIGWORDS"
+END
+
+DEF TASK "TextBigWord"
+    SET NAME "Chercher le mot savant que l'étudiant d'échange a utilisé"
+    SET ASKER_NAME "Demandez de l'aide pour chercher le mot savant que l'étudiant d'échange a utilisé"
+    SET HELPER_NAME "Aidez <ASKER> à chercher le mot savant que l'étudiant d'échange a utilisé"
+    SET CAPTAIN "YOUNG"
+    SET PARTICIPANT "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TextBigWord"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Re-rearreange the book case student rearranged
+CLONE DEED "Nothing2" "RearrangeBookcase1"
+    SET INSTRUCTIONS "Dites à l'élève que c'est super"
+END
+
+CLONE DEED "Hold3" "RearrangeBookcase2"
+    SET INSTRUCTIONS "Assurez-vous qu'il soit parti"
+END
+
+CLONE DEED "QuickTap3" "RearrangeBookcase3"
+    SET INSTRUCTIONS "Qui trie par couleur ??"
+END
+
+CLONE DEED "Hold2" "RearrangeBookcase4"
+    SET INSTRUCTIONS "Remettez tout à leur place"
+END
+
+DEF TASK "RearrangeBookcase"
+    SET NAME "Re-réarranger la bibliothèque que l'étudiant d'échange a réarrangée"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "RearrangeBookcase1"
+    STEP "2" "RearrangeBookcase2"
+    STEP "3" "RearrangeBookcase3"
+    STEP "4" "RearrangeBookcase4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Call student's parents
+CLONE DEED "DialogID" "CallExParents"
+    SET INSTRUCTIONS "Appelez 'Exchange student's parents'"
+    SET CONTENT_ID "EXCHANGESTUDENT_PARENT"
+END
+
+DEF TASK "CallExParents"
+    SET NAME "Appeler les parents de l'étudiant d'échange"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallExParents"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Work on college applications with student
+CLONE DEED "QuickTap5" "CollegeApEx1"
+    SET INSTRUCTIONS "Rédigez votre lettre de motivation"
+END
+
+CLONE DEED "SwipeRight" "CollegeApEx2"
+    SET INSTRUCTIONS "Jetez un coup d'œil à la moyenne générale de l'élève"
+END
+
+CLONE DEED "Hold2" "CollegeApEx3"
+    SET INSTRUCTIONS "Comment ça, on a besoin d'activités extrascolaires ?!"
+END
+
+CLONE DEED "Nothing3" "CollegeApEx4"
+    SET INSTRUCTIONS "Désespérez."
+END
+
+DEF TASK "CollegeApEx"
+    SET NAME "Travailler sur les demandes d'inscription à l'université avec l'étudiant en échange"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CollegeApEx1"
+    STEP "2" "CollegeApEx2"
+    STEP "3" "CollegeApEx3"
+    STEP "4" "CollegeApEx4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : -------------------------------------
+
+REM : Sink into melancholy
+CLONE DEED "Instructions4" "Melancholy"
+    SET INSTRUCTIONS "Sombrez dans la mélancolie"
+
+    SET MECHANIC_0 "SWIPE_LEFT"
+    SET INSTRUCTIONS_0 "Fermez les rideaux"
+    SET MECHANIC_1 "TAP_HOLD"
+    SET INSTRUCTIONS_1 "Prenez en compte votre avenir inconnu"
+    SET MECHANIC_2 "SWIPE_LEFT"
+    SET INSTRUCTIONS_2 "Jetez-vous sur le canapé"
+    SET MECHANIC_3 "SWIPE_RIGHT"
+    SET INSTRUCTIONS_3 "Jetez-vous sur l'autre canapé"
+END
+
+DEF TASK "Melancholy"
+    SET NAME "Sombrer dans la mélancolie"
+    SET ASKER_NAME "Aidez votre adolescent à sombrer dans la mélancolie"
+    SET HELPER_NAME "Demandez l'aide de <ASKER> pour sombrer dans la mélancolie"
+    SET CAPTAIN "TEENS"
+    SET PARTICIPANT "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Melancholy"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Glower on the stoop
+CLONE DEED "Tap1" "Glower1"
+    SET INSTRUCTIONS "Jetez un regard noir sur l'étudiant étranger"
+END
+
+CLONE DEED "QuickTap3" "Glower2"
+    SET INSTRUCTIONS "Jetez un regard noir plus fort"
+END
+
+CLONE DEED "SwipeLeft" "Glower3"
+    SET INSTRUCTIONS "Acceptez l'offre de l'étudiant pour un thé glacé"
+END
+
+CLONE DEED "Hold2" "Glower4"
+    SET INSTRUCTIONS "Rafraîchissant !"
+END
+
+CLONE DEED "QuickTap3" "Glower5"
+    SET INSTRUCTIONS "On retourne aux regards noirs"
+END
+
+DEF TASK "Glower"
+    SET NAME "Jeter un regard noir sur le seuil de l'étudiant étranger"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "Glower1"
+    STEP "2" "Glower2"
+    STEP "3" "Glower3"
+    STEP "4" "Glower4"
+    STEP "5" "Glower5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Show student dead lizard
+CLONE DEED "SwipeBase" "DeadLizard1"
+    SET INSTRUCTIONS "Cherchez dans les hautes herbes"
+    SET DIRECTION "LEFT,RIGHT"
+END
+
+CLONE DEED "Tap2" "DeadLizard2"
+    SET INSTRUCTIONS "Tapez-le avec un bâton !"
+END
+
+CLONE DEED "Hold2" "DeadLizard3"
+    SET INSTRUCTIONS "Regardez l'étudiant en échange qui le ramène à la vie"
+END
+
+CLONE DEED "Tap2" "DeadLizard4"
+    SET INSTRUCTIONS "Tapez sur le lézard vivant et ennuyeux avec un bâton"
+END
+
+DEF TASK "DeadLizard"
+    SET NAME "Montrer à l'étudiant d'échange le lézard mort que vous avez trouvé"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DeadLizard1"
+    STEP "2" "DeadLizard2"
+    STEP "3" "DeadLizard3"
+    STEP "4" "DeadLizard4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Play pretend with student
+CLONE DEED "SwipeRight" "PlayPretendEx1"
+    SET INSTRUCTIONS "Sortez les belles poupées"
+END
+
+CLONE DEED "Hold3" "PlayPretendEx2"
+    SET INSTRUCTIONS "Rêvez d'un monde magique"
+END
+
+CLONE DEED "Nothing3" "PlayPretendEx3"
+    SET INSTRUCTIONS "Émerveillez-vous devant le pouvoir de l'imagination de l'étudiant"
+END
+
+CLONE DEED "Hold3" "PlayPretendEx4"
+    SET INSTRUCTIONS "Ressentez de l'infériorité pour la première fois"
+END
+
+DEF TASK "PlayPretendEx"
+    SET NAME "Jouer à faire semblant avec un étudiant étranger"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PlayPretendEx1"
+    STEP "2" "PlayPretendEx2"
+    STEP "3" "PlayPretendEx3"
+    STEP "4" "PlayPretendEx4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Pour out jug of iced tea on student as revenge
+CLONE DEED "Instructions5" "TeaRevenge"
+    SET INSTRUCTIONS "Versez une cruche de thé glacé sur l'étudiant pour vous venger"
+
+    SET MECHANIC_0 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_0 "Remuez votre thé"
+    SET MECHANIC_1 "TAP_HOLD"
+    SET INSTRUCTIONS_1 "Laissez-le refroidir..."
+    SET MECHANIC_2 "TAP_3"
+    SET INSTRUCTIONS_2 "Faufilez-vous dans le dos de votre ennemi..."
+    SET MECHANIC_3 "TAP_HOLD"
+    SET INSTRUCTIONS_3 "Soyez prêt..."
+    SET MECHANIC_4 "TAP"
+    SET INSTRUCTIONS_4 "Rafraîchissant!"
+END
+
+DEF TASK "TeaRevenge"
+    SET NAME "Verser une cruche de thé glacé sur l'étudiant pour se venger"
+    SET ASKER_NAME "Demandez de l'aide pour verser une cruche de thé glacé sur l'étudiant pour se venger"
+    SET HELPER_NAME "Aidez <ASKER> à verser une cruche de thé glacé sur l'étudiant pour se venger"
+    SET CAPTAIN "CHILDREN"
+    SET PARTICIPANT "MATURE"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TeaRevenge"
+
+    NEXT "1" SUCCESS FAILURE
+END

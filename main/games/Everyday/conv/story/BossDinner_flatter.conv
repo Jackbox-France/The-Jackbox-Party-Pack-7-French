@@ -1,0 +1,24 @@
+MAIN(Boss): Comment puis-je vous aider, jeune capitaliste ?
+-ADVICE-> Comment puis-je avoir un énorme succès comme vous ?
+-BRATTY-> Comment puis-je éviter vos nombreuses erreurs évidentes ?
+-SHORTCUT-> Is there some shortcut to success that doesn't involve so much "trying"?
+
+ADVICE(Boss): Honnêtement, tout est dans les vêtements. Trouvez-vous un bon tailleur et vous aurez fait la moitié du chemin.
+-TAILOR-> Qui est votre gars ?
+-BODYTEMP-> Ma température corporelle extrêmement élevée n'est PAS bonne pour le lin.
+
+TAILOR(Boss): Parlez à Vinny au dépôt de costumes et dites-lui que je vous envoie.
+-SUCCESS-> J'ai fait une connexion!
+
+BODYTEMP(Boss): Ils font de grandes choses avec les vêtements de bureau en Nomex ces jours-ci.
+-SUCCESS-> Bon, on a assez parlé pour l'instant.
+
+BRATTY(Boss): Je suppose en revenant en 1998 et dire à Carolyn que je ne veux pas qu'elle déménage à Detroit...
+-SUCCESS-> C'est devenu trop réel.
+
+SHORTCUT(Boss): Cela dépend. Êtes-vous né riche?
+-NOTRICH-> Malheureusement, non.
+-NOTRICH-> Si je l'érais, est-ce que je serais en train de gâcher mon temps à parler avec vous?
+
+NOTRICH(Boss): Alors je ne peux pas vous aider.
+-SUCCESS-> Commentaire tranchant.

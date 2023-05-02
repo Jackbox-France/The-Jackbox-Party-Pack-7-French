@@ -1,0 +1,17 @@
+MAIN(Voisin): Bonjour, je n'ai pas eu mes lettres aujourd'hui. Vous les avez ?
+-YES-> Oui, juste ici !
+-NO-> Non, j'ai déteste les actualités
+-PAPERBOY-> Ces facteurs ne sont pas très forts !
+-STOLEPAPER-> VOUS avez volé MES lettres !
+
+YES(Voisin): Oh merci !
+-SUCCESS-> Bien. Ils n'étaient pas du tout suspects...
+
+NO(Voisin): Alors qu'est ce que c'est que ça ?
+-SUCCESS-> Mon chapeau avec un journal plié m'a trahi
+
+PAPERBOY(Voisin): Je les déteste aussi !
+-SUCCESS-> Je me suis fait un nouvel allié dans ma guerre contre le livreur de journaux.
+
+STOLEPAPER(Voisin): Vous avez raison, le voici. 
+-SUCCESS-> J'ai récupéré mon journal, mais j'ai perdu mon voisin.

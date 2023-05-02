@@ -1,0 +1,17 @@
+MAIN(Voisin): Bonjour voisin, je crois que j'ai reçu votre mail. Le voici
+-THANKS-> Merci mon ami
+-KEEPIT-> Gardez-le
+-THIEF-> Voleur !
+-REWARD-> Voici un cadeau pour vous !
+
+THANKS(Voisin): Pas de soucis ! Bonne journée !
+-SUCCESS-> Les gens bien sont bons
+
+KEEPIT(Neighbor): Merci ! Il y a des coupons dedans en plus !
+-SUCCESS-> J'étais sympa, mais j'ai raté de bons deals
+
+THIEF(Neighbor): Comment pouvez-vous ?! Je vais garder ce flyer pour essuyer mes larmes !
+-SUCCESS-> C'est vraiment déplacé
+
+REWARD(Neighbor): Et voici votre journal !
+-SUCCESS-> Ce voisin avait vraiment besoin de 2€

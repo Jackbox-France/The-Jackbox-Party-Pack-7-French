@@ -1,0 +1,23 @@
+DEF DEED "PhoneBase"
+    SET MECHANIC_ID "PHONE"
+    SET INSTRUCTIONS "Phone"
+    SET CATEGORY "FOOD"
+END
+
+REM : Clones
+
+CLONE DEED "PhoneBase" "PhoneFood"
+    SET CATEGORY "FOOD"
+END
+
+CLONE DEED "PhoneBase" "PhoneResidence"
+    SET CATEGORY "RESIDENCE"
+END
+
+CLONE DEED "PhoneBase" "PhoneCategory"
+    SET CATEGORY "RESIDENCE"
+END
+
+CLONE DEED "PhoneBase" "PhoneID"
+    SET CATEGORY "RESIDENCE"
+END

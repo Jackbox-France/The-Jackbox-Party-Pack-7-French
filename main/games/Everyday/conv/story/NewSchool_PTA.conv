@@ -1,0 +1,17 @@
+MAIN(PTA Rep): Qu'apportez-vous à notre association parents/professeurs ?
+-PASSION-> De la passion pour l'éducation
+-LOVE-> De l'amour pour mes enfants
+-YELL-> Beaucoup de cris
+-SNACK-> Des snacks
+
+PASSION(PTA Rep): Ça va le faire !
+-SUCCESS-> ...J'espère que je n'aurai pas à apprendre des maths maintenant.
+
+LOVE(PTA Rep): Woah! Pour tous?
+-SUCCESS-> Et bien... pour la plupart.
+
+YELL(PTA Rep): En fait... nous ne faisons plus de réunions.
+-SUCCESS-> QUOI?!?!?!
+
+SNACK(PTA Rep): Enfin! Nous étions morts de faim.
+-SUCCESS-> Les tranches d'orange sont en route.

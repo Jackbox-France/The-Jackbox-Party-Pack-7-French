@@ -1,0 +1,17 @@
+MAIN(Neighbor): Qu'est-ce que cet arbuste obscène est censé être ?
+-DRAG-> Une attaque de dragon
+-SELF-> Un autoportrait
+-TEST-> C'est un test de Rorschach
+-DYING-> Cet arbuste est mourrant
+
+DRAG(Neighbor): Terrifiant. 
+-SUCCESS-> Les juges des pelouses ne réagissent qu'au potentiel.
+
+SELF(Neighbor): C'est parfait!
+-SUCCESS-> Je devrais voir un docteur
+
+TEST(Neighbor): Oh non... Est-ce que je déteste ma mère ?
+-SUCCESS-> La topiaire dit 'oui'
+
+DYING(Neighbor): C'est mauvais pour votre score de pelouse.
+-SUCCESS-> Et pour le buisson aussi

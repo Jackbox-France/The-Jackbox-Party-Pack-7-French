@@ -1,0 +1,1250 @@
+REM : Catch Bugs
+
+CLONE DEED "SwipeUp" "BugsStep1"
+    SET INSTRUCTIONS "Ouvrez le bocal"
+END
+
+CLONE DEED "Tap1" "BugsStep2"
+    SET INSTRUCTIONS "Il y a un insecte ! Attrapez le !"
+END
+
+CLONE DEED "Tap1" "BugsStep3"
+    SET INSTRUCTIONS "Il y a une coccinelle !"
+END
+
+CLONE DEED "Nothing4" "BugsStep4"
+    SET INSTRUCTIONS "C'est un raisin... Laissez le tranquille"
+    SET PARTICIPATION "SOLO"
+END 
+
+CLONE DEED "SwipeDown" "BugsStep5"
+    SET INSTRUCTIONS "Fermez le bocal"
+END
+
+DEF TASK "CatchBugs"
+    SET NAME "Attraper des insectes"
+    SET THEME "PLAYING"
+    SET CAPTAIN "CHILDREN"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CATEGORY "LOW"
+
+    STEP "1" "BugsStep1"
+    STEP "2" "BugsStep2"
+    STEP "3" "BugsStep3"
+    STEP "4" "BugsStep4"
+    STEP "5" "BugsStep5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+
+REM : Clean up Toys
+
+CLONE DEED "SwipeUp" "PickUpStupidToy"
+    SET INSTRUCTIONS "Jouets stupides"
+END
+
+CLONE DEED "SwipeRight" "TossBear"
+    SET INSTRUCTIONS "Jetez cet ours en peluche"
+END
+
+CLONE DEED "SwipeLeft" "TossMarbles"
+    SET INSTRUCTIONS "Jetez ces billes"
+END
+
+CLONE DEED "TapBase" "PickUpMarbles"
+    SET INSTRUCTIONS "OH NON PAS LES BILLES !"
+    SET NUM_TAPS 10
+    SET WAIT 0S
+END
+
+DEF TASK "CleanUpToys"
+    SET NAME "Ranger les jouets"
+    SET THEME "CLEANING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "PickUpStupidToy"
+    STEP "2" "TossBear"
+    STEP "3" "TossMarbles"
+    STEP "4" "PickUpMarbles"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE 
+END
+
+
+REM : Earn Merit Badge
+
+CLONE DEED "Hold5" "HelpOldLady"
+    SET INSTRUCTIONS "Aidez une grand-mère à traverser la rue"
+END
+
+CLONE DEED "Tap2" "PickUpLitter"
+    SET INSTRUCTIONS "Prenez la litière"
+END
+
+CLONE DEED "SwipeBase" "TieKnots"
+    SET INSTRUCTIONS "Faites des noeuds"
+    SET DIRECTION "LEFT,UP,DOWN,RIGHT"
+END
+
+CLONE DEED "Nothing4" "WearBadge"
+    SET INSTRUCTIONS "Portez fièrement votre nouveau badge scout"
+    SET PARTICIPATION "SOLO"
+END
+
+DEF TASK "EarnMeritBadge"
+    SET NAME "Obtenir l'insigne du mérite"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "HelpOldLady"
+    STEP "2" "PickUpLitter"
+    STEP "3" "TieKnots"
+    STEP "4" "WearBadge"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE 
+END
+
+
+REM : Squish Ants
+
+CLONE DEED "Tap3" "SquishAntsSlow"
+    SET INSTRUCTIONS "Écrasez ces fourmis !"
+END
+
+CLONE DEED "TapBase" "SquishAntsFast"
+    SET INSTRUCTIONS "Plus vite ! Elles s'approchent de la tarte"
+    SET NUM_TAPS 10
+    SET WAIT 0S
+END
+
+DEF TASK "SquishAnts"
+    SET NAME "Ecraser les fourmis"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET LEWD TRUE
+
+    STEP "1" "SquishAntsSlow"
+    STEP "2" "SquishAntsFast"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+
+REM : Make Slime (and Play With It)
+
+CLONE DEED "Tap3" "SlimeSupplies"
+    SET INSTRUCTIONS "Prenez de la colle, du bicarbonate de soude et du sérum physiologique."
+END
+
+CLONE DEED "RotateBase" "SlimeMix"
+    SET ROTATIONS_IN_DEG 540
+    SET INSTRUCTIONS "Mixez les ingrédients"
+END
+
+CLONE DEED "SwipeBase" "SlimePlay"
+    SET INSTRUCTIONS "Jouez avec le slime"
+    SET DIRECTION "LEFT,RIGHT,DOWN,DOWN"
+END
+
+DEF TASK "MakeSlimePlay"
+    SET NAME "Faire du slime"
+    SET THEME "FIXING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "SlimeSupplies"
+    STEP "2" "SlimeMix"
+    STEP "3" "SlimePlay"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE 
+END
+
+
+REM : Make Slime (and Make a Mess)
+
+CLONE DEED "Tap3" "SlimeSupplies2"
+    SET INSTRUCTIONS "Prenez de la colle, du bicarbonate de soude et du sérum physiologique."
+END
+
+CLONE DEED "RotateBase" "SlimeMix2"
+    SET ROTATIONS_IN_DEG 540
+    SET INSTRUCTIONS "Mixez les ingrédients"
+END
+
+CLONE DEED "SwipeLeft" "SlimeFall"
+    SET INSTRUCTIONS "Il est tombé sur le tapis !"
+END
+
+CLONE DEED "SwipeRight" "SlimeHide"
+    SET INSTRUCTIONS "Déplacez le pouf pour cacher la tache"
+END
+
+DEF TASK "MakeSlimeMess"
+    SET NAME "Faire du slime"
+    SET THEME "FIXING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "SlimeSupplies2"
+    STEP "2" "SlimeMix2"
+    STEP "3" "SlimeFall"
+    STEP "4" "SlimeHide"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE 
+END
+
+
+REM : Play in the Sprinkler (PlayInSprinkler)
+
+CLONE DEED "Rotate1080Counter" "HoseOn"
+    SET INSTRUCTIONS "Ouvrez le tuyau"
+END
+
+CLONE DEED "SwipeRight" "RunThroughSprinkler"
+    SET INSTRUCTIONS "Passez à travers !"
+END
+
+CLONE DEED "SwipeBase" "SprinklerRunMore"
+    SET INSTRUCTIONS "Wheee !"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+DEF TASK "PlayInSprinkler"
+    SET NAME "Jouer dans l'arrosage"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "HoseOn"
+    STEP "2" "RunThroughSprinkler"
+    STEP "3" "SprinklerRunMore"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE 
+END
+
+
+REM : Pick up your toys! (PickUpToys)
+REM : Not to be confused with "CleanUpToys"
+
+CLONE DEED "Tap3" "PickToy1"
+    SET INSTRUCTIONS "Quelqu'un pourrait se briser le cou !"
+END
+
+CLONE DEED "Tap3" "PickToy2"
+    SET INSTRUCTIONS "Et ceux-là..."
+END
+
+CLONE DEED "HoldBase" "ReturnToyBox"
+    SET DURATION 7S
+    SET INSTRUCTIONS "Maintenant, emmenez-les dans votre chambre."
+END
+
+DEF TASK "PickUpToys"
+    SET NAME "Enlever ces jouets des marches !"
+    SET THEME "CLEANING"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "1" "PickToy1"
+    STEP "2" "PickToy2"
+    STEP "3" "ReturnToyBox"
+    
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE 
+END
+
+
+REM : Take a Bath
+
+CLONE DEED "SwipeDown" "BathStep1"
+    SET INSTRUCTIONS "Jetez vous dans le bain"
+END
+
+CLONE DEED "QuickTap4" "BathStep2"
+    SET INSTRUCTIONS "Faites des éclaboussures partout"
+END
+
+CLONE DEED "SwipeBase" "BathStep3"
+    SET INSTRUCTIONS "Nettoyez avec la serviette"
+    SET DIRECTION "RIGHT,LEFT,RIGHT,LEFT"
+END
+
+
+DEF TASK "TakeBathKid"
+    SET NAME "Prendre un bain"
+    SET THEME "BATHROOM"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+
+    STEP "Step1" "BathStep1"
+    STEP "Step2" "BathStep2"
+    STEP "Step3" "BathStep3"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" SUCCESS FAILURE
+END
+
+
+REM : Fire slingshot
+
+CLONE DEED "Tap1" "PickupMarble"
+    SET INSTRUCTIONS "Prendre la bille"
+END
+
+CLONE DEED "SwipeLeft" "PullSling"
+    SET INSTRUCTIONS "Tirez sur la fronde"
+END
+
+CLONE DEED "Tap1" "LetGo"
+    SET INSTRUCTIONS "Laissez-vous aller !"
+END
+
+CLONE DEED "Tap5" "VaseRun"
+    SET INSTRUCTIONS "Vous avez cassé un vase ! Courrez !"
+END
+
+DEF TASK "FireSlingShot"
+    SET NAME "Jouer au lance-pierre"
+    SET THEME "PLAYING"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET CATEGORY "LOW"
+
+    STEP "1" "PickupMarble"
+    STEP "2" "PullSling"
+    STEP "3" "LetGo"
+    STEP "4" "VaseRun"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "FixVase"
+
+END
+
+
+REM : Fix the vase you broke (FixVase)
+
+CLONE DEED "ScrubMedium" "VasePieces"
+    SET INSTRUCTIONS "Récupérez toutes les pièces"
+END
+
+CLONE DEED "SwipeDown" "GlueVase"
+    SET INSTRUCTIONS "Ajoutez de la colle"
+END
+
+CLONE DEED "HoldBase" "HoldVase"
+    SET INSTRUCTIONS "Tenez le en place"
+    SET DURATION 5S
+END
+
+DEF TASK "FixVase"
+    SET NAME "Reparer le vase cassé"
+    SET THEME "FIXING"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+
+    STEP "1" "VasePieces"
+    STEP "2" "GlueVase"
+    STEP "3" "HoldVase"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END        
+
+
+REM : Double Dutch Jump Rope
+
+CLONE DEED "SwipeRight" "JumpRopeStep1"
+    SET INSTRUCTIONS "Sautez !"
+END
+
+CLONE DEED "Tap3" "JumpRopeStep2"
+    SET INSTRUCTIONS "Continuez de sauter !"
+END
+
+CLONE DEED "QuickTap6" "JumpRopeStep3"
+    SET INSTRUCTIONS "NE VOUS ARRETEZ PAS DE SAUTER !"
+END
+
+CLONE DEED "SwipeUp" "JumpRopeStep4"
+    SET INSTRUCTIONS "SORTEZ MAINTENANT !"
+END
+
+DEF TASK "JumpRope"
+    SET NAME "Faire de la corde à sauter"
+    SET THEME "PLAYING"
+    SET CAPTAIN "CHILDREN"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+
+    STEP "Step1" "JumpRopeStep1"
+    STEP "Step2" "JumpRopeStep2"
+    STEP "Step3" "JumpRopeStep3"
+    STEP "Step4" "JumpRopeStep4"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" "Step4" FAILURE
+    NEXT "Step4" SUCCESS FAILURE
+END
+
+
+REM : Get Toy Out of Cereal Box
+
+CLONE DEED "SwipeDown" "ToyCereal1Step1"
+    SET INSTRUCTIONS "Mettez votre main dans la boite"
+END
+
+CLONE DEED "ScrubMedium" "ToyCereal1Step2"
+    SET INSTRUCTIONS "Fouillez dedans"
+END
+
+CLONE DEED "ScrubMedium" "ToyCereal1Step3"
+    SET INSTRUCTIONS "Laissez tomber, jettez tout ça."
+END
+
+CLONE DEED "Tap1" "ToyCereal1Step4"
+    SET INSTRUCTIONS "Récupérez le jouet"
+END
+
+DEF TASK "ToyCereal1"
+    SET NAME "Sortir le jouet de la boite de cereales"
+    SET THEME "KITCHEN"
+    SET CAPTAIN "CHILDREN"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+
+    STEP "Step1" "ToyCereal1Step1"
+    STEP "Step2" "ToyCereal1Step2"
+    STEP "Step3" "ToyCereal1Step3"
+    STEP "Step4" "ToyCereal1Step4"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" "Step4" FAILURE
+    NEXT "Step4" SUCCESS FAILURE
+END
+
+
+REM : Get Toy Out of Cereal Box
+
+CLONE DEED "SwipeDown" "ToyCereal2Step1"
+    SET INSTRUCTIONS "Mettez votre main dans la boite"
+END
+
+CLONE DEED "ScrubMedium" "ToyCereal2Step2"
+    SET INSTRUCTIONS "Fouillez dedans"
+END
+
+CLONE DEED "ScrubLong" "ToyCereal2Step3"
+    SET INSTRUCTIONS "Laissez tomber, jettez tout ça."
+END
+
+CLONE DEED "Nothing5" "ToyCereal2Step4"
+    SET INSTRUCTIONS "Oubliez ça, vous l'avez déjà"
+END
+
+DEF TASK "ToyCereal2"
+    SET NAME "Sortir le jouet de la boite de cereales"
+    SET THEME "KITCHEN"
+    SET CAPTAIN "MATURE"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+
+    STEP "Step1" "ToyCereal2Step1"
+    STEP "Step2" "ToyCereal2Step2"
+    STEP "Step3" "ToyCereal2Step3"
+    STEP "Step4" "ToyCereal2Step4"
+
+    NEXT "Step1" "Step2" FAILURE
+    NEXT "Step2" "Step3" FAILURE
+    NEXT "Step3" "Step4" FAILURE
+    NEXT "Step4" SUCCESS FAILURE
+END
+
+REM : Make a PB&J
+
+CLONE DEED "SwipeLeft" "MakePBJ1"
+    SET INSTRUCTIONS "Mettez le beurre de cacahuète sur un côté"
+END
+
+CLONE DEED "Tap1" "MakePBJ2"
+    SET INSTRUCTIONS "Ajoutez de la confiture sur l'autre côté"
+END
+
+CLONE DEED "Hold3" "MakePBJ3"
+    SET INSTRUCTIONS "Rassemblez tout ça ensemble"
+END
+
+CLONE DEED "Tap1" "MakePBJ4"
+    SET INSTRUCTIONS "Engloutissez tout ça !"
+END
+
+DEF TASK "MakePBJ"
+    SET NAME "Faire un sandwich au beurre de cacahuète et à la confiture"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET DURATION <3H>
+    REM : SOLO TIMEOUT
+    SET THEME "COOKING"
+
+    STEP "1" "MakePBJ1"
+    STEP "2" "MakePBJ2"
+    STEP "3" "MakePBJ3"
+    STEP "4" "MakePBJ4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Color in coloring book
+
+CLONE DEED "SwipeRight" "ColoringBook1"
+    SET INSTRUCTIONS "Ouvrez le livre à la page de la fusée"
+END
+
+CLONE DEED "SwipeUp" "ColoringBook2"
+    SET INSTRUCTIONS "Prenez vos crayons"
+END
+
+CLONE DEED "ScrubMedium" "ColoringBook3"
+    SET INSTRUCTIONS "Coloriez !"
+END
+
+DEF TASK "ColoringBook"
+    SET NAME "Colorier dans le livre de dessin"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "ColoringBook1"
+    STEP "2" "ColoringBook2"
+    STEP "3" "ColoringBook3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Pack Backpack
+
+CLONE DEED "SwipeLeft" "PackBackpack1"
+    SET INSTRUCTIONS "Ouvrez le sac à dos"
+END
+
+CLONE DEED "Tap1" "PackBackpack2"
+    SET INSTRUCTIONS "Ajoutez des livres"
+END
+
+CLONE DEED "Tap2" "PackBackpack3"
+    SET INSTRUCTIONS "Ajoutez de la nourriture"
+END
+
+CLONE DEED "Tap1" "PackBackpack4"
+    SET INSTRUCTIONS "Ajoutez des feux d'artifices"
+END
+
+CLONE DEED "SwipeRight" "PackBackpack5"
+    SET INSTRUCTIONS "Fermez le sac"
+END
+
+DEF TASK "PackBackpack"
+    SET NAME "Faire son sac"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "MISC"
+    SET DURATION <3H>
+
+    STEP "1" "PackBackpack1"
+    STEP "2" "PackBackpack2"
+    STEP "3" "PackBackpack3"
+    STEP "4" "PackBackpack4"
+    STEP "5" "PackBackpack5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Run around the house in a cape
+
+CLONE DEED "Rotate360" "CapeRun1"
+    SET INSTRUCTIONS "Attachez le drap autour de votre cou"
+END
+
+CLONE DEED "SwipeRight" "CapeRun2"
+    SET INSTRUCTIONS "Whee !"
+END
+
+CLONE DEED "SwipeLeft" "CapeRun3"
+    SET INSTRUCTIONS "Whee !"
+END
+
+CLONE DEED "Nothing3" "CapeRun4"
+    SET INSTRUCTIONS "Faites une petite pause"
+END
+
+CLONE DEED "SwipeRight" "CapeRun5"
+    SET INSTRUCTIONS "Whee !"
+END
+
+DEF TASK "CapeRun"
+    SET NAME "Courir dans la maison avec une cape"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+
+    STEP "1" "CapeRun1"
+    STEP "2" "CapeRun2"
+    STEP "3" "CapeRun3"
+    STEP "4" "CapeRun4"
+    STEP "5" "CapeRun5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+
+REM : Make macaroni art
+
+CLONE DEED "ScrubMedium" "MacaroniArt1"
+    SET INSTRUCTIONS "Choisissez des macaronis non cassés"
+END
+
+CLONE DEED "Tap4" "MacaroniArt2"
+    SET INSTRUCTIONS "Placez sur du papier avec de la colle"
+END
+
+CLONE DEED "Hold5" "MacaroniArt3"
+    SET INSTRUCTIONS "Pliez les yeux pour que ça ressemble à un chat"
+END
+
+DEF TASK "MacaroniArt"
+    SET NAME "Faire de l'art avec des pâtes"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "MacaroniArt1"
+    STEP "2" "MacaroniArt2"
+    STEP "3" "MacaroniArt3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+
+REM : Put on shoes
+
+CLONE DEED "Tap2" "PutOnShoes1"
+    SET INSTRUCTIONS "Mettez vos chaussures"
+END
+
+CLONE DEED "Rotate360" "PutOnShoes2"
+    SET INSTRUCTIONS "Faites vos lacets sur la chaussure de droite"
+END
+
+CLONE DEED "Rotate360Counter" "PutOnShoes3"
+    SET INSTRUCTIONS "Faites vos lacets sur la chaussure de gauche"
+END
+
+DEF TASK "PutOnShoes"
+    SET NAME "Mettre ses chaussures"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "CLOTHES"
+    SET DURATION <3H>
+
+    STEP "1" "PutOnShoes1"
+    STEP "2" "PutOnShoes2"
+    STEP "3" "PutOnShoes3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+
+REM : Swing on the swing set
+
+CLONE DEED "Tap1" "SwingSet1"
+    SET INSTRUCTIONS "Essayez la vitesse de rotation maximale"
+END
+
+CLONE DEED "SwipeBase" "SwingSet2"
+    SET INSTRUCTIONS "Balancez !"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+CLONE DEED "SwipeBase" "SwingSet3"
+    SET INSTRUCTIONS "Balancez plus fort !"
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+CLONE DEED "Hold3" "SwingSet4"
+    SET INSTRUCTIONS "Lancez !"
+END
+
+DEF TASK "SwingSet"
+    SET NAME "Se balancer sur la balançoire"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+
+    STEP "1" "SwingSet1"
+    STEP "2" "SwingSet2"
+    STEP "3" "SwingSet3"
+    STEP "4" "SwingSet4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+
+REM : Do a cartwheel
+
+CLONE DEED "SwipeRight" "Cartwheel1"
+    SET INSTRUCTIONS "Faites de la place"
+END
+
+CLONE DEED "Hold2" "Cartwheel2"
+    SET INSTRUCTIONS "Prenez votre position"
+END
+
+CLONE DEED "Rotate360" "Cartwheel3"
+    SET INSTRUCTIONS "Roulez !"
+END
+
+CLONE DEED "Rotate360Counter" "Cartwheel4"
+    SET INSTRUCTIONS "Roulez encore !"
+END
+
+CLONE DEED "Nothing3" "Cartwheel5"
+    SET INSTRUCTIONS "Accueillez les éloges"
+END
+
+DEF TASK "Cartwheel"
+    SET NAME "Faire la roue"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "LOW"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+
+    STEP "1" "Cartwheel1"
+    STEP "2" "Cartwheel2"
+    STEP "3" "Cartwheel3"
+    STEP "4" "Cartwheel4"
+    STEP "5" "Cartwheel5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+
+REM : Make a paper lantern v1
+
+CLONE DEED "Hold5" "PaperLantern1Step1"
+    SET INSTRUCTIONS "Collez le papier"
+END
+
+CLONE DEED "QuickTap4" "PaperLantern1Step2"
+    SET INSTRUCTIONS "Découpez des fentes dans le papier"
+END
+
+CLONE DEED "Tap1" "PaperLantern1Step3"
+    SET INSTRUCTIONS "Allumez la lanterne"
+END
+
+CLONE DEED "Nothing5" "PaperLantern1Step4"
+    SET INSTRUCTIONS "Profitez de la beauté"
+END
+
+DEF TASK "PaperLantern1"
+    SET NAME "Faire une lanterne de papier"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "PaperLantern1Step1"
+    STEP "2" "PaperLantern1Step2"
+    STEP "3" "PaperLantern1Step3"
+    STEP "4" "PaperLantern1Step4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Make a paper lantern v2
+
+CLONE DEED "Hold5" "PaperLantern2Step1"
+    SET INSTRUCTIONS "Collez le papier"
+END
+
+CLONE DEED "QuickTap4" "PaperLantern2Step2"
+    SET INSTRUCTIONS "Découpez des fentes dans le papier"
+END
+
+CLONE DEED "Tap1" "PaperLantern2Step3"
+    SET INSTRUCTIONS "Allumez la lanterne"
+END
+
+CLONE DEED "ScrubMedium" "PaperLantern2Step4"
+    SET INSTRUCTIONS "Eteignez le feu"
+END
+
+DEF TASK "PaperLantern2"
+    SET NAME "Faire une lanterne en papier"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "PaperLantern2Step1"
+    STEP "2" "PaperLantern2Step2"
+    STEP "3" "PaperLantern2Step3"
+    STEP "4" "PaperLantern2Step4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Drink a juice box
+
+CLONE DEED "Hold3" "JuiceBox1"
+    SET INSTRUCTIONS "Décidez quel jus vous voulez"
+END
+
+CLONE DEED "ScrubMedium" "JuiceBox2"
+    SET INSTRUCTIONS "Secouez le !"
+END
+
+CLONE DEED "SwipeDown" "JuiceBox3"
+    SET INSTRUCTIONS "Faites entrez la paille"
+END
+
+CLONE DEED "SwipeDown" "JuiceBox4"
+    SET INSTRUCTIONS "C'est presque ça !"
+END
+
+CLONE DEED "Hold3" "JuiceBox5"
+    SET INSTRUCTIONS "Rafraîchissez-vous !"
+END
+
+DEF TASK "JuiceBox"
+    SET NAME "Boire une brique de jus"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "KITCHEN"
+    SET DURATION <3H>
+
+    STEP "1" "JuiceBox1"
+    STEP "2" "JuiceBox2"
+    STEP "3" "JuiceBox3"
+    STEP "4" "JuiceBox4"
+    STEP "5" "JuiceBox5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Push little wagon around the house
+
+CLONE DEED "Rotate360" "LittleWagon1"
+    SET INSTRUCTIONS "Attelez votre wagon"
+END
+
+CLONE DEED "SwipeLeft" "LittleWagon2"
+    SET INSTRUCTIONS "Roulez sur ce chemin poussiéreux"
+END
+
+CLONE DEED "SwipeLeft" "LittleWagon3"
+    SET INSTRUCTIONS "Continuez de rouler !"
+END
+
+CLONE DEED "Rotate360Counter" "LittleWagon4"
+    SET INSTRUCTIONS "Lâchez votre monture"
+END
+
+CLONE DEED "Nothing4" "LittleWagon5"
+    SET INSTRUCTIONS "Relaxez vous après une journée de dur labeur"
+END
+
+DEF TASK "LittleWagon"
+    SET NAME "Pousser le wagon dans la maison"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+
+    STEP "1" "LittleWagon1"
+    STEP "2" "LittleWagon2"
+    STEP "3" "LittleWagon3"
+    STEP "4" "LittleWagon4"
+    STEP "5" "LittleWagon5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Try on grownup clothes
+
+CLONE DEED "SwipeLeft" "GrownupClothes1"
+    SET INSTRUCTIONS "Ouvrir le placard des parents"
+END
+
+CLONE DEED "Tap1" "GrownupClothes2"
+    SET INSTRUCTIONS "Choisissez un beau blazer"
+END
+
+CLONE DEED "SwipeBase" "GrownupClothes3"
+    SET INSTRUCTIONS "Enfilez les talons les plus hauts que vous pouvez trouver"
+    SET DIRECTION "DOWN,DOWN"
+END
+
+CLONE DEED "Hold4" "GrownupClothes4"
+    SET INSTRUCTIONS "Les parents portent ça tous les jours ??"
+END
+
+CLONE DEED "SwipeBase" "GrownupClothes5"
+    SET INSTRUCTIONS "Rejetez les normes sociétales"
+    SET DIRECTION "LEFT,RIGHT,DOWN,UP"
+END
+
+DEF TASK "GrownupClothes"
+    SET NAME "Essayer des vetements plus grands"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "CLOTHES"
+    SET DURATION <3H>
+
+    STEP "1" "GrownupClothes1"
+    STEP "2" "GrownupClothes2"
+    STEP "3" "GrownupClothes3"
+    STEP "4" "GrownupClothes4"
+    STEP "5" "GrownupClothes5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Feed the fish v1
+
+CLONE DEED "QuickTap4" "FeedFish1Step1"
+    SET INSTRUCTIONS "Saupoudrer de nourriture"
+END
+
+CLONE DEED "Tap3" "FeedFish1Step2"
+    SET INSTRUCTIONS "Faites un calin au poisson"
+END
+
+CLONE DEED "ScrubShort" "FeedFish1Step3"
+    SET INSTRUCTIONS "Se sécher les mains sur une serviette"
+END
+
+DEF TASK "FeedFish1"
+    SET NAME "Nourrir le poisson"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "MISC"
+    SET DURATION <3H>
+
+    STEP "1" "FeedFish1Step1"
+    STEP "2" "FeedFish1Step2"
+    STEP "3" "FeedFish1Step3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Feed the fish v2
+
+CLONE DEED "QuickTap4" "FeedFish2Step1"
+    SET INSTRUCTIONS "Saupoudrer de nourriture"
+END
+
+CLONE DEED "QuickTap4" "FeedFish2Step2"
+    SET INSTRUCTIONS "Encore plus de nourriture !"
+END
+
+CLONE DEED "SwipeUp" "FeedFish2Step3"
+    SET INSTRUCTIONS "C'est trop, retirez-en !"
+END
+
+DEF TASK "FeedFish2"
+    SET NAME "Nourrir le poison"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "MISC"
+    SET DURATION <3H>
+
+    STEP "1" "FeedFish2Step1"
+    STEP "2" "FeedFish2Step2"
+    STEP "3" "FeedFish2Step3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Make a finger painting
+
+CLONE DEED "Tap3" "FingerPainting1"
+    SET INSTRUCTIONS "Trouvez du papier"
+END
+
+CLONE DEED "Hold3" "FingerPainting2"
+    SET INSTRUCTIONS "Consultez vos muses"
+END
+
+CLONE DEED "ScrubMedium" "FingerPainting3"
+    SET INSTRUCTIONS "Peignez !"
+END
+
+CLONE DEED "SwipeUp" "FingerPainting4"
+    SET INSTRUCTIONS "Accrochez-les au réfrigérateur pour les faire sécher"
+END
+
+DEF TASK "FingerPainting"
+    SET NAME "Faire une peinture avec ses doigts"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "FingerPainting1"
+    STEP "2" "FingerPainting2"
+    STEP "3" "FingerPainting3"
+    STEP "4" "FingerPainting4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Put on a puppet show
+
+CLONE DEED "SwipeBase" "PuppetShow1"
+    SET INSTRUCTIONS "Sortez la scène en carton"
+    SET DIRECTION "LEFT,LEFT,LEFT"
+END
+
+CLONE DEED "Hold5" "PuppetShow2"
+    SET INSTRUCTIONS "Familiarisez vos acteurs avec le scénario"
+END
+
+CLONE DEED "SwipeBase" "PuppetShow3"
+    SET INSTRUCTIONS "Assurez le premier acte"
+    SET DIRECTION "UP,DOWN"
+END
+
+CLONE DEED "QuickTap5" "PuppetShow4"
+    SET INSTRUCTIONS "Atteignez le point culminant du drame"
+END
+
+CLONE DEED "Nothing3" "PuppetShow5"
+    SET INSTRUCTIONS "Organisez un débat avec les réalisateurs"
+END
+
+DEF TASK "PuppetShow"
+    SET NAME "Organiser un spectacle de marionnettes"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "PLAYING"
+    SET DURATION <3H>
+    SET LEWD TRUE
+
+    STEP "1" "PuppetShow1"
+    STEP "2" "PuppetShow2"
+    STEP "3" "PuppetShow3"
+    STEP "4" "PuppetShow4"
+    STEP "5" "PuppetShow5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Put dirty clothes in the hamper
+
+CLONE DEED "Tap1" "ClothesHamper1"
+    SET INSTRUCTIONS "Mettez les vêtements sales dans le panier à linge"
+END
+
+CLONE DEED "Nothing5" "ClothesHamper2"
+    SET INSTRUCTIONS "Vous voulez une médaille ?"
+END
+
+DEF TASK "ClothesHamper"
+    SET NAME "Mettre les vêtements sales dans le panier à linge"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "CLOTHES"
+    SET DURATION <3H>
+
+    STEP "1" "ClothesHamper1"
+    STEP "2" "ClothesHamper2"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Make a collage
+
+CLONE DEED "QuickTap3" "MakeCollage1"
+    SET INSTRUCTIONS "Découpez les magazines des parents"
+END
+
+CLONE DEED "ScrubMedium" "MakeCollage2"
+    SET INSTRUCTIONS "Trouver l'emplacement idéal pour des images"
+END
+
+CLONE DEED "Hold5" "MakeCollage3"
+    SET INSTRUCTIONS "Collez"
+END
+
+CLONE DEED "SwipeUp" "MakeCollage4"
+    SET INSTRUCTIONS "Accrochez dans la salle de bain"
+END
+
+DEF TASK "MakeCollage"
+    SET NAME "Faire un montage"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "DECORATING"
+    SET DURATION <3H>
+
+    STEP "1" "MakeCollage1"
+    STEP "2" "MakeCollage2"
+    STEP "3" "MakeCollage3"
+    STEP "4" "MakeCollage4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "KidTasks"
+    ADDTASK "CatchBugs"
+    ADDTASK "CleanUpToys"
+    ADDTASK "EarnMeritBadge"
+    ADDTASK "SquishAnts"
+    ADDTASK "MakeSlimePlay"
+    ADDTASK "MakeSlimeMess"
+    ADDTASK "PlayInSprinkler"
+    ADDTASK "PickUpToys"
+    ADDTASK "TakeBathKid"
+    ADDTASK "FireSlingShot"
+    ADDTASK "JumpRope"
+    ADDTASK "ToyCereal1"
+    ADDTASK "ToyCereal2"
+    ADDTASK "MakePBJ"
+    ADDTASK "ColoringBook"
+    ADDTASK "PackBackpack"
+    ADDTASK "CapeRun"
+    ADDTASK "MacaroniArt"
+    ADDTASK "PutOnShoes"
+    ADDTASK "SwingSet"
+    ADDTASK "Cartwheel"
+    ADDTASK "PaperLantern1"
+    ADDTASK "PaperLantern2"
+    ADDTASK "JuiceBox"
+    ADDTASK "LittleWagon"
+    ADDTASK "GrownupClothes"
+    ADDTASK "FeedFish1"
+    ADDTASK "FeedFish2"
+    ADDTASK "FingerPainting"
+    ADDTASK "PuppetShow"
+    ADDTASK "MakeCollage"
+END

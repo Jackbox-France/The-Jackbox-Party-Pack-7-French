@@ -1,0 +1,30 @@
+MAIN(Victime): Bonjour ? Qui est à l'appareil ?
+-UNDERSELL-> Avez-vous un endroit pour garder votre nourriture au frais ?
+-CLASSIC-> Est ce que votre réfrigérateur marche ? 
+-OVERSHOOT-> Hey, quel est le problème avec votre réfrigérateur ?
+-LOSTIT-> Heu... En fait non. 
+
+
+UNDERSELL(Victime): Oui ! Et actuellement, ça ne marche pas, pouvez vous venir le réparer ? 
+-SUCCESS-> Tu as appris un métier mais tu as perdu la guerre des pranks..
+
+
+CLASSIC(Victime): Oui il marche ! Merci d'avoir demandé ! 
+-SUCCESS-> J'ai eu une bonne conversation ! 
+
+
+OVERSHOOT(Victime): Il a des jambres et il commance à courrir, aidez moi !
+-SUCCESS-> Je devrais peut-être donner l'appel à quelqu'un d'autre...
+
+
+LOSTIT(Victime): Vous êtes sûr que vous voulez pas faire votre prank ?
+-FORGOT-> Quel prank ?? Je suis un client. Je voudrais commander tout votre magasin !
+-TRYAGAIN-> Oh, ok! Laissez moi rééssayer...
+
+FORGOT (Victime): C'est un plaisir de faire affaire avec vous !
+-FAILURE-> Vous avez oublié de faire un prank.
+
+TRYAGAIN(Victime): Ahem... Bonjour ?
+-UNDERSELL-> Avez-vous un endroit pour garder votre nourriture au frais ?
+-CLASSIC-> Est ce que votre réfrigérateur marche ? 
+-OVERSHOOT-> Hey, quel est le problème avec votre réfrigérateur ?

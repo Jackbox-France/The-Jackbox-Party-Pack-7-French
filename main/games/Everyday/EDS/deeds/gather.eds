@@ -1,0 +1,20 @@
+DEF DEED "GatherBase"
+    SET MECHANIC_ID "GATHER"
+    SET INSTRUCTIONS "Gather"
+    SET CATEGORY "LUNCH"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+END
+
+REM : Clones
+
+CLONE DEED "GatherBase" "GatherLunch"
+    SET CATEGORY "LUNCH"
+END
+
+
+CLONE DEED "GatherBase" "GatherMeal"
+    SET CATEGORY "LUNCH"
+END
+
+CLONE DEED "GatherBase" "GatherID"
+END

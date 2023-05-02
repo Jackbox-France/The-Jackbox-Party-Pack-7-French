@@ -1,0 +1,28 @@
+MAIN(3 chiens dans un costume): A l'aide, il y a eu un accident et j'ai besoin d'un rein au plus vite !
+-YES-> Bien sûr ! Tout pour mon... Attendez, vous êtes 3 chiens dans un costume ?
+-NO-> Jamais ! Je ne vais jamais donné mon rein à... Attendez, vous êtes 3 chiens dans un costume ?
+-COAT-> Bien sûr, je... Attendez, vous êtes 3 chiens dans un costume ?
+-WHY-> ...Qu'allez vous faire avec ce rein ?
+
+
+YES(3 chiens dans un costume): Woof woof, cher voisin, vous avez passé mon test. Woof woof, bonne journée.
+-SUCCESS-> Looks like I'm the alpha!
+
+
+NO(3 chiens dans un costume): Arf ! Malédiction ! Encore raté ! Awroo !
+-SUCCESS-> Le rein passe un jour de plus là où il doit être, dans mon ventre. 
+
+
+COAT(3 chiens dans un costume): On dirait que j'aboie dans le mauvais arbre !
+-SUCCESS-> Les auteurs s'excusent pour la pression mentale que cette conversation a pu causer. 
+
+
+WHY(3 chiens dans un costume): Pas... à... manger...
+-FAILURE-> Oh, dans ce cas, bien sûr, tout pour mon voisin humain !
+-TRYAGAIN-> Expliquez moi votre question une autre fois...
+
+
+TRYAGAIN(3 chiens dans un costume): J'ai juste besoin de votre rein, ne vous inquiétez pas mon ami
+-YES-> Bien sûr ! Tout pour mon... Attendez, vous êtes 3 chiens dans un costume ?
+-NO-> Jamais ! Je ne vais jamais donné mon rein à... Attendez, vous êtes 3 chiens dans un costume ?
+-COAT-> Bien sûr, je... Attendez, vous êtes 3 chiens dans un costume ?

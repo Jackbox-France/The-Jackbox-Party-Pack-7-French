@@ -1,0 +1,24 @@
+MAIN(Marty): Vous êtes sur Marty and the Fuzz Drive-Time Radio ! Vous êtes à quelques questions de gagner un nouveau lave-linge séchant !
+-EXCITED-> Woo, yeah !
+-EXCITED-> Yeah, woo !
+
+EXCITED(Marty): Quel animal animal australien est connu pour sauté haut
+-WRONG-> Facile, c'est un chien !
+-WRONG-> Cheval. Je pense que c'est un cheval.
+-KANGAROO-> Kangourou ?
+
+KANGAROO(Marty): Correcte ! Prochaine question, H20 est la fomule chimique pour
+-WRONG-> Le ketcup !
+-WRONG-> Hmm... Le vinaigre ?
+-WATER-> Oh... Heu... Je crois que c'est... L'eau !
+
+WATER(Marty): Dernière question ! D'après les mythes, quel monstre à corne vit dans les enfers ?
+-WIN-> Les diables.
+-WIN-> Oh, celle là est une bonne question. Peut-être que ce sont les démons ?
+-WIN-> Juste comme ça, je vais dire que ce sont les démons.
+
+WRONG(Marty): Wow, vous avez vraiment loupé cette question. Vous perdez.
+-FAILURE-> Mince, je voulais vraiment ce lave-linge séchant.
+
+WIN(Marty): Félicitations, nous avons un gagnant !
+-SUCCESS-> Enfin, mon propre lave-linge que je ne vais pas avoir à partagé avec ma famille.

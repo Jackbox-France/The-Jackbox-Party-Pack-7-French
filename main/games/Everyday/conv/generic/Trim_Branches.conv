@@ -1,0 +1,18 @@
+MAIN(Voisin): Pourriez-vous tailler les branches de votre arbre ?
+-RIGHT-> Je fais ça tout de suite !
+-FINE-> HEU... BIEN SÛR
+-LOVE-> Non je l'aime trop
+-COOK-> D'accord, mais je veux un cookie
+
+
+RIGHT(Voisin): Merci beaucoup !
+-SUCCESS-> Merci à VOUS pour m'avoir donné la chance de tailler quelque chose
+
+FINE(Voisin): HEU... Merci
+-SUCCESS-> Heu... De rien... VOUS ÊTES UN AMI SUPER !
+
+LOVE(Voisin): Pardon, désolé
+-SUCCESS-> Jamais je ne couperai cet arbre !
+
+COOK(Voisin): La moitié d'un cookie !
+-SUCCESS-> C'est un deal !

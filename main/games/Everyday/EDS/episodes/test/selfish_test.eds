@@ -1,0 +1,81 @@
+REM --- An Episode can set an EMERGENCY which is a task or taskset to spawn in an emergency
+
+DEF EPISODE "SelfishTest"
+    SET CHOOSABLE FALSE
+    SET EMERGENCY "SelfishSpecialEmergencyTasks"
+    
+    ROUND <1 8:00> <1 22:00> 2000 1000 1
+
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+    SCHEDULE TASK "SelfishTestTask" <1 8:00>
+END
+
+REM --- Emergencies need to be able to accept EVERY player into them. If the task is a non-ALL or OPEN task
+REM --- You need to set an ObserverBehavior. This tells the game that this task can accept players into it
+REM --- beyond the ones allowed by the cast/mechanic participation type. It also defines what those players
+REM --- will SEE. We call this OBSERVER_BEHAVIOR_ID.
+
+DEF DEED "SelfishSpecialEmergencyDeed"
+    SET MECHANIC_ID "NOTHING"
+    SET INSTRUCTIONS "Nothing"
+    SET DURATION 5S
+    SET FAIL_OUTRIGHT FALSE
+END
+
+REM --- Note here that this emergency task has CAN_LEAVE set to FALSE, and gives an Observer Behavior ID of EMERGENCY
+REM --- So players that got pulled into this task that can't participate show something on their device.
+
+DEF TASK "SelfishSpecialEmergencyTask1"
+    SET NAME "EMERGENCY 1!!"
+    SET CATEGORY "EMERGENCY"
+    SET CAN_LEAVE FALSE
+    SET OBSERVER_BEHAVIOR_ID "EMERGENCY"
+        
+    STEP "1" "SelfishSpecialEmergencyDeed"
+    
+    NEXT "1" SUCCESS FAILURE
+END
+
+CLONE TASK "SelfishSpecialEmergencyTask1" "SelfishSpecialEmergencyTask2"
+    SET NAME "EMERGENCY 2!!"
+END
+
+CLONE TASK "SelfishSpecialEmergencyTask1" "SelfishSpecialEmergencyTask3"
+    SET NAME "EMERGENCY 2!!"
+END
+
+DEF TASKSET "SelfishSpecialEmergencyTasks"
+    ADDTASK "SelfishSpecialEmergencyTask1"
+    ADDTASK "SelfishSpecialEmergencyTask2"
+    ADDTASK "SelfishSpecialEmergencyTask3"
+END
+
+DEF TASK "SelfishTestCanceler"
+    SET NAME "Selfish Canceler! STOP <SELFISH_PLAYER>!"
+    SET CATEGORY "CANCELER"
+    
+    STEP "First" "Tap1"
+
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM --- CANCELER is the task that will be generate that upon success will kill this task.
+
+DEF TASK "SelfishTestTask"
+    SET NAME "Selfish Test"
+    SET CATEGORY "SELFISH"
+    SET EMPTY_BEHAVIOR "FAIL"
+    
+    SET CANCELER "SelfishTestCanceler"
+
+    STEP "First" "Tap1"
+
+    NEXT "First" SUCCESS FAILURE
+END

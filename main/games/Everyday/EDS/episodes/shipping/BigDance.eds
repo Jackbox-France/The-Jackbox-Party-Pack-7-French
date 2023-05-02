@@ -1,0 +1,518 @@
+DEF EPISODE "BigDance"
+    SET CHOOSABLE TRUE
+    SET EMERGENCY "EmergencyTasks"
+    SET NAME "Bal nécessaire"
+    SET DESCRIPTION "C'est l'heure de la <font color='#AF0000'>Danse Printanière</font>! Soyez présent ou restez à l'écart pour le reste de votre carrière au lycée."
+    SET SUCCESS_MESSAGE "Joli travail sur ce numéro de claquettes. La danse était tout ce qu'une danse est censée être : sûre, maladroite, un peu malicieuse, et surtout, pleine de sueur."
+    SET FAILURE_MESSAGE "Nous n'avons pas vu un événement se dérouler aussi mal depuis le Masque de la Mort Rouge. Nous espérons que vous avez apprécié votre retour en voiture en silence, car personne ne signera vos almanachs pour la prochaine décennie."
+
+
+    REM : ------------------------------
+
+    REM : SCORE TARGETS
+    INCLUDE "../templates/longweekend/score_target.eds"
+    
+    REM : TASK SCHEDULE
+    INCLUDE "../templates/longweekend/schedule.eds"
+    
+    REM : MEALS
+    INCLUDE "../templates/longweekend/meals.eds"
+
+    REM : ------------------------------
+     
+    REM : ROUND 1 STORY TASKS
+    SCHEDULE TASK "AskDateDance" <1 8:00>
+    SCHEDULE TASK "PickOutBalloons" <1 10:00>
+    SCHEDULE TASK "ChaperoneSupply" <1 12:00>
+    SCHEDULE TASK "ShaveForDance" <1 14:00>
+    SCHEDULE TASK "PickOutfitDance" <1 16:00>
+         
+    REM : ROUND 2 STORY TASKS
+    SCHEDULE TASK "GatherCorsage" <2 8:00>
+    SCHEDULE TASK "PickUpDate" <2 13:00>
+    SCHEDULE TASK "TooManyPics" <2 14:00>
+    SCHEDULE TASK "SneakIntoDance" <2 15:00>
+    SCHEDULE TASK "RespectfulDance" <2 15:00>
+    
+    REM : ROUND 3 STORY TASKS
+    SCHEDULE TASK "StinkBomb" <3 18:01>
+    SCHEDULE TASK "ChaperoneFight" <3 19:00>
+    SCHEDULE TASK "SmoochTime" <3 20:00>
+        
+END
+
+
+REM : ------------------------------
+
+
+REM : Pick out balloons
+CLONE DEED "Tap2" "PickUpBalloons"
+    SET INSTRUCTIONS "Ramassez des ballons de baudruche"
+END
+
+CLONE DEED "Hold3" "BlowUp"
+    SET INSTRUCTIONS "Gonflez-les!"
+END
+
+CLONE DEED "SwipeBase" "ArrangeBalloons"
+    SET INSTRUCTIONS "Arrangez !"
+    SET DIRECTION "LEFT,RIGHT,DOWN"
+END
+
+CLONE DEED "Nothing2" "AdmireArch"
+    SET INSTRUCTIONS "Admirez votre magnifique arche"
+END
+
+DEF TASK "PickOutBalloons"
+    SET NAME "Prendre des ballons pour le bal"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PickUpBalloons"
+    STEP "2" "BlowUp"
+    STEP "3" "ArrangeBalloons"
+    STEP "4" "AdmireArch"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Ask someone to dance
+
+CLONE DEED "DialogID" "AskDateDance"
+    SET INSTRUCTIONS "Obtenez un rendez-vous !"
+    SET CONTENT_ID "BIGDANCE_GETDATE"
+END
+
+DEF TASK "AskDateDance"
+    SET NAME "Inviter quelqu'un au bal"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "AskDateDance"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Chaperone supplies
+CLONE DEED "PhoneID" "CallChaperoneStore"
+    SET INSTRUCTIONS "Appelez 'Chaperone supply store'"
+    SET CONTENT_ID "CHAP_PIER"
+END
+
+CLONE DEED "SwipeUp" "GoodTissues"
+    SET INSTRUCTIONS "Faites des folies avec les jolis mouchoirs"
+END
+
+CLONE DEED "Tap3" "GearUpChaperone"
+    SET INSTRUCTIONS "Équipez-vous !"
+END
+
+DEF TASK "ChaperoneSupply"
+    SET NAME "Appeler le magasin de fournitures pour chaperons"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "CallChaperoneStore"
+    STEP "2" "GoodTissues"
+    STEP "3" "GearUpChaperone"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+
+REM : Help pick outfit
+CLONE DEED "Instructions4" "PickOutfitDance"
+    SET INSTRUCTIONS "Choisissez la tenue parfaite"
+
+    SET MECHANIC_0 "SWIPE_UP"
+    SET INSTRUCTIONS_0 "Mettez ce pantalon"
+    SET MECHANIC_1 "SWIPE_DOWN"
+    SET INSTRUCTIONS_1 "Non, pas ce pantalon. Retirez-le"
+    SET MECHANIC_2 "ROTATE_CLOCK"
+    SET INSTRUCTIONS_2 "Commencez le montage du relooking"
+    SET MECHANIC_3 "TAP_3"
+    SET INSTRUCTIONS_3 "Ajoutez un nœud papillon pour la touche finale"
+END
+
+DEF TASK "PickOutfitDance"
+    SET NAME "Choisir la tenue parfaite pour le bal"
+    SET ASKER_NAME "Aidez à choisir la tenue parfaite pour le bal"
+    SET HELPER_NAME "Essayez des tenues avec <ASKER> pour le bal"
+    SET CAPTAIN "CHILDREN"
+    SET PARTICIPANT "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PickOutfitDance"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : Shave for the dance
+CLONE DEED "Tap3" "DabShaving"
+    SET INSTRUCTIONS "Tamponnez la crème à raser"
+END
+
+CLONE DEED "SwipeDown" "CarefulShave"
+    SET INSTRUCTIONS "Rasez-vous délicatement..."
+END
+
+CLONE DEED "SwipeBase" "BloodyShave"
+    SET INSTRUCTIONS "Il suffit de... passer... à travers..."
+    SET DIRECTION "LEFT,RIGHT,LEFT,RIGHT"
+END
+
+CLONE DEED "SwipeDown" "RinseOffShave"
+    SET INSTRUCTIONS "Rincez-vous !"
+END
+
+DEF TASK "ShaveForDance"
+    SET NAME "Se raser pour le bal"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DabShaving"
+    STEP "2" "CarefulShave"
+    STEP "3" "BloodyShave"
+    STEP "4" "RinseOffShave"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : ----------------------------------------------
+
+CLONE DEED "SwipeBase" "SwipeThroughDisguises"
+    SET INSTRUCTIONS "Choisissez le déguisement parfait"
+    SET DIRECTION "LEFT,LEFT,LEFT"
+END
+
+CLONE DEED "Tap3" "StackKids"
+    SET INSTRUCTIONS "Empilez-vous !"
+END
+
+CLONE DEED "Hold3" "KeepBalance"
+    SET INSTRUCTIONS "Gardez l'équilibre"
+END
+
+CLONE DEED "Tap2" "WalkAdult"
+    SET INSTRUCTIONS "Marchez comme un adulte humain"
+END
+
+DEF TASK "SneakIntoDance"
+    SET NAME "Se faufiler au bal"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SwipeThroughDisguises"
+    STEP "2" "StackKids"
+    STEP "3" "KeepBalance"
+    STEP "4" "WalkAdult"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+
+REM : Gather corsage
+CLONE DEED "GatherBase" "GatherCorsage"
+    SET INSTRUCTIONS "Rassemblez les ingrédients pour le corsage"
+    SET CONTENT_ID "PROM_CORSAGE"
+END
+
+DEF TASK "GatherCorsage"
+    SET DURATION <3H>
+    SET NAME "Rassembler des éléments pour un corsage"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET CAPTAINLESS_BEHAVIOR "KICK_ALL"
+
+    STEP "1" "GatherCorsage"
+
+    NEXT "1" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "ArrangeCorsage"
+END
+
+REM : Arrange corsage
+
+CLONE DEED "SwipeUp" "ReadTut"
+    SET INSTRUCTIONS "Lisez le tutoriel"
+END
+
+CLONE DEED "Rotate180" "InspectFlower"
+    SET INSTRUCTIONS "Contrôlez la fleur parfaite"
+END
+
+CLONE DEED "SwipeBase" "BabyBreath"
+    SET INSTRUCTIONS "Maintenant, un peu de gysophiles..."
+    SET DIRECTION "LEFT,RIGHT"
+END
+
+CLONE DEED "Hold1" "Dashing"
+    SET INSTRUCTIONS "Magnifique !"
+END
+
+DEF TASK "ArrangeCorsage"
+    SET NAME "Arranger votre propre corsage"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ReadTut"
+    STEP "2" "InspectFlower"
+    STEP "3" "BabyBreath"
+    STEP "4" "Dashing"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+
+REM : Pick up date
+CLONE DEED "TravelCategory" "PickUpDate"
+    SET INSTRUCTIONS "Prenez votre rendez-vous"
+    SET CATEGORY "RESIDENCE"
+END
+
+DEF TASK "PickUpDate"
+    SET NAME "Conduire pour aller chercher le rendez-vous"
+    SET ASKER_NAME "Faites-vous conduire pour aller chercher votre rendez-vous"
+    SET HELPER_NAME "Conduisez <ASKER> pour chercher le rendez-vous"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "PickUpDate"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Take too many pictures
+CLONE DEED "Tap1" "SayCheese"
+    SET INSTRUCTIONS "Dites ouistiti!"
+END
+
+CLONE DEED "Tap1" "SillyOne"
+    SET INSTRUCTIONS "Maintenant, une photo amusante"
+END
+
+CLONE DEED "Tap3" "OneMore"
+    SET INSTRUCTIONS "Une de plus..."
+END
+
+CLONE DEED "QuickTap3" "OneMoreMore"
+    SET INSTRUCTIONS "Encore une de plus..."
+END
+
+DEF TASK "TooManyPics"
+    SET NAME "Prendre trop de photos du couple"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "SayCheese"
+    STEP "2" "SillyOne"
+    STEP "3" "OneMore"
+    STEP "4" "OneMoreMore"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Dance at a respectful distance
+CLONE DEED "Hold2" "TouchShoulders"
+    SET INSTRUCTIONS "Touchez doucement les épaules"
+END
+
+CLONE DEED "SwipeLeft" "MoreSpace"
+    SET INSTRUCTIONS "Peut-être un peu plus d'espace"
+END
+
+CLONE DEED "SwipeLeft" "EvenMoreSpace"
+    SET INSTRUCTIONS "Juste un peu plus"
+END
+
+CLONE DEED "SwipeBase" "Sway"
+    SET INSTRUCTIONS "Balancez-vous légèrement !"
+    SET DIRECTION "RIGHT,LEFT,RIGHT,LEFT"
+END
+
+DEF TASK "RespectfulDance"
+    SET NAME "Dansez à une distance respectueuse"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "TouchShoulders"
+    STEP "2" "MoreSpace"
+    STEP "3" "EvenMoreSpace"
+    STEP "4" "Sway"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : ----------------------------------------
+
+CLONE DEED "SwipeBase" "ShakeStink"
+    SET INSTRUCTIONS "Secouez la bombe puante"
+    SET DIRECTION "UP,DOWN"
+END
+
+CLONE DEED "Hold2" "PullPin"
+    SET INSTRUCTIONS "Tirez la goupille"
+END
+
+CLONE DEED "SwipeLeft" "TossStink"
+    SET INSTRUCTIONS "Lancez sous les gradins"
+END
+
+CLONE DEED "Tap3" "CheeseIt"
+    SET INSTRUCTIONS "Fuyez !"
+END
+
+DEF TASK "StinkBomb"
+    SET NAME "Faire une blague à la bombe puante"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ShakeStink"
+    STEP "2" "PullPin"
+    STEP "3" "TossStink"
+    STEP "4" "CheeseIt"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+
+    CONSEQUENCE SUCCESS "DefuseStinkBomb"
+END
+
+REM : Defuse stink bomb
+CLONE DEED "Gizmos3" "DefuseStinkBomb"
+    SET INSTRUCTIONS "Désamorcez la blague de la bombe puante"
+END
+
+DEF TASK "DefuseStinkBomb"
+    SET NAME "Désamorcer la blague de la bombe puante"
+    SET ASKER_NAME "Obtenez de l'aide pour désamorcer la bombe puante"
+    SET HELPER_NAME "Aidez <ASKER> à désamorcer la bombe puante"
+    SET CAPTAIN "ADULTS"
+    SET PARTICIPANT "YOUNG"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "DefuseStinkBomb"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Chaperone fight
+CLONE DEED "Nothing2" "ThoughtfulDiscussion"
+    SET INSTRUCTIONS "Discutez de manière réfléchie"
+END
+
+CLONE DEED "ScrubShort" "ConsiderPoint"
+    SET INSTRUCTIONS "Prenez en compte le point de vue de l'autre partie"
+END
+
+CLONE DEED "Tap3" "DefendPosition"
+    SET INSTRUCTIONS "Défendez votre position"
+END
+
+CLONE DEED "Hold2" "LeavePeacefully"
+    SET INSTRUCTIONS "Partez sereinement"
+END
+
+DEF TASK "ChaperoneFight"
+    SET NAME "Se disputer avec un autre chaperon"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "ThoughtfulDiscussion"
+    STEP "2" "ConsiderPoint"
+    STEP "3" "DefendPosition"
+    STEP "4" "LeavePeacefully"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Go in for the smoooch
+CLONE DEED "SwipeBase" "LipsReady"
+    SET INSTRUCTIONS "Armez..."
+    SET DIRECTION "LEFT,RIGHT"
+END
+
+CLONE DEED "Hold3" "AimLips"
+    SET INSTRUCTIONS "Visez..."
+END
+
+CLONE DEED "Tap3" "LipsFire"
+    SET INSTRUCTIONS "Feu!"
+END
+
+CLONE DEED "Nothing3" "BracesLocked"
+    SET INSTRUCTIONS "Les bagues sont bloquées ! Appelez l'infirmière !"
+END
+
+DEF TASK "SmoochTime"
+    SET NAME "Go in for the smooch"
+    SET CAPTAIN "TEENS"
+    SET CATEGORY "STORY"
+    SET THEME "STORY"
+    SET DURATION <8H>
+
+    STEP "1" "LipsReady"
+    STEP "2" "AimLips"
+    STEP "3" "LipsFire"
+    STEP "4" "BracesLocked"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+

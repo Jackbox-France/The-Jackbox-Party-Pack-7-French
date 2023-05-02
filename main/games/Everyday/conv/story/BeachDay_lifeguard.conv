@@ -1,0 +1,17 @@
+MAIN(Neighbor): Que dois-je faire en tant que maître-nageur ?
+-PROTECT-> Protéger les enfants
+-YELL-> Crier sur les enfants
+-MOCK-> Se moquer des enfants
+-WHISTLE-> Juste siffler
+
+PROTECT(Neighbor): Ça sonne bien!
+-SUCCESS-> Soyez notre gardien fidèle!
+
+YELL(Neighbor): Ça sonne bien!
+-SUCCESS-> Voilà un mégaphone
+
+MOCK(Neighbor): Hum... Je vais le faire sans les moqueries...
+-SUCCESS-> Personne ne va donc s'énerver contre ces enfants désobéissants?!?!?
+
+WHISTLE(Neighbor): Ça sonne bien!
+-SUCCESS-> Soyez notre gardien aigu!

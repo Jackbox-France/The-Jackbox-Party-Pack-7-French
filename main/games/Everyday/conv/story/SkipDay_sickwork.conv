@@ -1,0 +1,17 @@
+MAIN(Boss): Pourquoi ne pouvez-vous pas venir travailler aujourd'hui ?
+-SICK-> Je me sens un peu malade
+-HEAD-> Ma tête me fait un mal de chien
+-PARTY-> J'ai un peu trop fait le fête
+-CAUGHT-> Je suis pris dans un piège à ours
+
+SICK(Boss): Hmmm, trop vague pour moi pour faire des recherches.
+-SUCCESS-> Parfait! Euh j'veux dire... tousse
+
+HEAD(Boss): Hmmm, trop vague pour moi pour faire des recherches.
+-SUCCESS-> Parfait! Euh j'veux dire... aïe
+
+PARTY(Boss): Alors cela compte comme un jour de vacances
+-SUCCESS-> Je hais la société des mortels
+
+CAUGHT(Boss): Ok, mais il ne vous reste que 2 jours piège à ours.
+-SUCCESS-> J'espère être libre demain... *commence à ronger*

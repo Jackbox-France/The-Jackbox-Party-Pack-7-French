@@ -1,0 +1,24 @@
+﻿MAIN(Observateur d'oiseau): Je viens de voir un rouge-gorge rubis dans votre jardin ! Puis-je prendre une photo ?
+-YES-> Bien entendu !
+-MONEY-> Oui... ça fera 30 €.
+-NO-> On est où ici, au musée d'oiseau ? Partez d'ici !
+
+YES(Observateur d'oiseau): Hmmm, il est en haut de ce sapin. Est ce que je devrais grimper sur cet arbre ?
+-LADDER-> Je vais vous chercher une échelle.
+-YES2-> Allez-y.
+-NO2-> Ca devient bizarre... Partez d'ici !
+
+MONEY(Observateur d'oiseau): Voici votre argent, profiteur d'oiseau !
+-SUCCESS-> Ils ont eu la photo, mais je n'ai pas pris de plaisir lors de cette rencontre.
+
+NO(Observateur d'oiseau): La société Aubon saura ce qu'il vient de se passer !
+-FAILURE-> Je déteste les oiseaux... Et les humains regardant les oiseaux !
+
+LADDER(Observateur d'oiseau): C'est parfait, regardez ce plumage ! Merci !
+-SUCCESS-> Une victoire pour les oiseaux, c'est une victoire pour le monde !
+
+YES2(Observateur d'oiseau): Bon... J'ai eu la photo avant que la branche casse. Je suis sûr que mon bras s'en sortira.
+-SUCCESS-> J'avais oublié comment observer les oiseaux pouvait être violent...
+
+NO2(Observateur d'oiseau): Vous n'être rien qu'un tueur d'oiseau !
+-FAILURE-> Mes manières sont la VRAIE espèce en voie de disparition.

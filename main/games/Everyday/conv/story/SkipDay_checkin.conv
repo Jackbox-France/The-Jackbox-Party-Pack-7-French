@@ -1,0 +1,17 @@
+MAIN(Vice Principal): Serez-vous là demain ?
+-ABS-> Absolument!
+-SURE-> Bien sûr, pourquoi pas ?
+-WEATHER-> Si la météo me le permet
+-SERVE-> Ça dépend... Qu'est-ce que vous servez ?
+
+ABS(Vice Principal): Voilà l'esprit qu'il faut!
+-SUCCESS-> Est-ce que l'apprentissage me manque ?
+
+SURE(Vice Principal): Nous avons besoin de plus d'enthousiasme. Restez chez vous !
+-SUCCESS-> Mince ! Encore un jour de congé !
+
+WEATHER(Vice Principal): Ouais, je ne bosse pas sous la pluie non plus.
+-SUCCESS-> Les profs sont comme nous. 
+
+SERVE(Vice Principal): Une formation sur mesure !
+-SUCCESS-> Miam miam!

@@ -1,0 +1,13 @@
+MAIN(Riley): Alors, vous faites un barbecue ?
+-EAGER-> Oui! Vous devriez totalement venir !!
+-ANTI-> Argh. Ça va être si embarrassant
+-ALOOF-> Peut-être. Je ne suis pas sûr. Je m'en fiche.
+
+EAGER(Riley): Cool! J'amènerai ma belle famille en visite !
+-SUCCESS-> Ça devrait être... bon...
+
+ANTI(Riley): En fait, j'aime bien les barbecues...
+-SUCCESS-> JE SAIS, MOI AUSSI, VOUS DEVRIEZ VENIR !!!
+
+ALOOF(Riley): J'ai appris de nos interactions précédentes que cela veut dire que vous ne me voulez pas au barbecue.
+-SUCCCESS-> Riley est le meilleur!

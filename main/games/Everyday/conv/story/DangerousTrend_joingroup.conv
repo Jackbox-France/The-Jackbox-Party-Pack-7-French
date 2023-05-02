@@ -1,0 +1,17 @@
+MAIN(Parent):Qu'est-ce que vous connaissez du "gronking"?
+-DANCE-> C'est une danse....?
+-DRINK-> C'est une boisson...?
+-INVENTED-> J'ai inventé le "gronking"!
+-NOTHING-> Rien du tout
+
+DANCE(Parent): Pas du tout. Nous allons vous envoyer une brochure.
+-SUCCESS-> Enfin! Des réponses photocopiées!
+
+DRINK(Parent): Pas du tout. Nous allons vous envoyer une brochure.
+-SUCCESS-> Enfin! Des réponses photocopiées!
+
+NOTHING(Parent): Les parents ne doivent jamais admettre l'ignorance
+-SUCCESS-> J'espère que mes enfants ne ressentent pas cette faiblesse
+
+INVENTED(Parent): Super! Alors vous pouvez nous dire ce que c'est!
+-SUCCESS-> Super! Je ne mens absolument pas du tout!

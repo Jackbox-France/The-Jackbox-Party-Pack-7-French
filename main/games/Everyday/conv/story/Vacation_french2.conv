@@ -1,0 +1,9 @@
+MAIN(French Language Tape): Always keep your tuba in a clear case when traveling.
+-RESPONSE1-> I keep all my stuff in a clear suitcase.
+-RESPONSE1-> I play, in fact, the trumpet.
+-RESPONSE1-> Quelque chose à propos... d'un tuba ??
+
+RESPONSE1(French Language Tape): It is unlikely that iguanas need a watch.
+-SUCCESS-> The wrist of an iguana is too small for a watch.
+-SUCCESS-> I don't need those informations.
+-FAILURE-> L'espagnol est-il plus facile ? On devrait peut-être aller en Espagne...

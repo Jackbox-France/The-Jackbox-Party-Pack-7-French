@@ -1,0 +1,647 @@
+REM : Dialog Neighbor
+CLONE DEED "DialogBase" "NeighborDialog"
+    SET INSTRUCTIONS "S'occuper du visiteur"
+    SET CATEGORY "NEIGHBOR"        
+END
+
+DEF TASK "NeighborAtDoor"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+    SET NAME "Quelqu'un est a la porte"
+    SET THEME "TALKING"
+    SET CATEGORY "MEDIUM"
+    
+    STEP "First" "NeighborDialog"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+REM : Ice Cream Man
+CLONE DEED "DialogBase" "IceCreamDialog"
+    SET INSTRUCTIONS "Achetez des glaces"
+    SET CONTENT_ID "ICE_CREAM_VAN"
+END
+
+DEF TASK "IceCreamMan"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+    SET NAME "Camion de glace ! Camion de glace !"
+    SET THEME "TALKING"
+    SET CATEGORY "MEDIUM"
+
+    STEP "First" "IceCreamDialog"
+    
+    NEXT "First" SUCCESS FAILURE
+END
+
+
+REM : Vegan Pizza
+CLONE DEED "DialogBase" "VeganPizzaDialog"
+    SET INSTRUCTIONS "Commandez des pizzas"
+    SET CONTENT_ID "PIZZA_ORDER"
+END
+
+CLONE DEED "PhoneBase" "PhoneVeganPizza"
+    SET INSTRUCTIONS "Appelez Pepper-Phonies Vegan Pizza"
+    SET CONTENT_ID "PEPPER-VEGAN"
+END
+
+DEF TASK "PizzaOrder"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+    SET NAME "Commander des pizzas"
+    SET THEME "TALKING"
+    SET CATEGORY "HIGH"
+    
+    STEP "1" "PhoneVeganPizza"
+    STEP "2" "VeganPizzaDialog"
+    
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+REM : Fridge Repair
+CLONE DEED "DialogBase" "FixFridgeDialog"
+    SET INSTRUCTIONS "Appelez la boutique de réparation"
+    SET CONTENT_ID "FRIDGE_REPAIR"
+END
+
+CLONE DEED "PhoneBase" "PhoneRepairShop"
+    SET INSTRUCTIONS "Appelez Quite-A-Repair"
+    SET CONTENT_ID "QUITE-A-REPA"
+END
+
+DEF TASK "FridgeRepair"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+    SET NAME "Appeler la boutique de réparation pour le réfrégirateur"
+    SET THEME "TALKING"
+    SET CATEGORY "HIGH"
+    SET CAPTAIN "MATURE"
+  
+    STEP "1" "PhoneRepairShop"
+    STEP "2" "FixFridgeDialog"
+    
+    NEXT "1" "2" FAILURE
+    NEXT "2" SUCCESS FAILURE
+END
+
+
+
+REM : Fix the Wifi
+CLONE DEED "PhoneBase" "PhoneISP"
+    SET INSTRUCTIONS "Appelez BigBand Internet Service"
+    SET CONTENT_ID "BIGBAND_INTE"
+END
+
+CLONE DEED "Nothing5" "Wait"
+    SET INSTRUCTIONS "Vous attendez..."
+END
+
+CLONE DEED "SwipeLeft" "Unplug"
+    SET INSTRUCTIONS "Hmmm... peut-être débrancher le routeur ?"
+END
+
+CLONE DEED "SwipeRight" "PlugIn"
+    SET INSTRUCTIONS "Maintenant rebranchez le"
+END
+
+CLONE DEED "SwipeDown" "Works"
+    SET INSTRUCTIONS "Ca marche. Raccrochez"
+END
+
+DEF TASK "FixWifi"
+    SET NAME "Reparer le Wifi"
+    SET THEME "TALKING"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "HIGH"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "PhoneISP"
+    STEP "2" "Wait"
+    STEP "3" "Unplug"
+    STEP "4" "PlugIn"
+    STEP "5" "Works"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Fix Car
+CLONE DEED "SwipeUp" "OpenHood"
+    SET INSTRUCTIONS "Ouvrez le capot"
+END
+
+CLONE DEED "Hold3" "Look"
+    SET INSTRUCTIONS "Regardez autour de vous de manière réfléchie"
+END
+
+CLONE DEED "Tap5" "Hit"
+    SET INSTRUCTIONS "Frappez le moteur au hasard avec un marteau"
+END
+
+CLONE DEED "Nothing3" "Realize"
+    SET INSTRUCTIONS "Réalisez que vous avez juste empiré les choses"
+END
+
+CLONE DEED "PhoneCategory" "Call"
+    SET INSTRUCTIONS "Appelez le mécanicien"
+    SET CATEGORY "CAR"
+END
+
+DEF TASK "CarSound"
+    SET NAME "La voiture fait un bruit bizarre"
+    SET THEME "TALKING"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET DURATION <1H>
+
+    STEP "1" "OpenHood"
+    STEP "2" "Look"
+    STEP "3" "Hit"
+    STEP "4" "Realize"
+    STEP "5" "Call"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM Oh No Ants v1
+CLONE DEED "Hold3" "LookClose"
+    SET INSTRUCTIONS "Regardez attentivement pour voir de quelle sorte ils sont"
+END
+
+CLONE DEED "Nothing2" "Remember"
+    SET INSTRUCTIONS "Rappelez-vous que vous ne connaissez rien aux fourmis."
+END
+
+CLONE DEED "PhoneCategory" "Exterminator"
+    SET INSTRUCTIONS "Appelez l'exterminateur"
+    SET CATEGORY "EXTERMINATOR"
+END
+
+DEF TASK "OhNoAnts1"
+    SET NAME "Oh non ! Des fourmis !"
+    SET THEME "MISC"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "HIGH"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "LookClose"
+    STEP "2" "Remember"
+    STEP "3" "Exterminator"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+
+REM : Food Prank
+
+CLONE DEED "PhoneCategory" "FoodPrank1"
+    SET INSTRUCTIONS "Faites une farce en commandant de la nourriture pour les voisins."
+    SET CATEGORY "FOOD"
+END
+
+CLONE DEED "Nothing3" "ThinkPrank1"
+    SET INSTRUCTIONS "Je ne devrais probablement pas recommencer..."
+END
+
+CLONE DEED "PhoneCategory" "FoodPrank2"
+    SET INSTRUCTIONS "Faites une farce en commandant de la nourriture pour les voisins."
+    SET CATEGORY "FOOD"
+END
+
+CLONE DEED "Nothing3" "ThinkPrank2"
+    SET INSTRUCTIONS "Juste un autre..."
+END
+
+CLONE DEED "PhoneCategory" "FoodPrank3"
+    SET INSTRUCTIONS "Faites une farce en commandant de la nourriture pour les voisins."
+    SET CATEGORY "FOOD"
+END
+
+DEF TASK "Prank1"
+    SET NAME "Faire une farce classique de commande de nourriture"
+    SET THEME "TALKING"
+    SET CAPTAIN "YOUNG"
+    SET CATEGORY "ULTRA"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "FoodPrank1"
+    STEP "2" "ThinkPrank1"
+    STEP "3" "FoodPrank2"
+    STEP "4" "ThinkPrank2"
+    STEP "5" "FoodPrank3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+
+REM : Sleepover call
+
+CLONE DEED "PhoneCategory" "SleepoverPickupCall"
+    SET INSTRUCTIONS "Téléphonez à un parent pour qu'il vienne vous chercher à la soirée pyjama"
+    SET CONTENT_ID "DEVILS_FAMIL"
+END
+
+DEF TASK "SleepoverPickup"
+    SET NAME "Appeler un parent pour qu'il vienne vous chercher à la soirée pyjama"
+    SET THEME "TALKING"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "HIGH"
+    SET DURATION <1H>
+
+    STEP "1" "SleepoverPickupCall"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : Call Roofer
+CLONE DEED "PhoneCategory" "CallRooferTask"
+    SET INSTRUCTIONS "Appelez le couvreur pour réparer la fuite"
+    SET CATEGORY "CONTRACTOR"
+END
+
+DEF TASK "CallRoofer"
+    SET NAME "Appeler le couvreur pour réparer la fuite"
+    SET THEME "TALKING"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "CallRooferTask"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Order a cake
+
+CLONE DEED "PhoneBase" "OrderCake1"
+    SET INSTRUCTIONS "Appelez Caked n' Loaded"
+    SET CONTENT_ID "CAKED_N_LOAD"
+END
+
+CLONE DEED "Tap1" "OrderCake2"
+    SET INSTRUCTIONS "Commandez un gâteau Sans inscription"
+END
+
+CLONE DEED "Tap1" "OrderCake3"
+    SET INSTRUCTIONS "Clarifiez, qu'il devrait y avoir d'écrit 'Sans inscription'"
+END
+
+CLONE DEED "Nothing4" "OrderCake4"
+    SET INSTRUCTIONS "Parce que c'est une private joke"
+END
+
+DEF TASK "OrderCake"
+    SET NAME "Commander un gateau"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET THEME "TALKING"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "OrderCake1"
+    STEP "2" "OrderCake2"
+    STEP "3" "OrderCake3"
+    STEP "4" "OrderCake4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Negotiate Cable Bundle
+
+CLONE DEED "PhoneBase" "CableBundle1"
+    SET INSTRUCTIONS "Appelez BigBand Internet Service"
+    SET CONTENT_ID "BIGBAND_INTE"
+END
+
+CLONE DEED "Nothing3" "CableBundle2"
+    SET INSTRUCTIONS "Vous êtes 1er dans la queue"
+END
+
+CLONE DEED "Nothing3" "CableBundle3"
+    SET INSTRUCTIONS "Vous êtes 3ème dans la queue"
+END
+
+CLONE DEED "Nothing3" "CableBundle4"
+    SET INSTRUCTIONS "Vous êtes presque dans la queue"
+END
+
+CLONE DEED "Tap1" "CableBundle5"
+    SET INSTRUCTIONS "Choisissez le bundle premium"
+END
+
+DEF TASK "CableBundle"
+    SET NAME "Negocier le prix des chaines télé"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "HIGH"
+    SET THEME "RECREATION"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "CableBundle1"
+    STEP "2" "CableBundle2"
+    STEP "3" "CableBundle3"
+    STEP "4" "CableBundle4"
+    STEP "5" "CableBundle5"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" "5" FAILURE
+    NEXT "5" SUCCESS FAILURE
+END
+
+REM : Cancel dinner plans
+
+CLONE DEED "SwipeUp" "CancelDinner1"
+    SET INSTRUCTIONS "Uh oh, c'est ce soir ? Vérifiez votre calendrier"
+END
+
+CLONE DEED "Nothing4" "CancelDinner2"
+    SET INSTRUCTIONS "Envisagez fortement d'annuler l'interaction sociale..."
+END
+
+CLONE DEED "PhoneCategory" "CancelDinner3"
+    SET INSTRUCTIONS "Appelez vos voisins pour annuler le diner à la dernière minute"
+    SET CATEGORY "RESIDENCE"
+END
+
+DEF TASK "CancelDinner"
+    SET NAME "Annuler le diner"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET THEME "GUESTS"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "CancelDinner1"
+    STEP "2" "CancelDinner2"
+    STEP "3" "CancelDinner3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Angry opossum in the backyard! Call animal control!
+
+CLONE DEED "Hold2" "AnimalControl1"
+    SET INSTRUCTIONS "Enquêter sur ce grognement bizarre"
+END
+
+CLONE DEED "SwipeDown" "AnimalControl2"
+    SET INSTRUCTIONS "Aah ! Allez à l'intérieur !"
+END
+
+CLONE DEED "SwipeLeft" "AnimalControl3"
+    SET INSTRUCTIONS "Fermez la porte !"
+END
+
+CLONE DEED "PhoneBase" "AnimalControl4"
+    SET INSTRUCTIONS "Appelez Animal Control, le plus vite possible !!!"
+    SET CATEGORY "ANIMALCONTROL"
+END
+
+DEF TASK "AnimalControl"
+    SET NAME "Opossum en colère ! Appelez le contrôle des animaux !"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET THEME "YARD_WORK"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "AnimalControl1"
+    STEP "2" "AnimalControl2"
+    STEP "3" "AnimalControl3"
+    STEP "4" "AnimalControl4"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" "4" FAILURE
+    NEXT "4" SUCCESS FAILURE
+END
+
+REM : Cancel magazine subscriptions
+
+CLONE DEED "SwipeDown" "CancelMagazine1"
+    SET INSTRUCTIONS "Jetez des piles de magazines"
+END
+
+CLONE DEED "SwipeDown" "CancelMagazine2"
+    SET INSTRUCTIONS "Pourquoi sommes-nous abonnés à tout cela ?"
+END
+
+CLONE DEED "PhoneCategory" "CancelMagazine3"
+    SET INSTRUCTIONS "Appelez pour annuler des abonnements à des magazines"
+    SET CATEGORY "MAGAZINE"
+END
+
+DEF TASK "CancelMagazine"
+    SET NAME "Annuler les abonnements à des magazines"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "HIGH"
+    SET THEME "PAPERWORK"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "CancelMagazine1"
+    STEP "2" "CancelMagazine2"
+    STEP "3" "CancelMagazine3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Make restaurant reservation
+
+CLONE DEED "Hold2" "RestaurantReservation1"
+    SET INSTRUCTIONS "Hm, où devrons nous manger ?"
+END
+
+CLONE DEED "PhoneCategory" "RestaurantReservation2"
+    SET INSTRUCTIONS "Appelez le restaurant pour réserver une table"
+    SET CATEGORY "FOOD"
+END
+
+CLONE DEED "Hold2" "RestaurantReservation3"
+    SET INSTRUCTIONS "Il s'avère qu'ils ne prennent pas de réservations"
+END
+
+DEF TASK "RestaurantReservation"
+    SET NAME "Faire une réservation au restaurant"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "HIGH"
+    SET THEME "TALKING"
+    SET DURATION <5H>
+    REM : TALKING TIMEOUT
+
+    STEP "1" "RestaurantReservation1"
+    STEP "2" "RestaurantReservation2"
+    STEP "3" "RestaurantReservation3"
+
+    NEXT "1" "2" FAILURE
+    NEXT "2" "3" FAILURE
+    NEXT "3" SUCCESS FAILURE
+END
+
+REM : Answer the phone
+
+CLONE DEED "DialogBase" "AnswerPhone"
+    SET INSTRUCTIONS "Parlez au téléphone"
+    SET CATEGORY "ANSWERPHONE"
+END
+
+DEF TASK "AnswerPhone"
+    SET NAME "Le telephone sonne"
+    SET CAPTAIN "EVERYONE"
+    SET CATEGORY "HIGH"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "AnswerPhone"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Make dentist appointment
+CLONE DEED "DialogID" "DentistAppt"
+    SET INSTRUCTIONS "Prenez un rendez-vous"
+    SET CONTENT_ID "DENTIST"
+END
+
+DEF TASK "DentistAppt"
+    SET NAME "Prendre un rendez-vous chez le dentiste"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "DentistAppt"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Call cable company to add a channel
+CLONE DEED "DialogID" "AddCableChannel"
+    SET INSTRUCTIONS "Parlez avec le représentant de Cable co"
+    SET CONTENT_ID "CABLECO"
+END
+
+DEF TASK "AddCableChannel"
+    SET NAME "Appeler Cable Co pour acheter un bouquet tele"
+    SET CAPTAIN "MATURE"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "AddCableChannel"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Pretend action figures are talking
+CLONE DEED "DialogID" "ActionFigures"
+    SET INSTRUCTIONS "Prétendez que les figurines parlent"
+    SET CONTENT_ID "ACTION_FIGURES"
+END
+
+DEF TASK "ActionFigures"
+    SET NAME "Prétendre que les figurines parlent"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "ActionFigures"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Get invited to classmate's birthday
+CLONE DEED "DialogID" "BirthdayInvite"
+    SET INSTRUCTIONS "Jouez la cool"
+    SET CONTENT_ID "BIRTHDAY_INVITE"
+END
+
+DEF TASK "BirthdayInvite"
+    SET NAME "Se faire inviter à un anniversaire d'un camarade de classe"
+    SET CAPTAIN "CHILDREN"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "BirthdayInvite"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+REM : Compliment neighbor's petunias
+CLONE DEED "DialogID" "Petunias"
+    SET INSTRUCTIONS "Complimentez les pétunias du voisin"
+    SET CONTENT_ID "COMPLIMENT_PETUNIAS"
+END
+
+DEF TASK "Petunias"
+    SET NAME "Complimenter les pétunias du voisin"
+    SET CAPTAIN "ADULTS"
+    SET CATEGORY "MEDIUM"
+    SET THEME "TALKING"
+    SET DURATION <3H>
+
+    STEP "1" "Petunias"
+
+    NEXT "1" SUCCESS FAILURE
+END
+
+
+REM : ------------------------------------------------
+REM : Define Task Set
+
+DEF TASKSET "PhoneDialog"
+    SET MAX_SPAWNS 5
+
+    ADDTASK "NeighborAtDoor"
+    ADDTASK "IceCreamMan"
+    ADDTASK "PizzaOrder"
+    ADDTASK "FridgeRepair"
+    ADDTASK "FixWifi"
+    ADDTASK "CarSound"
+    ADDTASK "OhNoAnts1"
+    ADDTASK "Prank1"
+    ADDTASK "CallRoofer"
+    ADDTASK "OrderCake"
+    ADDTASK "CableBundle"
+    ADDTASK "CancelDinner"
+    ADDTASK "AnimalControl"
+    ADDTASK "CancelMagazine"
+    ADDTASK "RestaurantReservation"
+    ADDTASK "AnswerPhone"
+    ADDTASK "DentistAppt"
+    ADDTASK "AddCableChannel"
+    ADDTASK "ActionFigures"
+    ADDTASK "BirthdayInvite"
+    ADDTASK "Petunias"
+END

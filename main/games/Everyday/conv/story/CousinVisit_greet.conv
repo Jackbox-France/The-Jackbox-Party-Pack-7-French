@@ -1,0 +1,13 @@
+MAIN(Cousin Rompo): Où est-ce que je peux mettre mon sac?
+-TOSS-> Balances-le où tu veux
+-DOOR-> Laisse-le à la porte
+-NEVER-> Ne l'enlève jamais. 
+
+TOSS(Cousin Rompo): *Le jette dans une vitrine*
+-SUCCESS-> J'ai dit n'importe où, pour être honnête
+
+DOOR(Cousin Rompo): Je ferais mieux de le nourrir d'abord alors.
+-SUCCESS-> Nourrir quoi maintenant?
+
+NEVER(Cousin Rompo): Ok, j'imagine que je dois éviter les flammes alors. 
+-SUCCESS-> ...il y a quoi à l'intérieur?

@@ -1,0 +1,17 @@
+MAIN(Jackbox): Hi, this is a placeholder conversation for dialogs that haven't been written yet.
+-BUG-> Shouldn't content be finished by now?
+-UNDERSTAND-> Making games is hard.
+-BUG-> Is this a bug?
+
+BUG(Jackbox): That depends. Has the game been released yet?
+-RELEASEYES-> Yes
+-RELEASENO-> No
+
+RELEASENO(Jackbox): Oh thank god. Anyway, get back to the game.
+-SUCCESS-> It's been a pleasure.
+
+RELEASEYES(Jackbox): Uh, then yes, this is a bug.
+-SUCCESS-> I'm going to go to help.jackboxgames.com and report this immediately.
+
+UNDERSTAND(Jackbox): Thanks! Enjoy your points!
+-SUCCESS-> Oh I will. I will.

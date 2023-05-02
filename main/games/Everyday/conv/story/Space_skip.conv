@@ -1,0 +1,17 @@
+MAIN(Moonley): Avez-vous des questions sur l'espace ?
+-SMELL-> C'est comment l'odeur ?
+-WORLD-> Les extraterrestres sont-ils gentils ?
+-STAR-> Pourquoi les étoiles ?
+-WHERE-> Où se trouve l'espace ?
+
+SMELL(Moonley): Comme des œufs.
+-SUCCESS-> Je le savais
+
+WORLD(Moonley): Tous sauf Gary
+-SUCCESS-> Connard de Gary.
+
+STAR(Moonley): Les scientifiques se le demandent depuis des années.
+-SUCCESS-> *Regarde le soleil* Pourquoi?
+
+WHERE(Moonley): C'est... hum... en haut.
+-SUCCESS-> Ça, c'est le plafond

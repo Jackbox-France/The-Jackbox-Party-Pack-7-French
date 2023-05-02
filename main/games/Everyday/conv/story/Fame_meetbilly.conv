@@ -1,0 +1,17 @@
+MAIN(Billy): À qui dois-je remettre cet autographe ?
+-FAN-> Votre tout premier fan!!!
+-FRIEND-> Votre meilleur ami!
+-SPOUSE-> Votre future épouse!
+-VOICE-> Désolé, mais vous semblez si différent en personne.
+
+FAN(Billy): Je classe mes fans par ordre numérique
+-SUCCESS-> Je le sais!
+
+FRIEND(Billy): Vous êtes mon chien Chester ?
+-SUCCESS-> Si vous le voulez!
+
+SPOUSE(Billy): Je suis déjà marié.
+-SUCCESS-> Pour l'instant....
+
+VOICE(Billy): J'ai dravaillé zur la brononciation !
+-SUCCESS-> Voilà le Billy que je connais!

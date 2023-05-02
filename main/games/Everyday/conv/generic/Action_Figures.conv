@@ -1,0 +1,18 @@
+MAIN(Superguideur Man): Bonjour, héros ! Je besoin de votre aide, Dr. Vileplan. m'embête
+-YES-> Je vais aller le couper avec mon sabre laser
+-NAH-> Hmm, Je vais regarder la télé.
+
+NAH(Superguideur Man): S'il vous plait, n'abandonnez pas la ville de Binjpipe city
+-FAILURE-> Je suis trop vieux pour jouer avec ces figurines. Où est la télécommande ?
+-YES-> Okay, Je vais désintégrer Dr. Vileplan avec ma vision laser.
+
+YES(Dr Vileplan): Muahaha! Lorsque j'aurai laché ma mécha-vache, Binjpipe city sera détruite !
+-DOOMED-> Je crois que Dr. Vileplan a gagné...
+-NOTSOFAST-> Je suis plus fort que vous docteur. Blammo! Pow! Kaboom!
+
+DOOMED(Dr Vileplan): Vraiment ? Vous allez me laisser gagner ?
+-NOTSOFAST-> Non, c'était un piège... maintenant je peux vous désintégrer avec mes yeux laser ! ZZZORCH!
+-FAILURE-> Je ne veux plus jouer au super-héros. Où est la télécommande ?
+
+NOTSOFAST(Superguideur Man): Hourrah ! Vous avez tué Dr. Vileplan et avez sauvé Binjpipe City
+-SUCCESS-> Un super travail par le plus grand super héros du monde !

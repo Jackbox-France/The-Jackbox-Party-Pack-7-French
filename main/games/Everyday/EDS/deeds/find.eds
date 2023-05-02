@@ -1,0 +1,12 @@
+DEF DEED "FindBase"
+    SET MECHANIC_ID "FIND"
+    SET INSTRUCTIONS "Find"
+    SET CATEGORY "SOCKS"
+    SET FAIL_ON_MISTAKE FALSE
+END
+
+CLONE DEED "FindBase" "FindCategory"
+END
+
+CLONE DEED "FindBase" "FindID"
+END
