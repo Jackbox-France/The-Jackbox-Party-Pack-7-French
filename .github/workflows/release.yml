@@ -1,0 +1,42 @@
+name: Release Pack
+  # You may pin to the exact commit or the version.
+  # uses: subosito/flutter-action@48cafc24713cca54bbe03cdc3a423187d413aafa
+    
+on:
+  push:
+     branches: [ main ]
+     
+jobs:
+ retrievingVersion:
+  runs-on: ubuntu-latest
+  outputs:
+      version: ${{ steps.versionstep.outputs.version }}
+  steps:
+    - uses: actions/checkout@v3
+    - id: set_var
+      run: |
+          content=`cat ./main/config.jet`
+          # the following lines are only required for multi line json
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          # end of optional handling for multi line json
+          echo "::set-output name=packageJson::$content"
+    - run: |
+          VERSION=${{fromJson(steps.set_var.outputs.packageJson).buildVersion}}
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+      name: Retrieve Release Version         
+    - run: mkdir -p outputs
+    - run: echo "${VERSION}"
+    - name: Zipping windows release
+      working-directory: main
+      run: |
+          zip -r ../outputs/JPP7.zip *
+    - name: Upload release onto Github
+      uses: ncipollo/release-action@v1
+      with:
+         artifacts: 'outputs/JPP7.zip'
+         token: ${{ secrets.GITHUB_TOKEN }}
+         tag: ${{ env.VERSION }}
+         prerelease: false
+         allowUpdates: true
