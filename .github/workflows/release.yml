@@ -32,10 +32,18 @@ jobs:
       working-directory: main
       run: |
           zip -r ../outputs/JPP7.zip *
+    - name: Remove audio files
+      working-directory: main
+      run: |
+        rm -rf games/Everyday/TalkshowExport/project/media
+    - name: Zipping release without voice
+      working-directory: main
+      run: |
+          zip -r ../outputs/JPP7_SansVoix.zip *
     - name: Upload release onto Github
       uses: ncipollo/release-action@v1
       with:
-         artifacts: 'outputs/JPP7.zip'
+         artifacts: 'outputs/JPP7.zip,outputs/JPP7_SansVoix.zip'
          token: ${{ secrets.GITHUB_TOKEN }}
          tag: ${{ env.VERSION }}
          prerelease: false
