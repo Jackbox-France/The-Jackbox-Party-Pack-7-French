@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - id: set_var
       run: |
-          content=`cat ./main/config.jet`
+          content=`cat ./main/jbg.config.jet`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
