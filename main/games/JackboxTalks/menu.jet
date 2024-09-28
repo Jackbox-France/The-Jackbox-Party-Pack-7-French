@@ -1,0 +1,29 @@
+{
+    "localized" : "true",
+    "items": [
+        {
+            "title":"JEU CLASSIQUE",
+            "action":"doPlayGameNormal",
+            "description":"PLAY_NORMAL_DESCRIPTION",
+            "value":0
+        },
+        {
+            "title":"JEU LIBRE",
+            "action":"doPlayGameFreePlay",
+            "description":"PLAY_FREE_PLAY_DESCRIPTION",
+            "value":1
+        },
+        {
+            "title":"PARAMÈTRES",
+            "action":"doSettings",
+            "description":"SETTINGS_DESCRIPTION",
+            "value":2
+        },
+        {
+            "title":"RETOUR AU PACK",
+            "action":"doBackToPack",
+            "description":"BACK_TO_PACK_DESCRIPTION",
+            "value":3
+        }
+    ]
+}
