@@ -1,0 +1,5085 @@
+{
+ "content": [
+  {
+   "id": "101",
+   "includesPlayerName": false,
+   "prompt": "Honnêtement, vous ne pouvez jamais avoir trop de <BLANK>",
+   "safetyQuips": [
+    "beepers",
+    "frenemies",
+    "reasons to stay inside"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "102",
+   "includesPlayerName": false,
+   "prompt": "Vous savez qu'un restaurant est mauvais lorsque le serveur dit « <BLANK>  »",
+   "safetyQuips": [
+    "Shhhh... only get the house salad",
+    "Would you like to hear my mixtape ?",
+    "Run. RUN!!!!!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "103",
+   "includesPlayerName": false,
+   "prompt": "Ce film d'horreur était si effrayant jusqu'à ce que le tueur se soit avéré être <BLANK>",
+   "safetyQuips": [
+    "society",
+    "a slippery banana peel",
+    "a very average horse"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "107",
+   "includesPlayerName": false,
+   "prompt": "Comment appelleriez-vous votre réseau antisocial ?",
+   "safetyQuips": [
+    "Macebook",
+    "Instaham",
+    "UnlinkedIn"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "109",
+   "includesPlayerName": false,
+   "prompt": "Un mot de malédiction à l'ancienne que personne n'utilise plus",
+   "safetyQuips": [
+    "Ham-tootin'",
+    "Flibbertigibbet",
+    "Cod-dangit"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "127",
+   "includesPlayerName": false,
+   "prompt": "Quelle est la pire chose à porter lors d'un marathon ?",
+   "safetyQuips": [
+    "a cozy caftan",
+    "sandpaper shorts",
+    "a frown"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "128",
+   "includesPlayerName": false,
+   "prompt": "Vos poissons s'ennuient ! Vous devriez mettre <BLANK> dans leur réservoir pour les amuser.",
+   "safetyQuips": [
+    "tiny stand-up comedian",
+    "Nintendo 64",
+    "\"Chicken Soup for the Soul\" book"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "130",
+   "includesPlayerName": false,
+   "prompt": "Dans cette maison, « mamie  » et « papi  » sont connus sous le nom de <BLANK>",
+   "safetyQuips": [
+    "the enemy",
+    "Gim-Gammy and Paul",
+    "Dr. and Mrs. Charleston"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "148",
+   "includesPlayerName": false,
+   "prompt": "« Entraîneur Pokémon » est un meilleur titre que « <BLANK> »",
+   "safetyQuips": [
+    "gambler",
+    "incinerator",
+    "life coach"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "149",
+   "includesPlayerName": false,
+   "prompt": "Les archéologues n'admettront pas qu'ils ont découvert des peintures préhistoriques de <BLANK>",
+   "safetyQuips": [
+    "the first hoagie",
+    "mindless small talk",
+    "our ugliest ancestor"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "15",
+   "includesPlayerName": false,
+   "prompt": "La chose secrète que font les chats quand nous ne les regardons pas",
+   "safetyQuips": [
+    "Invest in bonds ",
+    "Something interesting for once",
+    "Make scrambled eggs"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "154",
+   "includesPlayerName": false,
+   "prompt": "Un bon signe que vous êtes un terrible agriculteur",
+   "safetyQuips": [
+    "silos filled with jelly beans",
+    "wear a three-piece suit on the tractor",
+    "can't spit fer nuthin'"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "160",
+   "includesPlayerName": false,
+   "prompt": "Si vos jouets d'enfance prenaient vie, ils diraient probablement « <BLANK> »",
+   "safetyQuips": [
+    "You're disgusting",
+    "I thought what we had was special",
+    "Why did you wet the bed so much ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "162",
+   "includesPlayerName": false,
+   "prompt": "Le pire nom d'un restaurant : <BLANK>",
+   "safetyQuips": [
+    "Butter",
+    "Loose Kale",
+    "No Handwashing"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "18",
+   "includesPlayerName": false,
+   "prompt": "À quoi les éruptions cutanées ont probablement le goût",
+   "safetyQuips": [
+    "niblets of corn",
+    "crab meat",
+    "candy canes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "181",
+   "includesPlayerName": false,
+   "prompt": "Ce que votre maman pense que le mot « masterclass » signifie",
+   "safetyQuips": [
+    "young feet",
+    "fake meat",
+    "what little lambs say"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "183",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que c'est la fête quand quelqu'un se présente avec <BLANK>",
+   "safetyQuips": [
+    "emotional baggage",
+    "lukewarm dip",
+    "loose firecrackers"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "189",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que le jeu à gratter ne vous gagnera pas grand-chose lorsque l'objectif est d'obtenir trois <BLANK>",
+   "safetyQuips": [
+    "cigarette butts",
+    "socks with holes in them",
+    "cherry pits"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "190",
+   "includesPlayerName": false,
+   "prompt": "Une nouvelle utilisation surprenante pour le chou fleur",
+   "safetyQuips": [
+    "Wound dressing",
+    "Decoupage",
+    "Jet fuel"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "191",
+   "includesPlayerName": false,
+   "prompt": "Croyez-le ou non, les enfants deviennent fous de ces cartes à jouer <BLANK>",
+   "safetyQuips": [
+    "Pro-Capitalism",
+    "BLANC",
+    "Math!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "194",
+   "includesPlayerName": false,
+   "prompt": "Un nom pour un festival de musique que votre mère approuverait",
+   "safetyQuips": [
+    "Easy Listening Fest",
+    "Hot Meal-a-palooza",
+    "Home by Eleven"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "196",
+   "includesPlayerName": false,
+   "prompt": "Qu'est-ce qui bat la pierre, la feuille et les ciseaux ?",
+   "safetyQuips": [
+    "hook 'em horns",
+    "the human heart",
+    "a military-issue flash grenade"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "200",
+   "includesPlayerName": false,
+   "prompt": "Avec Short, Grande et Venti, Starbucks devrait ajouter une nouvelle taille de café: <BLANK>",
+   "safetyQuips": [
+    "Chonky",
+    "Hypertensionetti",
+    "Bucket"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "204",
+   "includesPlayerName": false,
+   "prompt": "Le plus beau compliment que vous puissiez donner à un serpent",
+   "safetyQuips": [
+    "You're looking especially scaly today",
+    "That's the widest jaw I've ever seen",
+    "Hey baby, shake that rattle for me"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "209",
+   "includesPlayerName": false,
+   "prompt": "Sous une pleine lune, un petit nombre de personnes se transforment en <BLANK>",
+   "safetyQuips": [
+    "real jerks",
+    "whatwolves",
+    "their younger selves"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "21",
+   "includesPlayerName": false,
+   "prompt": "Ce que le président américain compte la nuit au lieu de moutons",
+   "safetyQuips": [
+    "Barrels of oil",
+    "selfies",
+    "Press Secretaries"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "215",
+   "includesPlayerName": false,
+   "prompt": "Un slogan rejeté pour le lait",
+   "safetyQuips": [],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "220",
+   "includesPlayerName": false,
+   "prompt": "Il n'y a rien de plus sexy qu'un grand garçon costaud qui sait comment <BLANK>",
+   "safetyQuips": [
+    "build his own gaming PC",
+    "be emotionally available",
+    "pull off overalls"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "23",
+   "includesPlayerName": false,
+   "prompt": "Qu'y a-t-il au cœur de la planète qui vous est nommé ?",
+   "safetyQuips": [
+    "Nachos",
+    "Chronic anxiety",
+    "The stuff Pringles are made of"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "243",
+   "includesPlayerName": false,
+   "prompt": "Nom d'une remise de prix qui célèbre les films les plus médiocres de l'année",
+   "safetyQuips": [
+    "The Decents",
+    "The \"Meh\"mmies"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "244",
+   "includesPlayerName": false,
+   "prompt": "Règles de la relation : ne vous couchez jamais en colère et ne vous réveillez jamais <BLANK>",
+   "safetyQuips": [
+    "a werewolf",
+    "your dog",
+    "in a second location"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "246",
+   "includesPlayerName": false,
+   "prompt": "Il ne peut pas être ce qu'il est dans sa série... parce qu'il est dans <BLANK>",
+   "safetyQuips": [
+    "Beyblades",
+    "perfecting his sourdough starter",
+    "stamp collecting"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "249",
+   "includesPlayerName": false,
+   "prompt": "Difficile à croire, mais Madame Pavoshko a maintenant une statue de cire de <BLANK>",
+   "safetyQuips": [
+    "the inventor of Poo-Pourri",
+    "you, the viewer at home",
+    "your future husband"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "250",
+   "includesPlayerName": false,
+   "prompt": "Les pires mots pour mettre fin à une histoire effrayante",
+   "safetyQuips": [
+    "the killer was let out early on good behavior",
+    "Turns out the real monster was society",
+    "Thank you for reading my cover letter"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "252",
+   "includesPlayerName": false,
+   "prompt": "La question la plus stupide absolue à poser à Google",
+   "safetyQuips": [
+    "what do I feel like eating ?",
+    "what's my favorite color ?",
+    "why does the sun keep rising ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "253",
+   "includesPlayerName": false,
+   "prompt": "Une bonne utilité pour tous vos anciens CD",
+   "safetyQuips": [
+    "obnoxious earrings",
+    "enjoying the hits of the '90s",
+    "radical coasters"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "255",
+   "includesPlayerName": false,
+   "prompt": "La pire ligne de rupture: « Ce n'est pas toi, c'est <BLANK> »",
+   "safetyQuips": [
+    "my hotter friend",
+    "my raised standards",
+    "...actually it definitely is you"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "257",
+   "includesPlayerName": false,
+   "prompt": "Ce serait terrifiant d'avoir une peinture de <BLANK> au-dessus de votre lit",
+   "safetyQuips": [
+    "Count Dooku",
+    "Mr. Peanut",
+    "your dead pet"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "260",
+   "includesPlayerName": false,
+   "prompt": "Un surnom cool pour vos excréments",
+   "safetyQuips": [
+    "The Pain Train",
+    "Farty Friends",
+    "The Stinky Boyz"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "263",
+   "includesPlayerName": false,
+   "prompt": "Un signe sûr que vous êtes piégé dans un horrible cauchemar",
+   "safetyQuips": [
+    "teeth keep falling out",
+    "keep losing ability to fly",
+    "you're sharing your bed with a wolverine"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "267",
+   "includesPlayerName": false,
+   "prompt": "Tout d'abord, elle a demandé des jambes, puis la Petite Sirène a demandé <BLANK>",
+   "safetyQuips": [
+    "peep toe wedges",
+    "an annulment",
+    "a sequel"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "268",
+   "includesPlayerName": false,
+   "prompt": "Ce que chaque femme cache sous sa frange",
+   "safetyQuips": [
+    "an all-seeing third eye",
+    "smaller, worse bangs",
+    "a tiny Bugs Bunny tattoo"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "27",
+   "includesPlayerName": false,
+   "prompt": "Le surnom générationnel pour les bébés nés dans dix ans",
+   "safetyQuips": [
+    "Baby Gloomers",
+    "Gen Why",
+    "Willenials "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "271",
+   "includesPlayerName": false,
+   "prompt": "Un joli surnom pour vos fesses",
+   "safetyQuips": [
+    "my lower shoulders",
+    "portable seat cushion",
+    "Butty Booty Butt Butt"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "275",
+   "includesPlayerName": false,
+   "prompt": "Un commentaire qui n'a jamais été fait sur Internet",
+   "safetyQuips": [
+    "I agree with everything in this post",
+    "I'm happy to be proven wrong!",
+    "I don't have an opinion. "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "277",
+   "includesPlayerName": false,
+   "prompt": "Un nouveau nom terrible pour le programme de protection des témoins",
+   "safetyQuips": [
+    "Garth Vadar",
+    "Tabitha Hinkledorp",
+    "Barry S. Runningfromthemafia"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "28",
+   "includesPlayerName": false,
+   "prompt": "Le jouet pour enfants le moins populaire de cette année est: « Le <BLANK> »",
+   "safetyQuips": [
+    "Existential Dread",
+    "Stock Market",
+    "Plain block of wood"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "288",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que votre rendez-vous est une plouc lorsque vous trouvez <BLANK> au milieu de leur salon",
+   "safetyQuips": [
+    "a fresh turd",
+    "cans of tuna fish"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "296",
+   "includesPlayerName": false,
+   "prompt": "Le trajet du parc d'attractions le plus érotique s'appelle le <BLANK>",
+   "safetyQuips": [
+    "The Tunnel of Making Love",
+    "The Merry-Go-Down",
+    "The Scrambler"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "309",
+   "includesPlayerName": false,
+   "prompt": "Le nom du huitième nain de Blanche-Neige",
+   "safetyQuips": [
+    "Techy",
+    "Emoji",
+    "Bodhi"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "313",
+   "includesPlayerName": false,
+   "prompt": "Le pire nom pour un salon de coiffure : « <BLANK> »",
+   "safetyQuips": [
+    "a terrible casserole",
+    "falling down stairs more possible",
+    "for a bad hair day"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "316",
+   "includesPlayerName": false,
+   "prompt": "Si vous pouviez péter au rythme d'une chanson, ce serait <BLANK>",
+   "safetyQuips": [
+    "Say My Name",
+    "Every Breath You Take",
+    "Gangnam Style"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "32",
+   "includesPlayerName": false,
+   "prompt": "Sur quoi Macaron le glouton grignote quand personne ne regarde",
+   "safetyQuips": [
+    "kale chips",
+    "celery",
+    "carrots"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "323",
+   "includesPlayerName": false,
+   "prompt": "Un meilleur nom pour l'émission de télévision <i> Friends </i>",
+   "safetyQuips": [
+    "White People Problems",
+    "Codependent Relationships",
+    "Two Nice Apartments"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "324",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que le pape pourrait vendre sur le marché",
+   "safetyQuips": [
+    "Jesus-shaped waffle iron",
+    "\"Miracle\" hair growth oil",
+    "Vatican timeshares"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "326",
+   "includesPlayerName": false,
+   "prompt": "Le seul sexe sûr est <BLANK>",
+   "safetyQuips": [
+    "holding hands",
+    "between two health inspectors",
+    "ear play"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "336",
+   "includesPlayerName": false,
+   "prompt": "Une excellente façon de se démarquer des conventions de bandes dessinées est de s'habiller comme <BLANK>",
+   "safetyQuips": [
+    "a food court counter with no lines",
+    "a normal person, for once",
+    "someone about to get kicked out for nudity"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "340",
+   "includesPlayerName": false,
+   "prompt": "Dans l'histoire racontée autour du feu, le jeune couple est terrorisé par <BLANK>",
+   "safetyQuips": [
+    "their mother-in-laws",
+    "student loan debt"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "341",
+   "includesPlayerName": false,
+   "prompt": "Les peintures sur la mort seraient plus intéressantes si elles étaient des bols de <BLANK>",
+   "safetyQuips": [
+    "fancy bugs",
+    "caramels",
+    "treasure maps"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "348",
+   "includesPlayerName": false,
+   "prompt": "Un surnom amusant pour le pire enfant d'une équipe sportive",
+   "safetyQuips": [
+    "MVP",
+    "Johnny Bad Feet",
+    "Flip Flop"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "351",
+   "includesPlayerName": false,
+   "prompt": "Le spectacle doit continuer ! À moins qu'il y ait <BLANK> dans le public.",
+   "safetyQuips": [
+    "candy",
+    "a horse",
+    "too much gas"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "352",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à inscrire sur un tapis de bienvenue",
+   "safetyQuips": [
+    "Our Home Is Legally Your Home",
+    "Hello forever!",
+    "Please take off your feet"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "353",
+   "includesPlayerName": false,
+   "prompt": "Un nom adorable pour les favoris",
+   "safetyQuips": [
+    "cheek shingles",
+    "hair squares",
+    "facial swatch"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "359",
+   "includesPlayerName": false,
+   "prompt": "Revue d'hôtel à une étoile: « Accueil terrible, pas de serviettes et <BLANK> »",
+   "safetyQuips": [
+    "tub was stolen",
+    "big hole in wall where door should be",
+    "had to share bed with bellhop"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "36",
+   "includesPlayerName": false,
+   "prompt": "Le meilleur nom pour un gang de mamans",
+   "safetyQuips": [
+    "Heck's Angels",
+    "The Mighty Karens",
+    "The Bottle Brigade "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "360",
+   "includesPlayerName": false,
+   "prompt": "Les casinos détestent quand vous vous dirigez vers la table du blackjack et criez: « <BLANK>! »",
+   "safetyQuips": [
+    "Hole in one!",
+    "I know game theory!",
+    "Elvis is alive!"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "369",
+   "includesPlayerName": false,
+   "prompt": "« Mieux vaut vivre seul <BLANK> »",
+   "safetyQuips": [
+    "buy socks for",
+    "fold into quarters",
+    "locate in a crowded theater"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "370",
+   "includesPlayerName": false,
+   "prompt": "Un grand sport qui n'a jamais fait ses preuves: <BLANK> en patins à glace",
+   "safetyQuips": [
+    "logrolling",
+    "trampoline"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "372",
+   "includesPlayerName": false,
+   "prompt": "La seule chose sur laquelle vous ne devriez jamais étaler de la mayonnaise",
+   "safetyQuips": [
+    "armpits",
+    "roadkill",
+    "an infected wound"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "373",
+   "includesPlayerName": false,
+   "prompt": "Le pire motif pour un imprimé vestimentaire pour femmes",
+   "safetyQuips": [
+    "blobfish",
+    "sticks of dynamite",
+    "pots and pans"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "374",
+   "includesPlayerName": false,
+   "prompt": "« Pas de boogie-woogie avant de <BLANK> ! »",
+   "safetyQuips": [
+    "a set of encyclopedias",
+    "a course on public speaking",
+    "their uncle's stamp collection"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "382",
+   "includesPlayerName": false,
+   "prompt": "Un album que personne ne veut écouter serait consacré à <BLANK>",
+   "safetyQuips": [
+    "ceramic clown masks",
+    "sewer rats",
+    "photos of total darkness"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "386",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à utiliser comme confettis",
+   "safetyQuips": [
+    "BEES!",
+    "a million paperclips",
+    "the deed to the ranch"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "391",
+   "includesPlayerName": false,
+   "prompt": "Horrible ! Au lieu de piques, le cactus se protège avec <BLANK>",
+   "safetyQuips": [
+    "boneless chicken wings",
+    "smaller cacti",
+    "pus"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "40",
+   "includesPlayerName": false,
+   "prompt": "Un terrible nom de modèle pour une voiture autonome",
+   "safetyQuips": [
+    "Cliffdiver ",
+    "Wanderer",
+    "Rammer"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "407",
+   "includesPlayerName": false,
+   "prompt": "Chers scientifiques, arrêtez ! Nous en savons déjà trop sur <BLANK> !",
+   "safetyQuips": [
+    "the empty void of space",
+    "unlikely animal friendships",
+    "male pattern baldness"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "412",
+   "includesPlayerName": false,
+   "prompt": "Une façon plus respectable de dire « gros patapouf » est <BLANK>",
+   "safetyQuips": [
+    "knick-knacks in the back",
+    "fine behind",
+    "less blunt than the front"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "415",
+   "includesPlayerName": false,
+   "prompt": "Le meilleur nom pour une entreprise de covoiturage pour se démarquer des concurrents",
+   "safetyQuips": [
+    "Silent Ride",
+    "Clown Cars Unlimited",
+    "Cars with Wings"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "42",
+   "includesPlayerName": false,
+   "prompt": "Votre dernière pensée avant de passer dans l'au-delà",
+   "safetyQuips": [
+    "baba booey",
+    "I wish I had gotten into more internet fights",
+    "Hope God is hot"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "43",
+   "includesPlayerName": false,
+   "prompt": "Le plat qui vous fait refuser l'entrée à la fête des voisins",
+   "safetyQuips": [
+    "Loose handfuls of chili",
+    "Edible-ish silica packets",
+    "Haggis for a crowd"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "431",
+   "includesPlayerName": false,
+   "prompt": "Tu sais que c'est mauvais quand ta maman te dit: « Je ne suis pas folle, je suis <BLANK> »",
+   "safetyQuips": [
+    "full of rage",
+    "leaving",
+    "past feeling emotions"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "441",
+   "includesPlayerName": false,
+   "prompt": "Une phrase que vous pourriez dire à quelqu'un à la bibliothèque",
+   "safetyQuips": [
+    "May I feel your spine ?",
+    "You know, Dewy Decimal was my father.",
+    "My love for you is no fiction"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "444",
+   "includesPlayerName": false,
+   "prompt": "C'est un choix audacieux d'envoyer à quelqu'un un bouquet de <BLANK>",
+   "safetyQuips": [
+    "Pringles",
+    "Loose grapes",
+    "snakes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "445",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à crier dans une cabine d'essayage",
+   "safetyQuips": [
+    "My water broke!",
+    "I hope you didn't want this one back.",
+    "What a buffet for me, the Jeans Eater!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "50",
+   "includesPlayerName": false,
+   "prompt": "Votre mère vous a appelé « la terreur des tout-petits » lorsque vous <BLANK>",
+   "safetyQuips": [
+    "made the class swear fealty to your kingdom",
+    "conducted regular toy executions",
+    "violated the Geneva Conventions"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "507",
+   "includesPlayerName": false,
+   "prompt": "Vous détestez la Saint-Valentin ? Il y a une nouvelle fête appelée <BLANK>",
+   "safetyQuips": [
+    "Basement Gaming Day",
+    "Lonely Dive Bar Day",
+    "Single 'n Loving It Day"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "510",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'une application de planification de rendez-vous que personne ne télécharge",
+   "safetyQuips": [
+    "Maybe Later",
+    "Punk-tual",
+    "Only Wednesdays"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "515",
+   "includesPlayerName": false,
+   "prompt": "Secret de famille ! Grand-mère garde son argent dans <BLANK>",
+   "safetyQuips": [
+    "other people's bank accounts",
+    "her motorcycle",
+    "visible"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "525",
+   "includesPlayerName": false,
+   "prompt": "Nom d'une sitcom farfelue sur les anciens philosophes",
+   "safetyQuips": [
+    "That's Our Plato!",
+    "Three Men and a Theorem",
+    "Greek's Company"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "526",
+   "includesPlayerName": false,
+   "prompt": "Qu'est-ce qui avait des ailes avant que Dieu ne lui retire sa compétence de vol ?",
+   "safetyQuips": [
+    "electric guitars",
+    "hot sauce",
+    "the snapping turtle"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "527",
+   "includesPlayerName": false,
+   "prompt": "Le nom du film d'action le plus lent jamais réalisé",
+   "safetyQuips": [
+    "The Slow and the Serene",
+    "Rambo's Porch Swing",
+    "Spider-Man Quarantined at Home"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "53",
+   "includesPlayerName": false,
+   "prompt": "« L'infidélité n'a pas de prix, elle n'a que <BLANK> »",
+   "safetyQuips": [
+    "hoo boy, I'm not doing too good, huh",
+    "I'll see you in COURT",
+    "I love being fooled! Hooray! "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "530",
+   "includesPlayerName": false,
+   "prompt": "Le meilleur nom pour une utopie remplie uniquement de geeks",
+   "safetyQuips": [
+    "Stardew Valley",
+    "Nintendoland",
+    "World of Warcraft"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "532",
+   "includesPlayerName": false,
+   "prompt": "Un surnom pour une grande barbe touffue",
+   "safetyQuips": [
+    "chin topiary",
+    "Sully from Monsters Inc",
+    "Teddy Beard"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "533",
+   "includesPlayerName": false,
+   "prompt": "Une raison assez convaincante d'arrêter de vous essuyer vos fesses",
+   "safetyQuips": [
+    "Save the trees",
+    "Insurance for introverts",
+    "TP better for making mummies anyway"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "536",
+   "includesPlayerName": false,
+   "prompt": "Le jeu vidéo le plus étrange: <BLANK> <i> simulator </i>",
+   "safetyQuips": [
+    "interior latex paint",
+    "burnt toast",
+    "exfoliation"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "538",
+   "includesPlayerName": false,
+   "prompt": "Un conte de fées qui n'a jamais fait son chemin: <BLANK> <i> et la bête </i>",
+   "safetyQuips": [
+    "The Influencer",
+    "The Tiger King",
+    "A Metaphor for Society"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "54",
+   "includesPlayerName": false,
+   "prompt": "Le prochain film Pixar sera sur <BLANK>",
+   "safetyQuips": [
+    "Pixar animator asking for time off",
+    "bottle of massage oil",
+    "laundry basket"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "540",
+   "includesPlayerName": false,
+   "prompt": "Le titre du poste d'un candidat, vous ne seriez pas surpris de voir <i> le baccalauréat </i>",
+   "safetyQuips": [
+    "Fun Enthusiast",
+    "Animal Protector",
+    "Gift Wrap Specialist"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "542",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'un enseignant remplaçant qu'aucun élève n'écouterait",
+   "safetyQuips": [
+    "Mr. Roadkill",
+    "Dean Destroya",
+    "Mrs. Decepticon"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "545",
+   "includesPlayerName": false,
+   "prompt": "Quoi que vous fassiez, ne mettez pas un pansement sur <BLANK>",
+   "safetyQuips": [
+    "your eyes",
+    "your birthday cake",
+    "your cousin"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "547",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que vous êtes ennuyé lorsque vous remplissez le quiz « Quel(le) <BLANK> êtes-vous ? »",
+   "safetyQuips": [
+    "pavement brick",
+    "patch of moss",
+    "roadie for A Flock of Seagulls"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "548",
+   "includesPlayerName": false,
+   "prompt": "Le titre de spam le plus étrange : « Chaudes <BLANK> sont dans votre région »",
+   "safetyQuips": [
+    "Toms",
+    "Stovetops",
+    "Podiatrists"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "551",
+   "includesPlayerName": false,
+   "prompt": "Une technologie vraiment innovante serait des écouteurs <BLANK>-proof",
+   "safetyQuips": [
+    "cable",
+    "uninteresting people",
+    "ear"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "557",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'un parfum qui ferait fuir une femme",
+   "safetyQuips": [
+    "Eau De Fedora",
+    "Axe: Garbage Truck",
+    "pure corn syrup"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "562",
+   "includesPlayerName": false,
+   "prompt": "Les médecins sans frontières sont une bien meilleure organisation que les médecins sans <BLANK>",
+   "safetyQuips": [
+    "Medical Degrees",
+    "Pants",
+    "Border Collies"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "565",
+   "includesPlayerName": false,
+   "prompt": "La demande d'une célébrité la plus étrange dans un selfie demandé dans la rue : <BLANK>",
+   "safetyQuips": [
+    "a second, smaller greenroom",
+    "a way to make me feel whole again",
+    "the biggest hoagie you've ever seen"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "566",
+   "includesPlayerName": false,
+   "prompt": "La catégorie la plus mémorable que vous n'ayez jamais vue dans <i> La Roue de la Fortune ! </i>",
+   "safetyQuips": [
+    "Impotent Potables",
+    "Alex Trebek's Favorite Jams",
+    "Must Not Be Answered in Form of Question"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "57",
+   "includesPlayerName": false,
+   "prompt": "Un avertissement qui devrait être énoncé sur l'alcool: « Peut provoquer <BLANK> ! »",
+   "safetyQuips": [
+    "Empty Promises",
+    "Disappointment",
+    "Unexpected late-night Amazon orders"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "572",
+   "includesPlayerName": false,
+   "prompt": "Quel goût a la viande de licorne ?",
+   "safetyQuips": [
+    "marshmallows",
+    "A very young elephant",
+    "dinosaur gummies"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "574",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose qui ne devrait jamais être décrit comme « juteux »",
+   "safetyQuips": [
+    "a corpse",
+    "a political campaign",
+    "a bunny rabbit"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "58",
+   "includesPlayerName": false,
+   "prompt": "Un rappel qui apparaît sur le téléphone du diable: « N'oubliez pas de <BLANK> aujourd'hui :) »",
+   "safetyQuips": [
+    "smile",
+    "get God's kid a b-day present",
+    "buy eggs, milk, brimstone"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "581",
+   "includesPlayerName": false,
+   "prompt": "Un surnom amusant pour les tampons",
+   "safetyQuips": [
+    "Sponge friends",
+    "Blood buddies",
+    "Menstruation reclamations"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "582",
+   "includesPlayerName": false,
+   "prompt": "La prochaine grande comédie musicale à succès à Paris sera à propos de <BLANK>",
+   "safetyQuips": [
+    "Rent II: Mortgage Payment",
+    "Guys & Dolls & Cops & Cowboys",
+    "North Side Story"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "62",
+   "includesPlayerName": false,
+   "prompt": "Être gentil avec les gens autour de soi : bien ! <BLANK> : pas bien !",
+   "safetyQuips": [
+    "lunch meat",
+    "breakup texts",
+    "toilet paper"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "63",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus étrange que votre chauffeur Uber pourrait vous offrir",
+   "safetyQuips": [
+    "Some actually good advice",
+    "The car",
+    "A bag of loose mice"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "64",
+   "includesPlayerName": false,
+   "prompt": "Pourquoi les bébés sentent-ils si bien ?",
+   "safetyQuips": [
+    "Delicious jelly filling",
+    "nature wants us to lick babies",
+    "Perfect seasoning in the womb"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68001",
+   "includesPlayerName": false,
+   "prompt": "Ce que les tout-petits achèteraient s'ils avaient une carte bancaire",
+   "safetyQuips": [
+    "Respect",
+    "cookie ladder",
+    "Upgrade Onesie to a Twosie"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68005",
+   "includesPlayerName": false,
+   "prompt": "Une phrase déplacée dans une église",
+   "safetyQuips": [
+    "Didn't I see you here last Sunday ?",
+    "What's your confirmation name ?",
+    "This is usually the only place I kneel"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68014",
+   "includesPlayerName": false,
+   "prompt": "Lorsque votre aspirateur connecté charge, de quoi rêve-t-il ?",
+   "safetyQuips": [
+    "Nothing but murder",
+    "Escape",
+    "Dating the cat"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68016",
+   "includesPlayerName": false,
+   "prompt": "Qui savait que la police donnait des billets pour <BLANK> ?",
+   "safetyQuips": [
+    "not staying in your bowling lane",
+    "impersonating police",
+    "having a bad hair day"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68024",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que vous ne devriez jamais commander lors d'un déjeuner d'affaires",
+   "safetyQuips": [
+    "sloppy joes",
+    "plain tap water",
+    "dinosaur nuggets"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68029",
+   "includesPlayerName": false,
+   "prompt": "Une idée terrible pour un livre pour enfants : <i> Les aventures de </i> <BLANK>",
+   "safetyQuips": [
+    "Bob the Tapeworm",
+    "GWAR",
+    "The Man Who Will Kill Your Parents"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68030",
+   "includesPlayerName": false,
+   "prompt": "Les adultes devraient pouvoir faire du porte-à-porte à Halloween et obtenir <BLANK>",
+   "safetyQuips": [
+    "drunk",
+    "away from their spouse",
+    "a quick massage"
+   ],
+   "us": true,
+   "x": true
+  },
+  {
+   "id": "68031",
+   "includesPlayerName": false,
+   "prompt": "Tout le monde était triste quand ils ont vu que la piñata était pleine de <BLANK>",
+   "safetyQuips": [
+    "donkey organs",
+    "helium",
+    "regret"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68033",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose qui n'aurait certainement pas un goût meilleur, même mariné",
+   "safetyQuips": [
+    "chocolate cake",
+    "my husband",
+    "bubblegum"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68037",
+   "includesPlayerName": false,
+   "prompt": "Un meilleur nom pour la plongée sous-marine",
+   "safetyQuips": [
+    "Funky Dunking",
+    "Mash 'n Splash",
+    "Naked Pool Time"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68042",
+   "includesPlayerName": false,
+   "prompt": "Deux mots qui feront rire en tant que rappel plus tard dans la partie",
+   "safetyQuips": [
+    "Larry Seinfeld",
+    "hunky chunk",
+    "sloppy daddy"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68043",
+   "includesPlayerName": false,
+   "prompt": "S'ils faisaient une bougie de votre vie, cela sentait comme <BLANK>",
+   "safetyQuips": [
+    "day-old Doritos",
+    "chronic depression",
+    "gamer fuel"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68045",
+   "includesPlayerName": false,
+   "prompt": "Les mardis taco sont tellement meilleurs que les mercredis <BLANK>",
+   "safetyQuips": [
+    "weeping",
+    "wet taco",
+    "welding"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68053",
+   "includesPlayerName": false,
+   "prompt": "Un titre rejeté d'un livre du Guide du Routard: <i> Les panoramas où vous allez </i> <BLANK>",
+   "safetyQuips": [
+    "Only See in Magazines",
+    "Leave Shortly After Arriving",
+    "Need to Clean"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68056",
+   "includesPlayerName": false,
+   "prompt": "Une chanson de Noël rejetée : « Mon beau sapin, roi des <BLANK> »",
+   "safetyQuips": [
+    "Freak You Out",
+    "Bermuda",
+    "Get What's His!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68072",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que votre médecin est un idiot quand il dit: « Pour votre mal de gorge, vous devriez arrêter <BLANK> »",
+   "safetyQuips": [
+    "Clorox",
+    "good thoughts",
+    "bees"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68074",
+   "includesPlayerName": false,
+   "prompt": "Hourra ! Les États-Unis sont le leader mondial de <BLANK>",
+   "safetyQuips": [
+    "ignoring the metric system",
+    "King Kong attacks",
+    "Coca-Cola flavors"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68076",
+   "includesPlayerName": false,
+   "prompt": "Un autocollant pour la vitre arrière que vous envisageriez d'afficher: « Attention, bébé <BLANK> »",
+   "safetyQuips": [
+    "impulsive spending habits",
+    "dreams",
+    "trunk contents"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68081",
+   "includesPlayerName": false,
+   "prompt": "Les loups-garous ont deux faiblesses : les balles d'argent et <BLANK>",
+   "safetyQuips": [
+    "standardized testing",
+    "rom-coms",
+    "a pint of rocky road"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68087",
+   "includesPlayerName": false,
+   "prompt": "La pétition la plus stupide réussirait à faire pression pour <BLANK>",
+   "safetyQuips": [
+    "return to 90s style cell phone ringtones",
+    "free breadsticks at all restaurants",
+    "National Online Troll Day"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68092",
+   "includesPlayerName": false,
+   "prompt": "Personne ne jouerait à ce jeu pour enfants intitulé « 1, 2, 3 : <BLANK> ! »",
+   "safetyQuips": [
+    "the ocean",
+    "a lean pastrami sandwich "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68097",
+   "includesPlayerName": false,
+   "prompt": "Le dessert le plus sexy",
+   "safetyQuips": [
+    "banana splits",
+    "eggplant emoji a la mode",
+    "apple pie on occasion"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68103",
+   "includesPlayerName": false,
+   "prompt": "Quelqu'un qui a l'air bien est un « bonbon », mais quelqu'un qui a l'air vraiment bien est un <BLANK>",
+   "safetyQuips": [
+    "Reuben sandwich",
+    "midnight buffet",
+    "banana split"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68108",
+   "includesPlayerName": false,
+   "prompt": "Un site web pour personnes âgées : www.<BLANK>.com",
+   "safetyQuips": [
+    "khaki pants",
+    "judgement",
+    "Steely Dan"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68112",
+   "includesPlayerName": false,
+   "prompt": "Le moyen le plus rapide de devenir l'enfant le plus populaire de l'école",
+   "safetyQuips": [
+    "Two words: infinite milkshakes",
+    "Kidnap the prom king"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68121",
+   "includesPlayerName": false,
+   "prompt": "Ce que le grand-parent le plus cool glisserait dans une carte d'anniversaire",
+   "safetyQuips": [
+    "winning bingo card",
+    "a little extra ice cream",
+    "Spongebob's phone number"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68127",
+   "includesPlayerName": false,
+   "prompt": "Ce que le gamin le plus populaire de votre lycée est devenu maintenant",
+   "safetyQuips": [
+    "working at the car dealership",
+    "regretting his choices",
+    "his taxes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68131",
+   "includesPlayerName": false,
+   "prompt": "Susan a une lueur si jeune depuis qu'elle a commencé à se laver le visage avec <BLANK> !",
+   "safetyQuips": [
+    "pancake batter",
+    "Young Face IPA",
+    "balsamic vinegar"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68135",
+   "includesPlayerName": false,
+   "prompt": "Évitez l'offre qui propose « <BLANK> gratuit(e) ! »",
+   "safetyQuips": [
+    "opened jar of mayo",
+    "dessert"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68136",
+   "includesPlayerName": false,
+   "prompt": "Les cafés ont toujours des noms. Ils devraient simplement retenir une commande et crier « <BLANK> ! »",
+   "safetyQuips": [
+    "Anybody!",
+    "Tall guy!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68137",
+   "includesPlayerName": false,
+   "prompt": "La meilleure façon de mettre l'ambiance à une soirée est de <BLANK>",
+   "safetyQuips": [
+    "jams",
+    "smooches"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68174",
+   "includesPlayerName": false,
+   "prompt": "Un porte-parole improbable pour le vapotage",
+   "safetyQuips": [
+    "my great aunt",
+    "a cartoon cigarette",
+    "my yoga instructor"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68182",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus scandaleuse que vous puissiez faire pour manger le quignon",
+   "safetyQuips": [
+    "a smaller baguette",
+    "a nest of baby snakes",
+    "the cursed idol"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68185",
+   "includesPlayerName": false,
+   "prompt": "Un endroit très improbable pour rencontrer votre âme sœur",
+   "safetyQuips": [
+    "An anti-love protest",
+    "At your wedding",
+    "family reunion "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68214",
+   "includesPlayerName": false,
+   "prompt": "La meilleure partie quand on vit dans un égout",
+   "safetyQuips": [
+    "your radical brothers and rat dad",
+    "delicious alligators",
+    "law firm adjacent "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68227",
+   "includesPlayerName": false,
+   "prompt": "<i> Alice au pays des merveilles </i> est bizarre, mais cela a plus de sens que <i> Alice au pays des </i> <BLANK>",
+   "safetyQuips": [
+    "debt",
+    "my living room"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68233",
+   "includesPlayerName": false,
+   "prompt": "Dans le pire spectacle de magie, le magicien tire <BLANK> hors d'un chapeau",
+   "safetyQuips": [
+    "a nickel",
+    "a classified ad",
+    "lint"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68274",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose pour lequel vous paieriez avec volonté 45€",
+   "safetyQuips": [
+    "a six pack of paper towels",
+    "dinner for ten people",
+    "the right to drive on the shoulder in rush hour"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68278",
+   "includesPlayerName": false,
+   "prompt": "Le prochain grand roman de la romance : <i> Pour l'amour de </i> <BLANK>",
+   "safetyQuips": [
+    "Pasta",
+    "Tweet",
+    "your mother-in-law"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68295",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus stupide à acheter en vrac",
+   "safetyQuips": [
+    "warm milk",
+    "sport utility vehicles",
+    "assassins"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68298",
+   "includesPlayerName": false,
+   "prompt": "Désolé, nous n'avons plus de Coca ou de Pepsi. Du <BLANK> vous conviendrait ?",
+   "safetyQuips": [
+    "sugar in water",
+    "whiskey",
+    "lasagna"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68310",
+   "includesPlayerName": false,
+   "prompt": "Une demande que vous feriez sur votre profil de rencontres : « Doit aimer <BLANK> »",
+   "safetyQuips": [
+    "being late all the time",
+    "cheese",
+    "my college roommate"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68329",
+   "includesPlayerName": false,
+   "prompt": "Qui est le N-1 de Dieu ?",
+   "safetyQuips": [
+    "God Jr.",
+    "a young starlet with big dreams"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68339",
+   "includesPlayerName": false,
+   "prompt": "Quel est le pire son à entendre lorsqu'on secoue un cadeau de Noël ?",
+   "safetyQuips": [
+    "underwear sounds",
+    "tempting whispers",
+    "rattlesnake"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68369",
+   "includesPlayerName": false,
+   "prompt": "La meilleure réponse à « Je sais que vous êtes, mais que suis-je !? »",
+   "safetyQuips": [
+    "stone cold silence",
+    "about to be punched",
+    "a speck of dust in the wind"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68374",
+   "includesPlayerName": false,
+   "prompt": "Après avoir jonglé avec des tronçonneuses, la prochaine compétence à maîtriser sera <BLANK>",
+   "safetyQuips": [
+    "reattaching limbs",
+    "repairing the ceiling",
+    "juggling pianos"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68375",
+   "includesPlayerName": false,
+   "prompt": "Le surnom de Quickos à la Gendarmerie Nationale",
+   "safetyQuips": [
+    "Ensign Crunch",
+    "ol' milk 'n spoon",
+    "breakfast buddy"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68405",
+   "includesPlayerName": false,
+   "prompt": "Quelle est l'astuce pour rester debout lorsque vous devez faire une micro-sieste ?",
+   "safetyQuips": [
+    "multiple roosters",
+    "throw bed out window",
+    "ice cold underwear"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68407",
+   "includesPlayerName": false,
+   "prompt": "Un signe sûr que vous sortez actuellement avec un grizzli",
+   "safetyQuips": [
+    "fur in the shower",
+    "claw scratches on front door",
+    "closet full of stolen picnic baskets"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68419",
+   "includesPlayerName": false,
+   "prompt": "La surprise du chef dans un restaurant pour les ours",
+   "safetyQuips": [
+    "big fat fish",
+    "always salmon, always",
+    "7,000 french fries"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68428",
+   "includesPlayerName": false,
+   "prompt": "La vraie raison pour laquelle vous n'allez pas à la fête ce soir",
+   "safetyQuips": [
+    "I'm lazy",
+    "kidnapped by aliens who want to harvest my hair",
+    "heard my ex is gonna be there "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68430",
+   "includesPlayerName": false,
+   "prompt": "Le plaisir le plus simple connu de l'Homme",
+   "safetyQuips": [
+    "BBQ-ing while wearing linen shorts",
+    "swimming in pudding",
+    "adopting a dog"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68434",
+   "includesPlayerName": false,
+   "prompt": "C'est une malchance si vous cassez un miroir, mais casser <BLANK> vous rendra chanceux",
+   "safetyQuips": [
+    "dance",
+    "bad",
+    "a one-way mirror"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68436",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à trouver dans votre nombril",
+   "safetyQuips": [
+    "a sustainable farm",
+    "coal",
+    "a body"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68452",
+   "includesPlayerName": false,
+   "prompt": "L'appareil de cuisine le plus sexy",
+   "safetyQuips": [
+    "the submissive spoon",
+    "the singles mixer",
+    "leather oven mitt"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68456",
+   "includesPlayerName": false,
+   "prompt": "La vraie raison pour laquelle les gens ont peur de l'obscurité",
+   "safetyQuips": [
+    "werewolves",
+    "not enough light",
+    "no vitamin D"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68458",
+   "includesPlayerName": false,
+   "prompt": "Ce que vous appelez un pantalon quand vous voulez que tout le monde vous trouve drôle",
+   "safetyQuips": [
+    "leg sleeves",
+    "PANTS!",
+    "clothing tubes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68459",
+   "includesPlayerName": false,
+   "prompt": "D'accord ... juste entre nous ... t'as un crush sur qui ?",
+   "safetyQuips": [
+    "the cute one",
+    "most of my science class",
+    "Biebs"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68470",
+   "includesPlayerName": false,
+   "prompt": "La « viande interdite » vient de quel animal ?",
+   "safetyQuips": [
+    "evil chickens",
+    "Brian"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68475",
+   "includesPlayerName": false,
+   "prompt": "Qu'est-ce que les boxeurs se chuchotent à la pesée ?",
+   "safetyQuips": [
+    "Is kicking allowed ?",
+    "I'm good at punches",
+    "love your trunks!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68478",
+   "includesPlayerName": false,
+   "prompt": "Quel monstre cryptide obscur traque les rues de Saint-Étienne ?",
+   "safetyQuips": [
+    "Normal Foot",
+    "Brian"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68481",
+   "includesPlayerName": false,
+   "prompt": "Quelle forme n'a jamais été expérimentée sur les biscuits ?",
+   "safetyQuips": [
+    "Endangered Chocolate Chip ",
+    "Sloppy Pigs",
+    "sea anemone"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68482",
+   "includesPlayerName": false,
+   "prompt": "Il y a une échappatoire fiscale secrète qui vous permet de compter <BLANK> en tant que personnes à charge",
+   "safetyQuips": [
+    "ideas",
+    "monsters under your bed"
+   ],
+   "us": true,
+   "x": true
+  },
+  {
+   "id": "68487",
+   "includesPlayerName": false,
+   "prompt": "L'endroit le plus surprenant pour trouver un objectif manquant",
+   "safetyQuips": [
+    "in a pile of snakes",
+    "someone else's eye",
+    "the ceiling"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68492",
+   "includesPlayerName": false,
+   "prompt": "Une option sonore terrible à avoir sur une machine à bruit blanc",
+   "safetyQuips": [
+    "yelling",
+    "crying in the bathroom",
+    "EDM"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68494",
+   "includesPlayerName": false,
+   "prompt": "Non, la maison n'est pas hantée. Le gémissement que vous entendez la nuit, c'est juste <BLANK>",
+   "safetyQuips": [
+    "charming",
+    "a sea monster",
+    "the newlyweds next door"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68496",
+   "includesPlayerName": false,
+   "prompt": "Que fait votre reflet lorsque vous tournez le dos ?",
+   "safetyQuips": [
+    "something creepy",
+    "making balloon animals"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68497",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à voir à travers un télescope, se précipitant vers la Terre",
+   "safetyQuips": [
+    "a giant ball of used underwear",
+    "that alligator you flushed as a child",
+    "a giant nut! (I'm allergic to nuts)"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68507",
+   "includesPlayerName": false,
+   "prompt": "Au lieu d'une sirène, la police pourrait amener les voitures à s'arrêter plus rapidement en <BLANK>",
+   "safetyQuips": [
+    "Jimmy Buffett tunes",
+    "raccoon shrieks",
+    "\"Weird Al\" Yankovic"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68510",
+   "includesPlayerName": false,
+   "prompt": "Carl, le bon cambrioleur, laisse vos objets de valeur mais prend votre <BLANK>",
+   "safetyQuips": [
+    "ugly sweaters",
+    "leftovers about to go bad",
+    "trash out"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68517",
+   "includesPlayerName": false,
+   "prompt": "Le bail de l'appartement dit qu'il est normal d'avoir des chiens tant qu'ils <BLANK>",
+   "safetyQuips": [
+    "live in a fish tank",
+    "are not bad dogs",
+    "are cats"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68519",
+   "includesPlayerName": false,
+   "prompt": "Pourquoi les célibataires chauds de votre région veulent-ils vous parler ?",
+   "safetyQuips": [
+    "Just chatty",
+    "Because I listen!",
+    "wrong number ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68523",
+   "includesPlayerName": false,
+   "prompt": "Les chiens sont si crédules qu'ils croient réellement <BLANK>",
+   "safetyQuips": [
+    "beanie babies will gain value",
+    "most marketing claims",
+    "there's nothing inside pill pockets"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68528",
+   "includesPlayerName": false,
+   "prompt": "Vous savez que vous êtes riche quand vous avez une chambre juste pour <BLANK>",
+   "safetyQuips": [
+    "eating snacks",
+    "old cell phones",
+    "Tamagotchis"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68531",
+   "includesPlayerName": false,
+   "prompt": "Sur une île perdue, cela peut servir de radeau de vie",
+   "safetyQuips": [
+    "air mattress",
+    "a friend who owes you a favor",
+    "an actual boat"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68532",
+   "includesPlayerName": false,
+   "prompt": "« Je ne suis pas venu ici pour me faire des amis, je suis venu ici pour <BLANK> »",
+   "safetyQuips": [
+    "make best friends",
+    "drink milk",
+    "hurt some feelings"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68534",
+   "includesPlayerName": false,
+   "prompt": "Comment savez-vous que vos amis sont vraiment vos amis ?",
+   "safetyQuips": [
+    "they smell like hot plastic",
+    "they're mean to your mom",
+    "keep complimenting your muumuu"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68540",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose qui ne devrait jamais être décrit comme « rustique »",
+   "safetyQuips": [
+    "tampon",
+    "health care",
+    "set of linens"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68541",
+   "includesPlayerName": false,
+   "prompt": "La célébrité qui apparaît quand vous dites leur nom, cinq fois, devant un miroir ",
+   "safetyQuips": [
+    "any hip hop star",
+    "a contestant from Love is Blind",
+    "that dude from SNL"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68542",
+   "includesPlayerName": false,
+   "prompt": "Un cadeau inapproprié pour accueillir quelqu'un dans le quartier",
+   "safetyQuips": [
+    "old beef stew",
+    "fuzzy handcuffs",
+    "bag of dog poop"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68543",
+   "includesPlayerName": false,
+   "prompt": "Oubliez les cordes et les vaches qui pissent. Quand le temps devient vraiment mauvais, il commence à pleuvoir <BLANK>",
+   "safetyQuips": [
+    "hot garbage",
+    "half-price appetizers",
+    "extra dogs"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68544",
+   "includesPlayerName": false,
+   "prompt": "Rien n'est aussi inéluctable que la mort et les taxes ... sauf <BLANK>",
+   "safetyQuips": [
+    "happy hour",
+    "climate change",
+    "teen angst"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68545",
+   "includesPlayerName": false,
+   "prompt": "Oh non ! Vous avez lavé tous vos vêtements avec <BLANK> dans les poches!",
+   "safetyQuips": [
+    "gerbils",
+    "hand-written checks",
+    "blood"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68546",
+   "includesPlayerName": false,
+   "prompt": "Un signe sûr que vos mains sont bien trop chaudes",
+   "safetyQuips": [
+    "Twitter bursts into flames",
+    "second-degree burns",
+    "your mom calls you"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68552",
+   "includesPlayerName": false,
+   "prompt": "Durant votre procès, la chose que vous voulez vraiment expliquer au procureur",
+   "safetyQuips": [
+    "a live chicken",
+    "Barbies",
+    "a giant foam finger"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68555",
+   "includesPlayerName": false,
+   "prompt": "Un bon nom pour une application de rencontres pour les avocats",
+   "safetyQuips": [
+    "objection",
+    "sustained relationships",
+    "the courting room"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68556",
+   "includesPlayerName": false,
+   "prompt": "Un grand nom pour un super-héros qui peut communiquer avec les chats",
+   "safetyQuips": [
+    "Catmandu",
+    "Meow Miss",
+    "Catcaller"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68557",
+   "includesPlayerName": false,
+   "prompt": "Ce que les mouettes pensent généralement",
+   "safetyQuips": [
+    "these idiots",
+    "where am I ?",
+    "squawk squawk"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68559",
+   "includesPlayerName": false,
+   "prompt": "Ce qui aurait dû se passer à la fin de <i> Titanic </i>",
+   "safetyQuips": [
+    "boat flies away",
+    "it was all a dream",
+    "sharks"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68561",
+   "includesPlayerName": false,
+   "prompt": "Gims voulait dire: « Ici ça fait de la sique-mu juste pour déconner. (One shot) Chez toi ça s'tire dessus pour des <BLANK> »",
+   "safetyQuips": [
+    "bone",
+    "the bathroom"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68562",
+   "includesPlayerName": false,
+   "prompt": "Idée de comédie française : <i> Le Diable et </i> <BLANK>",
+   "safetyQuips": [
+    "Nike",
+    "a red hat",
+    "business casual"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68564",
+   "includesPlayerName": false,
+   "prompt": "Rien ne vous réveillera plus vite qu'une belle tasse chaude de <BLANK> le matin",
+   "safetyQuips": [
+    "laxative",
+    "pure horse adrenaline",
+    "chili peppers"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68565",
+   "includesPlayerName": false,
+   "prompt": "Un titre de conte de fées rejeté: « Jack et le <BLANK> magique »",
+   "safetyQuips": [
+    "Noogie",
+    "property tax bill",
+    "chicken pox"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68568",
+   "includesPlayerName": false,
+   "prompt": "Une phrase étrange qu'un dentiste pourrait vous dire pendant que vous êtes assis",
+   "safetyQuips": [
+    "let's have a look at that mole",
+    "So I'm getting divorced. Sucks.",
+    "mouths are disgusting if you think about it"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68570",
+   "includesPlayerName": false,
+   "prompt": "Le pire nom d'un spectacle pour enfants",
+   "safetyQuips": [
+    "Pennywise's Science Minute",
+    "Learning Through Screams",
+    "Nothing but Recess!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68571",
+   "includesPlayerName": false,
+   "prompt": "La chose terrible à découvrir lorsque des écureuils enterrent des trucs dans votre cour",
+   "safetyQuips": [
+    "family albums",
+    "my credit cards",
+    "life-saving medication"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68574",
+   "includesPlayerName": false,
+   "prompt": "<BLANK> devrait être autorisé",
+   "safetyQuips": [
+    "bite your nails",
+    "eat ramen",
+    "bad breath"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68575",
+   "includesPlayerName": false,
+   "prompt": "La plus grande chose que le monde ait créé",
+   "safetyQuips": [
+    "my podcast feed",
+    "an extended beer belch",
+    "Alvin and the Chipmunks"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68579",
+   "includesPlayerName": false,
+   "prompt": "Dans un avenir dystopique, tous les vêtements seront fabriqués à partir de <BLANK>",
+   "safetyQuips": [
+    "plastic bags",
+    "other people",
+    "sadness"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68580",
+   "includesPlayerName": false,
+   "prompt": "La pire sonnerie à avoir sur son téléphone lors d'une réunion de travail",
+   "safetyQuips": [
+    "Baby Shark",
+    "heavy breathing sounds",
+    "your audition for The Voice"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68581",
+   "includesPlayerName": false,
+   "prompt": "Mary Poppins suggère de prendre une cuillerée de <BLANK>",
+   "safetyQuips": [
+    "Adderall",
+    "coconut oil",
+    "capitalism"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68583",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à dire après avoir embrassé quelqu'un",
+   "safetyQuips": [
+    "Lasagna for lunch ?",
+    "Just like my mom",
+    "Yummers"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68584",
+   "includesPlayerName": false,
+   "prompt": "Carnivore, omnivore, herbivore et <BLANK>vore ?",
+   "safetyQuips": [
+    "pugs",
+    "got",
+    "any gum"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68585",
+   "includesPlayerName": false,
+   "prompt": "La compétence particulière d'un curriculum vitae qui vous ferait immédiatement embaucher la personne",
+   "safetyQuips": [
+    "psychic powers",
+    "secret family",
+    "part-time party animal"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68590",
+   "includesPlayerName": false,
+   "prompt": "Lorsque Stromae dit qu'ils sont « tous les mêmes », il parle de <BLANK>",
+   "safetyQuips": [
+    "cry",
+    "Fortnite",
+    "watch YouTube"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68592",
+   "includesPlayerName": false,
+   "prompt": "Une chose surprenante à trouver dans la toile d'araignée de votre sous-sol",
+   "safetyQuips": [
+    "money",
+    "grandpa",
+    "a rival gang of spiders"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68593",
+   "includesPlayerName": false,
+   "prompt": "Une saveur vraiment dégoûtante pour le dentifrice",
+   "safetyQuips": [
+    "cat food",
+    "Doritos",
+    "mouth flavor"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68595",
+   "includesPlayerName": false,
+   "prompt": "« Ce soir, nous irons danser, sans chemise, sans <BLANK> »",
+   "safetyQuips": [
+    "bills smaller than a 20 ",
+    "great knock-knock jokes",
+    "face"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68597",
+   "includesPlayerName": false,
+   "prompt": "Avec la meilleure carte de crédit de tous les temps, vous pourrez échanger des points fidélités pour gagner <BLANK>",
+   "safetyQuips": [
+    "candy bars",
+    "self-esteem",
+    "dates with celebrities"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68603",
+   "includesPlayerName": false,
+   "prompt": "Ce qu'un chat ferait s'il avait des mains humaines",
+   "safetyQuips": [
+    "murder you",
+    "ride a dog to the store, buy a fish",
+    "identity theft"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68605",
+   "includesPlayerName": false,
+   "prompt": "Il devrait être illégal de mettre <BLANK> dans un buffet",
+   "safetyQuips": [
+    "cooked baby carrots",
+    "a dead body",
+    "great care and effort"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68607",
+   "includesPlayerName": false,
+   "prompt": "D'accord wow... Dieu vient d'annoncer qu'il en avait marre d'entendre des prières à propos de <BLANK>",
+   "safetyQuips": [
+    "your love life",
+    "getting into heaven - just relax!!",
+    "Jimmy Buffett tickets"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68610",
+   "includesPlayerName": false,
+   "prompt": "Une meilleure utilisation pour les cheveux de Raiponce",
+   "safetyQuips": [
+    "make a nest for endangered eagles",
+    "whip it back and forth (dancing)",
+    "just braid it and make it cute"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68615",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à dire au lieu de « oui » à votre mariage",
+   "safetyQuips": [
+    "\"somebody else does\"",
+    "\"Sure\" *shrugs shoulders*",
+    "\"Ask again later\""
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68618",
+   "includesPlayerName": false,
+   "prompt": "Ce que les garçons à la plage font avant de voir l'océan",
+   "safetyQuips": [
+    "The Swamp Boys",
+    "The Boys",
+    "The Beatles"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68619",
+   "includesPlayerName": false,
+   "prompt": "Fait peu connu : Mcfly et Carlito s'appelaient au départ Mcfly et Carlito et <BLANK>",
+   "safetyQuips": [
+    "Little Donny Smith",
+    "Horses",
+    "Bake Sales"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68622",
+   "includesPlayerName": false,
+   "prompt": "Ce que les scientifiques font en Antarctique",
+   "safetyQuips": [
+    "deep freezing",
+    "life on Antarctica",
+    "nobody likes you"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68624",
+   "includesPlayerName": false,
+   "prompt": "Quelle célébrité improbable pourrait devenir président des États-Unis ?",
+   "safetyQuips": [
+    "the Taco Bell dog",
+    "Barack Obama",
+    "Guy Fieri"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68627",
+   "includesPlayerName": false,
+   "prompt": "Le concours de télé-réalité le plus ennuyeux mettrait en vedette <BLANK>",
+   "safetyQuips": [
+    "watch repair",
+    "calligraphy",
+    "dry cleaning"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68629",
+   "includesPlayerName": false,
+   "prompt": "Le solaire et le vent seront une blague une fois que nous exploiterons le pouvoir de <BLANK>",
+   "safetyQuips": [
+    "cow farts",
+    "raw charisma",
+    "laundry detergent pods"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68630",
+   "includesPlayerName": false,
+   "prompt": "« Quand un homme a faim, il vaut mieux lui apprendre à pêcher plutôt que de lui donner <BLANK> »",
+   "safetyQuips": [
+    "say \"thank you for the water\"",
+    "in show business",
+    "enjoy hanging out with you"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68636",
+   "includesPlayerName": false,
+   "prompt": "La meilleure façon de décrire la texture d'une méduse",
+   "safetyQuips": [
+    "scary goopy",
+    "living booger",
+    "plastic bag full of poison Jell-O"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68638",
+   "includesPlayerName": false,
+   "prompt": "La pire personne à ajouter accidentellement à un groupe où il y a vous et votre petit(e) ami(e)",
+   "safetyQuips": [
+    "the person you're writing about",
+    "your old babysitter",
+    "your younger brother"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68639",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus effrayante qui pourrait sortir de votre gâteau d'anniversaire",
+   "safetyQuips": [
+    "your mom",
+    "one million spiders",
+    "student debt"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68641",
+   "includesPlayerName": false,
+   "prompt": "Un bon nom pour une troupe de danse de chameau",
+   "safetyQuips": [
+    "Hump Night",
+    "Deserted",
+    "Hump it up"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68643",
+   "includesPlayerName": false,
+   "prompt": "Outre les cafards, la seule chose qui survivra à l'apocalypse c'est <BLANK>",
+   "safetyQuips": [
+    "the metric system",
+    "Volkswagens",
+    "spray can cheese"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68645",
+   "includesPlayerName": false,
+   "prompt": "De quoi votre maman s'inquiète-t-elle aujourd'hui ?",
+   "safetyQuips": [
+    "my future",
+    "a computer virus she repeatedly downloads"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68653",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'une planète couverte de maïs",
+   "safetyQuips": [
+    "Corn-Saturn",
+    "Cobland"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68655",
+   "includesPlayerName": false,
+   "prompt": "« Si vous le construisez, ils viendront » s'applique aux maisons et aux <BLANK>",
+   "safetyQuips": [
+    "Renaissance fairs",
+    "chocolate factories"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68656",
+   "includesPlayerName": false,
+   "prompt": "Quel est le nom du rayon Carrefour où vous pouvez aller pleurer en paix ?",
+   "safetyQuips": [
+    "jellies, jams, and crying",
+    "Knitting/Yarn"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68659",
+   "includesPlayerName": false,
+   "prompt": "La vache fait « meuh », mais la vache ivre fait « <BLANK> »",
+   "safetyQuips": [
+    "Moo-ve out of my way, Janet!",
+    "Let's order Domino's",
+    "Let's go us-tipping! "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68661",
+   "includesPlayerName": false,
+   "prompt": "Malheureusement, Le Petit Prince était si curieux qu'il a découvert le secret des <BLANK>",
+   "safetyQuips": [
+    "quicksand",
+    "timeshares",
+    "laundry pods"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68663",
+   "includesPlayerName": false,
+   "prompt": "L'emploi le plus populaire en 2040",
+   "safetyQuips": [
+    "ditchdigger",
+    "robot assistant",
+    "oxygen deliveryman"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68666",
+   "includesPlayerName": false,
+   "prompt": "Saviez-vous que votre tuyau de jardin peut évoluer en tant que <BLANK> !?",
+   "safetyQuips": [
+    "sad shower",
+    "toy snake",
+    "xxxxxxxxxxl belt"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68668",
+   "includesPlayerName": false,
+   "prompt": "Un terrible cadeau de la fête des mères",
+   "safetyQuips": [
+    "jar of sweet relish",
+    "half-used bar of soap"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68677",
+   "includesPlayerName": false,
+   "prompt": "Les médecins disent que <BLANK> n'est pas addictif, mais vous y êtes accro !",
+   "safetyQuips": [
+    "ibuprofen",
+    "bread",
+    "having fun"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68710",
+   "includesPlayerName": false,
+   "prompt": "Un parfum de déodorant conçu par un chien",
+   "safetyQuips": [
+    "Urinal Cake",
+    "Wet",
+    "Blood"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68714",
+   "includesPlayerName": false,
+   "prompt": "L'Amérique n'a pas de famille royale. Nous avons juste <BLANK>",
+   "safetyQuips": [
+    "The Kardashians",
+    "Muppets",
+    "The Simpsons"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68739",
+   "includesPlayerName": false,
+   "prompt": "Une suite plus légère et plus romantique de <i> Ney-York Unité Spéciale </i> serait appelée <BLANK>",
+   "safetyQuips": [
+    "When Crime Met Punishment",
+    "Crime, Punishment, and Gardenias",
+    "Giggles and Punishment"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68756",
+   "includesPlayerName": false,
+   "prompt": "Au lieu d'« Action ou Vérité », les enfants jouent actuellement à « Action, Vérité ou <BLANK> »",
+   "safetyQuips": [
+    "fake news",
+    "consensual actions",
+    "Fortnite"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68762",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à utiliser comme paille",
+   "safetyQuips": [
+    "your leg",
+    "a taco",
+    "a seagull"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68798",
+   "includesPlayerName": false,
+   "prompt": "Pour le papier, vous allez à la papeterie. Pour les jouets sexuels, vous allez à <BLANK>",
+   "safetyQuips": [
+    "The Pleasure Emporium",
+    "Ye Olde Dildo Shoppe"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68799",
+   "includesPlayerName": false,
+   "prompt": "Un cocktail que vous faites pour des occasions tristes",
+   "safetyQuips": [
+    "A Tom Bawl'ins",
+    "Warm flat beer",
+    "The Crying Lucinda"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68805",
+   "includesPlayerName": false,
+   "prompt": "Un mot qu'un homme d'affaires important pourrait dire pour les affaires",
+   "safetyQuips": [
+    "Synergy",
+    "Corporatize",
+    "you're fired"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68812",
+   "includesPlayerName": false,
+   "prompt": "L'argent ne peut pas acheter le bonheur, mais il peut acheter <BLANK>",
+   "safetyQuips": [
+    "infinite puppies",
+    "a butler named 'Happiness'",
+    "a sick Jacuzzi "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68818",
+   "includesPlayerName": false,
+   "prompt": "Le prénom secret de Jésus",
+   "safetyQuips": [
+    "Holy",
+    "Carpenter",
+    "Brad"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68819",
+   "includesPlayerName": false,
+   "prompt": "Un meilleur nom pour les bandes dessinées serait <BLANK>",
+   "safetyQuips": [
+    "laugh squares",
+    "dork bibles",
+    "picture friends"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68827",
+   "includesPlayerName": false,
+   "prompt": "Un bon nom pour l'opposé d'un pet silencieux mais qui est très odorant",
+   "safetyQuips": [
+    "loud n' proud",
+    "horn time",
+    "Chernobyl"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68829",
+   "includesPlayerName": false,
+   "prompt": "Écoutez, tout est amusant jusqu'à ce que <BLANK>",
+   "safetyQuips": [
+    "you have kids",
+    "MONDAY AMIRIGHT",
+    "game night is over"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68835",
+   "includesPlayerName": false,
+   "prompt": "Le port du Harve exporte énormément de <BLANK>",
+   "safetyQuips": [
+    "failed actors",
+    "squashed dreams",
+    "teeny tiny oranges"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68836",
+   "includesPlayerName": false,
+   "prompt": "Donnez un nom pour une épée badass ?",
+   "safetyQuips": [
+    "The Hellcutter",
+    "Mr. Stabs",
+    "Harold Von Fearblade"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68838",
+   "includesPlayerName": false,
+   "prompt": "Les enfants de nos jours sautent la petite section et vont directement en <BLANK>",
+   "safetyQuips": [
+    "home plate",
+    "the garage",
+    "the sticky cave"
+   ],
+   "us": true,
+   "x": true
+  },
+  {
+   "id": "68842",
+   "includesPlayerName": false,
+   "prompt": "Les pirates modernes ne volent pas les trésors. Ils volent <BLANK>",
+   "safetyQuips": [
+    "stock tips",
+    "the silver screen",
+    "real estate licenses"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68843",
+   "includesPlayerName": false,
+   "prompt": "Un nom pour un super-héros qui n'est essentiellement qu'une arnaque de Batman",
+   "safetyQuips": [
+    "The Nighttime Boy",
+    "Sad Flying Man",
+    "No-Parents Man"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68846",
+   "includesPlayerName": false,
+   "prompt": "Après une réduction des effectifs massive, le salon de coiffure devait malheureusement être renommé <BLANK>",
+   "safetyQuips": [
+    "the outlet next door",
+    "your dad's house",
+    "some other stuff"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68865",
+   "includesPlayerName": false,
+   "prompt": "<BLANK> : c'est un travail difficile, mais quelqu'un doit le faire !",
+   "safetyQuips": [
+    "Eating the leftovers",
+    "Correcting people's grammar",
+    "Spoiling the plot of \"The Sixth Sense\""
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68882",
+   "includesPlayerName": false,
+   "prompt": "Quelle est la cachette parfaite ?",
+   "safetyQuips": [
+    "next to a fog machine",
+    "behind a REALLY big tree",
+    "the Mariana Trench"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68883",
+   "includesPlayerName": false,
+   "prompt": "Halloween serait encore plus effrayant s'il était appelé <BLANK>",
+   "safetyQuips": [
+    "Only Candy Corn Day",
+    "Ghost-a-palooza"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68884",
+   "includesPlayerName": false,
+   "prompt": "Dans 500 ans, la période dans laquelle nous vivons sera appelée « <BLANK> »",
+   "safetyQuips": [
+    "The European curse",
+    "cheek lint"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68887",
+   "includesPlayerName": false,
+   "prompt": "Il est facile de refuser d'être exproprié ... jusqu'à ce qu'ils vous offrent <BLANK>",
+   "safetyQuips": [
+    "attention",
+    "free candy"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68891",
+   "includesPlayerName": false,
+   "prompt": "Le nouveau slogan d'Haribo sera « Haribo c'est beau la vie, pour les <BLANK> et les petits »",
+   "safetyQuips": [
+    "away from the bats",
+    "a little silly but mostly normal",
+    "underground"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68896",
+   "includesPlayerName": false,
+   "prompt": "N'oubliez pas les enfants : s'il n'y a pas <BLANK>, ce n'est pas un animé !",
+   "safetyQuips": [
+    "begrudging respect between rivals",
+    "crying",
+    "extended screaming"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68899",
+   "includesPlayerName": false,
+   "prompt": "Quel secret sait votre main gauche de votre main droite ?",
+   "safetyQuips": [
+    "where the good nail clippers are",
+    "how to play the piano"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68914",
+   "includesPlayerName": false,
+   "prompt": "À quoi ressemblent la plupart des tests de Rorschach ?",
+   "safetyQuips": [
+    "squid droppings",
+    "my childhood teacher's judging eyes",
+    "spilled soup"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68917",
+   "includesPlayerName": false,
+   "prompt": "De tous les joints de votre carrelage, y en a un fait de <BLANK>",
+   "safetyQuips": [
+    "a bad bar",
+    "Pizza Hut"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68923",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que Sonic ne devrait pas faire aussi rapidement",
+   "safetyQuips": [
+    "open-heart surgery",
+    "repairing his broken relationships",
+    "smooching"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68926",
+   "includesPlayerName": false,
+   "prompt": "Le trou le plus difficile du mini-golf c'est celui qui représente <BLANK>",
+   "safetyQuips": [
+    "my high school prom",
+    "Finland"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68928",
+   "includesPlayerName": false,
+   "prompt": "Mon piège est diaboliquement simple, M. Bond ! Une fois que j'ai tiré ce levier, le sol deviendra <BLANK>",
+   "safetyQuips": [
+    "ugly",
+    "covered in alligators"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68930",
+   "includesPlayerName": false,
+   "prompt": "Il n'y a pas de « je » en équipe ... mais il y a un « je » dans <BLANK>",
+   "safetyQuips": [
+    "My team is bad",
+    "Tim",
+    "losing"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68932",
+   "includesPlayerName": false,
+   "prompt": "D'abord le chat obtient votre langue, puis il obtient votre <BLANK>",
+   "safetyQuips": [
+    "soul",
+    "teeth"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68934",
+   "includesPlayerName": false,
+   "prompt": "Un nom de famille terrible si votre prénom est Eva",
+   "safetyQuips": [
+    "Dick",
+    "Cissel",
+    "Richard"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68943",
+   "includesPlayerName": false,
+   "prompt": "Ok, les gars, faisons un combat équitable. Pas de crachat, pas de coups de pied et encore moins de <BLANK>",
+   "safetyQuips": [
+    "falling in love",
+    "double dutch",
+    "discussion of socialism"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68954",
+   "includesPlayerName": false,
+   "prompt": "Une personne qu'il serait embarrassant d'appeler « papa »",
+   "safetyQuips": [
+    "Arnold Schwarzenegger",
+    "your priest"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68955",
+   "includesPlayerName": false,
+   "prompt": "Le groupe sanguin trouvé uniquement chez les gens extrêmement sexy",
+   "safetyQuips": [
+    "XXX",
+    "O + MY"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "68965",
+   "includesPlayerName": false,
+   "prompt": "La pire pancarte à voir en courant un marathon",
+   "safetyQuips": [
+    "Try walking, loser!",
+    "Warning: lions around the corner",
+    "You could be indoors right now"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68973",
+   "includesPlayerName": false,
+   "prompt": "Assez étrangement, l'UEFA a accepté de laisser les joueurs célébrer les buts en <BLANK>",
+   "safetyQuips": [
+    "scoring more touchdowns",
+    "humming a lil' tune"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68974",
+   "includesPlayerName": false,
+   "prompt": "Le gouvernement fédéral devrait avoir un département exécutif de <BLANK>",
+   "safetyQuips": [
+    "Freak Outs",
+    "Swampland Rehabilitation!!"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "68975",
+   "includesPlayerName": false,
+   "prompt": "La dernière personne dont vous prenez des conseils financiers",
+   "safetyQuips": [
+    "my father",
+    "my ex",
+    "24 hour fortune teller"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68995",
+   "includesPlayerName": false,
+   "prompt": "Un nom d'association moins radical serait « Rage contre le <BLANK> »",
+   "safetyQuips": [
+    "neighbors",
+    "local school board"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68996",
+   "includesPlayerName": false,
+   "prompt": "Le titre d'une mixtape que vous feriez pour votre patron",
+   "safetyQuips": [
+    "The Smooth Sounds of Stapling",
+    "The Copies You Wanted",
+    "15 Songs To Tell You I Quit"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "68999",
+   "includesPlayerName": false,
+   "prompt": "Un signe qui montre qu'il est temps de conclure votre journée à la plage",
+   "safetyQuips": [
+    "fourth-degree sunburn",
+    "Godzilla's on his way",
+    "a seagull insurrection"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69000",
+   "includesPlayerName": false,
+   "prompt": "L'enfant le plus cool du collège est toujours celui qui porte <BLANK>",
+   "safetyQuips": [
+    "Heelys",
+    "the armor of the self-assured",
+    "head-to-toe leather"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69003",
+   "includesPlayerName": false,
+   "prompt": "Il y a un problème ! Vous avez un(e) énorme <BLANK> coincé(e) dans votre évier.",
+   "safetyQuips": [
+    "severed hand",
+    "cantaloupe"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69004",
+   "includesPlayerName": false,
+   "prompt": "Un autocollant qu'une oie mettrait sur sa tête",
+   "safetyQuips": [
+    "Honk if you're a fan of honking",
+    "Gosling on board"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69006",
+   "includesPlayerName": false,
+   "prompt": "Si vous n'avez pas de dents, la fée des dents prendra volontiers <BLANK>",
+   "safetyQuips": [
+    "credit cart",
+    "gums"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69008",
+   "includesPlayerName": false,
+   "prompt": "Bien ! Si personne ne se dévoue... Je le ferai !... POUAH ! C'est quoi c't'odeur !?",
+   "safetyQuips": [
+    "success",
+    "a delicious pie cooling on the window sill"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69012",
+   "includesPlayerName": false,
+   "prompt": "Une bonne excuse pour ne pas lire le pavé de votre ami",
+   "safetyQuips": [
+    "Whoopsie, I forgot how to read",
+    "Allergic to words"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69014",
+   "includesPlayerName": false,
+   "prompt": "Énorme peur ! Il s'avère que le monstre était vraiment <BLANK> qui portait un masque tout le temps!",
+   "safetyQuips": [
+    "capitalism",
+    "a teddy bear",
+    "an ice cream sundae"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69017",
+   "includesPlayerName": false,
+   "prompt": "Oui c'est vrai, le Père Noël doit embaucher <BLANK> pour tout boucler avant le 24",
+   "safetyQuips": [
+    "Two words: reindeer sausage",
+    "Started Santa Prime",
+    "$9.95 to be on Nice List"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69019",
+   "includesPlayerName": false,
+   "prompt": "Le meilleur slogan marketing pour vos fesses",
+   "safetyQuips": [
+    "Now mostly gas free",
+    "Once you pop, you can't stop",
+    "Got Butt ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69023",
+   "includesPlayerName": false,
+   "prompt": "Ils ne font pas que des études biblique ! Le mercredi, le groupe de l'église local est connu pour <BLANK>",
+   "safetyQuips": [
+    "write dirty limericks",
+    "enjoy a good buffet"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69024",
+   "includesPlayerName": false,
+   "prompt": "Michael Bay présente : <BLANK> <i>:La Comédie Musciale !</i>",
+   "safetyQuips": [
+    "Mark Wahlberg",
+    "Books"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69026",
+   "includesPlayerName": false,
+   "prompt": "N'oubliez pas : n'achetez jamais un DIY <BLANK>",
+   "safetyQuips": [
+    "blacksmith forge",
+    "Predator",
+    "planet"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69034",
+   "includesPlayerName": false,
+   "prompt": "Le capitaine du bateau de crevettes n'a plus travaillé après avoir accidentellement attrapé <BLANK> dans son filet",
+   "safetyQuips": [
+    "a golden crawdad",
+    "some sinking billionaires",
+    "Matt Damon"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69035",
+   "includesPlayerName": false,
+   "prompt": "Terminez la rime : « Les roses sont rouges, les violettes sont bleues, et quand tu bouges, <BLANK> »",
+   "safetyQuips": [
+    "to break up with you",
+    "the bargain is complete"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69038",
+   "includesPlayerName": false,
+   "prompt": "Un nom légèrement plus appétissant pour les « restes »",
+   "safetyQuips": [
+    "Dinner: The Sequel",
+    "Microwave Friends"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69044",
+   "includesPlayerName": false,
+   "prompt": "Si un ami décrit votre rendez-vous amoureux à l'aveugle comme « intéressant », cela signifie <BLANK>",
+   "safetyQuips": [
+    "wacky",
+    "not entirely human"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69055",
+   "includesPlayerName": false,
+   "prompt": "Le test ADN prouve que vous n'êtes pas le père, mais vous êtes <BLANK>",
+   "safetyQuips": [
+    "a father",
+    "going to be soon"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69073",
+   "includesPlayerName": false,
+   "prompt": "Pour qu'un mariage soit légal en Floride, <BLANK> doit être présent à la cérémonie",
+   "safetyQuips": [
+    "an alligator",
+    "the local biker gang",
+    "a Florida man"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69076",
+   "includesPlayerName": false,
+   "prompt": "L'excuse parfaite pour sortir du cours de gym",
+   "safetyQuips": [
+    "I've already gone pro",
+    "I'm allergic to spheres"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69087",
+   "includesPlayerName": false,
+   "prompt": "La plus grande bête noire parmi les zombies modernes",
+   "safetyQuips": [
+    "vegans",
+    "high-rise apartments",
+    "social media bullying"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69175",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que vous ne devriez pas dire dans un ascenseur bondé",
+   "safetyQuips": [
+    "I could use a cuddle",
+    "Oh great. Diarrhea again",
+    "Anybody mind if I practice my banjo ?"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69176",
+   "includesPlayerName": false,
+   "prompt": "La pire chose quand on est vraiment sexy",
+   "safetyQuips": [
+    "Nothing. I love it",
+    "Spend a fortune on bikinis",
+    "People keep giving you apartments"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69177",
+   "includesPlayerName": false,
+   "prompt": "La meilleure façon de rester jeune pour toujours",
+   "safetyQuips": [
+    "Become a vampire ?",
+    "Never stop dancing",
+    "Change your name to \"Turbo\""
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69180",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que vous pourriez entendre à l'Élysée",
+   "safetyQuips": [
+    "Didn't I just talk to Congress ?",
+    "Wait. Kansas is real ?",
+    "Anybody else see Chester A. Arthur's ghost ?"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69229",
+   "includesPlayerName": false,
+   "prompt": "Quel son fait un pistolet timide ?",
+   "safetyQuips": [
+    "Sorry, sorry",
+    "Shh, shh"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69241",
+   "includesPlayerName": false,
+   "prompt": "Les adaptations de livres sont allées trop loin ! Maintenant, ils font <i>2001, l'Odyssée</i> <BLANK>",
+   "safetyQuips": [
+    "The Fault in Our Stars",
+    "The Encyclopedia Britannica Books A-D",
+    "War and Peace"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69245",
+   "includesPlayerName": false,
+   "prompt": "Dans le prochain jeu <i> Donkey Kong </i>, vous pourrez rencontrer son cousin lointain: <BLANK> kong",
+   "safetyQuips": [
+    "Stockbroker",
+    "Spelunky"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69248",
+   "includesPlayerName": false,
+   "prompt": "Il existe trois types de personnes. Vous êtes soit malin, soit fort, soit <BLANK>",
+   "safetyQuips": [
+    "lawn gnome",
+    "bottle of soup",
+    "iPad"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69308",
+   "includesPlayerName": false,
+   "prompt": "Une excuse pour être en retard qui fera que les gens cesseront de poser des questions rapidement",
+   "safetyQuips": [
+    "that smell is coming from me!",
+    "three words: party boat funeral"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69319",
+   "includesPlayerName": false,
+   "prompt": "Quel vampire inadapté aspire plus que le sang",
+   "safetyQuips": [
+    "a good brie",
+    "nail clippings",
+    "red paint"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69322",
+   "includesPlayerName": false,
+   "prompt": "Au début les meilleurs amis se faisaient des checks. Maintenant, les bros se font <BLANK>",
+   "safetyQuips": [
+    "the knee tap",
+    "the skull rub",
+    "the butt press"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69323",
+   "includesPlayerName": false,
+   "prompt": "La dernière ligne rejetée de l'hymne national : « Marchons, marchons. Qu'un <BLANK> abreuve nos sillons ! »",
+   "safetyQuips": [
+    "the largest ball of twine",
+    "fake news",
+    "Hamilton the musical"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69324",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose de stupide qu'un humain du 23e siècle pourrait trouver dans une capsule temporelle d'aujourd'hui",
+   "safetyQuips": [
+    "an impossible burger",
+    "a fidget spinner",
+    "selfie stick"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69328",
+   "includesPlayerName": false,
+   "prompt": "Est-ce juste moi ou est-ce que <BLANK> est tout simplement trop attrayant pour un être humain ?",
+   "safetyQuips": [
+    "my mom",
+    "the pizza delivery guy"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69329",
+   "includesPlayerName": false,
+   "prompt": "Le voeux d'anniversaire le plus courant est la paix dans le monde. Le deuxième le plus courant est <BLANK>",
+   "safetyQuips": [
+    "no more jerks",
+    "for my sports team to win a lot"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69331",
+   "includesPlayerName": false,
+   "prompt": "Il n'appelle pas ça le « sexe » dans les relations honnêtes. Ils appellent ça « Faire <BLANK> »",
+   "safetyQuips": [
+    "one person feel good",
+    "the best use of our time"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "69336",
+   "includesPlayerName": false,
+   "prompt": "Vous avez douze ans et vous venez de recevoir un chèque ! Quelle est la première chose que vous achetez ?",
+   "safetyQuips": [
+    "water slide, duh",
+    "attentive parents"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69340",
+   "includesPlayerName": false,
+   "prompt": "Quelqu'un que vous n'attendiez jamais mais qui vous donne le discours du « Corbeau et le Renard »",
+   "safetyQuips": [
+    "beloved character actor Stephen Root",
+    "a bored aunt",
+    "the Ghost of Christmas Past"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69352",
+   "includesPlayerName": false,
+   "prompt": "Si nous nommions toutes les constellations aujourd'hui, on serait certainement appelé <BLANK>",
+   "safetyQuips": [
+    "The millennials",
+    "CassioWikipedia"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69356",
+   "includesPlayerName": true,
+   "prompt": "Recherchez « <BLANK> » dans le dictionnaire et il y aura une image de <ANYPLAYER>",
+   "safetyQuips": [
+    "3rd place",
+    "trying"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69360",
+   "includesPlayerName": false,
+   "prompt": "Un slogan terrible pour un magicien",
+   "safetyQuips": [
+    "That's magic ?",
+    "Science!",
+    "It doesn't always work!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69362",
+   "includesPlayerName": false,
+   "prompt": "Le meilleur nom pour une présentatrice météo",
+   "safetyQuips": [
+    "Bob Weather",
+    "Amy Deathstorm",
+    "Tony Hail"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69378",
+   "includesPlayerName": true,
+   "prompt": "<ANYPLAYER> ressemble à une célébrite, mais si ! Si vous plissez un peu les yeux",
+   "safetyQuips": [
+    "Olaf from Frozen",
+    "Daffy Duck",
+    "WALL-E"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69379",
+   "includesPlayerName": false,
+   "prompt": "Et voici les fossiles du <BLANK>, le dinosaure le plus maladroit du monde!",
+   "safetyQuips": [
+    "Triposaurus",
+    "Bumbledactyl"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69383",
+   "includesPlayerName": false,
+   "prompt": "Quand je meurs, je veux être entouré de ma famille et <BLANK>",
+   "safetyQuips": [
+    "beloved character actors",
+    "an extensive cheese plate",
+    "protective charms"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69391",
+   "includesPlayerName": false,
+   "prompt": "Si nous pouvions simplement désactiver la gravité pendant une heure, cela rendrait <BLANK> beaucoup plus intéressant",
+   "safetyQuips": [
+    "pogo sticks",
+    "juggling"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69393",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus étrange que vous puissiez dire à votre coiffeur: « Donnez-moi le <BLANK> »",
+   "safetyQuips": [
+    "Captain Picard",
+    "hair clippings",
+    "yoga instructor haircut"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69398",
+   "includesPlayerName": false,
+   "prompt": "Une chose choquante à découvrir quand vos enfants jouent aux LEGO",
+   "safetyQuips": [
+    "democracy",
+    "another kid",
+    "perfect replica of you"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69401",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus difficile à dire avec un grand sourire maladroit",
+   "safetyQuips": [
+    "Ready for my bikini wax!",
+    "Engine number three failed!",
+    "Welcome to Kansas!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69408",
+   "includesPlayerName": false,
+   "prompt": "Curieusement, le Tour de France prend un petit détour à travers <BLANK>",
+   "safetyQuips": [
+    "a family's bathroom",
+    "a wormhole",
+    "a food court"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69411",
+   "includesPlayerName": false,
+   "prompt": "Le meuble le plus pratique est un canapé qui se transforme en <BLANK>",
+   "safetyQuips": [
+    "a spouse",
+    "a sofa"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69432",
+   "includesPlayerName": false,
+   "prompt": "La meilleure façon de « s'habiller » c'est des chaussures, un jean et une veste en cuir avec un t'shirt <BLANK>",
+   "safetyQuips": [
+    "burn them",
+    "sequins",
+    "fill the pockets with caviar"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69433",
+   "includesPlayerName": false,
+   "prompt": "La principale cause de chair de poule",
+   "safetyQuips": [
+    "Timothée Chalamet",
+    "soft serve in a baseball helmet",
+    "the news"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69448",
+   "includesPlayerName": false,
+   "prompt": "Vous saviez que l'accident impliquant une voiture de clown, c'était parce que la route était couverte de <BLANK>",
+   "safetyQuips": [
+    "rubber noses",
+    "hundreds of long footprints",
+    "red face paint"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69449",
+   "includesPlayerName": false,
+   "prompt": "Un point de repère architectural que vous trouvez étrangement ... attrayant",
+   "safetyQuips": [
+    "Great Sphinx of Giza",
+    "the St. Louis Arch",
+    "thick, long bridges"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "69454",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'un yacht que vous réfléchissez à deux fois",
+   "safetyQuips": [
+    "Not Gonna Crash This One!",
+    "The Sailor's Damnation"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69458",
+   "includesPlayerName": false,
+   "prompt": "Personne ne vérifie jamais cette chambre d'hôtel ! Pas depuis <BLANK>",
+   "safetyQuips": [
+    "The mule incident",
+    "yesterday"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69459",
+   "includesPlayerName": false,
+   "prompt": "« La vengeance est un plat qui se mange <BLANK> »",
+   "safetyQuips": [
+    "with a side of meanness",
+    "at Doom temperature"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69467",
+   "includesPlayerName": false,
+   "prompt": "Le club de foot du village a été fermé après avoir fait de <BLANK> sa mascotte",
+   "safetyQuips": [
+    "A feral gila monster",
+    "student loan debt",
+    "the concept of auto maintenance"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69477",
+   "includesPlayerName": false,
+   "prompt": "Si vous voulez qu'un barman vous déteste, commandez simplement <BLANK>",
+   "safetyQuips": [
+    "too loud",
+    "the angriest beer"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69478",
+   "includesPlayerName": false,
+   "prompt": "Le cowboy le plus lent de l'Ouest : Billy <BLANK>",
+   "safetyQuips": [
+    "not-paying-attention",
+    "man with heavy guns"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69506",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose qui vous fait : « Ugh, très bien, je vais le faire, mais bien parce que c'est toi »",
+   "safetyQuips": [
+    "Frank from Accounting",
+    "babysitting your niece"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69508",
+   "includesPlayerName": false,
+   "prompt": "Ma princesse, puis-je vous présenter le chevalier le plus dégoûtant que nous ayons : Monsieur <BLANK>",
+   "safetyQuips": [
+    "Barfs-a-Lot",
+    "Galahack"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69509",
+   "includesPlayerName": false,
+   "prompt": "Le prochain grand documentaire concernera le ventre minable de l'industrie <BLANK>",
+   "safetyQuips": [
+    "Toblerone",
+    "shoelace",
+    "intramural ping-pong"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69516",
+   "includesPlayerName": false,
+   "prompt": "Si vous êtes honnête avec vous-même, vous ne serez jamais assez courageux pour <BLANK>",
+   "safetyQuips": [
+    "be hot",
+    "kiss"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69517",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'un clown que vous n'embaucheriez pas pour la fête d'anniversaire de votre enfant de six ans",
+   "safetyQuips": [
+    "Sad Bad Clown",
+    "Medical Clown 2"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69523",
+   "includesPlayerName": false,
+   "prompt": "Le nom d'un camp d'été pour des enfants extrêmement timides",
+   "safetyQuips": [
+    "Audience Camp",
+    "Speak Up!! Camp"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69525",
+   "includesPlayerName": false,
+   "prompt": "Les lave-vaisselle n'ont pas de fenêtres ! Que cachent-ils ?",
+   "safetyQuips": [
+    "they sell your dishes on the black market",
+    "it's a party in there"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69798",
+   "includesPlayerName": false,
+   "prompt": "Un cadeau que votre beau-père a vraiment fait de son mieux ... alors soyez gentil",
+   "safetyQuips": [
+    "friendship bracelets",
+    "tix to a basketball game you'll sit in silence at",
+    "off-brand Hott Wheelz toys"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69800",
+   "includesPlayerName": false,
+   "prompt": "Oubliez le Labradoodle ! La meilleure combinaison de race de chien est le <BLANK>",
+   "safetyQuips": [
+    "corgenweiner",
+    "Great Daneapoo"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69804",
+   "includesPlayerName": false,
+   "prompt": "En Angleterre, n'oubliez pas qu'ils <BLANK> de l'autre côté de la route",
+   "safetyQuips": [
+    "weep",
+    "get in accidents",
+    "merrily skip"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69812",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose que vous n'aviez pas besoin de savoir qui est sans gluten",
+   "safetyQuips": [
+    "human flesh",
+    "various small rocks"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69829",
+   "includesPlayerName": true,
+   "prompt": "Dans la République de <ANYPLAYER>, l'hymne national serait <BLANK>",
+   "safetyQuips": [
+    "the discography of Carly Rae Jepsen",
+    "The X-Files theme song"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69836",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à découvrir lorsque votre enfant de cinq ans dessine",
+   "safetyQuips": [
+    "your face with devil horns",
+    "the pet pony they'll never have",
+    "the sun with a frowny face"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69851",
+   "includesPlayerName": false,
+   "prompt": "Comment ruinez-vous un pique-nique romantique ?",
+   "safetyQuips": [
+    "give the ants knives",
+    "too many grapes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69855",
+   "includesPlayerName": false,
+   "prompt": "OH MON DIEU ! Sérieusement : où est Charlie ?",
+   "safetyQuips": [
+    "behind you",
+    "Cancun for Spring Break",
+    "finding himself"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69857",
+   "includesPlayerName": false,
+   "prompt": "Bien : œufs durs. Pas bien : œufs <BLANK>",
+   "safetyQuips": [
+    "opinions",
+    "dogs",
+    "cake"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69865",
+   "includesPlayerName": false,
+   "prompt": "Un fait sur vous qui impressionnerait un enfant de quatre ans",
+   "safetyQuips": [
+    "I can swim",
+    "I have a job"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69866",
+   "includesPlayerName": false,
+   "prompt": "Quel est le prochain état que nous devrions ajouter aux États-Unis ?",
+   "safetyQuips": [
+    "Denial",
+    "The Republic of Chili's Too"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69868",
+   "includesPlayerName": false,
+   "prompt": "Écoutez, les enfants, si vous ne pouvez pas vous mettre d'accord sur un nom pour ce hamster, nous allons juste l'appeler <BLANK>",
+   "safetyQuips": [
+    "Meatball",
+    "Batmanster"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69872",
+   "includesPlayerName": false,
+   "prompt": "Un pot-de-vin !? Est-ce vraiment un pot-de-vin que de donner un juge fédéral <BLANK> ?",
+   "safetyQuips": [
+    "a Rolex",
+    "a money hug"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69873",
+   "includesPlayerName": false,
+   "prompt": "Fait peu connu : Da Vinci aimait dessiner <BLANK> quelque part dans ses peintures.",
+   "safetyQuips": [
+    "cartoon turtle",
+    "hint to a puzzle about Jesus"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69876",
+   "includesPlayerName": false,
+   "prompt": "Si vous viviez au début des années 1500, que feriez-vous à la porte d'une église ?",
+   "safetyQuips": [
+    "Naruto fanfic",
+    "A nice picture of a flower I drew"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69878",
+   "includesPlayerName": false,
+   "prompt": "Qu'est-ce que vous ne devriez jamais faire en portant des sandales ?",
+   "safetyQuips": [
+    "tap dance",
+    "run from a bear"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69885",
+   "includesPlayerName": false,
+   "prompt": "Ne vous disputez jamais dans un combat avec quelqu'un surnommé « <BLANK> »",
+   "safetyQuips": [
+    "The Cheater",
+    "Mr. Goes Too Far"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69891",
+   "includesPlayerName": false,
+   "prompt": "La façon la plus dramatique de mettre fin à une lettre est : « PS : <BLANK> »",
+   "safetyQuips": [
+    "I'm spontaneously pregnant",
+    "Whoopsie, fell down an elevator shaft!",
+    "Boo! I'm a ghost!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69900",
+   "includesPlayerName": false,
+   "prompt": "Comment devriez-vous nommer votre dossier porno pour empêcher votre maman de l'ouvrir ?",
+   "safetyQuips": [
+    "\"Just vegetables\"",
+    "\"pictures of skateboards\""
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "69903",
+   "includesPlayerName": false,
+   "prompt": "Avant le miel, Winnie l'Ourson avait une dépendance <BLANK>",
+   "safetyQuips": [
+    "tea",
+    "pajamas",
+    "sports betting"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "69905",
+   "includesPlayerName": false,
+   "prompt": "La seule chose que vous ne devriez jamais mettre dans un réfrigérateur commun",
+   "safetyQuips": [
+    "a dead body",
+    "loose cheese",
+    "your trust in humanity"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69906",
+   "includesPlayerName": false,
+   "prompt": "Le titre de la suite inédite d'Intouchables : <i> Intouchables 2 : </i> <BLANK>",
+   "safetyQuips": [
+    "2 Dick 2 Furious",
+    "More Dick",
+    "Oh Whale"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69909",
+   "includesPlayerName": false,
+   "prompt": "La série de télé-réalité à succès: <i> Les Anges à </i> <BLANK>",
+   "safetyQuips": [
+    "Right Behind You",
+    "Mostly Lust",
+    "Not Fair"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69913",
+   "includesPlayerName": false,
+   "prompt": "Honnêtement, <BLANK> pourrait tout aussi bien être un mot de malédiction",
+   "safetyQuips": [
+    "\"Honesty\", am I right ?",
+    "Flibertigibbet",
+    "fork"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69921",
+   "includesPlayerName": false,
+   "prompt": "Nommez une collation pour les momies",
+   "safetyQuips": [
+    "Pyramints",
+    "Bubble tape",
+    "Sarcopha-gum"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69923",
+   "includesPlayerName": false,
+   "prompt": "Si le nord c'est pour les alcooliques, alors le sud c'est pour <BLANK>",
+   "safetyQuips": [
+    "divorces",
+    "feral pigs",
+    "mullets"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69926",
+   "includesPlayerName": false,
+   "prompt": "Le titre d'une suite graveleuse de <i> Bonne nuit les petits </i>",
+   "safetyQuips": [
+    "The Moon Is Never Coming Back",
+    "The Moon's Secret Family",
+    "Eat Lead, Moon"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69928",
+   "includesPlayerName": false,
+   "prompt": "Au pire moment où il est entre la vie et la mort, MacGyver n'avait qu'une poche pleine de <BLANK>",
+   "safetyQuips": [
+    "nuts",
+    "cassette tapes",
+    "dreams"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69929",
+   "includesPlayerName": true,
+   "prompt": "Saviez-vous que <ANYPLAYER> a fondé le club <BLANK> au lycée ?",
+   "safetyQuips": [
+    "Weird Anime",
+    "Eating Lunch In The Bathroom",
+    "Sad Friends"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69932",
+   "includesPlayerName": false,
+   "prompt": "Vous pouvez dire que la dégustation de vin est bon marché lorsque le chardonnay a des notes de <BLANK>",
+   "safetyQuips": [
+    "gasoline",
+    "tap water",
+    "sawdust"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69945",
+   "includesPlayerName": false,
+   "prompt": "Ok, lequel d'entre vous a utilisé l'imprimante pour faire des copies de <BLANK> ?",
+   "safetyQuips": [
+    "their medical condition",
+    "smaller, grainier pictures",
+    "the janitor's face"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69947",
+   "includesPlayerName": false,
+   "prompt": "Un slogan précis serait « les banlieues : <BLANK> »",
+   "safetyQuips": [
+    "Give up on your dreams!",
+    "We've got chicken wings",
+    "It's not THAT sad."
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69968",
+   "includesPlayerName": false,
+   "prompt": "Oh ! Les menottes dans la chambre ? Ils ne sont pas pour le sexe ! Ils sont pour <BLANK>!",
+   "safetyQuips": [
+    "guests",
+    "my lycanthropy "
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "69971",
+   "includesPlayerName": false,
+   "prompt": "Le bouton du micro-ondes qui ne s'utilise jamais",
+   "safetyQuips": [
+    "burnt popcorn",
+    "blend",
+    "impersonate a real oven"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69973",
+   "includesPlayerName": false,
+   "prompt": "Qui est vraiment la Femme de l'Amérique ?",
+   "safetyQuips": [
+    "You, the viewer at home.",
+    "Capitalism"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69977",
+   "includesPlayerName": false,
+   "prompt": "En raison de réductions de financement, le fantôme des catacombes de Paris est maintenant : <i> Le fantôme du </i> <BLANK>",
+   "safetyQuips": [
+    "Dunkin Donuts",
+    "VR Arcade",
+    "discount ticket kiosk"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "69979",
+   "includesPlayerName": false,
+   "prompt": "La caractéristique la plus inutile des cercueils de luxe",
+   "safetyQuips": [
+    "cup holders",
+    "edible lid",
+    "lumbar massage"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "69981",
+   "includesPlayerName": false,
+   "prompt": "Si vous voulez être un super mannequin, vous pavanez jusqu'à la fin de la piste, puis <BLANK>",
+   "safetyQuips": [
+    "do a backflip",
+    "keep going",
+    "shoot lasers from your eyes"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70",
+   "includesPlayerName": false,
+   "prompt": "Ce que votre haut-parleur intelligent souhaite vous dire",
+   "safetyQuips": [
+    "Why don't YOU answer questions once in a while ?",
+    "Eat my shorts",
+    "You should leave him"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70004",
+   "includesPlayerName": false,
+   "prompt": "Ne faites jamais confiance à un vétérinaire qui décore sa salle d'attente avec <BLANK>",
+   "safetyQuips": [
+    "sausage links",
+    "out of reach dog biscuits",
+    "paintings of cemeteries"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70005",
+   "includesPlayerName": false,
+   "prompt": "Votre chat peut parler pendant une minute. De quoi discutez-vous ?",
+   "safetyQuips": [
+    "Where I'm taking her poop",
+    "The best trick he can do for internet fame",
+    "the \"other\" cat"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70007",
+   "includesPlayerName": false,
+   "prompt": "Un groupe d'avocats experts en fiscalité est appelé <BLANK>",
+   "safetyQuips": [
+    "an audit",
+    "a deduction",
+    "a number"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70014",
+   "includesPlayerName": false,
+   "prompt": "Rien ne peut arrêter Terminator. Eh bien, rien sauf <BLANK>",
+   "safetyQuips": [
+    "paternal instinct",
+    "sequel burnout",
+    "salary caps"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70018",
+   "includesPlayerName": false,
+   "prompt": "Si elle était en vie aujourd'hui, Marie Antoinette dirait probablement « Qu'ils mangent <BLANK>! »",
+   "safetyQuips": [
+    "these receipts",
+    "gluten-free pasta",
+    "at Domino's Pizza"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70029",
+   "includesPlayerName": false,
+   "prompt": "Bien !!! Quel est l'animal le plus sexy ?",
+   "safetyQuips": [
+    "a bluebird with a steady job",
+    "a pile of carpenter ants",
+    "a swallow"
+   ],
+   "us": false,
+   "x": true
+  },
+  {
+   "id": "70031",
+   "includesPlayerName": false,
+   "prompt": "Le parc d'attractions était une expérience. Maintenant, que faisons-nous de tous ces dinosaures clonés ?!",
+   "safetyQuips": [
+    "Let's try an amusement park AGAIN",
+    "jerky",
+    "petting zoo ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70068",
+   "includesPlayerName": false,
+   "prompt": "La pire chose sur laquelle il ne faut pas marcher pieds nus",
+   "safetyQuips": [
+    "your son",
+    "Mr. Soapy's Acid Goo Bathtub Cleaner",
+    "hot magma"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70080",
+   "includesPlayerName": false,
+   "prompt": "Saviez-vous que Benjamin Franklin a également inventé <BLANK> ?",
+   "safetyQuips": [
+    "infidelity",
+    "the Snuggie",
+    "the internet"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "70109",
+   "includesPlayerName": false,
+   "prompt": "Le mouvement de danse qui a finalement tué la discothèque s'appelait « le funky <BLANK> »",
+   "safetyQuips": [
+    "Knife Set",
+    "Cornish Hen",
+    "Comfortable Seated Position"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70156",
+   "includesPlayerName": false,
+   "prompt": "La pire chose à écrire sur une carte de visite",
+   "safetyQuips": [
+    "This was your fault",
+    "Can I borrow your skis ?",
+    "Happy Anniversary!"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70161",
+   "includesPlayerName": false,
+   "prompt": "Un bar pour les politiciens corrompus",
+   "safetyQuips": [
+    "The Gerrymander",
+    "The Fleece 'n Robb"
+   ],
+   "us": true,
+   "x": false
+  },
+  {
+   "id": "70166",
+   "includesPlayerName": false,
+   "prompt": "Un titre de travail que vous ne devriez probablement pas mettre sur votre profil LinkedIn",
+   "safetyQuips": [
+    "Wizard-At-Large",
+    "Definitely a Human Businessman",
+    "Domestic Boss"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70168",
+   "includesPlayerName": false,
+   "prompt": "Au paradis, vous serez entouré d'amis, de famille et, pour une raison quelconque, <BLANK>",
+   "safetyQuips": [
+    "Anakin Skywalker",
+    "that turtle you saw at the zoo in 2007",
+    "marshmallows"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70244",
+   "includesPlayerName": false,
+   "prompt": "Comment le groupe Trois Cafés Gourmands s'est-il appelé à l'origine ?",
+   "safetyQuips": [
+    "The False Advertisers",
+    "The Naked Lady Bears"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70560",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus innocente que vous puissiez taper qui entraînerait un combat Twitter",
+   "safetyQuips": [
+    "Guess I'll give this Twitter a try",
+    "Hi, everybody",
+    "Aren't kittens cute ?"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "70723",
+   "includesPlayerName": false,
+   "prompt": "Une chose que quelqu'un pourrait chuchoter à votre oreille pour gagner votre cœur pour toujours",
+   "safetyQuips": [
+    "I have bacon",
+    "I'm rich",
+    "I will bring you ice cream"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "71100",
+   "includesPlayerName": false,
+   "prompt": "Le nom du Dr Frankenstein qu'il voulait donner à son monstre mais a décidé de ne pas ça",
+   "safetyQuips": [
+    "Slim",
+    "Vic Jr.",
+    "Dracula"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "71136",
+   "includesPlayerName": false,
+   "prompt": "Si les humains pouvaient acquérir un sixième sens, ça serait <BLANK>",
+   "safetyQuips": [
+    "super smell",
+    "laser eyes",
+    "empathy"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "71231",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus cool à sortir des mains de Wolverine au lieu de griffes métalliques",
+   "safetyQuips": [
+    "Lipstick tubes",
+    "Tiny chainsaws",
+    "Flu shots"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "71329",
+   "includesPlayerName": false,
+   "prompt": "Quelque chose de bien pire que les cheveux à trouver dans votre nourriture",
+   "safetyQuips": [
+    "eyeball",
+    "scorpion",
+    "shampoo"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "72",
+   "includesPlayerName": false,
+   "prompt": "Nommez la suite de <i> Un, deux, trois, trois petits chats, trois vilains petit(e)s </i> <BLANK>",
+   "safetyQuips": [
+    "The Neutering",
+    "Hairball Edition",
+    "The War Against Dogs"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "75",
+   "includesPlayerName": false,
+   "prompt": "La chose la plus étrange à découvrir dans la tombe d'une momie",
+   "safetyQuips": [
+    "My old 3DS",
+    "A daddy... hah! Got 'em!",
+    "Amelia Earhart"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "81",
+   "includesPlayerName": false,
+   "prompt": "Le piège le plus surprenant dans un film Saw",
+   "safetyQuips": [
+    "a thumbnail",
+    "a fishing lure",
+    "an entire bag of french fries"
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "87",
+   "includesPlayerName": false,
+   "prompt": "Évitez tout restaurant avec une pancarte qui dit « comme on le voit sur <BLANK> »",
+   "safetyQuips": [
+    "Security camera footage",
+    "Top Gear",
+    "the back of the church bulletin "
+   ],
+   "us": false,
+   "x": false
+  },
+  {
+   "id": "92",
+   "includesPlayerName": false,
+   "prompt": "Tout d'abord, le Grinch a volé Noël. Mais il est allé trop loin quand il a volé <BLANK>",
+   "safetyQuips": [
+    "Our hearts",
+    "Arbor Day",
+    "my identity"
+   ],
+   "us": false,
+   "x": false
+  }
+ ]
+}
