@@ -1171,7 +1171,7 @@
   {
    "id": "540",
    "includesPlayerName": false,
-   "prompt": "Le titre du poste d'un candidat, vous ne seriez pas surpris de voir <i> le baccalauréat </i>",
+   "prompt": "L'ancien métier d'un candidat que vous ne seriez pas surpris de voir dans <i> Cauchemar en Cuisine </i>",
    "safetyQuips": [
     "Fun Enthusiast",
     "Animal Protector",
@@ -3733,7 +3733,7 @@
   {
    "id": "69073",
    "includesPlayerName": false,
-   "prompt": "Pour qu'un mariage soit légal en Floride, <BLANK> doit être présent à la cérémonie",
+   "prompt": "Pour qu'un mariage soit légal en Bretagne, <BLANK> doit être présent à la cérémonie",
    "safetyQuips": [
     "an alligator",
     "the local biker gang",
