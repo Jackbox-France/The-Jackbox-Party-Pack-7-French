@@ -1,4 +1,4 @@
-{
+F{
  "content": [
   {
    "id": "100",
@@ -63,7 +63,7 @@
   {
    "id": "112",
    "includesPlayerName": false,
-   "prompt": "Quel signe a été laissé de côté parmi les signes du zodiaque?",
+   "prompt": "Quel signe a été laissé de côté parmi les signes du zodiaque ?",
    "safetyQuips": [
     "Frappricorn",
     "Albert the Alligator",
@@ -87,7 +87,7 @@
   {
    "id": "117",
    "includesPlayerName": false,
-   "prompt": "Que donnent les écoles super progressistes au lieu des notes?",
+   "prompt": "Que donnent les écoles super progressistes au lieu des notes ?",
    "safetyQuips": [
     "Turtles",
     "Firm handshakes",
@@ -99,7 +99,7 @@
   {
    "id": "118",
    "includesPlayerName": false,
-   "prompt": "Qu'est-ce que le seul tour que les magiciens refusent de faire?",
+   "prompt": "Qu'est-ce que le seul tour que les magiciens refusent de faire ?",
    "safetyQuips": [
     "Fall in love",
     "Steal a baby's nose",
@@ -290,7 +290,7 @@
   {
    "id": "167",
    "includesPlayerName": false,
-   "prompt": "Qu'est-ce qui est derrière la porte verrouillée et que l'agent immobilier refuse de vous montrer?",
+   "prompt": "Qu'est-ce qui est derrière la porte verrouillée et que l'agent immobilier refuse de vous montrer ?",
    "safetyQuips": [
     "a competing real estate agent",
     "wall-to-wall ant farm",
@@ -422,7 +422,7 @@
   {
    "id": "202",
    "includesPlayerName": false,
-   "prompt": "La mort par <BLANK> est rare, sauf en Floride",
+   "prompt": "La mort par <BLANK> est rare, sauf en Suisse",
    "safetyQuips": [
     "lost tourist",
     "airboat",
@@ -517,7 +517,7 @@
   {
    "id": "233",
    "includesPlayerName": false,
-   "prompt": "Si le dîner de la fête des pères était une tradition, quelle serait la pièce maîtresse de la table?",
+   "prompt": "Si le dîner de la fête des pères était une tradition, quelle serait la pièce maîtresse de la table ?",
    "safetyQuips": [
     "a Big Mouth Billy Bass",
     "a bouquet of wrenches",
@@ -1914,7 +1914,7 @@
   {
    "id": "68118",
    "includesPlayerName": false,
-   "prompt": "Si votre maman était une super-héros, quel signal brillerait dans le ciel pour l'invoquer?",
+   "prompt": "Si votre maman était une super-héros, quel signal brillerait dans le ciel pour l'invoquer ?",
    "safetyQuips": [
     "an empty plate",
     "my dad napping",
@@ -4558,7 +4558,7 @@
   {
    "id": "70035",
    "includesPlayerName": false,
-   "prompt": "Quelle sera la principale cause de décès en 2200?",
+   "prompt": "Quelle sera la principale cause de décès en 2200 ?",
    "safetyQuips": [
     "ape revolution",
     "need more Soylent Green"
@@ -4604,7 +4604,7 @@
   {
    "id": "70141",
    "includesPlayerName": false,
-   "prompt": "Quelle cause de décès est à la fois une tragédie et une comédie?",
+   "prompt": "Quelle cause de décès est à la fois une tragédie et une comédie ?",
    "safetyQuips": [
     "crushed by famous fat cat Garfield",
     "clown car disaster",
@@ -4652,7 +4652,7 @@
   {
    "id": "70150",
    "includesPlayerName": false,
-   "prompt": "Qu'adoreriez-vous dire pendant que votre chef parle à Dieu, quelque part dans les montagnes?",
+   "prompt": "Qu'adoreriez-vous dire pendant que votre chef parle à Dieu, quelque part dans les montagnes ?",
    "safetyQuips": [
     "Golden calf every time, bro!",
     "Zeus with a pinch of Pan for flair",
